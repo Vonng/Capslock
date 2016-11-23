@@ -1,0 +1,680 @@
+<?xml version="1.0"?>
+<root>
+    <!-- Introduction -->
+    <item>
+        <name style="important">CapsLock Enhancement</name>
+        <appendix>Make CapsLock Great Again!</appendix>
+        <appendix>Author: Ruohang Feng(fengruohang@outlook.com)</appendix>
+        <appendix>Source: https://github.com/Vonng/Configuration/blob/master/osx/private.xml</appendix>
+        <appendix>Platform: Mac OS X darwin64 via Karabiner</appendix>
+        <appendix>License: WTFPL</appendix>
+        <appendix>Mapping CapsLock to F19 before enabling these functionality.</appendix>
+    </item>
+
+
+    <!-- Hyper declaration -->
+    <modifierdef>HYPER</modifierdef>
+
+
+    <!-- Capslock to Hyper/Language Switch(Recommend) -->
+    <item>
+        <name style="important">CapsLock(F19) to Hyper/Language Switch</name>
+        <appendix>You can only choose one of LanguageSwitch or Escape!</appendix>
+        <appendix>Capslock [Hold] : Hyper</appendix>
+        <appendix>Capslock [Press] : ^SPace (Switch Language)</appendix>
+        <identifier>private.capslock</identifier>
+        <autogen>
+            --KeyOverlaidModifier--
+            KeyCode::F19,
+            KeyCode::VK_MODIFIER_HYPER,
+            KeyCode::SPACE, ModifierFlag::CONTROL_L
+        </autogen>
+    </item>
+
+
+    <!-- Capslock to Hyper/ESC -->
+    <item>
+        <name style="important">CapsLock(F19) to Hyper/Escape</name>
+        <appendix>You can only choose one of LanguageSwitch or Escape!</appendix>
+        <appendix>Capslock [Hold] : Hyper</appendix>
+        <appendix>Capslock [Press] : Escape</appendix>
+        <identifier>private.capslock-escape</identifier>
+        <autogen>
+            --KeyOverlaidModifier--
+            KeyCode::F19,
+            KeyCode::VK_MODIFIER_HYPER,
+            KeyCode::ESCAPE
+        </autogen>
+    </item>
+
+
+    <!-- Hyper Escape -->
+    <item>
+        <name>Hyper Esc</name>
+        <appendix>Hyper Esc : Escape Hyper back to CapsLock itself</appendix>
+        <identifier>private.hyper-escape</identifier>
+        <autogen>__KeyToKey__ KeyCode::ESCAPE, ModifierFlag::HYPER, KeyCode::CAPSLOCK</autogen>
+    </item>
+
+
+    <!-- Hyper Shifter-->
+    <item>
+        <name>Hyper Shifter</name>
+        <appendix>Hyper 1234567890-=: +⇧</appendix>
+        <appendix>Hyper ; : ⇧- `_`</appendix>
+        <appendix>Hyper ' : = `=`</appendix>
+        <appendix>Hyper [ : ⇧9 `(`</appendix>
+        <appendix>Hyper ] : ⇧0 `)`</appendix>
+        <identifier>private.hyper-shifter</identifier>
+
+        <autogen>
+            --KeyToKey--
+            KeyCode::1, ModifierFlag::HYPER,
+            KeyCode::1, ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::2, ModifierFlag::HYPER,
+            KeyCode::2, ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::3, ModifierFlag::HYPER,
+            KeyCode::3, ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::4, ModifierFlag::HYPER,
+            KeyCode::4, ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::5, ModifierFlag::HYPER,
+            KeyCode::5, ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::6, ModifierFlag::HYPER,
+            KeyCode::6, ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::7, ModifierFlag::HYPER,
+            KeyCode::7, ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::8, ModifierFlag::HYPER,
+            KeyCode::8, ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::9, ModifierFlag::HYPER,
+            KeyCode::9, ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::0, ModifierFlag::HYPER,
+            KeyCode::0, ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::MINUS, ModifierFlag::HYPER,
+            KeyCode::MINUS, ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::EQUAL, ModifierFlag::HYPER,
+            KeyCode::EQUAL, ModifierFlag::SHIFT_L
+        </autogen>
+
+        <autogen>
+            --KeyToKey--
+            KeyCode::SEMICOLON, ModifierFlag::HYPER,
+            KeyCode::MINUS , ModifierFlag::SHIFT_R,
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::QUOTE, ModifierFlag::HYPER,
+            KeyCode::EQUAL
+        </autogen>
+
+        <autogen>
+            --KeyToKey--
+            KeyCode::BRACKET_LEFT, ModifierFlag::HYPER,
+            KeyCode::9 , ModifierFlag::SHIFT_R,
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::BRACKET_RIGHT, ModifierFlag::HYPER,
+            KeyCode::0 , ModifierFlag::SHIFT_R,
+        </autogen>
+
+    </item>
+
+
+    <!-- Hyper Function-->
+    <item>
+        <name>Hyper Function</name>
+        <appendix>Hyper F1-12 : Corresponding functionality</appendix>
+        <appendix>Require system preference modification: Use F1,F2,etc.. as standard function key</appendix>
+        <identifier>private.hyper-function</identifier>
+        <!-- F1 -->
+        <autogen>
+            __KeyToKey__ KeyCode::F1, ModifierFlag::HYPER,
+            ConsumerKeyCode::BRIGHTNESS_DOWN ,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
+        </autogen>
+
+        <!-- F2 -->
+        <autogen>
+            __KeyToKey__ KeyCode::F2, ModifierFlag::HYPER,
+            ConsumerKeyCode::BRIGHTNESS_UP ,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
+        </autogen>
+
+        <!-- F3 -->
+        <autogen>__KeyToKey__ KeyCode::F3, ModifierFlag::HYPER, KeyCode::EXPOSE_ALL</autogen>
+
+        <!-- F4 -->
+        <autogen>__KeyToKey__ KeyCode::F4, ModifierFlag::HYPER, KeyCode::LAUNCHPAD</autogen>
+
+        <!-- F5 -->
+        <autogen>
+            __KeyToKey__ KeyCode::F1, ModifierFlag::HYPER,
+            ConsumerKeyCode::KEYBOARDLIGHT_LOW ,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
+        </autogen>
+
+        <!-- F6 -->
+        <autogen>
+            __KeyToKey__ KeyCode::F2, ModifierFlag::HYPER,
+            ConsumerKeyCode::KEYBOARDLIGHT_HIGH ,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
+        </autogen>
+
+        <!-- F7 -->
+        <autogen>
+            __KeyToKey__ KeyCode::F7, ModifierFlag::HYPER,
+            ConsumerKeyCode::MUSIC_PREV
+        </autogen>
+
+        <!-- F8 -->
+        <autogen>
+            __KeyToKey__ KeyCode::F8, ModifierFlag::HYPER,
+            ConsumerKeyCode::MUSIC_PLAY
+        </autogen>
+
+        <!-- F9 -->
+        <autogen>
+            __KeyToKey__ KeyCode::F9, ModifierFlag::HYPER,
+            ConsumerKeyCode::MUSIC_NEXT
+        </autogen>
+
+        <!-- F10 -->
+        <autogen>
+            __KeyToKey__ KeyCode::F10, ModifierFlag::HYPER,
+            ConsumerKeyCode::VOLUME_MUTE
+        </autogen>
+
+        <!-- F11 -->
+        <autogen>
+            __KeyToKey__ KeyCode::F11, ModifierFlag::HYPER,
+            ConsumerKeyCode::VOLUME_DOWN,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
+        </autogen>
+
+        <!-- F12 -->
+        <autogen>
+            __KeyToKey__ KeyCode::F12, ModifierFlag::HYPER,
+            ConsumerKeyCode::VOLUME_UP,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
+        </autogen>
+
+    </item>
+
+
+    <!-- Hyper Navigator -->
+    <item>
+        <name>Hyper Navigator</name>
+        <appendix>Hyper H : ←</appendix>
+        <appendix>Hyper J : ↓</appendix>
+        <appendix>Hyper K : ↑</appendix>
+        <appendix>Hyper L : →</appendix>
+        <appendix>Hyper U : PgUp</appendix>
+        <appendix>Hyper I : Home</appendix>
+        <appendix>Hyper O : End</appendix>
+        <appendix>Hyper P : PgDn</appendix>
+        <appendix>Hold additional ⌘(Left) key for selection</appendix>
+        <identifier>private.hyper-navigator</identifier>
+
+        <!-- H: Left -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::H, ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
+            KeyCode::CURSOR_LEFT | ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::H, ModifierFlag::HYPER,
+            KeyCode::CURSOR_LEFT
+        </autogen>
+
+        <!-- J: Down -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::J, ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
+            KeyCode::CURSOR_DOWN | ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::J,ModifierFlag::HYPER,
+            KeyCode::CURSOR_DOWN
+        </autogen>
+
+        <!-- K: Up -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::K, ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
+            KeyCode::CURSOR_UP | ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::K,ModifierFlag::HYPER,
+            KeyCode::CURSOR_UP
+        </autogen>
+
+        <!-- L: Right -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::L, ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
+            KeyCode::CURSOR_RIGHT | ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::L,ModifierFlag::HYPER,
+            KeyCode::CURSOR_RIGHT
+        </autogen>
+
+        <!-- U: PageUp -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::U, ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
+            KeyCode::PAGEUP | ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::U,ModifierFlag::HYPER,
+            KeyCode::PAGEUP
+        </autogen>
+
+        <!-- I: HOME -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::I, ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
+            KeyCode::HOME | ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::I,ModifierFlag::HYPER,
+            KeyCode::HOME
+        </autogen>
+
+        <!-- O: END -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::O, ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
+            KeyCode::END | ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::O,ModifierFlag::HYPER,
+            KeyCode::END
+        </autogen>
+
+        <!-- P: PageDown -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::P, ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
+            KeyCode::PAGEDOWN | ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::P,ModifierFlag::HYPER,
+            KeyCode::PAGEDOWN
+        </autogen>
+    </item>
+
+
+    <!-- Hyper Bash Control -->
+    <item>
+        <name>Hyper Bash-Control</name>
+        <appendix>Hyper Z : ^Z (SIGTSTP)</appendix>
+        <appendix>Hyper X : ^B (Tmux-Prefix)</appendix>
+        <appendix>Hyper C : ^C (SIGINT)</appendix>
+        <appendix>Hyper V : , (VIM Leader)</appendix>
+        <appendix>Hyper D : ^D (EOF)</appendix>
+        <identifier>private.hyper-bash-control</identifier>
+
+        <!-- ^Z SIGTSTP -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::Z, ModifierFlag::HYPER ,
+            KeyCode::Z, ModifierFlag::CONTROL_L
+        </autogen>
+
+        <!-- ^X Tmux Prefix -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::X, ModifierFlag::HYPER ,
+            KeyCode::B, ModifierFlag::CONTROL_L
+        </autogen>
+
+        <!-- ^C SIGINT -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::C, ModifierFlag::HYPER,
+            KeyCode::C, ModifierFlag::CONTROL_L
+        </autogen>
+
+        <!-- ^V Vim -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::V, ModifierFlag::HYPER ,
+            KeyCode::COMMA
+        </autogen>
+
+        <!-- ^D EOF  +⌘=^R (Debug) -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::D, ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
+            KeyCode::D, ModifierFlag::CONTROL_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::D, ModifierFlag::HYPER ,
+            KeyCode::D, ModifierFlag::CONTROL_L
+        </autogen>
+
+    </item>
+
+
+    <!-- Hyper Window Control -->
+    <item>
+        <name>Hyper Window-Control</name>
+        <appendix>Hyper Q : ⌘Q (Close Window)</appendix>
+        <appendix>Hyper W : ⌘W (Close Tab)</appendix>
+        <appendix>Hyper A : ⌘⌥⇧⌃A (Moom-Prefix)</appendix>
+        <appendix>Hyper ⌘A : Desktop</appendix>
+        <appendix>Hyper S : ^Tab (Switch Tab)</appendix>
+        <appendix>Hyper ⌘S : ^⇧Tab (Switch Tab Reverse)</appendix>
+        <identifier>private.hyper-window-control</identifier>
+
+        <!-- ⌘Q: Quit Window -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::Q, ModifierFlag::HYPER,
+            KeyCode::Q, ModifierFlag::COMMAND_L
+        </autogen>
+
+        <!-- ⌘W Close Tab -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::W, ModifierFlag::HYPER ,
+            KeyCode::W, ModifierFlag::COMMAND_L
+        </autogen>
+
+        <!-- Hyper-A Moom-Prefix (Set to Physical Hyper-A) -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::A,ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
+            KeyCode::F11
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::A,ModifierFlag::HYPER ,
+            KeyCode::A,ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L | ModifierFlag::CONTROL_L |
+            ModifierFlag::SHIFT_L
+        </autogen>
+
+        <!-- ^Tab: Switch Tag -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::S,ModifierFlag::HYPER, ModifierFlag::COMMAND_L,
+            KeyCode::TAB,ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::S,ModifierFlag::HYPER,
+            KeyCode::TAB,ModifierFlag::CONTROL_L
+        </autogen>
+    </item>
+
+
+    <!-- Hyper Deletion -->
+    <item>
+        <name>Hyper Deletion</name>
+        <appendix>Hyper N : ⌥Del (Delete a word ahead)</appendix>
+        <appendix>Hyper M : Del (Delete a char ahead)</appendix>
+        <appendix>Hyper , : ForwardDel (Delete a char after)</appendix>
+        <appendix>Hyper . : ⌥ForwardDel(Delete a char after)</appendix>
+        <identifier>private.hyper-deletion</identifier>
+
+        <autogen>
+            --KeyToKey--
+            KeyCode::N, ModifierFlag::HYPER,
+            KeyCode::DELETE, ModifierFlag::OPTION_L,
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::M,ModifierFlag::HYPER,
+            KeyCode::DELETE
+        </autogen>
+
+        <autogen>
+            --KeyToKey--
+            KeyCode::COMMA,ModifierFlag::HYPER,
+            KeyCode::FORWARD_DELETE
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::DOT,ModifierFlag::HYPER,
+            KeyCode::FORWARD_DELETE, ModifierFlag::OPTION_L
+        </autogen>
+    </item>
+
+
+    <!--Hyper Application-->
+    <item>
+        <name>Hyper Application</name>
+        <appendix>* Hyper E : Google Chrome</appendix>
+        <appendix>* Hyper ⌘E : Finder</appendix>
+        <appendix>* Hyper R : iTerm</appendix>
+        <appendix>* Hyper ⌘R : ^R (Run)</appendix>
+        <appendix>* Hyper T : Sublime Text</appendix>
+        <appendix>* Hyper ⌘T : Typora</appendix>
+        <appendix>* Hyper F : Dash</appendix>
+        <appendix>* Hyper ⌘F : Dictionary</appendix>
+        <appendix>* Hyper G : Intellij IDEA</appendix>~
+        <identifier>private.hyper-application</identifier>
+
+        <!--Define your own application here-->
+        <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APP_Google_Chrome</name>
+            <url type="file">/Applications/Google Chrome.app</url>
+        </vkopenurldef>
+        <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APP_iTerm</name>
+            <url type="file">/Applications/iTerm.app</url>
+        </vkopenurldef>
+        <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APP_Sublime_Text</name>
+            <url type="file">/Applications/Sublime Text.app</url>
+        </vkopenurldef>
+        <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APP_INTELLIJ_IDEA</name>
+            <url type="file">/Applications/IntelliJ IDEA.app/</url>
+        </vkopenurldef>
+        <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APP_Dash</name>
+            <url type="file">/Applications/Dash.app/</url>
+        </vkopenurldef>
+        <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APP_Typora</name>
+            <url type="file">/Applications/Typora.app</url>
+        </vkopenurldef>
+
+        <autogen>
+            --KeyToKey--
+            KeyCode::E, ModifierFlag::HYPER | ModifierFlag::COMMAND_L ,
+            KeyCode::VK_OPEN_URL_APP_Finder
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::E, ModifierFlag::HYPER,
+            KeyCode::VK_OPEN_URL_APP_Google_Chrome
+        </autogen>
+
+        <autogen>
+            --KeyToKey--
+            KeyCode::R, ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
+            KeyCode::R, ModifierFlag::CONTROL_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::R, ModifierFlag::HYPER,
+            KeyCode::VK_OPEN_URL_APP_iTerm
+        </autogen>
+
+
+        <autogen>
+            --KeyToKey--
+            KeyCode::T, ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
+            KeyCode::VK_OPEN_URL_APP_Typora
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::T, ModifierFlag::HYPER,
+            KeyCode::VK_OPEN_URL_APP_Sublime_Text
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::F, ModifierFlag::HYPER | ModifierFlag::COMMAND_L ,
+            KeyCode::VK_OPEN_URL_APP_Dictionary
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::F, ModifierFlag::HYPER,
+            KeyCode::VK_OPEN_URL_APP_Dash
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::G, ModifierFlag::HYPER,
+            KeyCode::VK_OPEN_URL_APP_INTELLIJ_IDEA
+        </autogen>
+
+    </item>
+
+
+    <!-- Hyper Other -->
+    <item>
+        <name>Hyper Other</name>
+        <appendix>Hyper / : ^/ (Comment)</appendix>
+        <appendix>Hyper ` : Save selected area image to desktop</appendix>
+        <appendix>Hyper Space : ESCAPE</appendix>
+        <identifier>private.hyper-other</identifier>
+
+        <autogen>
+            --KeyToKey--
+            KeyCode::SLASH, ModifierFlag::HYPER,
+            KeyCode::SLASH, ModifierFlag::COMMAND_L
+        </autogen>
+
+        <autogen>
+            --KeyToKey--
+            KeyCode::SPACE, ModifierFlag::HYPER,
+            KeyCode::ESCAPE
+        </autogen>
+
+        <autogen>
+            --KeyToKey--
+            KeyCode::BACKQUOTE, ModifierFlag::HYPER,
+            KeyCode::4, ModifierFlag::SHIFT_L | ModifierFlag::COMMAND_L
+        </autogen>
+    </item>
+
+
+    <!-- Hyper Media Control-->
+    <item>
+        <name>Hyper Media Control</name>
+        <appendix>Hyper End : ⇧⌥F1 (Fine grained brightness down)</appendix>
+        <appendix>Hyper Home : ⇧⌥F2 (Fine grained brightness up)</appendix>
+        <appendix>Hyper PgDn : ⇧⌥F11 (Fine grained volume down)</appendix>
+        <appendix>Hyper PgUp : ⇧⌥F12 (Fine grained volume up)</appendix>
+
+        <identifier>private.hyper-media-control</identifier>
+        <!-- PgUp -->
+        <autogen>
+            __KeyToKey__ KeyCode::PAGEUP, ModifierFlag::HYPER,
+            ConsumerKeyCode::VOLUME_UP,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
+        </autogen>
+
+        <!-- PgDn -->
+        <autogen>
+            __KeyToKey__ KeyCode::PAGEDOWN, ModifierFlag::HYPER,
+            ConsumerKeyCode::VOLUME_DOWN,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
+        </autogen>
+
+        <!-- Home -->
+        <autogen>
+            __KeyToKey__ KeyCode::HOME, ModifierFlag::HYPER,
+            ConsumerKeyCode::BRIGHTNESS_UP,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
+        </autogen>
+
+        <!-- End -->
+        <autogen>
+            __KeyToKey__ KeyCode::END, ModifierFlag::HYPER,
+            ConsumerKeyCode::BRIGHTNESS_DOWN,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
+        </autogen>
+    </item>
+
+
+    <!-- Hyper Mouse key -->
+    <item>
+        <name>Hyper MouseKey</name>
+        <appendix>Hyper ↑ : MouseUp</appendix>
+        <appendix>Hyper ↓ : MouseDown</appendix>
+        <appendix>Hyper ← : MouseLeft</appendix>
+        <appendix>Hyper → : MouseRight</appendix>
+        <appendix>Hyper Return : Mouse LButton Click</appendix>
+        <appendix>Hyper \ : Mouse RButton Click</appendix>
+        <identifier>private.hyper-mousekey</identifier>
+
+
+        <autogen>
+            --KeyToKey--
+            KeyCode::CURSOR_UP, ModifierFlag::HYPER,
+            KeyCode::VK_MOUSEKEY_UP
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::CURSOR_DOWN, ModifierFlag::HYPER,
+            KeyCode::VK_MOUSEKEY_DOWN
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::CURSOR_LEFT, ModifierFlag::HYPER,
+            KeyCode::VK_MOUSEKEY_LEFT
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::CURSOR_RIGHT, ModifierFlag::HYPER,
+            KeyCode::VK_MOUSEKEY_RIGHT
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::RETURN, ModifierFlag::HYPER,
+            KeyCode::VK_MOUSEKEY_BUTTON_LEFT
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::BACKSLASH, ModifierFlag::HYPER,
+            KeyCode::VK_MOUSEKEY_BUTTON_RIGHT
+        </autogen>
+    </item>
+
+</root>
