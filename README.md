@@ -1,34 +1,93 @@
 # Capslock
 
-*Make CapsLock Great Again! —— Vonng*
+*Make CapsLock Great Again!*  
 
+![](images/trump.jpg)
 
+**Transform Capslock into hyper  key,  and improve your APM tremendously !!!**
 
-**将Capslock改造为超级功能键，显著提高键盘操作效率！**
-
-* 功能强大：基于CapsLock的新功能键 Hyper(࿊)可以与任何按键组合，提供强大的定制性。
+* 功能强大：基于CapsLock的新功能键 Hyper(✱)可以与任何按键组合，提供强大的定制性。
 * 精心设计：在作者两年使用实践中不断雕琢，将最常使用的操作预置于核心键区，显著提高操作效率。
-* 轻量跨平台：分别基于[Karabiner](https://pqrs.org/osx/karabiner/)（OSX），基于[AutoHotKey](http://www.ahkscript.org/)（Win）以脚本实现。
+* 轻量跨平台：分别基于[Karabiner()](https://pqrs.org/osx/karabiner/) 与[AutoHotKey(⊞)](http://www.ahkscript.org/)以脚本方式实现。
 * 部署方便：放在随身装机U盘中，还是托管在Github上，简单几步即可复刻环境。
 
 
-[Mac版Capslock功能说明与使用手册](osx/)
+[CapsLock()](osx/)
 
-[Win版Capslock功能说明与使用手册](win/)
+[CapsLock(⊞)](win/)
 
 ## 前言
 
-CapsLock，即大写锁定键，其起源可追溯至打字机时代。打字机是纯机械的设备，当按下Shift时，整套设备会与墨条纸带发生位移，使小写字母“上档”为大写字母。此等操作对小拇指是不小的负担，以致连续输入两到三个大写字母都比较吃力。于是在今天键盘上Capslock的位置上出现了其原型Shiftlock功能键：可以在大小写状态之间切换与保持。这样的设计解决了一指禅选手的困境，更减轻了打字员的负担。
+⇪CapsLock，即大写锁定键，其起源可追溯至打字机时代。打字机是纯机械的设备，当按下Shift时，整套设备会与墨条纸带发生位移，使小写字母“上档”为大写字母。此等操作对小拇指是不小的负担，以致连续输入两到三个大写字母都比较吃力。于是在今天键盘上⇪Capslock的位置上出现了其原型Shiftlock功能键：可以在大小写状态之间切换与保持。这样的设计解决了一指禅选手的困境，更减轻了打字员的负担。
 
-然而随着科技的进步，这样的问题已经不存在了。除了一指禅选手，Shift能够毫不费力的满足人们的需求。而Capslock这个'多余'的按键，则因为历史惯性保留在了绝大多数键盘的黄金位置。
+然而随着科技的进步，这样的问题已经不存在了。除了一指禅选手，Shift能够毫不费力的满足人们的需求。而⇪Capslock这个'多余'的按键，则因为历史惯性保留在了绝大多数键盘的黄金位置。
 
-历史上有很多人注意到了这一点，不少人都琢磨着让这个占据宝地的按键发挥出更大的作用。一些键盘直接去掉了Capslock键，而另一些则直接把它作为Ctrl使用。在一些Unix Like（e.g Mac OS X）环境中，Capslock还被用作语言切换的按键。有些人将Capslock改为复合功能键：单独键入时是ESC，而按住不放时是Ctrl。
+历史上有很多人注意到了这一点，不少人都琢磨着让这个占据宝地的按键发挥出更大的作用。一些键盘直接去掉了⇪Capslock键，而另一些则直接把它作为⌃Ctrl使用。在一些Unix Like（e.g ）环境中，⇪Capslock还被用作语言切换的按键。有些人将⇪Capslock改为复合功能键：单独键入时是⎋ESC，而按住不放时是⌃Ctrl。
 
 不过为什么要浪费这样一个绝佳的机会呢？我们所能做的远比这更多：
 
-譬如创造一个如`Shift(⇧)`，`Ctrl(^)`，`Option(⌥) | Win(❖)`，`Alt | Command(⌘)`一般的新功能键：
+譬如创造一个类似⇧ Shift、⌃ Ctrl、⌥ Option、⊞ Win、⎇ Alt 、 ⌘ Command等修饰键的全新功能键：
 
-​										Hyper (࿊)
+​										✱ Hyper
+
+## 符号参考表
+
+#### Modifiers: Mac
+
+| Sym  | Key     |
+| ---- | ------- |
+| ✱    | Hyper   |
+| ⌃    | Control |
+| ⌥    | Option  |
+| ⇧    | Shift   |
+| ⌘    | Command |
+
+#### Modifiers: ⊞Windows
+
+| Sym  | Key     |
+| ---- | ------- |
+| ✱    | Hyper   |
+| ⌃    | Control |
+| ⊞    | Windows |
+| ⇧    | Shift   |
+| ⎇    | Alter   |
+
+#### Normal Keys
+
+| GLYPH   | NAME                                   |
+| ------- | -------------------------------------- |
+|        | Apple                                  |
+| ⌘       | Command, Cmd, Clover, (formerly) Apple |
+| ⌃       | Control, Ctl, Ctrl                     |
+| ⌥       | Option, Opt, (Windows) Alt             |
+| ⎇       | Alt                                    |
+| ⇧       | Shift                                  |
+| ⇪       | Caps lock                              |
+| ⏏       | Eject                                  |
+| ↩, ↵, ⏎ | Return, Carriage Return                |
+| ⌤       | Enter                                  |
+| ⌫       | Delete, Backspace                      |
+| ⌦       | Forward Delete                         |
+| ⎋       | Escape, Esc                            |
+| →       | Right arrow                            |
+| ←       | Left arrow                             |
+| ↑       | Up arrow                               |
+| ↓       | Down arrow                             |
+| ⇞       | Page Up, PgUp                          |
+| ⇟       | Page Down, PgDn                        |
+| ↖       | Home                                   |
+| ↘       | End                                    |
+| ⌧       | Clear                                  |
+| ⇥       | Tab, Tab Right, Horizontal Tab         |
+| ⇤       | Shift Tab, Tab Left, Back-tab          |
+| ␢       | Space, Blank                           |
+| ␣       | Space, Blank                           |
+| ❘⃝      | Power                                  |
+| ⇭       | Num lock                               |
+| ?⃝      | Help                                   |
+|        | Context menu                           |
+
+
 
 ## 功能说明
 
@@ -115,3 +174,47 @@ CapsLock，即大写锁定键，其起源可追溯至打字机时代。打字机
    `Hyper-G： IntelliJ IDEA.app`，`Hyper-⌘G: Clion`，G就是`Great`的意思，所以放了IDE
 
    `Hyper-B`可以放一些别的东西，目前当做了呼叫Emoji窗口的快捷键(`^⇧Space`)。
+
+
+
+## FAQ
+
+* Q： Why using ✱ as symbol of hyper key？
+
+  A：Cause asterisk have the ascii code 42, which is the answer to life, the universe, and everything!  while itself has meaning 'star'. ✱ (Heavy-Asterisk) is a pretty version of `*`(Asterisk). Actually I would choose ☯  if Github could render it properly...
+
+* Q：Why Linux support is missing？
+
+  A：Cause I always use Linux through Terminal of Mac or Windows, so….
+
+* Q：Po主单身吗？
+
+  A：单身！
+
+
+
+## 关于
+
+作者：Vonng(fengruohang@outlook.com)
+
+协议：WTFPL
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/WTFPL_logo.svg/140px-WTFPL_logo.svg.png)
+
+```
+do What The Fuck you want to Public License
+
+Version 1.0, March 2000
+Copyright (C) 2000 Banlu Kemiyatorn (]d).
+136 Nives 7 Jangwattana 14 Laksi Bangkok
+Everyone is permitted to copy and distribute verbatim copies
+of this license document, but changing it is not allowed.
+
+Ok, the purpose of this license is simple
+and you just
+
+DO WHAT THE FUCK YOU WANT TO.
+```
+
+
+

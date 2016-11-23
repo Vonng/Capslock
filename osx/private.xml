@@ -3,12 +3,14 @@
     <!-- Introduction -->
     <item>
         <name style="important">CapsLock Enhancement</name>
+        <appendix></appendix>
         <appendix>Make CapsLock Great Again!</appendix>
-        <appendix>Author: Ruohang Feng(fengruohang@outlook.com)</appendix>
-        <appendix>Source: https://github.com/Vonng/Configuration/blob/master/osx/private.xml</appendix>
-        <appendix>Platform: Mac OS X darwin64 via Karabiner</appendix>
-        <appendix>License: WTFPL</appendix>
-        <appendix>Mapping CapsLock to F19 before enabling these functionality.</appendix>
+        <appendix></appendix>
+        <appendix>※Author: Vonng (fengruohang@outlook.com)</appendix>
+        <appendix>※Document: https://github.com/Vonng/Capslock/tree/master/osx</appendix>
+        <appendix>※Environment: Mac OS X darwin64 via Karabiner</appendix>
+        <appendix>※License: WTFPL</appendix>
+        <appendix>※Prequisite: Maps ⇪CapsLock to F19(KeyCode:80) first. (via Seil)</appendix>
     </item>
 
 
@@ -16,13 +18,24 @@
     <modifierdef>HYPER</modifierdef>
 
 
-    <!-- Capslock to Hyper/Language Switch(Recommend) -->
     <item>
-        <name style="important">CapsLock(F19) to Hyper/Language Switch</name>
-        <appendix>You can only choose one of LanguageSwitch or Escape!</appendix>
-        <appendix>Capslock [Hold] : Hyper</appendix>
-        <appendix>Capslock [Press] : ^SPace (Switch Language)</appendix>
-        <identifier>private.capslock</identifier>
+        <name style="important">CapsLock setup</name>
+        <appendix>Hold CapsLock to Hyper</appendix>
+        <appendix>⇪[Hold] ↦ ✱</appendix>
+        <appendix></appendix>
+        <appendix>Press CapsLock to ?</appendix>
+        <appendix><![CDATA[* ⎋  ESC ]]></appendix>
+        <appendix><![CDATA[* ⌥␢ Language-Switcher]]></appendix>
+    </item>
+
+
+    <!-- CapsLock to Hyper/Language Switcher(Recommend) -->
+    <item>
+        <name>Press CapsLock to Language-Switcher</name>
+        <appendix>⇪[Press] ↦ ⌥␢</appendix>
+
+        <identifier>private.capslock-langswitcher</identifier>
+
         <autogen>
             --KeyOverlaidModifier--
             KeyCode::F19,
@@ -32,13 +45,12 @@
     </item>
 
 
-    <!-- Capslock to Hyper/ESC -->
     <item>
-        <name style="important">CapsLock(F19) to Hyper/Escape</name>
-        <appendix>You can only choose one of LanguageSwitch or Escape!</appendix>
-        <appendix>Capslock [Hold] : Hyper</appendix>
-        <appendix>Capslock [Press] : Escape</appendix>
+        <name>Press CapsLock to Escape</name>
+        <appendix>⇪[Press] ↦ ⎋</appendix>
+
         <identifier>private.capslock-escape</identifier>
+
         <autogen>
             --KeyOverlaidModifier--
             KeyCode::F19,
@@ -50,9 +62,12 @@
 
     <!-- Hyper Escape -->
     <item>
-        <name>Hyper Esc</name>
-        <appendix>Hyper Esc : Escape Hyper back to CapsLock itself</appendix>
+        <name>Hyper Escape</name>
+        <appendix>Escape Hyper back to CapsLock</appendix>
+        <appendix>✱⎋ ↦ ⇪</appendix>
+
         <identifier>private.hyper-escape</identifier>
+
         <autogen>__KeyToKey__ KeyCode::ESCAPE, ModifierFlag::HYPER, KeyCode::CAPSLOCK</autogen>
     </item>
 
@@ -60,11 +75,18 @@
     <!-- Hyper Shifter-->
     <item>
         <name>Hyper Shifter</name>
-        <appendix>Hyper 1234567890-=: +⇧</appendix>
-        <appendix>Hyper ; : ⇧- `_`</appendix>
-        <appendix>Hyper ' : = `=`</appendix>
-        <appendix>Hyper [ : ⇧9 `(`</appendix>
-        <appendix>Hyper ] : ⇧0 `)`</appendix>
+        <appendix>Maps hyper numkeys, minus, equal to corresponding punctuation.</appendix>
+        <appendix>✱[12...-=] ↦ ⇧[12...-=] '!@..._+'</appendix>
+
+        <appendix></appendix>
+        <appendix>Maps Hyper semicolon to low dash</appendix>
+        <appendix>✱; ↦ ⇧- '_'</appendix>
+
+        <appendix></appendix>
+        <appendix>Maps square bracket to round breacket.</appendix>
+        <appendix>✱[ ↦ ⇧9 '('</appendix>
+        <appendix>✱] ↦ ⇧0 ')'</appendix>
+
         <identifier>private.hyper-shifter</identifier>
 
         <autogen>
@@ -127,18 +149,6 @@
             KeyCode::EQUAL, ModifierFlag::HYPER,
             KeyCode::EQUAL, ModifierFlag::SHIFT_L
         </autogen>
-
-        <autogen>
-            --KeyToKey--
-            KeyCode::SEMICOLON, ModifierFlag::HYPER,
-            KeyCode::MINUS , ModifierFlag::SHIFT_R,
-        </autogen>
-        <autogen>
-            --KeyToKey--
-            KeyCode::QUOTE, ModifierFlag::HYPER,
-            KeyCode::EQUAL
-        </autogen>
-
         <autogen>
             --KeyToKey--
             KeyCode::BRACKET_LEFT, ModifierFlag::HYPER,
@@ -153,11 +163,25 @@
     </item>
 
 
-    <!-- Hyper Function-->
+    <!-- Hyper Functional-->
     <item>
-        <name>Hyper Function</name>
-        <appendix>Hyper F1-12 : Corresponding functionality</appendix>
-        <appendix>Require system preference modification: Use F1,F2,etc.. as standard function key</appendix>
+        <name>Hyper Functional</name>
+        <appendix>Maps ✱F[N] to corresponding functionality</appendix>
+        <appendix><![CDATA[✱F1  ↦  BrightnessDown]]></appendix>
+        <appendix><![CDATA[✱F2  ↦  BrightnessUp]]></appendix>
+        <appendix><![CDATA[✱F3  ↦  ExposeAll]]></appendix>
+        <appendix><![CDATA[✱F4  ↦  LaunchPad]]></appendix>
+        <appendix><![CDATA[✱F5  ↦  KeyboardLightDown]]></appendix>
+        <appendix><![CDATA[✱F6  ↦  KeyboardLightUp]]></appendix>
+        <appendix><![CDATA[✱F7  ↦  MusicPrev]]></appendix>
+        <appendix><![CDATA[✱F8  ↦  MusicPlay]]></appendix>
+        <appendix><![CDATA[✱F9  ↦  MusicNext]]></appendix>
+        <appendix><![CDATA[✱F10 ↦  Mute]]></appendix>
+        <appendix><![CDATA[✱F11 ↦  VolumeDown]]></appendix>
+        <appendix><![CDATA[✱F12 ↦  VolumeUp]]></appendix>
+        <appendix></appendix>
+        <appendix>※Hint: Enable system settings: preference -> keyboard -> 'Use F1,F2,etc.. as standard function key'
+        </appendix>
         <identifier>private.hyper-function</identifier>
         <!-- F1 -->
         <autogen>
@@ -179,13 +203,13 @@
 
         <!-- F5 -->
         <autogen>
-            __KeyToKey__ KeyCode::F1, ModifierFlag::HYPER,
+            __KeyToKey__ KeyCode::F5, ModifierFlag::HYPER,
             ConsumerKeyCode::KEYBOARDLIGHT_LOW ,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
         </autogen>
 
         <!-- F6 -->
         <autogen>
-            __KeyToKey__ KeyCode::F2, ModifierFlag::HYPER,
+            __KeyToKey__ KeyCode::F6, ModifierFlag::HYPER,
             ConsumerKeyCode::KEYBOARDLIGHT_HIGH ,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
         </autogen>
 
@@ -231,15 +255,16 @@
     <!-- Hyper Navigator -->
     <item>
         <name>Hyper Navigator</name>
-        <appendix>Hyper H : ←</appendix>
-        <appendix>Hyper J : ↓</appendix>
-        <appendix>Hyper K : ↑</appendix>
-        <appendix>Hyper L : →</appendix>
-        <appendix>Hyper U : PgUp</appendix>
-        <appendix>Hyper I : Home</appendix>
-        <appendix>Hyper O : End</appendix>
-        <appendix>Hyper P : PgDn</appendix>
-        <appendix>Hold additional ⌘(Left) key for selection</appendix>
+        <appendix><![CDATA[✱H ↦ ← (CursorLeft)]]></appendix>
+        <appendix><![CDATA[✱J ↦ ↓ (CursorDown)]]></appendix>
+        <appendix><![CDATA[✱K ↦ ↑ (CursorUp)]]></appendix>
+        <appendix><![CDATA[✱L ↦ → (CursorRight)]]></appendix>
+        <appendix><![CDATA[✱U ↦ ⇞ (PageUp)]]></appendix>
+        <appendix><![CDATA[✱I ↦ ↖ (Home)]]></appendix>
+        <appendix><![CDATA[✱O ↦ ↘ (End)]]></appendix>
+        <appendix><![CDATA[✱P ↦ ⇟ (Pagedown)]]></appendix>
+        <appendix></appendix>
+        <appendix>※Hint: Hold additional ⌘(Left) key for selection</appendix>
         <identifier>private.hyper-navigator</identifier>
 
         <!-- H: Left -->
@@ -343,11 +368,12 @@
     <!-- Hyper Bash Control -->
     <item>
         <name>Hyper Bash-Control</name>
-        <appendix>Hyper Z : ^Z (SIGTSTP)</appendix>
-        <appendix>Hyper X : ^B (Tmux-Prefix)</appendix>
-        <appendix>Hyper C : ^C (SIGINT)</appendix>
-        <appendix>Hyper V : , (VIM Leader)</appendix>
-        <appendix>Hyper D : ^D (EOF)</appendix>
+        <appendix><![CDATA[✱Z ↦ ⌃Z (SIGTSTP)]]></appendix>
+        <appendix><![CDATA[✱X ↦ ⌃B (Tmux-Prefix)]]></appendix>
+        <appendix><![CDATA[✱C ↦ ⌃C (SIGINT)]]></appendix>
+        <appendix><![CDATA[✱V ↦ ,  (VIM Leader)]]></appendix>
+        <appendix><![CDATA[✱D ↦ ⌃D (EOF)]]></appendix>
+
         <identifier>private.hyper-bash-control</identifier>
 
         <!-- ^Z SIGTSTP -->
@@ -395,14 +421,14 @@
 
     <!-- Hyper Window Control -->
     <item>
-        <name>Hyper Window-Control</name>
-        <appendix>Hyper Q : ⌘Q (Close Window)</appendix>
-        <appendix>Hyper W : ⌘W (Close Tab)</appendix>
-        <appendix>Hyper A : ⌘⌥⇧⌃A (Moom-Prefix)</appendix>
-        <appendix>Hyper ⌘A : Desktop</appendix>
-        <appendix>Hyper S : ^Tab (Switch Tab)</appendix>
-        <appendix>Hyper ⌘S : ^⇧Tab (Switch Tab Reverse)</appendix>
-        <identifier>private.hyper-window-control</identifier>
+        <name>Hyper Window-Manipulation</name>
+        <appendix><![CDATA[✱Q  ↦ ⌘Q    (Close Window)]]></appendix>
+        <appendix><![CDATA[✱W  ↦ ⌘W    (Close Tab)]]></appendix>
+        <appendix><![CDATA[✱A  ↦ ⌃⌥⇧⌘A (Moom Prefix)]]></appendix>
+        <appendix><![CDATA[✱⌘A ↦ F11   (Desktop)]]></appendix>
+        <appendix><![CDATA[✱S  ↦ ⌃⇥    (Tab Switch)]]></appendix>
+        <appendix><![CDATA[✱⌘S ↦ ⌃⇧⇥   (Reverse Tab Switch)]]></appendix>
+        <identifier>private.hyper-window-manipulation</identifier>
 
         <!-- ⌘Q: Quit Window -->
         <autogen>
@@ -448,10 +474,10 @@
     <!-- Hyper Deletion -->
     <item>
         <name>Hyper Deletion</name>
-        <appendix>Hyper N : ⌥Del (Delete a word ahead)</appendix>
-        <appendix>Hyper M : Del (Delete a char ahead)</appendix>
-        <appendix>Hyper , : ForwardDel (Delete a char after)</appendix>
-        <appendix>Hyper . : ⌥ForwardDel(Delete a char after)</appendix>
+        <appendix><![CDATA[✱N ↦ ⌥⌫ (Delete a word ahead)]]></appendix>
+        <appendix><![CDATA[✱M ↦ ⌫  (Delete a char ahead)]]></appendix>
+        <appendix><![CDATA[✱, ↦ ⌦  (Forward Delete a char)]]></appendix>
+        <appendix><![CDATA[✱. ↦ ⌥⌦ (Forward Delete a word)]]></appendix>
         <identifier>private.hyper-deletion</identifier>
 
         <autogen>
@@ -481,15 +507,30 @@
     <!--Hyper Application-->
     <item>
         <name>Hyper Application</name>
-        <appendix>* Hyper E : Google Chrome</appendix>
-        <appendix>* Hyper ⌘E : Finder</appendix>
-        <appendix>* Hyper R : iTerm</appendix>
-        <appendix>* Hyper ⌘R : ^R (Run)</appendix>
-        <appendix>* Hyper T : Sublime Text</appendix>
-        <appendix>* Hyper ⌘T : Typora</appendix>
-        <appendix>* Hyper F : Dash</appendix>
-        <appendix>* Hyper ⌘F : Dictionary</appendix>
-        <appendix>* Hyper G : Intellij IDEA</appendix>~
+        <appendix></appendix>
+        <appendix>E: Explore</appendix>
+        <appendix><![CDATA[✱E  ↦ Google Chrome]]></appendix>
+        <appendix><![CDATA[✱⌘E ↦ Finder]]></appendix>
+
+        <appendix></appendix>
+        <appendix>R: Run</appendix>
+        <appendix><![CDATA[✱R  ↦ iTerm]]></appendix>
+        <appendix><![CDATA[✱⌘R ↦ ^R (IDE-Run)]]></appendix>
+
+        <appendix></appendix>
+        <appendix>T: Text</appendix>
+        <appendix><![CDATA[✱T  ↦ Sublime Text]]></appendix>
+        <appendix><![CDATA[✱⌘T ↦ Typora]]></appendix>
+
+        <appendix></appendix>
+        <appendix>F: Find</appendix>
+        <appendix><![CDATA[✱F  ↦ Dash]]></appendix>
+        <appendix><![CDATA[✱⌘F ↦ Dictionary]]></appendix>
+
+        <appendix></appendix>
+        <appendix>G: Grand</appendix>
+        <appendix><![CDATA[✱G  ↦ Intellij IDEA]]></appendix>
+        <appendix><![CDATA[✱G  ↦ CLion]]></appendix>
         <identifier>private.hyper-application</identifier>
 
         <!--Define your own application here-->
@@ -508,6 +549,10 @@
         <vkopenurldef>
             <name>KeyCode::VK_OPEN_URL_APP_INTELLIJ_IDEA</name>
             <url type="file">/Applications/IntelliJ IDEA.app/</url>
+        </vkopenurldef>
+        <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APP_CLion</name>
+            <url type="file">/Applications/CLion.app/</url>
         </vkopenurldef>
         <vkopenurldef>
             <name>KeyCode::VK_OPEN_URL_APP_Dash</name>
@@ -551,15 +596,22 @@
             KeyCode::T, ModifierFlag::HYPER,
             KeyCode::VK_OPEN_URL_APP_Sublime_Text
         </autogen>
+
         <autogen>
             --KeyToKey--
-            KeyCode::F, ModifierFlag::HYPER | ModifierFlag::COMMAND_L ,
+            KeyCode::F, ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
             KeyCode::VK_OPEN_URL_APP_Dictionary
         </autogen>
         <autogen>
             --KeyToKey--
             KeyCode::F, ModifierFlag::HYPER,
             KeyCode::VK_OPEN_URL_APP_Dash
+        </autogen>
+
+        <autogen>
+            --KeyToKey--
+            KeyCode::G, ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
+            KeyCode::VK_OPEN_URL_APP_CLion
         </autogen>
         <autogen>
             --KeyToKey--
@@ -573,9 +625,11 @@
     <!-- Hyper Other -->
     <item>
         <name>Hyper Other</name>
-        <appendix>Hyper / : ^/ (Comment)</appendix>
-        <appendix>Hyper ` : Save selected area image to desktop</appendix>
-        <appendix>Hyper Space : ESCAPE</appendix>
+        <appendix><![CDATA[✱\  ↦ ⌃/   (Comment/Uncomment)]]></appendix>
+        <appendix><![CDATA[✱`  ↦ ⌃⇧4  (ScreenShot by area)]]></appendix>
+        <appendix><![CDATA[✱⌘` ↦ ⌃⇧⌘4 (ScreenShot by area to file)]]></appendix>
+        <appendix><![CDATA[✱;  ↦ ⇧-   (Low dash:'_')]]></appendix>
+        <appendix><![CDATA[✱␢  ↦ ⎋    (Escape)]]></appendix>
         <identifier>private.hyper-other</identifier>
 
         <autogen>
@@ -586,49 +640,78 @@
 
         <autogen>
             --KeyToKey--
-            KeyCode::SPACE, ModifierFlag::HYPER,
-            KeyCode::ESCAPE
+            KeyCode::BACKQUOTE, ModifierFlag::HYPER,
+            KeyCode::4, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L | ModifierFlag::COMMAND_L
         </autogen>
 
         <autogen>
             --KeyToKey--
-            KeyCode::BACKQUOTE, ModifierFlag::HYPER,
+            KeyCode::BACKQUOTE, ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
             KeyCode::4, ModifierFlag::SHIFT_L | ModifierFlag::COMMAND_L
         </autogen>
+
+        <autogen>
+            --KeyToKey--
+            KeyCode::SEMICOLON, ModifierFlag::HYPER,
+            KeyCode::MINUS , ModifierFlag::SHIFT_R,
+        </autogen>
+
+        <autogen>
+            --KeyToKey--
+            KeyCode::QUOTE, ModifierFlag::HYPER,
+            KeyCode::EQUAL
+        </autogen>
+
+        <autogen>
+            --KeyToKey--
+            KeyCode::SPACE, ModifierFlag::HYPER,
+            KeyCode::ESCAPE
+        </autogen>
+
+
     </item>
 
 
-    <!-- Hyper Media Control-->
+    <!-- Hyper Special Control-->
     <item>
-        <name>Hyper Media Control</name>
-        <appendix>Hyper End : ⇧⌥F1 (Fine grained brightness down)</appendix>
-        <appendix>Hyper Home : ⇧⌥F2 (Fine grained brightness up)</appendix>
-        <appendix>Hyper PgDn : ⇧⌥F11 (Fine grained volume down)</appendix>
-        <appendix>Hyper PgUp : ⇧⌥F12 (Fine grained volume up)</appendix>
+        <name>Hyper Special to fine grained functional keys</name>
+        <appendix><![CDATA[✱Ins ↦ ⇧⌥F1  (Fine grained brightness down)]]></appendix>
+        <appendix><![CDATA[✱Del ↦ ⇧⌥F2  (Fine grained brightness up)]]></appendix>
+        <appendix><![CDATA[✱↘   ↦ ⇧⌥F5  (Fine grained keyboard light down)]]></appendix>
+        <appendix><![CDATA[✱↖   ↦ ⇧⌥F6  (Fine grained keyboard light up)]]></appendix>
+        <appendix><![CDATA[✱⇟   ↦ ⇧⌥F11 (Fine grained volume down)]]></appendix>
+        <appendix><![CDATA[✱⇞   ↦ ⇧⌥F12 (Fine grained volume up)]]></appendix>
 
-        <identifier>private.hyper-media-control</identifier>
+        <identifier>private.hyper-special</identifier>
+
+        <!-- Brightness: Insert/Delete -->
+        <autogen>
+            __KeyToKey__ KeyCode::PC_INSERT, ModifierFlag::HYPER,
+            ConsumerKeyCode::BRIGHTNESS_UP,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
+        </autogen>
+        <autogen>
+            __KeyToKey__ KeyCode::PC_DEL, ModifierFlag::HYPER,
+            ConsumerKeyCode::BRIGHTNESS_DOWN,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
+        </autogen>
+
+        <!-- Keyboard Light: Home/End -->
+        <autogen>
+            __KeyToKey__ KeyCode::HOME, ModifierFlag::HYPER,
+            ConsumerKeyCode::KEYBOARDLIGHT_LOW,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
+        </autogen>
+        <autogen>
+            __KeyToKey__ KeyCode::END, ModifierFlag::HYPER,
+            ConsumerKeyCode::KEYBOARDLIGHT_HIGH,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
+        </autogen>
+
         <!-- PgUp -->
         <autogen>
             __KeyToKey__ KeyCode::PAGEUP, ModifierFlag::HYPER,
             ConsumerKeyCode::VOLUME_UP,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
         </autogen>
-
-        <!-- PgDn -->
         <autogen>
             __KeyToKey__ KeyCode::PAGEDOWN, ModifierFlag::HYPER,
             ConsumerKeyCode::VOLUME_DOWN,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
-        </autogen>
-
-        <!-- Home -->
-        <autogen>
-            __KeyToKey__ KeyCode::HOME, ModifierFlag::HYPER,
-            ConsumerKeyCode::BRIGHTNESS_UP,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
-        </autogen>
-
-        <!-- End -->
-        <autogen>
-            __KeyToKey__ KeyCode::END, ModifierFlag::HYPER,
-            ConsumerKeyCode::BRIGHTNESS_DOWN,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
         </autogen>
     </item>
 
@@ -636,12 +719,12 @@
     <!-- Hyper Mouse key -->
     <item>
         <name>Hyper MouseKey</name>
-        <appendix>Hyper ↑ : MouseUp</appendix>
-        <appendix>Hyper ↓ : MouseDown</appendix>
-        <appendix>Hyper ← : MouseLeft</appendix>
-        <appendix>Hyper → : MouseRight</appendix>
-        <appendix>Hyper Return : Mouse LButton Click</appendix>
-        <appendix>Hyper \ : Mouse RButton Click</appendix>
+        <appendix><![CDATA[✱↑ ↦ MouseUp]]></appendix>
+        <appendix><![CDATA[✱↓ ↦ MouseDown]]></appendix>
+        <appendix><![CDATA[✱← ↦ MouseLeft]]></appendix>
+        <appendix><![CDATA[✱→ ↦ MouseRight]]></appendix>
+        <appendix><![CDATA[✱↩ ↦ MouseLButton]]></appendix>
+        <appendix><![CDATA[✱\ ↦ MouseRButton]]></appendix>
         <identifier>private.hyper-mousekey</identifier>
 
 
