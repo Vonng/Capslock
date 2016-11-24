@@ -93,7 +93,102 @@
 
 以Mac版本为例：
 
-![](images/function-spec.png)
+![](images/keyboard-layout.png)
+
+### 右手核心区
+
+* 基本映射
+  * 按住⇪CapsLock，映射为✱ Hyper
+  * 按下⇪CapsLock，映射为⌥␢ 输入法切换（二选一，默认）
+  * 按下⇪CapsLock，映射为⎋  ESC （二选一）
+* 导航键映射
+  * 按下✱ Hyper启用光标移动，按下✱⌘时启用光标选择
+  * `✱H ↦ ←` (VI导航键：✱H映射为左)
+  * `✱J ↦ ↓`  (VI导航键：✱J映射为左)
+  * `✱K ↦ ↑`  (VI导航键：✱K映射为左)
+  * `✱L ↦ →`  (VI导航键：✱L映射为右)
+  * `✱U ↦ ⇞`  (✱U映射为PageUp)
+  * `✱I ↦ ↖` (✱I映射为Home)
+  * `✱O ↦ ↘` (✱O映射为End)
+  * `✱P ↦ ⇟`  (✱P映射为Pagedown)
+* 删除键
+  * `✱N ↦ ⌥⌫` (删除光标左侧一个单词)
+  * `✱M ↦ ⌫`     (删除光标左侧一个字符)
+  * `✱, ↦ ⌦`     (删除光标右侧一个字符)
+  * `✱. ↦ ⌥⌦` (删除光标右侧一个单词) 
+
+### 左手核心区
+* 窗口操作
+  * `✱Q  ↦ ⌘Q`            (关闭窗口)
+  * `✱W  ↦ ⌘W`            (关闭标签页)
+  * `✱A  ↦ ⌃⌥⇧⌘A` (Moom-Meta键，※一个[窗口操作软件](https://manytricks.com/moom/))
+  * `✱⌘A ↦ F11`         (回到桌面)
+  * `✱S  ↦ ⌃⇥`           (切换标签页)
+  * `✱⌘S ↦ ⌃⇧⇥`     (反向切换标签页 )
+* Bash控制
+  * `✱Z ↦ ⌃Z` (作业停止信号：SIGTSTP))
+  * `✱X ↦ ⌃B` (Tmux-Prefix，※一个[终端复用软件](http://tmux.github.io/))
+  * `✱C ↦ ⌃C` (作业中断信号：SIGINT)
+  * `✱V ↦ , `  (Vim-Leader键)
+  * `✱D ↦ ⌃D` (发送EOF)
+* 应用快捷方式
+  * `✱E  ↦ Google Chrome`
+  * `✱⌘E ↦ Finder`
+  * `✱R  ↦ iTerm`
+  * `✱⌘R ↦ ^R (IDE-Run)`
+  * `✱T  ↦ Sublime Text`
+  * `✱⌘T ↦ Typora`
+  * `✱F  ↦ Dash`
+  * `✱⌘F ↦ Dictionary`
+  * `✱G  ↦ IntelliJ IDEA`
+  * `✱G  ↦ CLion`
+
+### 键盘第一行：功能键
+* 功能键映射
+  * `✱F1  ↦  BrightnessDown`
+  * `✱F2  ↦  BrightnessUp`
+  * `✱F3  ↦  ExposeAll`
+  * `✱F4  ↦  LaunchPad`
+  * `✱F5  ↦  KeyboardLightDown`
+  * `✱F6  ↦  KeyboardLightUp`
+  * `✱F7  ↦  MusicPrev`
+  * `✱F8  ↦  MusicPlay`
+  * `✱F9  ↦  MusicNext`
+  * `✱F10 ↦  Mute`
+  * `✱F11 ↦  VolumeDown`
+  * `✱F12 ↦  VolumeUp`
+
+### 键盘第二行：数字键
+* 上档键映射
+  * `✱[12...-=] ↦ ⇧[12...-=]` (将✱数字键、✱减号、✱等于号上档为对应符号)
+  * `✱[] ↦ ⇧90 '()'`  (将✱方括号映射为圆括号)
+  * `✱'  ↦ ⇧-  '_' `  (将✱单引号映射为下划线)
+
+### 主键区其他按键
+* 主键区其他杂项
+  * `✱\  ↦ ⌃/`       (✱斜杠 映射为注释/解注释)
+  * `✱`  ↦ ⌃⇧⌘4` (✱反引号 映射为选取截图区域并存储)
+  * `✱⌘` ↦ ⌃⇧4`  (✱⌘反引号 映射为选取截图区域至剪贴板)
+  * `✱'  ↦ =`           (✱单引号 映射为等于号)
+  * `✱␢  ↦ ⎋`         (✱空格 映射为ESC)
+
+### 特殊键区
+* PC键盘特殊按键映射
+  * `✱Ins ↦ ⇧⌥F1`  (✱Insert 微调提升屏幕亮度)
+  * `✱Del ↦ ⇧⌥F2`  (✱Delete 微调降低屏幕亮度)
+  * `✱↘   ↦ ⇧⌥F5` (✱Home 微调提升键盘背光亮度)
+  * `✱↖   ↦ ⇧⌥F6` (✱End 微调降低键盘背光亮度)
+  * `✱⇟   ↦ ⇧⌥F11` (✱PgUp 微调提升音量)
+  * `✱⇞   ↦ ⇧⌥F12` (✱PgDn 微调降低音量)
+* 光标键映射
+  * `✱↑ ↦ MouseUp`
+  * `✱↓ ↦ MouseDown`
+  * `✱← ↦ MouseLeft`
+  * `✱→ ↦ MouseRight`
+  * `✱↩ ↦ MouseLButton`
+  * `✱\ ↦ MouseRButton`
+
+## 设计原理
 
 1. `CapsLock`单独按下与长按的区分
 
