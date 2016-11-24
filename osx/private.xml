@@ -45,6 +45,7 @@
     </item>
 
 
+    <!-- CapsLock to Escape -->
     <item>
         <name>Press CapsLock to Escape</name>
         <appendix>⇪[Press] ↦ ⎋</appendix>
@@ -57,198 +58,6 @@
             KeyCode::VK_MODIFIER_HYPER,
             KeyCode::ESCAPE
         </autogen>
-    </item>
-
-
-    <!-- Hyper Escape -->
-    <item>
-        <name>Hyper Escape</name>
-        <appendix>Escape Hyper back to CapsLock</appendix>
-        <appendix>✱⎋ ↦ ⇪</appendix>
-
-        <identifier>private.hyper-escape</identifier>
-
-        <autogen>__KeyToKey__ KeyCode::ESCAPE, ModifierFlag::HYPER, KeyCode::CAPSLOCK</autogen>
-    </item>
-
-
-    <!-- Hyper Shifter-->
-    <item>
-        <name>Hyper Shifter</name>
-        <appendix>Maps hyper numkeys, minus, equal to corresponding punctuation.</appendix>
-        <appendix>✱[12...-=] ↦ ⇧[12...-=] '!@..._+'</appendix>
-
-        <appendix></appendix>
-        <appendix>Maps Hyper semicolon to low dash</appendix>
-        <appendix>✱; ↦ ⇧- '_'</appendix>
-
-        <appendix></appendix>
-        <appendix>Maps square bracket to round breacket.</appendix>
-        <appendix>✱[ ↦ ⇧9 '('</appendix>
-        <appendix>✱] ↦ ⇧0 ')'</appendix>
-
-        <identifier>private.hyper-shifter</identifier>
-
-        <autogen>
-            --KeyToKey--
-            KeyCode::1, ModifierFlag::HYPER,
-            KeyCode::1, ModifierFlag::SHIFT_L
-        </autogen>
-        <autogen>
-            --KeyToKey--
-            KeyCode::2, ModifierFlag::HYPER,
-            KeyCode::2, ModifierFlag::SHIFT_L
-        </autogen>
-        <autogen>
-            --KeyToKey--
-            KeyCode::3, ModifierFlag::HYPER,
-            KeyCode::3, ModifierFlag::SHIFT_L
-        </autogen>
-        <autogen>
-            --KeyToKey--
-            KeyCode::4, ModifierFlag::HYPER,
-            KeyCode::4, ModifierFlag::SHIFT_L
-        </autogen>
-        <autogen>
-            --KeyToKey--
-            KeyCode::5, ModifierFlag::HYPER,
-            KeyCode::5, ModifierFlag::SHIFT_L
-        </autogen>
-        <autogen>
-            --KeyToKey--
-            KeyCode::6, ModifierFlag::HYPER,
-            KeyCode::6, ModifierFlag::SHIFT_L
-        </autogen>
-        <autogen>
-            --KeyToKey--
-            KeyCode::7, ModifierFlag::HYPER,
-            KeyCode::7, ModifierFlag::SHIFT_L
-        </autogen>
-        <autogen>
-            --KeyToKey--
-            KeyCode::8, ModifierFlag::HYPER,
-            KeyCode::8, ModifierFlag::SHIFT_L
-        </autogen>
-        <autogen>
-            --KeyToKey--
-            KeyCode::9, ModifierFlag::HYPER,
-            KeyCode::9, ModifierFlag::SHIFT_L
-        </autogen>
-        <autogen>
-            --KeyToKey--
-            KeyCode::0, ModifierFlag::HYPER,
-            KeyCode::0, ModifierFlag::SHIFT_L
-        </autogen>
-        <autogen>
-            --KeyToKey--
-            KeyCode::MINUS, ModifierFlag::HYPER,
-            KeyCode::MINUS, ModifierFlag::SHIFT_L
-        </autogen>
-        <autogen>
-            --KeyToKey--
-            KeyCode::EQUAL, ModifierFlag::HYPER,
-            KeyCode::EQUAL, ModifierFlag::SHIFT_L
-        </autogen>
-        <autogen>
-            --KeyToKey--
-            KeyCode::BRACKET_LEFT, ModifierFlag::HYPER,
-            KeyCode::9 , ModifierFlag::SHIFT_R,
-        </autogen>
-        <autogen>
-            --KeyToKey--
-            KeyCode::BRACKET_RIGHT, ModifierFlag::HYPER,
-            KeyCode::0 , ModifierFlag::SHIFT_R,
-        </autogen>
-
-    </item>
-
-
-    <!-- Hyper Functional-->
-    <item>
-        <name>Hyper Functional</name>
-        <appendix>Maps ✱F[N] to corresponding functionality</appendix>
-        <appendix><![CDATA[✱F1  ↦  BrightnessDown]]></appendix>
-        <appendix><![CDATA[✱F2  ↦  BrightnessUp]]></appendix>
-        <appendix><![CDATA[✱F3  ↦  ExposeAll]]></appendix>
-        <appendix><![CDATA[✱F4  ↦  LaunchPad]]></appendix>
-        <appendix><![CDATA[✱F5  ↦  KeyboardLightDown]]></appendix>
-        <appendix><![CDATA[✱F6  ↦  KeyboardLightUp]]></appendix>
-        <appendix><![CDATA[✱F7  ↦  MusicPrev]]></appendix>
-        <appendix><![CDATA[✱F8  ↦  MusicPlay]]></appendix>
-        <appendix><![CDATA[✱F9  ↦  MusicNext]]></appendix>
-        <appendix><![CDATA[✱F10 ↦  Mute]]></appendix>
-        <appendix><![CDATA[✱F11 ↦  VolumeDown]]></appendix>
-        <appendix><![CDATA[✱F12 ↦  VolumeUp]]></appendix>
-        <appendix></appendix>
-        <appendix>※Hint: Enable system settings: preference -> keyboard -> 'Use F1,F2,etc.. as standard function key'
-        </appendix>
-        <identifier>private.hyper-function</identifier>
-        <!-- F1 -->
-        <autogen>
-            __KeyToKey__ KeyCode::F1, ModifierFlag::HYPER,
-            ConsumerKeyCode::BRIGHTNESS_DOWN ,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
-        </autogen>
-
-        <!-- F2 -->
-        <autogen>
-            __KeyToKey__ KeyCode::F2, ModifierFlag::HYPER,
-            ConsumerKeyCode::BRIGHTNESS_UP ,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
-        </autogen>
-
-        <!-- F3 -->
-        <autogen>__KeyToKey__ KeyCode::F3, ModifierFlag::HYPER, KeyCode::EXPOSE_ALL</autogen>
-
-        <!-- F4 -->
-        <autogen>__KeyToKey__ KeyCode::F4, ModifierFlag::HYPER, KeyCode::LAUNCHPAD</autogen>
-
-        <!-- F5 -->
-        <autogen>
-            __KeyToKey__ KeyCode::F5, ModifierFlag::HYPER,
-            ConsumerKeyCode::KEYBOARDLIGHT_LOW ,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
-        </autogen>
-
-        <!-- F6 -->
-        <autogen>
-            __KeyToKey__ KeyCode::F6, ModifierFlag::HYPER,
-            ConsumerKeyCode::KEYBOARDLIGHT_HIGH ,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
-        </autogen>
-
-        <!-- F7 -->
-        <autogen>
-            __KeyToKey__ KeyCode::F7, ModifierFlag::HYPER,
-            ConsumerKeyCode::MUSIC_PREV
-        </autogen>
-
-        <!-- F8 -->
-        <autogen>
-            __KeyToKey__ KeyCode::F8, ModifierFlag::HYPER,
-            ConsumerKeyCode::MUSIC_PLAY
-        </autogen>
-
-        <!-- F9 -->
-        <autogen>
-            __KeyToKey__ KeyCode::F9, ModifierFlag::HYPER,
-            ConsumerKeyCode::MUSIC_NEXT
-        </autogen>
-
-        <!-- F10 -->
-        <autogen>
-            __KeyToKey__ KeyCode::F10, ModifierFlag::HYPER,
-            ConsumerKeyCode::VOLUME_MUTE
-        </autogen>
-
-        <!-- F11 -->
-        <autogen>
-            __KeyToKey__ KeyCode::F11, ModifierFlag::HYPER,
-            ConsumerKeyCode::VOLUME_DOWN,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
-        </autogen>
-
-        <!-- F12 -->
-        <autogen>
-            __KeyToKey__ KeyCode::F12, ModifierFlag::HYPER,
-            ConsumerKeyCode::VOLUME_UP,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
-        </autogen>
-
     </item>
 
 
@@ -365,6 +174,105 @@
     </item>
 
 
+    <!-- Hyper Deletion -->
+    <item>
+        <name>Hyper Deletion</name>
+        <appendix><![CDATA[✱N ↦ ⌥⌫ (Delete a word ahead)]]></appendix>
+        <appendix><![CDATA[✱M ↦ ⌫  (Delete a char ahead)]]></appendix>
+        <appendix><![CDATA[✱, ↦ ⌦  (Forward Delete a char)]]></appendix>
+        <appendix><![CDATA[✱. ↦ ⌥⌦ (Forward Delete a word)]]></appendix>
+        <identifier>private.hyper-deletion</identifier>
+
+        <autogen>
+            --KeyToKey--
+            KeyCode::N, ModifierFlag::HYPER,
+            KeyCode::DELETE, ModifierFlag::OPTION_L,
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::M,ModifierFlag::HYPER,
+            KeyCode::DELETE
+        </autogen>
+
+        <autogen>
+            --KeyToKey--
+            KeyCode::COMMA,ModifierFlag::HYPER,
+            KeyCode::FORWARD_DELETE
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::DOT,ModifierFlag::HYPER,
+            KeyCode::FORWARD_DELETE, ModifierFlag::OPTION_L
+        </autogen>
+    </item>
+
+
+    <!-- Hyper Window Control -->
+    <item>
+        <name>Hyper Window-Manipulation</name>
+        <appendix><![CDATA[✱Q  ↦ ⌘Q    (Close Window)]]></appendix>
+        <appendix><![CDATA[✱W  ↦ ⌘W    (Close Tab)]]></appendix>
+        <appendix><![CDATA[✱A  ↦ ⌃⌥⇧⌘A (Moom Prefix)]]></appendix>
+        <appendix><![CDATA[✱⌘A ↦ F11   (Desktop)]]></appendix>
+        <appendix><![CDATA[✱S  ↦ ⌃⇥    (Tab Switch)]]></appendix>
+        <appendix><![CDATA[✱⌘S ↦ ⌃⇧⇥   (Reverse Tab Switch)]]></appendix>
+        <identifier>private.hyper-window-manipulation</identifier>
+
+        <!-- ✱Tab to SwitchTab-->
+        <autogen>
+            --KeyToKey--
+            KeyCode::TAB, ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
+            KeyCode::TAB,ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L
+        </autogen>
+
+        <!-- ✱⌘Tab to Reverse SwitchTab-->
+        <autogen>
+            --KeyToKey--
+            KeyCode::TAB, ModifierFlag::HYPER,
+            KeyCode::TAB,ModifierFlag::CONTROL_L
+        </autogen>
+
+        <!-- ⌘Q: Quit Window -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::Q, ModifierFlag::HYPER,
+            KeyCode::Q, ModifierFlag::COMMAND_L
+        </autogen>
+
+        <!-- ⌘W Close Tab -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::W, ModifierFlag::HYPER ,
+            KeyCode::W, ModifierFlag::COMMAND_L
+        </autogen>
+
+        <!-- Hyper-A Moom-Prefix (Set to Physical Hyper-A) -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::A,ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
+            KeyCode::F11
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::A,ModifierFlag::HYPER ,
+            KeyCode::A,ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L | ModifierFlag::CONTROL_L |
+            ModifierFlag::SHIFT_L
+        </autogen>
+
+        <!-- ^Tab: Switch Tag -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::S,ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
+            KeyCode::TAB,ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::S,ModifierFlag::HYPER,
+            KeyCode::TAB,ModifierFlag::CONTROL_L
+        </autogen>
+    </item>
+
+
     <!-- Hyper Bash Control -->
     <item>
         <name>Hyper Bash-Control</name>
@@ -416,91 +324,6 @@
             KeyCode::D, ModifierFlag::CONTROL_L
         </autogen>
 
-    </item>
-
-
-    <!-- Hyper Window Control -->
-    <item>
-        <name>Hyper Window-Manipulation</name>
-        <appendix><![CDATA[✱Q  ↦ ⌘Q    (Close Window)]]></appendix>
-        <appendix><![CDATA[✱W  ↦ ⌘W    (Close Tab)]]></appendix>
-        <appendix><![CDATA[✱A  ↦ ⌃⌥⇧⌘A (Moom Prefix)]]></appendix>
-        <appendix><![CDATA[✱⌘A ↦ F11   (Desktop)]]></appendix>
-        <appendix><![CDATA[✱S  ↦ ⌃⇥    (Tab Switch)]]></appendix>
-        <appendix><![CDATA[✱⌘S ↦ ⌃⇧⇥   (Reverse Tab Switch)]]></appendix>
-        <identifier>private.hyper-window-manipulation</identifier>
-
-        <!-- ⌘Q: Quit Window -->
-        <autogen>
-            --KeyToKey--
-            KeyCode::Q, ModifierFlag::HYPER,
-            KeyCode::Q, ModifierFlag::COMMAND_L
-        </autogen>
-
-        <!-- ⌘W Close Tab -->
-        <autogen>
-            --KeyToKey--
-            KeyCode::W, ModifierFlag::HYPER ,
-            KeyCode::W, ModifierFlag::COMMAND_L
-        </autogen>
-
-        <!-- Hyper-A Moom-Prefix (Set to Physical Hyper-A) -->
-        <autogen>
-            --KeyToKey--
-            KeyCode::A,ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
-            KeyCode::F11
-        </autogen>
-        <autogen>
-            --KeyToKey--
-            KeyCode::A,ModifierFlag::HYPER ,
-            KeyCode::A,ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L | ModifierFlag::CONTROL_L |
-            ModifierFlag::SHIFT_L
-        </autogen>
-
-        <!-- ^Tab: Switch Tag -->
-        <autogen>
-            --KeyToKey--
-            KeyCode::S,ModifierFlag::HYPER, ModifierFlag::COMMAND_L,
-            KeyCode::TAB,ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L
-        </autogen>
-        <autogen>
-            --KeyToKey--
-            KeyCode::S,ModifierFlag::HYPER,
-            KeyCode::TAB,ModifierFlag::CONTROL_L
-        </autogen>
-    </item>
-
-
-    <!-- Hyper Deletion -->
-    <item>
-        <name>Hyper Deletion</name>
-        <appendix><![CDATA[✱N ↦ ⌥⌫ (Delete a word ahead)]]></appendix>
-        <appendix><![CDATA[✱M ↦ ⌫  (Delete a char ahead)]]></appendix>
-        <appendix><![CDATA[✱, ↦ ⌦  (Forward Delete a char)]]></appendix>
-        <appendix><![CDATA[✱. ↦ ⌥⌦ (Forward Delete a word)]]></appendix>
-        <identifier>private.hyper-deletion</identifier>
-
-        <autogen>
-            --KeyToKey--
-            KeyCode::N, ModifierFlag::HYPER,
-            KeyCode::DELETE, ModifierFlag::OPTION_L,
-        </autogen>
-        <autogen>
-            --KeyToKey--
-            KeyCode::M,ModifierFlag::HYPER,
-            KeyCode::DELETE
-        </autogen>
-
-        <autogen>
-            --KeyToKey--
-            KeyCode::COMMA,ModifierFlag::HYPER,
-            KeyCode::FORWARD_DELETE
-        </autogen>
-        <autogen>
-            --KeyToKey--
-            KeyCode::DOT,ModifierFlag::HYPER,
-            KeyCode::FORWARD_DELETE, ModifierFlag::OPTION_L
-        </autogen>
     </item>
 
 
@@ -622,50 +445,247 @@
     </item>
 
 
+    <!-- Hyper Functional-->
+    <item>
+        <name>Hyper Functional</name>
+        <appendix>Maps ✱F[N] to corresponding functionality</appendix>
+        <appendix><![CDATA[✱F1  ↦  BrightnessDown]]></appendix>
+        <appendix><![CDATA[✱F2  ↦  BrightnessUp]]></appendix>
+        <appendix><![CDATA[✱F3  ↦  ExposeAll]]></appendix>
+        <appendix><![CDATA[✱F4  ↦  LaunchPad]]></appendix>
+        <appendix><![CDATA[✱F5  ↦  KeyboardLightDown]]></appendix>
+        <appendix><![CDATA[✱F6  ↦  KeyboardLightUp]]></appendix>
+        <appendix><![CDATA[✱F7  ↦  MusicPrev]]></appendix>
+        <appendix><![CDATA[✱F8  ↦  MusicPlay]]></appendix>
+        <appendix><![CDATA[✱F9  ↦  MusicNext]]></appendix>
+        <appendix><![CDATA[✱F10 ↦  Mute]]></appendix>
+        <appendix><![CDATA[✱F11 ↦  VolumeDown]]></appendix>
+        <appendix><![CDATA[✱F12 ↦  VolumeUp]]></appendix>
+        <appendix></appendix>
+        <appendix>※Hint: Enable system settings: preference -> keyboard -> 'Use F1,F2,etc.. as standard function key'
+        </appendix>
+        <identifier>private.hyper-function</identifier>
+        <!-- F1 -->
+        <autogen>
+            __KeyToKey__ KeyCode::F1, ModifierFlag::HYPER,
+            ConsumerKeyCode::BRIGHTNESS_DOWN ,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
+        </autogen>
+
+        <!-- F2 -->
+        <autogen>
+            __KeyToKey__ KeyCode::F2, ModifierFlag::HYPER,
+            ConsumerKeyCode::BRIGHTNESS_UP ,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
+        </autogen>
+
+        <!-- F3 -->
+        <autogen>__KeyToKey__ KeyCode::F3, ModifierFlag::HYPER, KeyCode::EXPOSE_ALL</autogen>
+
+        <!-- F4 -->
+        <autogen>__KeyToKey__ KeyCode::F4, ModifierFlag::HYPER, KeyCode::LAUNCHPAD</autogen>
+
+        <!-- F5 -->
+        <autogen>
+            __KeyToKey__ KeyCode::F5, ModifierFlag::HYPER,
+            ConsumerKeyCode::KEYBOARDLIGHT_LOW ,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
+        </autogen>
+
+        <!-- F6 -->
+        <autogen>
+            __KeyToKey__ KeyCode::F6, ModifierFlag::HYPER,
+            ConsumerKeyCode::KEYBOARDLIGHT_HIGH ,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
+        </autogen>
+
+        <!-- F7 -->
+        <autogen>
+            __KeyToKey__ KeyCode::F7, ModifierFlag::HYPER,
+            ConsumerKeyCode::MUSIC_PREV
+        </autogen>
+
+        <!-- F8 -->
+        <autogen>
+            __KeyToKey__ KeyCode::F8, ModifierFlag::HYPER,
+            ConsumerKeyCode::MUSIC_PLAY
+        </autogen>
+
+        <!-- F9 -->
+        <autogen>
+            __KeyToKey__ KeyCode::F9, ModifierFlag::HYPER,
+            ConsumerKeyCode::MUSIC_NEXT
+        </autogen>
+
+        <!-- F10 -->
+        <autogen>
+            __KeyToKey__ KeyCode::F10, ModifierFlag::HYPER,
+            ConsumerKeyCode::VOLUME_MUTE
+        </autogen>
+
+        <!-- F11 -->
+        <autogen>
+            __KeyToKey__ KeyCode::F11, ModifierFlag::HYPER,
+            ConsumerKeyCode::VOLUME_DOWN,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
+        </autogen>
+
+        <!-- F12 -->
+        <autogen>
+            __KeyToKey__ KeyCode::F12, ModifierFlag::HYPER,
+            ConsumerKeyCode::VOLUME_UP,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
+        </autogen>
+
+    </item>
+
+
+    <!-- Hyper Shifter-->
+    <item>
+        <name>Hyper Shifter</name>
+        <appendix>Maps hyper numkeys, minus, equal to corresponding punctuation.</appendix>
+        <appendix>✱[12...-=] ↦ ⇧[12...-=] '!@..._+'</appendix>
+
+        <appendix></appendix>
+        <appendix>Maps square bracket to round breacket.</appendix>
+        <appendix>✱[ ↦ ⇧9 '('</appendix>
+        <appendix>✱] ↦ ⇧0 ')'</appendix>
+
+        <appendix></appendix>
+        <appendix>Maps Hyper semicolon to low dash</appendix>
+        <appendix>✱; ↦ ⇧- '_'</appendix>
+
+
+        <identifier>private.hyper-shifter</identifier>
+
+        <autogen>
+            --KeyToKey--
+            KeyCode::1, ModifierFlag::HYPER,
+            KeyCode::1, ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::2, ModifierFlag::HYPER,
+            KeyCode::2, ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::3, ModifierFlag::HYPER,
+            KeyCode::3, ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::4, ModifierFlag::HYPER,
+            KeyCode::4, ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::5, ModifierFlag::HYPER,
+            KeyCode::5, ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::6, ModifierFlag::HYPER,
+            KeyCode::6, ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::7, ModifierFlag::HYPER,
+            KeyCode::7, ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::8, ModifierFlag::HYPER,
+            KeyCode::8, ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::9, ModifierFlag::HYPER,
+            KeyCode::9, ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::0, ModifierFlag::HYPER,
+            KeyCode::0, ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::MINUS, ModifierFlag::HYPER,
+            KeyCode::MINUS, ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::EQUAL, ModifierFlag::HYPER,
+            KeyCode::EQUAL, ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::BRACKET_LEFT, ModifierFlag::HYPER,
+            KeyCode::9 , ModifierFlag::SHIFT_R,
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::BRACKET_RIGHT, ModifierFlag::HYPER,
+            KeyCode::0 , ModifierFlag::SHIFT_R,
+        </autogen>
+
+        <!-- ✱SemiColon to Minus -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::SEMICOLON, ModifierFlag::HYPER,
+            KeyCode::MINUS , ModifierFlag::SHIFT_R,
+        </autogen>
+    </item>
+
+
     <!-- Hyper Other -->
     <item>
         <name>Hyper Other</name>
-        <appendix><![CDATA[✱\  ↦ ⌃/   (Comment/Uncomment)]]></appendix>
-        <appendix><![CDATA[✱`  ↦ ⌃⇧4  (ScreenShot by area)]]></appendix>
-        <appendix><![CDATA[✱⌘` ↦ ⌃⇧⌘4 (ScreenShot by area to file)]]></appendix>
-        <appendix><![CDATA[✱;  ↦ ⇧-   (Low dash:'_')]]></appendix>
+        <appendix>Escape Hyper back to CapsLock</appendix>
+        <appendix><![CDATA[✱⎋  ↦ ⇪    (CapsLock)]]></appendix>
+        <appendix></appendix>
+        <appendix>Hyper Space to Escape</appendix>
         <appendix><![CDATA[✱␢  ↦ ⎋    (Escape)]]></appendix>
+        <appendix></appendix>
+        <appendix><![CDATA[✱\  ↦ ⌃/   (Comment/Uncomment)]]></appendix>
+        <appendix><![CDATA[✱`  ↦ ⌃⇧⌘4 (ScreenShot by area)]]></appendix>
+        <appendix><![CDATA[✱⌘` ↦ ⌃⇧4  (ScreenShot by area to file)]]></appendix>
+        <appendix><![CDATA[✱'  ↦ =    (Quote to equal)]]></appendix>
+
         <identifier>private.hyper-other</identifier>
 
+        <!-- ✱Escape to Capslock-->
+        <autogen>__KeyToKey__ KeyCode::ESCAPE, ModifierFlag::HYPER, KeyCode::CAPSLOCK</autogen>
+
+        <!-- ✱Space to Escape-->
+        <autogen>
+            --KeyToKey--
+            KeyCode::SPACE, ModifierFlag::HYPER,
+            KeyCode::ESCAPE
+        </autogen>
+
+        <!-- ✱Slash to comment -->
         <autogen>
             --KeyToKey--
             KeyCode::SLASH, ModifierFlag::HYPER,
             KeyCode::SLASH, ModifierFlag::COMMAND_L
         </autogen>
 
+
+        <!-- ✱` to area screenshot -->
         <autogen>
             --KeyToKey--
             KeyCode::BACKQUOTE, ModifierFlag::HYPER,
             KeyCode::4, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L | ModifierFlag::COMMAND_L
         </autogen>
 
+        <!-- ✱⌘` to area screenshot to file -->
         <autogen>
             --KeyToKey--
             KeyCode::BACKQUOTE, ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
             KeyCode::4, ModifierFlag::SHIFT_L | ModifierFlag::COMMAND_L
         </autogen>
 
-        <autogen>
-            --KeyToKey--
-            KeyCode::SEMICOLON, ModifierFlag::HYPER,
-            KeyCode::MINUS , ModifierFlag::SHIFT_R,
-        </autogen>
 
+        <!-- ✱Quote to Equal -->
         <autogen>
             --KeyToKey--
             KeyCode::QUOTE, ModifierFlag::HYPER,
             KeyCode::EQUAL
-        </autogen>
-
-        <autogen>
-            --KeyToKey--
-            KeyCode::SPACE, ModifierFlag::HYPER,
-            KeyCode::ESCAPE
         </autogen>
 
 
@@ -680,7 +700,13 @@
         <appendix><![CDATA[✱↘   ↦ ⇧⌥F5  (Fine grained keyboard light down)]]></appendix>
         <appendix><![CDATA[✱↖   ↦ ⇧⌥F6  (Fine grained keyboard light up)]]></appendix>
         <appendix><![CDATA[✱⇟   ↦ ⇧⌥F11 (Fine grained volume down)]]></appendix>
-        <appendix><![CDATA[✱⇞   ↦ ⇧⌥F12 (Fine grained volume up)]]></appendix>
+        <appendix><![CDATA[✱ ↦ ⇧⌥F12 (Fine grained volume up)]]></appendix>
+        <appendix></appendix>
+        <appendix><![CDATA[PrintScreen  ↦ ⌃⇧⌘3 (Save full screen to clipboard)]]></appendix>
+        <appendix><![CDATA[✱PrintScreen ↦ ⌃⇧3 (Save full screen to file)]]></appendix>
+        <appendix><![CDATA[ScrollLock   ↦ VolumeMute (Save full screen to clipboard)]]></appendix>
+        <appendix><![CDATA[Pause        ↦ MusicPlay (Save full screen to clipboard)]]></appendix>
+
 
         <identifier>private.hyper-special</identifier>
 
@@ -713,6 +739,29 @@
             __KeyToKey__ KeyCode::PAGEDOWN, ModifierFlag::HYPER,
             ConsumerKeyCode::VOLUME_DOWN,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
         </autogen>
+
+        <!-- PrintScreen & Hyper PrintScreen-->
+        <autogen>
+            __KeyToKey__ KeyCode::PC_PRINTSCREEN,
+            KeyCode::3, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L | ModifierFlag::COMMAND_L
+        </autogen>
+        <autogen>
+            __KeyToKey__ KeyCode::PC_PRINTSCREEN, ModifierFlag::HYPER,
+            KeyCode::3, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L
+        </autogen>
+
+        <!--Scroll to mute -->
+        <autogen>
+            __KeyToKey__ KeyCode::PC_SCROLLLOCK, ModifierFlag::HYPER,
+            ConsumerKeyCode::VOLUME_MUTE
+        </autogen>
+
+        <!--Pause to music_pley-->
+        <autogen>
+            __KeyToKey__ KeyCode::PC_PAUSE, ModifierFlag::HYPER,
+            ConsumerKeyCode::MUSIC_PLAY
+        </autogen>
+
     </item>
 
 
