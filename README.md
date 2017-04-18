@@ -251,7 +251,7 @@
 
    CapsLock+C映射到`^C`，用于发送SIGINT中断作业。
 
-   CapsLock+V映射到`,`，是Vim的`<Leader> key`
+   CapsLock+V映射到`,`，是Vim的`<Leader> key`,不过也可以作为应用按键
 
    CapsLock+D映射到`^D`，用于发送`EOF`
 

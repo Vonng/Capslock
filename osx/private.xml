@@ -279,8 +279,9 @@
         <appendix><![CDATA[✱Z ↦ ⌃Z (SIGTSTP)]]></appendix>
         <appendix><![CDATA[✱X ↦ ⌃B (Tmux-Prefix)]]></appendix>
         <appendix><![CDATA[✱C ↦ ⌃C (SIGINT)]]></appendix>
-        <appendix><![CDATA[✱V ↦ ,  (VIM Leader)]]></appendix>
+        <appendix><![CDATA[✱V ↦ ,  (VS Code)]]></appendix>
         <appendix><![CDATA[✱D ↦ ⌃D (EOF)]]></appendix>
+        <appendix><![CDATA[✱⌘D ↦ , (Dash)]]></appendix>
 
         <identifier>private.hyper-bash-control</identifier>
 
@@ -305,18 +306,10 @@
             KeyCode::C, ModifierFlag::CONTROL_L
         </autogen>
 
-        <!-- ^V Vim -->
-        <autogen>
-            --KeyToKey--
-            KeyCode::V, ModifierFlag::HYPER ,
-            KeyCode::COMMA
-        </autogen>
-
-        <!-- ^D EOF  +⌘=^R (Debug) -->
         <autogen>
             --KeyToKey--
             KeyCode::D, ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
-            KeyCode::D, ModifierFlag::CONTROL_L
+            KeyCode::VK_OPEN_URL_APP_Dash
         </autogen>
         <autogen>
             --KeyToKey--
@@ -342,18 +335,21 @@
 
         <appendix></appendix>
         <appendix>T: Text</appendix>
-        <appendix><![CDATA[✱T  ↦ Sublime Text]]></appendix>
-        <appendix><![CDATA[✱⌘T ↦ Typora]]></appendix>
+        <appendix><![CDATA[✱T  ↦ Typora]]></appendix>
+        <appendix><![CDATA[✱⌘T ↦ Blank ]]></appendix>
 
         <appendix></appendix>
         <appendix>F: Find</appendix>
-        <appendix><![CDATA[✱F  ↦ Dash]]></appendix>
-        <appendix><![CDATA[✱⌘F ↦ Dictionary]]></appendix>
+        <appendix><![CDATA[✱F  ↦ Dictionary]]></appendix>
+        <appendix><![CDATA[✱⌘D ↦ Dash]]></appendix>
 
         <appendix></appendix>
-        <appendix>G: Grand</appendix>
+        <appendix>G: IDE</appendix>
         <appendix><![CDATA[✱G  ↦ Intellij IDEA]]></appendix>
-        <appendix><![CDATA[✱G  ↦ CLion]]></appendix>
+
+        <appendix></appendix>
+        <appendix>V: VSCode</appendix>
+        <appendix><![CDATA[✱V  ↦ Visual Studio Code]]></appendix>
         <identifier>private.hyper-application</identifier>
 
         <!--Define your own application here-->
@@ -366,16 +362,12 @@
             <url type="file">/Applications/iTerm.app</url>
         </vkopenurldef>
         <vkopenurldef>
-            <name>KeyCode::VK_OPEN_URL_APP_Sublime_Text</name>
-            <url type="file">/Applications/Sublime Text.app</url>
-        </vkopenurldef>
-        <vkopenurldef>
             <name>KeyCode::VK_OPEN_URL_APP_INTELLIJ_IDEA</name>
             <url type="file">/Applications/IntelliJ IDEA.app/</url>
         </vkopenurldef>
         <vkopenurldef>
-            <name>KeyCode::VK_OPEN_URL_APP_CLion</name>
-            <url type="file">/Applications/CLion.app/</url>
+            <name>KeyCode::VK_OPEN_URL_APP_Visual_Studio_Code</name>
+            <url type="file">/Applications/Visual Studio Code.app/</url>
         </vkopenurldef>
         <vkopenurldef>
             <name>KeyCode::VK_OPEN_URL_APP_Dash</name>
@@ -396,7 +388,6 @@
             KeyCode::E, ModifierFlag::HYPER,
             KeyCode::VK_OPEN_URL_APP_Google_Chrome
         </autogen>
-
         <autogen>
             --KeyToKey--
             KeyCode::R, ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
@@ -407,41 +398,28 @@
             KeyCode::R, ModifierFlag::HYPER,
             KeyCode::VK_OPEN_URL_APP_iTerm
         </autogen>
-
-
         <autogen>
             --KeyToKey--
-            KeyCode::T, ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
+            KeyCode::T, ModifierFlag::HYPER,
             KeyCode::VK_OPEN_URL_APP_Typora
         </autogen>
         <autogen>
             --KeyToKey--
-            KeyCode::T, ModifierFlag::HYPER,
-            KeyCode::VK_OPEN_URL_APP_Sublime_Text
-        </autogen>
-
-        <autogen>
-            --KeyToKey--
-            KeyCode::F, ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
+            KeyCode::F, ModifierFlag::HYPER,
             KeyCode::VK_OPEN_URL_APP_Dictionary
         </autogen>
-        <autogen>
-            --KeyToKey--
-            KeyCode::F, ModifierFlag::HYPER,
-            KeyCode::VK_OPEN_URL_APP_Dash
-        </autogen>
 
-        <autogen>
-            --KeyToKey--
-            KeyCode::G, ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
-            KeyCode::VK_OPEN_URL_APP_CLion
-        </autogen>
+        <!-- ✱⌘D ↦ Dash move to Bash control section in order to overwrite ⌘D -->
         <autogen>
             --KeyToKey--
             KeyCode::G, ModifierFlag::HYPER,
             KeyCode::VK_OPEN_URL_APP_INTELLIJ_IDEA
         </autogen>
-
+        <autogen>
+            --KeyToKey--
+            KeyCode::V, ModifierFlag::HYPER,
+            KeyCode::VK_OPEN_URL_APP_Visual_Studio_Code
+        </autogen>
     </item>
 
 
@@ -530,7 +508,6 @@
             __KeyToKey__ KeyCode::F12, ModifierFlag::HYPER,
             ConsumerKeyCode::VOLUME_UP,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
         </autogen>
-
     </item>
 
 
@@ -687,8 +664,6 @@
             KeyCode::QUOTE, ModifierFlag::HYPER,
             KeyCode::EQUAL
         </autogen>
-
-
     </item>
 
 
@@ -808,5 +783,4 @@
             KeyCode::VK_MOUSEKEY_BUTTON_RIGHT
         </autogen>
     </item>
-
 </root>
