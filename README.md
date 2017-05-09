@@ -4,7 +4,20 @@
 
 ![](images/trump.jpg)
 
-**Transform Capslock into hyper  key,  and improve your APM tremendously !!!**
+Usage : [(Mac)](osx/) /[(⊞Win)](win/)
+
+
+
+##### Transform Capslock into hyper key, improve your APM tremendously !**
+
+* Powerful: Make Capslock a great new function key: **Hyper(✱)**. Can be combined with any other key in the keyboard 
+* Well-Designed:  Put high-free operation into core area. My dog food, adjust it for 2 years. 
+* Cross-Platform: Based on [Karabiner()](https://pqrs.org/osx/karabiner/)  and [AutoHotKey(⊞)](http://www.ahkscript.org/) (No linux support yet...)
+
+
+
+
+##### 大写锁定变身超级功能键，显著提升APM！
 
 * 功能强大：基于CapsLock的新功能键 Hyper(✱)可以与任何按键组合，提供强大的定制性。
 * 精心设计：在作者两年使用实践中不断雕琢，将最常使用的操作预置于核心键区，显著提高操作效率。
@@ -12,11 +25,9 @@
 * 部署方便：放在随身装机U盘中，还是托管在Github上，简单几步即可复刻环境。
 
 
-[CapsLock()](osx/)
 
-[CapsLock(⊞)](win/)
 
-## 前言
+## Introduction
 
 ⇪CapsLock，即大写锁定键，其起源可追溯至打字机时代。打字机是纯机械的设备，当按下Shift时，整套设备会与墨条纸带发生位移，使小写字母“上档”为大写字母。此等操作对小拇指是不小的负担，以致连续输入两到三个大写字母都比较吃力。于是在今天键盘上⇪Capslock的位置上出现了其原型Shiftlock功能键：可以在大小写状态之间切换与保持。这样的设计解决了一指禅选手的困境，更减轻了打字员的负担。
 
@@ -30,7 +41,9 @@
 
 ​										✱ Hyper
 
-## 符号参考表
+
+
+## Symbol Reference
 
 #### Modifiers: Mac
 
@@ -89,7 +102,7 @@
 
 
 
-## 功能说明
+## Usage(Mac)
 
 以Mac版本为例：
 
@@ -97,107 +110,125 @@
 
 ### 右手核心区
 
-* 基本映射
-  * 按住⇪CapsLock，映射为✱ Hyper
-  * 按下⇪CapsLock，映射为⌥␢ 输入法切换（二选一，默认）
-  * 按下⇪CapsLock，映射为⎋  ESC （二选一）
-* 导航键映射
-  * 按下✱ Hyper启用光标移动，按下✱⌘时启用光标选择
-  * `✱H ↦ ←` (VI导航键：✱H映射为左)
-  * `✱J ↦ ↓`  (VI导航键：✱J映射为左)
-  * `✱K ↦ ↑`  (VI导航键：✱K映射为左)
-  * `✱L ↦ →`  (VI导航键：✱L映射为右)
-  * `✱U ↦ ⇞`  (✱U映射为PageUp)
-  * `✱I ↦ ↖` (✱I映射为Home)
-  * `✱O ↦ ↘` (✱O映射为End)
-  * `✱P ↦ ⇟`  (✱P映射为Pagedown)
-  * 删除键
-  * `✱N ↦ ⌥⌫` (删除光标左侧一个单词)
-  * `✱M ↦ ⌫`     (删除光标左侧一个字符)
-  * `✱, ↦ ⌦`     (删除光标右侧一个字符)
-  * `✱. ↦ ⌥⌦` (删除光标右侧一个单词) 
+##### 基本映射
+
+* 按住⇪CapsLock，映射为✱ Hyper
+* 按下⇪CapsLock，映射为⌥␢ 输入法切换（二选一，默认）
+* 按下⇪CapsLock，映射为⎋  ESC （二选一）
+
+##### 导航键映射
+
+* 按下✱ Hyper启用光标移动，按下✱⌘时启用光标选择
+* `✱H ↦ ←` (VI导航键：✱H映射为左)
+* `✱J ↦ ↓`  (VI导航键：✱J映射为下)
+* `✱K ↦ ↑`  (VI导航键：✱K映射为上)
+* `✱L ↦ →`  (VI导航键：✱L映射为右)
+* `✱U ↦ ⇞`  (✱U映射为PageUp)
+* `✱I ↦ ↖` (✱I映射为Home)
+* `✱O ↦ ↘` (✱O映射为End)
+* `✱P ↦ ⇟`  (✱P映射为Pagedown)
+
+##### 删除键
+
+* `✱N ↦ ⌥⌫` (删除光标左侧一个单词)
+* `✱M ↦ ⌫`     (删除光标左侧一个字符)
+* `✱, ↦ ⌦`     (删除光标右侧一个字符)
+* `✱. ↦ ⌥⌦` (删除光标右侧一个单词) 
 
 ### 左手核心区
-* 窗口操作
-  * `✱⇥  ↦ ⌃⇥`         (✱Tab 映射为正向切换标签页)
-  * `✱⌘⇥↦ ⌃⇧⇥`      (✱⌘Tab 映射为反向切换标签页)
-  * `✱Q  ↦ ⌘Q`            (关闭窗口)
-  * `✱W  ↦ ⌘W`            (关闭标签页)
-  * `✱A  ↦ ⌃⌥⇧⌘A` (Moom-Meta键，※一个[窗口操作软件](https://manytricks.com/moom/))
-  * `✱⌘A ↦ F11`         (回到桌面)
-  * `✱S  ↦ ⌃⇥`           (切换标签页)
-  * `✱⌘S ↦ ⌃⇧⇥`     (反向切换标签页 )
-* Bash控制
-  * `✱Z ↦ ⌃Z` (作业停止信号：SIGTSTP))
-  * `✱X ↦ ⌃B` (Tmux-Prefix，※一个[终端复用软件](http://tmux.github.io/))
-  * `✱C ↦ ⌃C` (作业中断信号：SIGINT)
-  * `✱V ↦ , `  (Vim-Leader键)
-  * `✱D ↦ ⌃D` (发送EOF)
-* 应用快捷方式
-  * `✱E  ↦ Google Chrome`
-  * `✱⌘E ↦ Finder`
-  * `✱R  ↦ iTerm`
-  * `✱⌘R ↦ ^R (IDE-Run)`
-  * `✱T  ↦ Sublime Text`
-  * `✱⌘T ↦ Typora`
-  * `✱F  ↦ Dash`
-  * `✱⌘F ↦ Dictionary`
-  * `✱G  ↦ IntelliJ IDEA`
-  * `✱G  ↦ CLion`
+##### 窗口操作
+
+* `✱⇥  ↦ ⌃⇥`         (✱Tab 映射为正向切换标签页)
+* `✱⌘⇥↦ ⌃⇧⇥`      (✱⌘Tab 映射为反向切换标签页)
+* `✱Q  ↦ ⌘Q`            (关闭窗口)
+* `✱W  ↦ ⌘W`            (关闭标签页)
+* `✱A  ↦ ⌃⌥⇧⌘A` (Moom-Meta键，※一个[窗口操作软件](https://manytricks.com/moom/))
+* `✱⌘A ↦ F11`         (回到桌面)
+* `✱S  ↦ ⌃⇥`           (切换标签页)
+* `✱⌘S ↦ ⌃⇧⇥`     (反向切换标签页 )
+
+##### Bash控制
+
+* `✱Z ↦ ⌃Z` (作业停止信号：SIGTSTP))
+* `✱X ↦ ⌃B` (Tmux-Prefix，※一个[终端复用软件](http://tmux.github.io/))
+* `✱C ↦ ⌃C` (作业中断信号：SIGINT)
+* `✱V ↦ , `  (Vim-Leader键)
+* `✱D ↦ ⌃D` (发送EOF)
+
+##### 应用快捷方式
+
+* `✱E  ↦ Google Chrome`
+* `✱⌘E ↦ Finder`
+* `✱R  ↦ iTerm`
+* `✱⌘R ↦ ^R (IDE-Run)`
+* `✱T  ↦ Visual Studio Code`
+* `✱⌘T ↦ Typora`
+* `✱F  ↦ Dash`
+* `✱⌘F ↦ Dictionary`
+* `✱G  ↦ IntelliJ IDEA`
 
 ### 键盘第一行：功能键
-* 功能键映射
-  * `✱F1  ↦  BrightnessDown`
-  * `✱F2  ↦  BrightnessUp`
-  * `✱F3  ↦  ExposeAll`
-  * `✱F4  ↦  LaunchPad`
-  * `✱F5  ↦  KeyboardLightDown`
-  * `✱F6  ↦  KeyboardLightUp`
-  * `✱F7  ↦  MusicPrev`
-  * `✱F8  ↦  MusicPlay`
-  * `✱F9  ↦  MusicNext`
-  * `✱F10 ↦  Mute`
-  * `✱F11 ↦  VolumeDown`
-  * `✱F12 ↦  VolumeUp`
+##### 功能键映射
+
+* `✱F1  ↦  BrightnessDown`
+* `✱F2  ↦  BrightnessUp`
+* `✱F3  ↦  ExposeAll`
+* `✱F4  ↦  LaunchPad`
+* `✱F5  ↦  KeyboardLightDown`
+* `✱F6  ↦  KeyboardLightUp`
+* `✱F7  ↦  MusicPrev`
+* `✱F8  ↦  MusicPlay`
+* `✱F9  ↦  MusicNext`
+* `✱F10 ↦  Mute`
+* `✱F11 ↦  VolumeDown`
+* `✱F12 ↦  VolumeUp`
 
 ### 键盘第二行：数字键
-* 上档键映射
-  * `✱[12...-=] ↦ ⇧[12...-=]` (将✱数字键、✱减号、✱等于号上档为对应符号)
-  * `✱[] ↦ ⇧90 '()'`  (将✱方括号映射为圆括号)
-  * `✱'  ↦ ⇧-  '_' `  (将✱单引号映射为下划线)
+##### 上档键映射
+
+* `✱[12...-=] ↦ ⇧[12...-=]` (将✱数字键、✱减号、✱等于号上档为对应符号)
+* `✱[] ↦ ⇧90 '()'`  (将✱方括号映射为圆括号)
 
 ### 主键区其他按键
-* 主键区其他杂项
-  * `✱⎋  ↦ ⇪`       (✱Escape 将✱Hyper转义回⇪CapsLock)
-  * `✱␢   ↦ ⎋`      (✱空格 映射为⎋ESC)
-  * `✱\  ↦ ⌃/`       (✱斜杠 映射为注释/解注释)
-  * `✱`    ↦ ⌃⇧⌘4`(✱反引号 映射为选取截图区域并存储)
-  * `✱⌘` ↦ ⌃⇧4`  (✱⌘反引号 映射为选取截图区域至剪贴板)
-  * `✱'  ↦ =`           (✱单引号 映射为等于号)
+#### 特殊键区
+##### PC键盘特殊按键映射
 
-### 特殊键区
-* PC键盘特殊按键映射
-  * `✱Ins ↦ ⇧⌥F1`  (✱Insert 微调提升屏幕亮度)
-  * `✱Del ↦ ⇧⌥F2`  (✱Delete 微调降低屏幕亮度)
-  * `✱↘   ↦ ⇧⌥F5` (✱Home 微调提升键盘背光亮度)
-  * `✱↖   ↦ ⇧⌥F6` (✱End 微调降低键盘背光亮度)
-  * `✱⇟   ↦ ⇧⌥F11` (✱PgUp 微调提升音量)
-  * `✱⇞   ↦ ⇧⌥F12` (✱PgDn 微调降低音量)
-  * `PrintScreen  ↦ ⌃⇧⌘3` (保存全屏截图至剪贴板)
-  * `✱PrintScreen  ↦ ⌃⇧⌘3` (保存全屏截图至桌面文件)
-  * `ScrollLock  ↦ VolumeMute` (ScrollLock静音)
-  * `Pause       ↦ MusicPlay` (Pause映射为音乐播放)
+* `✱Ins ↦ ⇧⌥F1`  (✱Insert 微调提升屏幕亮度)
+* `✱Del ↦ ⇧⌥F2`  (✱Delete 微调降低屏幕亮度)
+* `✱↘   ↦ ⇧⌥F5` (✱Home 微调提升键盘背光亮度)
+* `✱↖   ↦ ⇧⌥F6` (✱End 微调降低键盘背光亮度)
+* `✱⇟   ↦ ⇧⌥F11` (✱PgUp 微调提升音量)
+* `✱⇞   ↦ ⇧⌥F12` (✱PgDn 微调降低音量)
+* `PrintScreen  ↦ ⌃⇧⌘3` (保存全屏截图至剪贴板)
+* `✱PrintScreen  ↦ ⌃⇧⌘3` (保存全屏截图至桌面文件)
+* `ScrollLock  ↦ VolumeMute` (ScrollLock静音)
+* `Pause       ↦ MusicPlay` (Pause映射为音乐播放)
 
-* 光标键映射
-* 
-  * `✱↑ ↦ MouseUp`
-  * `✱↓ ↦ MouseDown`
-  * `✱← ↦ MouseLeft`
-  * `✱→ ↦ MouseRight`
-  * `✱↩ ↦ MouseLButton`
-  * `✱\ ↦ MouseRButton`
+#### 光标键映射
 
-## 设计原理
+* `✱↑ ↦ MouseUp`
+
+
+
+* `✱↓ ↦ MouseDown`
+* `✱← ↦ MouseLeft`
+* `✱→ ↦ MouseRight`
+* `✱↩ ↦ MouseLButton`
+* `✱\ ↦ MouseRButton`
+
+#### 主键区其他杂项
+
+- `✱⎋  ↦ ⇪`       (✱Escape 将✱Hyper转义回⇪CapsLock)
+- `✱␢   ↦ ⎋`      (✱空格 映射为⎋ESC)
+- `✱\  ↦ ⌃/`       (✱斜杠 映射为注释/解注释)
+- `✱`    ↦ ⌃⇧⌘4`(✱反引号 映射为选取截图区域并存储)
+- `✱⌘` ↦ ⌃⇧4`  (✱⌘反引号 映射为选取截图区域至剪贴板)
+- `✱'  ↦ =`           (✱单引号 映射为等于号)
+- `✱;  ↦ ⇧-  '_' `  (将✱分号射为下划线)
+
+
+
+## Design
 
 1. `CapsLock`单独按下与长按的区分
 
@@ -291,17 +322,18 @@
 
   A：Cause I always use Linux through Terminal of Mac or Windows, so….
 
-* Q：Po主单身吗？
+* Q:  Why there is some different key bindings between Mac version and Win version?
 
-  A：单身！
+  A:   Since I don't use windows anymore（Except Steam！）, the win version is no longer matined. I am LAZY…, welcome if you could fix that...  
 
 
 
-## 关于
 
-作者：Vonng(fengruohang@outlook.com)
+## About
 
-协议：WTFPL
+Author：Vonng(fengruohang@outlook.com)
+
+License：WTFPL
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/WTFPL_logo.svg/140px-WTFPL_logo.svg.png)
 

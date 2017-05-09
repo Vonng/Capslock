@@ -17,7 +17,6 @@
     <!-- Hyper declaration -->
     <modifierdef>HYPER</modifierdef>
 
-
     <item>
         <name style="important">CapsLock setup</name>
         <appendix>Hold CapsLock to Hyper</appendix>
@@ -71,7 +70,7 @@
         <appendix><![CDATA[✱U ↦ ⇞ (PageUp)]]></appendix>
         <appendix><![CDATA[✱I ↦ ↖ (Home)]]></appendix>
         <appendix><![CDATA[✱O ↦ ↘ (End)]]></appendix>
-        <appendix><![CDATA[✱P ↦ ⇟ (Pagedown)]]></appendix>
+        <appendix><![CDATA[✱P ↦ ⇟ (PageDown)]]></appendix>
         <appendix></appendix>
         <appendix>※Hint: Hold additional ⌘(Left) key for selection</appendix>
         <identifier>private.hyper-navigator</identifier>
@@ -179,8 +178,8 @@
         <name>Hyper Deletion</name>
         <appendix><![CDATA[✱N ↦ ⌥⌫ (Delete a word ahead)]]></appendix>
         <appendix><![CDATA[✱M ↦ ⌫  (Delete a char ahead)]]></appendix>
-        <appendix><![CDATA[✱, ↦ ⌦  (Forward Delete a char)]]></appendix>
-        <appendix><![CDATA[✱. ↦ ⌥⌦ (Forward Delete a word)]]></appendix>
+        <appendix><![CDATA[✱, ↦ ⌦  (Delete a char after)]]></appendix>
+        <appendix><![CDATA[✱. ↦ ⌥⌦ (Delete a word after)]]></appendix>
         <identifier>private.hyper-deletion</identifier>
 
         <autogen>
@@ -210,48 +209,27 @@
     <!-- Hyper Window Control -->
     <item>
         <name>Hyper Window-Manipulation</name>
-        <appendix><![CDATA[✱Q  ↦ ⌘Q    (Close Window)]]></appendix>
-        <appendix><![CDATA[✱W  ↦ ⌘W    (Close Tab)]]></appendix>
         <appendix><![CDATA[✱A  ↦ ⌃⌥⇧⌘A (Moom Prefix)]]></appendix>
         <appendix><![CDATA[✱⌘A ↦ F11   (Desktop)]]></appendix>
-        <appendix><![CDATA[✱S  ↦ ⌃⇥    (Tab Switch)]]></appendix>
-        <appendix><![CDATA[✱⌘S ↦ ⌃⇧⇥   (Reverse Tab Switch)]]></appendix>
+        <appendix></appendix>
+        <appendix><![CDATA[✱Q  ↦ ⌘Q    (Close Window)]]></appendix>
+        <appendix><![CDATA[✱⇥  ↦ ⌃⇥    (Alter window)]]></appendix>
+        <appendix><![CDATA[✱⌘⇥ ↦ ⌃⇧⇥   (Alter window reversely)]]></appendix>
+        <appendix></appendix>
+        <appendix><![CDATA[✱S  ↦ ⌃⇥    (Alter tab)]]></appendix>
+        <appendix><![CDATA[✱⌘S ↦ ⌃⇧⇥   (Alter tab reversely)]]></appendix>
+        <appendix><![CDATA[✱W  ↦ ⌘W    (Close Tab)]]></appendix>
         <identifier>private.hyper-window-manipulation</identifier>
 
-        <!-- ✱Tab to SwitchTab-->
-        <autogen>
-            --KeyToKey--
-            KeyCode::TAB, ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
-            KeyCode::TAB,ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L
-        </autogen>
 
-        <!-- ✱⌘Tab to Reverse SwitchTab-->
-        <autogen>
-            --KeyToKey--
-            KeyCode::TAB, ModifierFlag::HYPER,
-            KeyCode::TAB,ModifierFlag::CONTROL_L
-        </autogen>
-
-        <!-- ⌘Q: Quit Window -->
-        <autogen>
-            --KeyToKey--
-            KeyCode::Q, ModifierFlag::HYPER,
-            KeyCode::Q, ModifierFlag::COMMAND_L
-        </autogen>
-
-        <!-- ⌘W Close Tab -->
-        <autogen>
-            --KeyToKey--
-            KeyCode::W, ModifierFlag::HYPER ,
-            KeyCode::W, ModifierFlag::COMMAND_L
-        </autogen>
-
-        <!-- Hyper-A Moom-Prefix (Set to Physical Hyper-A) -->
+        <!-- ✱A Moom-Prefix  -->
         <autogen>
             --KeyToKey--
             KeyCode::A,ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
             KeyCode::F11
         </autogen>
+
+        <!-- ✱⌘A: Desktop  -->
         <autogen>
             --KeyToKey--
             KeyCode::A,ModifierFlag::HYPER ,
@@ -259,7 +237,30 @@
             ModifierFlag::SHIFT_L
         </autogen>
 
-        <!-- ^Tab: Switch Tag -->
+        <!-- window control -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::TAB, ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
+            KeyCode::TAB,ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::TAB, ModifierFlag::HYPER,
+            KeyCode::TAB,ModifierFlag::COMMAND_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::Q, ModifierFlag::HYPER,
+            KeyCode::Q, ModifierFlag::COMMAND_L
+        </autogen>
+
+
+        <!-- tab control -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::W, ModifierFlag::HYPER ,
+            KeyCode::W, ModifierFlag::COMMAND_L
+        </autogen>
         <autogen>
             --KeyToKey--
             KeyCode::S,ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
@@ -281,7 +282,6 @@
         <appendix><![CDATA[✱C ↦ ⌃C (SIGINT)]]></appendix>
         <appendix><![CDATA[✱V ↦ ,  (VS Code)]]></appendix>
         <appendix><![CDATA[✱D ↦ ⌃D (EOF)]]></appendix>
-        <appendix><![CDATA[✱⌘D ↦ , (Dash)]]></appendix>
 
         <identifier>private.hyper-bash-control</identifier>
 
@@ -306,11 +306,7 @@
             KeyCode::C, ModifierFlag::CONTROL_L
         </autogen>
 
-        <autogen>
-            --KeyToKey--
-            KeyCode::D, ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
-            KeyCode::VK_OPEN_URL_APP_Dash
-        </autogen>
+        <!-- EOF -->
         <autogen>
             --KeyToKey--
             KeyCode::D, ModifierFlag::HYPER ,
@@ -335,8 +331,8 @@
 
         <appendix></appendix>
         <appendix>T: Text</appendix>
-        <appendix><![CDATA[✱T  ↦ Typora]]></appendix>
-        <appendix><![CDATA[✱⌘T ↦ Blank ]]></appendix>
+        <appendix><![CDATA[✱T  ↦ VS Code ]]></appendix>
+        <appendix><![CDATA[✱⌘T ↦ Typora ]]></appendix>
 
         <appendix></appendix>
         <appendix>F: Find</appendix>
@@ -347,9 +343,6 @@
         <appendix>G: IDE</appendix>
         <appendix><![CDATA[✱G  ↦ Intellij IDEA]]></appendix>
 
-        <appendix></appendix>
-        <appendix>V: VSCode</appendix>
-        <appendix><![CDATA[✱V  ↦ Visual Studio Code]]></appendix>
         <identifier>private.hyper-application</identifier>
 
         <!--Define your own application here-->
@@ -400,25 +393,28 @@
         </autogen>
         <autogen>
             --KeyToKey--
-            KeyCode::T, ModifierFlag::HYPER,
+            KeyCode::T, ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
             KeyCode::VK_OPEN_URL_APP_Typora
         </autogen>
         <autogen>
             --KeyToKey--
-            KeyCode::F, ModifierFlag::HYPER,
+            KeyCode::T, ModifierFlag::HYPER,
+            KeyCode::VK_OPEN_URL_APP_Visual_Studio_Code
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::F, ModifierFlag::HYPER | ModifierFlag::COMMAND_L ,
             KeyCode::VK_OPEN_URL_APP_Dictionary
         </autogen>
-
-        <!-- ✱⌘D ↦ Dash move to Bash control section in order to overwrite ⌘D -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::F, ModifierFlag::HYPER,
+            KeyCode::VK_OPEN_URL_APP_Dash
+        </autogen>
         <autogen>
             --KeyToKey--
             KeyCode::G, ModifierFlag::HYPER,
             KeyCode::VK_OPEN_URL_APP_INTELLIJ_IDEA
-        </autogen>
-        <autogen>
-            --KeyToKey--
-            KeyCode::V, ModifierFlag::HYPER,
-            KeyCode::VK_OPEN_URL_APP_Visual_Studio_Code
         </autogen>
     </item>
 
@@ -522,11 +518,6 @@
         <appendix>✱[ ↦ ⇧9 '('</appendix>
         <appendix>✱] ↦ ⇧0 ')'</appendix>
 
-        <appendix></appendix>
-        <appendix>Maps Hyper semicolon to low dash</appendix>
-        <appendix>✱; ↦ ⇧- '_'</appendix>
-
-
         <identifier>private.hyper-shifter</identifier>
 
         <autogen>
@@ -600,70 +591,6 @@
             KeyCode::0 , ModifierFlag::SHIFT_R,
         </autogen>
 
-        <!-- ✱SemiColon to Minus -->
-        <autogen>
-            --KeyToKey--
-            KeyCode::SEMICOLON, ModifierFlag::HYPER,
-            KeyCode::MINUS , ModifierFlag::SHIFT_R,
-        </autogen>
-    </item>
-
-
-    <!-- Hyper Other -->
-    <item>
-        <name>Hyper Other</name>
-        <appendix>Escape Hyper back to CapsLock</appendix>
-        <appendix><![CDATA[✱⎋  ↦ ⇪    (CapsLock)]]></appendix>
-        <appendix></appendix>
-        <appendix>Hyper Space to Escape</appendix>
-        <appendix><![CDATA[✱␢  ↦ ⎋    (Escape)]]></appendix>
-        <appendix></appendix>
-        <appendix><![CDATA[✱\  ↦ ⌃/   (Comment/Uncomment)]]></appendix>
-        <appendix><![CDATA[✱`  ↦ ⌃⇧⌘4 (ScreenShot by area)]]></appendix>
-        <appendix><![CDATA[✱⌘` ↦ ⌃⇧4  (ScreenShot by area to file)]]></appendix>
-        <appendix><![CDATA[✱'  ↦ =    (Quote to equal)]]></appendix>
-
-        <identifier>private.hyper-other</identifier>
-
-        <!-- ✱Escape to Capslock-->
-        <autogen>__KeyToKey__ KeyCode::ESCAPE, ModifierFlag::HYPER, KeyCode::CAPSLOCK</autogen>
-
-        <!-- ✱Space to Escape-->
-        <autogen>
-            --KeyToKey--
-            KeyCode::SPACE, ModifierFlag::HYPER,
-            KeyCode::ESCAPE
-        </autogen>
-
-        <!-- ✱Slash to comment -->
-        <autogen>
-            --KeyToKey--
-            KeyCode::SLASH, ModifierFlag::HYPER,
-            KeyCode::SLASH, ModifierFlag::COMMAND_L
-        </autogen>
-
-
-        <!-- ✱` to area screenshot -->
-        <autogen>
-            --KeyToKey--
-            KeyCode::BACKQUOTE, ModifierFlag::HYPER,
-            KeyCode::4, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L | ModifierFlag::COMMAND_L
-        </autogen>
-
-        <!-- ✱⌘` to area screenshot to file -->
-        <autogen>
-            --KeyToKey--
-            KeyCode::BACKQUOTE, ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
-            KeyCode::4, ModifierFlag::SHIFT_L | ModifierFlag::COMMAND_L
-        </autogen>
-
-
-        <!-- ✱Quote to Equal -->
-        <autogen>
-            --KeyToKey--
-            KeyCode::QUOTE, ModifierFlag::HYPER,
-            KeyCode::EQUAL
-        </autogen>
     </item>
 
 
@@ -677,10 +604,8 @@
         <appendix><![CDATA[✱⇟   ↦ ⇧⌥F11 (Fine grained volume down)]]></appendix>
         <appendix><![CDATA[✱ ↦ ⇧⌥F12 (Fine grained volume up)]]></appendix>
         <appendix></appendix>
-        <appendix><![CDATA[PrintScreen  ↦ ⌃⇧⌘3 (Save full screen to clipboard)]]></appendix>
-        <appendix><![CDATA[✱PrintScreen ↦ ⌃⇧3 (Save full screen to file)]]></appendix>
-        <appendix><![CDATA[ScrollLock   ↦ VolumeMute (Save full screen to clipboard)]]></appendix>
-        <appendix><![CDATA[Pause        ↦ MusicPlay (Save full screen to clipboard)]]></appendix>
+        <appendix><![CDATA[ScrollLock   ↦ VolumeMute (Mute)]]></appendix>
+        <appendix><![CDATA[Pause        ↦ MusicPlay (Play)]]></appendix>
 
 
         <identifier>private.hyper-special</identifier>
@@ -715,15 +640,6 @@
             ConsumerKeyCode::VOLUME_DOWN,ModifierFlag::SHIFT_L | ModifierFlag::OPTION_L
         </autogen>
 
-        <!-- PrintScreen & Hyper PrintScreen-->
-        <autogen>
-            __KeyToKey__ KeyCode::PC_PRINTSCREEN,
-            KeyCode::3, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L | ModifierFlag::COMMAND_L
-        </autogen>
-        <autogen>
-            __KeyToKey__ KeyCode::PC_PRINTSCREEN, ModifierFlag::HYPER,
-            KeyCode::3, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L
-        </autogen>
 
         <!--Scroll to mute -->
         <autogen>
@@ -781,6 +697,75 @@
             --KeyToKey--
             KeyCode::BACKSLASH, ModifierFlag::HYPER,
             KeyCode::VK_MOUSEKEY_BUTTON_RIGHT
+        </autogen>
+    </item>
+
+
+    <!-- Hyper Other -->
+    <item>
+        <name>Hyper Other</name>
+        <appendix>Escape Hyper back to CapsLock</appendix>
+        <appendix><![CDATA[✱⎋  ↦ ⇪    (CapsLock)]]></appendix>
+        <appendix></appendix>
+        <appendix>Hyper Space to Escape</appendix>
+        <appendix><![CDATA[✱␢  ↦ ⎋    (Escape)]]></appendix>
+        <appendix></appendix>
+        <appendix><![CDATA[✱\  ↦ ⌃/   (Comment/Uncomment)]]></appendix>
+        <appendix><![CDATA[✱`  ↦ ⌃⇧⌘4 (ScreenShot by area)]]></appendix>
+        <appendix><![CDATA[✱⌘` ↦ ⌃⇧4  (ScreenShot by area to file)]]></appendix>
+        <appendix><![CDATA[✱'  ↦ =    (Quote to equal)]]></appendix>
+
+        <appendix></appendix>
+        <appendix>Maps Hyper semicolon to lodash</appendix>
+        <appendix>✱; ↦ ⇧- '_'</appendix>
+
+        <identifier>private.hyper-other</identifier>
+
+        <!-- ✱Escape to Capslock-->
+        <autogen>__KeyToKey__ KeyCode::ESCAPE, ModifierFlag::HYPER, KeyCode::CAPSLOCK</autogen>
+
+        <!-- ✱Space to Escape-->
+        <autogen>
+            --KeyToKey--
+            KeyCode::SPACE, ModifierFlag::HYPER,
+            KeyCode::ESCAPE
+        </autogen>
+
+        <!-- ✱Slash to comment -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::SLASH, ModifierFlag::HYPER,
+            KeyCode::SLASH, ModifierFlag::COMMAND_L
+        </autogen>
+
+
+        <!-- ✱⌘` to area screenshot to file -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::BACKQUOTE, ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
+            KeyCode::4, ModifierFlag::SHIFT_L | ModifierFlag::COMMAND_L
+        </autogen>
+
+        <!-- ✱` to area screenshot -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::BACKQUOTE, ModifierFlag::HYPER,
+            KeyCode::4, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L | ModifierFlag::COMMAND_L
+        </autogen>
+
+
+        <!-- ✱Quote to Equal -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::QUOTE, ModifierFlag::HYPER,
+            KeyCode::EQUAL
+        </autogen>
+
+        <!-- ✱SemiColon to lodash -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::SEMICOLON, ModifierFlag::HYPER,
+            KeyCode::MINUS , ModifierFlag::SHIFT_R,
         </autogen>
     </item>
 </root>
