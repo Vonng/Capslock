@@ -351,6 +351,10 @@
             <url type="file">/Applications/Google Chrome.app</url>
         </vkopenurldef>
         <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APP_Safari</name>
+            <url type="file">/Applications/Safari.app</url>
+        </vkopenurldef>
+        <vkopenurldef>
             <name>KeyCode::VK_OPEN_URL_APP_iTerm</name>
             <url type="file">/Applications/iTerm.app</url>
         </vkopenurldef>
@@ -370,16 +374,25 @@
             <name>KeyCode::VK_OPEN_URL_APP_Typora</name>
             <url type="file">/Applications/Typora.app</url>
         </vkopenurldef>
+        <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APP_MWeb</name>
+            <url type="file">/Applications/MWeb.app</url>
+        </vkopenurldef>
 
         <autogen>
             --KeyToKey--
             KeyCode::E, ModifierFlag::HYPER | ModifierFlag::COMMAND_L ,
             KeyCode::VK_OPEN_URL_APP_Finder
         </autogen>
-        <autogen>
+        <!--<autogen>
             --KeyToKey--
             KeyCode::E, ModifierFlag::HYPER,
             KeyCode::VK_OPEN_URL_APP_Google_Chrome
+        </autogen>-->
+        <autogen>
+            --KeyToKey--
+            KeyCode::E, ModifierFlag::HYPER,
+            KeyCode::VK_OPEN_URL_APP_Safari
         </autogen>
         <autogen>
             --KeyToKey--
@@ -391,10 +404,15 @@
             KeyCode::R, ModifierFlag::HYPER,
             KeyCode::VK_OPEN_URL_APP_iTerm
         </autogen>
-        <autogen>
+        <!--<autogen>
             --KeyToKey--
             KeyCode::T, ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
             KeyCode::VK_OPEN_URL_APP_Typora
+        </autogen>-->
+        <autogen>
+            --KeyToKey--
+            KeyCode::T, ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
+            KeyCode::VK_OPEN_URL_APP_MWeb
         </autogen>
         <autogen>
             --KeyToKey--
