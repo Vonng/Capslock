@@ -321,7 +321,7 @@
         <name>Hyper Application</name>
         <appendix></appendix>
         <appendix>E: Explore</appendix>
-        <appendix><![CDATA[✱E  ↦ Google Chrome]]></appendix>
+        <appendix><![CDATA[✱E  ↦ Browser]]></appendix>
         <appendix><![CDATA[✱⌘E ↦ Finder]]></appendix>
 
         <appendix></appendix>
@@ -331,8 +331,9 @@
 
         <appendix></appendix>
         <appendix>T: Text</appendix>
-        <appendix><![CDATA[✱T  ↦ VS Code ]]></appendix>
-        <appendix><![CDATA[✱⌘T ↦ Typora ]]></appendix>
+        <appendix><![CDATA[✱T  ↦ Typora ]]></appendix>
+        <appendix><![CDATA[✱⌘T ↦ MWeb ]]></appendix>
+        <appendix><![CDATA[✱V  ↦ VS Code ]]></appendix>
 
         <appendix></appendix>
         <appendix>F: Find</appendix>
@@ -346,14 +347,6 @@
         <identifier>private.hyper-application</identifier>
 
         <!--Define your own application here-->
-        <vkopenurldef>
-            <name>KeyCode::VK_OPEN_URL_APP_Google_Chrome</name>
-            <url type="file">/Applications/Google Chrome.app</url>
-        </vkopenurldef>
-        <vkopenurldef>
-            <name>KeyCode::VK_OPEN_URL_APP_Safari</name>
-            <url type="file">/Applications/Safari.app</url>
-        </vkopenurldef>
         <vkopenurldef>
             <name>KeyCode::VK_OPEN_URL_APP_iTerm</name>
             <url type="file">/Applications/iTerm.app</url>
@@ -384,16 +377,6 @@
             KeyCode::E, ModifierFlag::HYPER | ModifierFlag::COMMAND_L ,
             KeyCode::VK_OPEN_URL_APP_Finder
         </autogen>
-        <!--<autogen>
-            --KeyToKey--
-            KeyCode::E, ModifierFlag::HYPER,
-            KeyCode::VK_OPEN_URL_APP_Google_Chrome
-        </autogen>-->
-        <autogen>
-            --KeyToKey--
-            KeyCode::E, ModifierFlag::HYPER,
-            KeyCode::VK_OPEN_URL_APP_Safari
-        </autogen>
         <autogen>
             --KeyToKey--
             KeyCode::R, ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
@@ -404,11 +387,11 @@
             KeyCode::R, ModifierFlag::HYPER,
             KeyCode::VK_OPEN_URL_APP_iTerm
         </autogen>
-        <!--<autogen>
+        <autogen>
             --KeyToKey--
-            KeyCode::T, ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
+            KeyCode::T, ModifierFlag::HYPER,
             KeyCode::VK_OPEN_URL_APP_Typora
-        </autogen>-->
+        </autogen>
         <autogen>
             --KeyToKey--
             KeyCode::T, ModifierFlag::HYPER | ModifierFlag::COMMAND_L,
@@ -416,7 +399,7 @@
         </autogen>
         <autogen>
             --KeyToKey--
-            KeyCode::T, ModifierFlag::HYPER,
+            KeyCode::V, ModifierFlag::HYPER,
             KeyCode::VK_OPEN_URL_APP_Visual_Studio_Code
         </autogen>
         <autogen>
@@ -433,6 +416,44 @@
             --KeyToKey--
             KeyCode::G, ModifierFlag::HYPER,
             KeyCode::VK_OPEN_URL_APP_INTELLIJ_IDEA
+        </autogen>
+    </item>
+
+    <!--Hyper Browser: Safari-->
+    <item>
+        <name>Hyper+E ↦ Safari</name>
+        <appendix><![CDATA[✱E  ↦ Safari]]></appendix>
+
+        <identifier>private.hyper-explore-safari</identifier>
+
+        <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APP_Safari</name>
+            <url type="file">/Applications/Safari.app</url>
+        </vkopenurldef>
+
+        <autogen>
+            --KeyToKey--
+            KeyCode::E, ModifierFlag::HYPER,
+            KeyCode::VK_OPEN_URL_APP_Safari
+        </autogen>
+    </item>
+
+    <!--Hyper Browser: Chrome -->
+    <item>
+        <name>Hyper+E ↦ Google Chrome</name>
+        <appendix><![CDATA[✱E  ↦ Google Chrome]]></appendix>
+
+        <identifier>private.hyper-explore-chrome</identifier>
+
+        <vkopenurldef>
+            <name>KeyCode::VK_OPEN_URL_APP_Google_Chrome</name>
+            <url type="file">/Applications/Google Chrome.app</url>
+        </vkopenurldef>
+
+        <autogen>
+            --KeyToKey--
+            KeyCode::E, ModifierFlag::HYPER,
+            KeyCode::VK_OPEN_URL_APP_Google_Chrome
         </autogen>
     </item>
 

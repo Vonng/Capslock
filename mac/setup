@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cp ./private.xml "${HOME}/Library/Application Support/Karabiner/private.xml"
+echo "${HOME}/Library/Application\ Support/Karabiner/private.xml" Done

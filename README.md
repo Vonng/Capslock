@@ -4,7 +4,7 @@
 
 ![](images/trump.jpg)
 
-Usage : [(Mac)](osx/) /[(⊞Win)](win/)
+Usage : [(Mac)](mac/) /[(⊞Win)](win/)
 
 
 
@@ -157,15 +157,16 @@ Usage : [(Mac)](osx/) /[(⊞Win)](win/)
 
 ##### 应用快捷方式
 
-* `✱E  ↦ Google Chrome`
+* `✱E  ↦ Safari / Google Chrome`
 * `✱⌘E ↦ Finder`
 * `✱R  ↦ iTerm`
 * `✱⌘R ↦ ^R (IDE-Run)`
-* `✱T  ↦ Visual Studio Code`
-* `✱⌘T ↦ Typora`
+* `✱T  ↦ Typora`
+* `✱⌘T ↦ MWeb`
 * `✱F  ↦ Dash`
 * `✱⌘F ↦ Dictionary`
 * `✱G  ↦ IntelliJ IDEA`
+* `✱V  ↦ VS Code`
 
 ### 键盘第一行：功能键
 ##### 功能键映射

@@ -83,7 +83,6 @@ Enjoy~ 😁
 * `✱Z ↦ ⌃Z` (SIGTSTP))
 * `✱X ↦ ⌃B` ([Tux](http://tmux.github.io)-Prefix)
 * `✱C ↦ ⌃C` (SIGINT)
-* `✱V ↦ , `  (Vim-Leader)
 * `✱D ↦ ⌃D` (EOF)
 
 #### Application shortcuts
@@ -94,11 +93,12 @@ Maybe you'd like overwrite these with your own favorite apps.
 * `✱⌘E ↦ Finder`
 * `✱R  ↦ iTerm`
 * `✱⌘R ↦ ^R (IDE-Run)`
-* `✱T  ↦ Visual Studio Code`
-* `✱⌘T ↦ Typora`
+* `✱T  ↦ Typora`
+* `✱⌘T ↦ MWeb`
 * `✱F  ↦ Dash`
 * `✱⌘F ↦ Dictionary`
 * `✱G  ↦ IntelliJ IDEA`
+* `✱V  ↦ Visual Studio Code`
 
   ​
 
