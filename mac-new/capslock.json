@@ -465,7 +465,7 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "preiod",
+            "key_code": "period",
             "modifiers": {
               "mandatory": [
                 "right_command",
@@ -506,7 +506,7 @@
           "to": [
             {
               "key_code": "up_arrow",
-              "modifier": [
+              "modifiers": [
                 "left_control"
               ]
             }
@@ -735,6 +735,25 @@
           },
           "to": [
             {
+              "key_code": "f11"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "d",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
               "key_code": "d",
               "modifiers": [
                 "left_control"
@@ -782,7 +801,7 @@
           },
           "to": [
             {
-              "shell_command": "open -a 'Google Chrome'"
+              "shell_command": "open -a 'Safari'"
             }
           ]
         },
@@ -867,7 +886,7 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "d",
+            "key_code": "f",
             "modifiers": {
               "mandatory": [
                 "left_command",
@@ -880,7 +899,7 @@
           },
           "to": [
             {
-              "key_code": "f11"
+              "shell_command": "open -a 'Dictionary'"
             }
           ]
         },
@@ -919,6 +938,100 @@
           "to": [
             {
               "shell_command": "open -a 'IntelliJ IDEA'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Hyper Misc",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "escape"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "grave_accent_and_tilde",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "4",
+              "modifiers": [
+                "left_shift",
+                "left_command"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "grave_accent_and_tilde",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "4",
+              "modifiers": [
+                "left_control",
+                "left_shift",
+                "left_command"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "slash",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "slash",
+              "modifiers": [
+                "left_command"
+              ]
             }
           ]
         }

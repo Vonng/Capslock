@@ -6,6 +6,7 @@
 
 Usage : [(Mac)](mac/) /[(⊞Win)](win/)
 
+Mac-Update: Karabiner-Element now works on MacOS High Sierra (10.13), new version [conf](mac-new/)
 
 
 ##### Transform Capslock into hyper key, improve your APM tremendously !**
