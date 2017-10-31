@@ -6,7 +6,10 @@
   "import_url": "karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac-new/capslock.json",
   "rules": [
     {
-      "description": "CapsLock to Hyper/Lang-Switcher (Conflict with Hyper/Escape)",
+      "description": "Check 'https://github.com/Vonng/Capslock' for more detail"
+    },
+    {
+      "description": "CapsLock to Hyper/Lang-Switcher",
       "manipulators": [
         {
           "type": "basic",
@@ -40,7 +43,7 @@
       ]
     },
     {
-      "description": "CapsLock to Hyper/Esc(Conflict with Hyper/Lang-Switcher)",
+      "description": "CapsLock to Hyper/Escape",
       "manipulators": [
         {
           "type": "basic",
