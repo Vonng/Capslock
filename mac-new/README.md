@@ -1,25 +1,41 @@
 # CapsLock (karabiner-element)
 
-Good News! [Karabiner-element](https://pqrs.org/osx/karabiner/) now works on MacOS 10.13 High Sierra. 
+* **Good News! [Karabiner-element](https://pqrs.org/osx/karabiner/) now works on MacOS 10.13 High Sierra. ** [Download](https://pqrs.org/osx/karabiner/files/Karabiner-Elements-11.1.0.dmg)
+* I upgrade My [CapsLock](https://github.com/Vonng/Capslock) karabiner configuration to newer `JSON Format`。
 
-So I upgrade My [CapsLock](https://github.com/Vonng/Capslock) enhancement to suit [karabiner-element](https://pqrs.org/osx/karabiner/)
 
-The new configuration file is JSON format, Just put it under karabiner's config directory
+
+## Install
+
+* You can put the json file into karabiner's config directory manually:
 
 ```bash
 mkdir -p "${HOME}/.config/karabiner/assets/complex_modifications/"
 cp ./capslock.json "${HOME}/.config/karabiner/assets/complex_modifications/capslock.json"
 ```
 
+* OR you can **[Click Here](karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac-new/capslock.json) to open Karabiner-Element and auto import it !**。
+
+```
+karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac-new/capslock.json
+```
 
 
-Then open karabiner-elements, select tab `Complex Modification`, Click `Add item` at bottom, then choose function you like.
+
+
+
+* See [Karabiner-Elements Sample Scripts](https://github.com/pqrs-org/KE-complex_modifications) for instructions:
+  * Open `karabiner-elements`
+  * Select tab `Complex Modification`
+  * Click `Add item` at bottom
+  * Choose function you like.
+  * Remember:  Press CapsLock alone can be mapped to language-switcher(system-default) or escape (vimer-evangel). **But you can not enable both simultaneously.**
+
+
+
+## Usage
 
 Hold Capslock, it always work as a `Hyper Key`, For single press, you may only choose only one of `Escape` and `Languag-Switcher`.Design and functionality describes [here](https://github.com/Vonng/Capslock)
-
-
-
-## Functionality
 
 
 
