@@ -419,6 +419,7 @@
         </autogen>
     </item>
 
+
     <!--Hyper Browser: Safari-->
     <item>
         <name>Hyper+E ↦ Safari</name>
@@ -437,6 +438,7 @@
             KeyCode::VK_OPEN_URL_APP_Safari
         </autogen>
     </item>
+
 
     <!--Hyper Browser: Chrome -->
     <item>
@@ -686,7 +688,7 @@
             ConsumerKeyCode::VOLUME_MUTE
         </autogen>
 
-        <!--Pause to music_pley-->
+        <!--Pause to music_play-->
         <autogen>
             __KeyToKey__ KeyCode::PC_PAUSE, ModifierFlag::HYPER,
             ConsumerKeyCode::MUSIC_PLAY

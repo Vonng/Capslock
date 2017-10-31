@@ -4,9 +4,12 @@
 
 ![](images/trump.jpg)
 
-Usage : [(Mac)](mac/) /[(⊞Win)](win/)
+Usage : [(Mac)](mac/)  [(MacOS10.11+)](mac-new/) /[(⊞Win)](win/)
 
-Mac-Update: Karabiner-Element now works on MacOS High Sierra (10.13), new version [conf](mac-new/)
+
+
+**Good News: Karabiner-Elements now works well on MacOS 10.11,10.12,10.13!**
+
 
 
 ##### Transform Capslock into hyper key, improve your APM tremendously !**
