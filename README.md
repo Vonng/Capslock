@@ -4,15 +4,21 @@
 
 ![](images/trump.jpg)
 
-Usage : [(Mac)](mac/)  [(MacOS10.11+)](mac-new/) /[(⊞Win)](win/)
+## Support
+
+| Platform                               | Engine                                   |
+| -------------------------------------- | ---------------------------------------- |
+| [MacOS (10.11,10.12,10.13)](mac-new/) | [karabiner-element](https://pqrs.org/osx/karabiner/files/Karabiner-Elements-11.1.0.dmg) |
+| [MacOS (before 10.11)](mac/)          | [karabiner](https://pqrs.org/osx/karabiner/files/Karabiner-10.22.0.dmg) |
+| [⊞Windows XP 7 8 10](win/)             | [AutoHotKey](https://www.autohotkey.com/) |
+
+**Good News: Karabiner-Elements now works well on MacOS 10.11,10.12,10.13!**  
+
+**Click [Here](karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac-new/capslock.json) to open Karabiner-Element and import settings.**
 
 
 
-**Good News: Karabiner-Elements now works well on MacOS 10.11,10.12,10.13!**
-
-
-
-##### Transform Capslock into hyper key, improve your APM tremendously !**
+#### Transform Capslock into hyper key, improve your APM tremendously !
 
 * Powerful: Make Capslock a great new function key: **Hyper(✱)**. Can be combined with any other key in the keyboard 
 * Well-Designed:  Put high-free operation into core area. My dog food, adjust it for 2 years. 

@@ -3,7 +3,7 @@
   "author": "Vonng(fengruohang@outlook.com)",
   "homepage": "https://github.com/Vonng/Capslock",
   "manual": "https://github.com/Vonng/Capslock/tree/master/mac-new",
-  "import_url": "karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac-new/capslock.json"
+  "import_url": "karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac-new/capslock.json",
   "rules": [
     {
       "description": "CapsLock to Hyper/Lang-Switcher (Conflict with Hyper/Escape)",
