@@ -1,45 +1,40 @@
-# CapsLock (karabiner-element)
+# Capslock (Mac OS X) 
 
-* **Good News! [Karabiner-element](https://pqrs.org/osx/karabiner/) now works on MacOS 10.13 High Sierra. ** [Download](https://pqrs.org/osx/karabiner/files/Karabiner-Elements-11.1.0.dmg)
-* I upgrade My [CapsLock](https://github.com/Vonng/Capslock) karabiner configuration to newer `JSON Format`。
+
+
+## Notice
+
+* Capslock for Mac is based on `karabiner` (and `seil`). But Karabiner **does not** work on **macOS Sierra(10.12)** at the moment. 
+* It **works well** on EI Capitan(10.11) and Yosemite(10.10).
+
 
 
 
 ## Install
 
-* You can put the json file into karabiner's config directory manually:
+* Step 1:   Download [`seil`](https://pqrs.org/osx/karabiner/seil.html.en) and install
+* Step 2:   Download [`karabiner`](https://pqrs.org/osx/karabiner/) and install.
+* Step 3:   Change capslock's keycode to 80 using `seil`
+    ![](images/seil-usage.png)
+* Step 4:   `karabiner`
+    * Switch to `Misc & Uninstall` panel.
+    * Click `Open private.xml` button.
+    * Copy and overwrite file: `private.xml`.
+      ![](images/karabiner-usage.png)
+* Step 5:   
+    * Switch back to `Change Key` panel
+    * Click `Reload XML`
+    * Enable functions you like :)
+      ![](images/karabiner-ui.png)
 
-```bash
-mkdir -p "${HOME}/.config/karabiner/assets/complex_modifications/"
-cp ./capslock.json "${HOME}/.config/karabiner/assets/complex_modifications/capslock.json"
-```
 
-* OR you can **[Click Here](karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac-new/capslock.json) to open Karabiner-Element and auto import it !**。
-
-```
-karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac-new/capslock.json
-```
-
-
-
-
-
-* See [Karabiner-Elements Sample Scripts](https://github.com/pqrs-org/KE-complex_modifications) for instructions:
-  * Open `karabiner-elements`
-  * Select tab `Complex Modification`
-  * Click `Add item` at bottom
-  * Choose function you like.
-  * Remember:  Press CapsLock alone can be mapped to language-switcher(system-default) or escape (vimer-evangel). **But you can not enable both simultaneously.**
+Enjoy~ 😁
 
 
 
 ## Usage
 
-Hold Capslock, it always work as a `Hyper Key`, For single press, you may only choose only one of `Escape` and `Languag-Switcher`.Design and functionality describes [here](https://github.com/Vonng/Capslock)
-
-
-
-![](https://github.com/Vonng/Capslock/raw/master/mac/images/keyboard-layout.png)
+![](images/keyboard-layout.png)
 
 
 
@@ -94,15 +89,16 @@ Hold Capslock, it always work as a `Hyper Key`, For single press, you may only c
 
 Maybe you'd like overwrite these with your own favorite apps.
 
-* `✱E  ↦ Safari`
+* `✱E  ↦ Google Chrome`
 * `✱⌘E ↦ Finder`
 * `✱R  ↦ iTerm`
 * `✱⌘R ↦ ^R (IDE-Run)`
-* `✱T  ↦ Visual Studio Code`
-* `✱⌘T ↦ Typora`
+* `✱T  ↦ Typora`
+* `✱⌘T ↦ MWeb`
 * `✱F  ↦ Dash`
 * `✱⌘F ↦ Dictionary`
 * `✱G  ↦ IntelliJ IDEA`
+* `✱V  ↦ Visual Studio Code`
 
   ​
 
@@ -120,9 +116,6 @@ Maybe you'd like overwrite these with your own favorite apps.
 * `✱F10 ↦  Mute`
 * `✱F11 ↦  VolumeDown`
 * `✱F12 ↦  VolumeUp`
-* `✱F13(PrintScreen)  ↦  MusicPrev`
-* `✱14(ScrollLock)  ↦  MusicNext`
-* `✱F15(Pause)  ↦  MusicPlay`
 
 #### Shifter
 
@@ -140,20 +133,24 @@ Maybe you'd like overwrite these with your own favorite apps.
 * `✱ScrollLock  ↦ VolumeMute` (Mute)
 * `✱Pause       ↦ MusicPlay` (Music play)
 
-#### Misc
+#### Cursors
+
+* `✱↑ ↦ MouseUp`
+
+
+
+* `✱↓ ↦ MouseDown`
+* `✱← ↦ MouseLeft`
+* `✱→ ↦ MouseRight`
+* `✱↩ ↦ MouseLButton`
+* `✱\ ↦ MouseRButton`
+
+#### Other
 
 - `✱⎋  ↦ ⇪`       (Escape turn ✱Hyper backs to ⇪CapsLock)
-
 - `✱␢   ↦ ⎋`      (Space maps to ⎋ESC)
-
 - `✱\  ↦ ⌃/`       (Back slash maps to comment [IDE shortcut])
-
-- `✱;  ↦ ⇧-  '!' `  (Semicolon to exclamation)
-
+- `✱;  ↦ ⇧-  '_' `  (Semicolon to lodash)
 - `✱'  ↦ =`           (Single quote to equal)
-
-- `✱~    ↦ ⌃⇧⌘4`  (tilde to area screenshot to clipboard)
-
-- `✱⌘ ↦ ⌃⇧4` (ScreenShot by area to desktop picture)
-
-  ​
+- `✱~    ↦ ⌃⇧⌘4`(tilde to area screenhot)
+- `✱⌘~ ↦ ⌃⇧4`  (⌘tilde to area screenhost to clipboard)

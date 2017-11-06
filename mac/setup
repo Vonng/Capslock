@@ -1,4 +1,5 @@
 #!/bin/bash
 
-cp ./private.xml "${HOME}/Library/Application Support/Karabiner/private.xml"
-echo "${HOME}/Library/Application\ Support/Karabiner/private.xml" Done
+mkdir -p "${HOME}/.config/karabiner/assets/complex_modifications/"
+cp ./capslock.json "${HOME}/.config/karabiner/assets/complex_modifications/capslock.json"
+echo "${HOME}/.config/karabiner/assets/complex_modifications/capslock.json" Done
