@@ -42,6 +42,8 @@
 
 ## Usage (mac)
 
+![](images/keyboard.png)
+
 ### Basic
 
 `✱` Hyper actually maps to `⌃⌥⇧⌘` (all right modifiers) , It works well with additional left modifiers. And compatible with most application. Hold CapsLock to enable `Hyper` funcationality while press it will emit an `Escape`.

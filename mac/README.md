@@ -16,10 +16,15 @@
 ## Install
 
 * Now CapsLock is hosted on official site: [Karabiner-Elements complex_modifications rules](https://pqrs.org/osx/karabiner/complex_modifications/)
-* If you already have Karabiner-Elements installed, Click [Here](karabiner://karabiner/assets/complex_modifications/import?url=https%3A%2F%2Fpqrs.org%2Fosx%2Fkarabiner%2Fcomplex_modifications%2Fjson%2Fcaps_lock_enhancement.json) to import it directly.
+
+* If you already have Karabiner-Elements installed, Copy this url to browser: 
+
+  `karabiner://karabiner/assets/complex_modifications/import?url=https%3A%2F%2Fpqrs.org%2Fosx%2Fkarabiner%2Fcomplex_modifications%2Fjson%2Fcaps_lock_enhancement.json` 
 
 
-* Or you can put json conf file in `$HOME/.config/karabiner/assets/complex_modifications` manually.
+* Or you can just download and put json conf file in conf directory manually
+
+  `$HOME/.config/karabiner/assets/complex_modifications`
 
 
 * See [Karabiner-Elements Sample Scripts](https://github.com/pqrs-org/KE-complex_modifications) for instructions:
@@ -32,6 +37,8 @@
 
 
 ## Usage
+
+![keyboard](keyboard.png)
 
 ### Basic
 
@@ -118,6 +125,7 @@
 | `⌘R`   | Open Preview            | Switch to opened picture, pdf, etc...    |
 | `T`    | Open Visual Studio Code | Text Editor: Visual Studio Code          |
 | `⌘T`   | Open Typora             | Text Editor: Typora , a great WYSIWYG md editor |
+| `Y`    | Open Siri               |                                          |
 | `F`    | Open Dash               | Find API Document                        |
 | `⌘F`   | Open Dictionary         | Find words                               |
 | `G`    | Open Intellij IDEA      | Open IDE                                 |
@@ -145,7 +153,7 @@
 | `F12`             | `VolumeUp`           |                                  |
 | `F13` PrintScreen | `MusicPrev`          |                                  |
 | `F14` ScrollLock  | `MusicNext`          |                                  |
-| `F15` Pause       | `MusicPlay`          | Just as it shows                 |
+| `F15` Pause       | `Mute`               |                                  |
 | `Insert`          | `⌥BrightnessUp`      | Fine grained brightness up       |
 | `Delete`          | `⌥BrightnessDown`    | Fine grained brightness down     |
 | `Home`            | `⌥KeyboardLightUp`   | Fine grained keyboard light up   |

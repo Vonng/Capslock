@@ -955,6 +955,25 @@
         {
           "type": "basic",
           "from": {
+            "key_code": "y",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a 'Siri'"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
             "key_code": "f",
             "modifiers": {
               "mandatory": [
@@ -1050,11 +1069,7 @@
           },
           "to": [
             {
-              "key_code": "display_brightness_decrement",
-              "modifiers": [
-                "left_shift",
-                "left_option"
-              ]
+              "key_code": "display_brightness_decrement"
             }
           ]
         },
@@ -1073,11 +1088,48 @@
           },
           "to": [
             {
-              "key_code": "display_brightness_increment",
-              "modifiers": [
-                "left_shift",
-                "left_option"
+              "key_code": "display_brightness_increment"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f3",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option"
               ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "up_arrow",
+              "modifiers": [
+                "left_control"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f4",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a 'Launchpad'"
             }
           ]
         },
@@ -1096,11 +1148,7 @@
           },
           "to": [
             {
-              "key_code": "illumination_decrement",
-              "modifiers": [
-                "left_shift",
-                "left_option"
-              ]
+              "key_code": "illumination_decrement"
             }
           ]
         },
@@ -1119,11 +1167,7 @@
           },
           "to": [
             {
-              "key_code": "illumination_increment",
-              "modifiers": [
-                "left_shift",
-                "left_option"
-              ]
+              "key_code": "illumination_increment"
             }
           ]
         },
@@ -1218,11 +1262,7 @@
           },
           "to": [
             {
-              "key_code": "volume_decrement",
-              "modifiers": [
-                "left_shift",
-                "left_option"
-              ]
+              "key_code": "volume_decrement"
             }
           ]
         },
@@ -1241,11 +1281,7 @@
           },
           "to": [
             {
-              "key_code": "volume_increment",
-              "modifiers": [
-                "left_shift",
-                "left_option"
-              ]
+              "key_code": "volume_increment"
             }
           ]
         },
@@ -1302,7 +1338,7 @@
           },
           "to": [
             {
-              "key_code": "play_or_pause"
+              "key_code": "mute"
             }
           ]
         },
@@ -1321,7 +1357,11 @@
           },
           "to": [
             {
-              "key_code": "display_brightness_increment"
+              "key_code": "display_brightness_increment",
+              "modifiers": [
+                "left_shift",
+                "left_option"
+              ]
             }
           ]
         },
@@ -1340,7 +1380,11 @@
           },
           "to": [
             {
-              "key_code": "display_brightness_decrement"
+              "key_code": "display_brightness_decrement",
+              "modifiers": [
+                "left_shift",
+                "left_option"
+              ]
             }
           ]
         },
@@ -1359,7 +1403,11 @@
           },
           "to": [
             {
-              "key_code": "illumination_increment"
+              "key_code": "illumination_increment",
+              "modifiers": [
+                "left_shift",
+                "left_option"
+              ]
             }
           ]
         },
@@ -1378,7 +1426,11 @@
           },
           "to": [
             {
-              "key_code": "illumination_decrement"
+              "key_code": "illumination_decrement",
+              "modifiers": [
+                "left_shift",
+                "left_option"
+              ]
             }
           ]
         },
