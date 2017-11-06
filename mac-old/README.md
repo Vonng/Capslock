@@ -5,9 +5,12 @@
 ## Notice
 
 * Capslock for Mac is based on `karabiner` (and `seil`). But Karabiner **does not** work on **macOS Sierra(10.12)** at the moment. 
+
 * It **works well** on EI Capitan(10.11) and Yosemite(10.10).
 
+* no longer maintained. Check [CapsLock(mac-new)](../mac) for latest system support
 
+  ​
 
 
 ## Install

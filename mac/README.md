@@ -8,21 +8,31 @@
   * macOS Sierra (10.12)
   * macOS EI Capitan (10.11)
 
-* For older OS X user, refers to old `karabiner` XML-Format configuration script.
+* For older OS X user, refers to [old](../mac-old) `karabiner` XML-Format configuration script.
 
   ​
 
 
-## Install
+## Install (mac)
 
-* Now CapsLock is hosted on official site: [Karabiner-Elements complex_modifications rules](https://pqrs.org/osx/karabiner/complex_modifications/)
+1. Download [Karabiner-Elements](https://pqrs.org/osx/karabiner/) and Install
 
-* If you already have Karabiner-Elements installed, Copy this url to browser: 
+2. Copy URL to your browser to import configuration script.
 
-  `karabiner://karabiner/assets/complex_modifications/import?url=https%3A%2F%2Fpqrs.org%2Fosx%2Fkarabiner%2Fcomplex_modifications%2Fjson%2Fcaps_lock_enhancement.json` 
+```bash
+# This Repo
+karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac/caps_lock.json
+
+# Karabiner-Elements Offical Script Gallery
+karabiner://karabiner/assets/complex_modifications/import?url=https%3A%2F%2Fpqrs.org%2Fosx%2Fkarabiner%2Fcomplex_modifications%2Fjson%2Fcaps_lock_enhancement.json
+```
+
+3. Open Karabiner, Tab "ComplexModification", Button "Add Item", and enable entries you like.
+
+4. Default conf file path is `$HOME/.config/karabiner/assets/complex_modifications`. Modify it if you like.
 
 
-* Or you can just download and put json conf file in conf directory manually
+* Or you can just download and put json conf file in conf directory manually：
 
   `$HOME/.config/karabiner/assets/complex_modifications`
 

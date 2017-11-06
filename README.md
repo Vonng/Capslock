@@ -29,14 +29,23 @@
   - XP, 7, 8, 10
 
 
-
 ## Install (mac)
 
 1. Download [Karabiner-Elements](https://pqrs.org/osx/karabiner/) and Install
-2. Click [Here](karabiner://karabiner/assets/complex_modifications/import?url=https%3A%2F%2Fpqrs.org%2Fosx%2Fkarabiner%2Fcomplex_modifications%2Fjson%2Fcaps_lock_enhancement.json) to import configuration directly.
-3. "Karabiner", "ComplexModification", "Add Item", and enable functionalities you like.
 
-* Default conf file path is `$HOME/.config/karabiner/assets/complex_modifications`
+2. Copy URL to your browser to import configuration script.
+
+```bash
+# This Repo
+karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac/caps_lock.json
+
+# Karabiner-Elements Offical Script Gallery
+karabiner://karabiner/assets/complex_modifications/import?url=https%3A%2F%2Fpqrs.org%2Fosx%2Fkarabiner%2Fcomplex_modifications%2Fjson%2Fcaps_lock_enhancement.json
+```
+
+3. Open Karabiner, Tab "ComplexModification", Button "Add Item", and enable entries you like.
+
+4. Default conf file path is `$HOME/.config/karabiner/assets/complex_modifications`. Modify it if you like.
 
 
 
