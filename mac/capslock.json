@@ -2195,28 +2195,6 @@
         },
         {
           "from": {
-            "key_code": "backslash",
-            "modifiers": {
-              "mandatory": [
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "backslash",
-              "modifiers": [
-                "left_shift"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
             "key_code": "semicolon",
             "modifiers": {
               "mandatory": [
@@ -2368,6 +2346,28 @@
               "modifiers": [
                 "left_control",
                 "left_shift",
+                "left_command"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "backslash",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "slash",
+              "modifiers": [
                 "left_command"
               ]
             }
