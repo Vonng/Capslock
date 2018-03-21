@@ -10,25 +10,28 @@
 
 * For older OS X user, refers to [old](../mac-old) `karabiner` XML-Format configuration script.
 
-  ​
 
 
-## Install
+## Install (mac)
 
 1. Download [Karabiner-Elements](https://pqrs.org/osx/karabiner/) and Install
 2. Copy URL to your browser to import configuration script.
 
 ```bash
-# This Repo
+# This Repo (open in safari)
 karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac/capslock.json
+```
 
+```bash
 # Karabiner-Elements Offical Script Gallery
 karabiner://karabiner/assets/complex_modifications/import?url=https%3A%2F%2Fpqrs.org%2Fosx%2Fkarabiner%2Fcomplex_modifications%2Fjson%2Fcaps_lock_enhancement.json
 ```
 
 3. Open Karabiner, Tab "ComplexModification", Button "Add Item", and enable entries you like.
 4. Default conf file path is `$HOME/.config/karabiner/assets/complex_modifications`. Modify it if you like.
-5. Enable functions:`[App] karabiner-elements -> [Tab] Complex Modification -> Add Item`
+5. Enable functions: `[App] karabiner-elements -> [Tab] Complex Modification -> Add Item`
+
+
 
 #### Notice
 
@@ -43,7 +46,9 @@ karabiner://karabiner/assets/complex_modifications/import?url=https%3A%2F%2Fpqrs
 
 
 
-## Usage
+
+
+## Usage (mac)
 
 ![](../images/keyboard.png)
 
@@ -212,7 +217,6 @@ karabiner://karabiner/assets/complex_modifications/import?url=https%3A%2F%2Fpqrs
 | `=` Equal          | `+`     | Plus                     |
 | `[` Left Bracket   | `(`     | Left Round Bracket `⇧9`  |
 | `]`  Right Bracket | `)`     | Right Round Bracket `⇧0` |
-| `\` Back Slash     | `|`     | Bar                      |
 | `;` Semicolon      | `!`     | Exclamation              |
 | `'` Single Quote   | `=`     | EqualSign                |
 | `⌘;` Semicolon     | `!`     | Colon                    |
@@ -226,7 +230,6 @@ karabiner://karabiner/assets/complex_modifications/import?url=https%3A%2F%2Fpqrs
 | `~` BackQuote          | `⌃⇧⌘4`              | macOS Area Screenshot to Clipboard             |
 | `⌘~` Command+BackQuote | `⌃⇧4`               | macOS Area Screenshot to Desktop File          |
 | `⌫` Backspace          | `⌘⌫`                | macOS Delete File                              |
-| `↩`  Return            | `=`                 | Return to Equal Sign                           |
 | `/` Slash              | `⌘/` Command+Slash  | Comment/Uncomment in many IDE                  |
+| `\` Backslash          | `⌘/` Command+Slash  | Comment/Uncomment in many IDE                  |
 | `␢` Spacebar           | `⌃␢`  Ctrl+Spacebar | Switch Input Source                            |
-

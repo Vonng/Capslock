@@ -41,9 +41,11 @@
 2. Copy URL to your browser to import configuration script.
 
 ```bash
-# This Repo
-karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac/caps_lock.json
+# This Repo (open in safari)
+karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac/capslock.json
+```
 
+```bash
 # Karabiner-Elements Offical Script Gallery
 karabiner://karabiner/assets/complex_modifications/import?url=https%3A%2F%2Fpqrs.org%2Fosx%2Fkarabiner%2Fcomplex_modifications%2Fjson%2Fcaps_lock_enhancement.json
 ```
@@ -224,7 +226,6 @@ karabiner://karabiner/assets/complex_modifications/import?url=https%3A%2F%2Fpqrs
 | `=` Equal          | `+`     | Plus                     |
 | `[` Left Bracket   | `(`     | Left Round Bracket `⇧9`  |
 | `]`  Right Bracket | `)`     | Right Round Bracket `⇧0` |
-| `\` Back Slash     | `|`     | Bar                      |
 | `;` Semicolon      | `!`     | Exclamation              |
 | `'` Single Quote   | `=`     | EqualSign                |
 | `⌘;` Semicolon     | `!`     | Colon                    |
@@ -232,15 +233,15 @@ karabiner://karabiner/assets/complex_modifications/import?url=https%3A%2F%2Fpqrs
 
 ### Misc
 
-| Origin                 | Maps to             | Comment                                  |
-| ---------------------- | ------------------- | ---------------------------------------- |
+| Origin                 | Maps to             | Comment                                        |
+| ---------------------- | ------------------- | ---------------------------------------------- |
 | `⎋` Escape             | `⇪`  CapsLock       | Bug: Difficult to turn capslock off after emit |
-| `~` BackQuote          | `⌃⇧⌘4`              | macOS Area Screenshot to Clipboard       |
-| `⌘~` Command+BackQuote | `⌃⇧4`               | macOS Area Screenshot to Desktop File    |
-| `⌫` Backspace          | `⌘⌫`                | macOS Delete File                        |
-| `↩`  Return            | `=`                 | Return to Equal Sign                     |
-| `/` Slash              | `⌘/` Command+Slash  | Comment/Uncomment in many IDE            |
-| `␢` Spacebar           | `⌃␢`  Ctrl+Spacebar | Switch Input Source                      |
+| `~` BackQuote          | `⌃⇧⌘4`              | macOS Area Screenshot to Clipboard             |
+| `⌘~` Command+BackQuote | `⌃⇧4`               | macOS Area Screenshot to Desktop File          |
+| `⌫` Backspace          | `⌘⌫`                | macOS Delete File                              |
+| `/` Slash              | `⌘/` Command+Slash  | Comment/Uncomment in many IDE                  |
+| `\` Backslash          | `⌘/` Command+Slash  | Comment/Uncomment in many IDE                  |
+| `␢` Spacebar           | `⌃␢`  Ctrl+Spacebar | Switch Input Source                            |
 
 
 
