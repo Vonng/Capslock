@@ -1856,7 +1856,11 @@
           },
           "to": [
             {
-              "key_code": "volume_decrement"
+              "key_code": "volume_decrement",
+              "modifiers": [
+                "left_shift",
+                "left_option"
+              ]
             }
           ],
           "type": "basic"
@@ -1875,7 +1879,11 @@
           },
           "to": [
             {
-              "key_code": "volume_increment"
+              "key_code": "volume_increment",
+              "modifiers": [
+                "left_shift",
+                "left_option"
+              ]
             }
           ],
           "type": "basic"
