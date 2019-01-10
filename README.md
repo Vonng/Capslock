@@ -149,7 +149,7 @@ karabiner://karabiner/assets/complex_modifications/import?url=https%3A%2F%2Fpqrs
 | ------ | ----------- | -------------------------------------------- |
 | `Z`    | `⌃Z` Ctrl+Z | SIGTSTP                                      |
 | `X`    | `⌃R` Ctrl+R | IDE Run                                      |
-| `C`    | `⌃C`Ctrl+Z  | SIGINT                                       |
+| `C`    | `⌃C`Ctrl+C  | SIGINT                                       |
 | `V`    | `⌃V`Ctrl+V  | Vim Prefix                                   |
 | `B`    | `⌃B`Ctrl+B  | [Tmux](http://tmux.github.io) Default Prefix |
 | `D`    | `⌃D` Ctrl+D | EOF                                          |
