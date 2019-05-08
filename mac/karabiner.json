@@ -1,7 +1,7 @@
 {
     "global": {
-        "check_for_updates_on_startup": true,
-        "show_in_menu_bar": false,
+        "check_for_updates_on_startup": false,
+        "show_in_menu_bar": true,
         "show_profile_name_in_menu_bar": false
     },
     "profiles": [
@@ -11,9 +11,41 @@
                     "basic.simultaneous_threshold_milliseconds": 50,
                     "basic.to_delayed_action_delay_milliseconds": 500,
                     "basic.to_if_alone_timeout_milliseconds": 1000,
-                    "basic.to_if_held_down_threshold_milliseconds": 500
+                    "basic.to_if_held_down_threshold_milliseconds": 500,
+                    "mouse_motion_to_scroll.speed": 100
                 },
                 "rules": [
+                    {
+                        "description": "CapsLock to Hyper/Escape",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_shift",
+                                        "modifiers": [
+                                            "right_command",
+                                            "right_control",
+                                            "right_option"
+                                        ]
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "escape"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
                     {
                         "description": "CapsLock to Hyper/Escape",
                         "manipulators": [
@@ -1123,7 +1155,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "open -a 'Dictionary'"
+                                        "shell_command": "open -a 'GoldenDict'"
                                     }
                                 ],
                                 "type": "basic"
@@ -1324,25 +1356,6 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "open -a 'Preview'"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "r",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_command",
-                                            "right_control",
-                                            "right_shift",
-                                            "right_option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
                                         "shell_command": "open -a 'iTerm'"
                                     }
                                 ],
@@ -1382,7 +1395,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "open -a 'Visual Studio Code'"
+                                        "shell_command": "open -a 'VSCodium'"
                                     }
                                 ],
                                 "type": "basic"
@@ -1864,7 +1877,11 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "volume_decrement"
+                                        "key_code": "volume_decrement",
+                                        "modifiers": [
+                                            "left_shift",
+                                            "left_option"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -1883,7 +1900,11 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "volume_increment"
+                                        "key_code": "volume_increment",
+                                        "modifiers": [
+                                            "left_shift",
+                                            "left_option"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -2459,67 +2480,7 @@
                     "identifiers": {
                         "is_keyboard": true,
                         "is_pointing_device": false,
-                        "product_id": 17733,
-                        "vendor_id": 1241
-                    },
-                    "ignore": false,
-                    "manipulate_caps_lock_led": false,
-                    "simple_modifications": [
-                        {
-                            "from": {
-                                "key_code": "left_command"
-                            },
-                            "to": {
-                                "key_code": "left_option"
-                            }
-                        },
-                        {
-                            "from": {
-                                "key_code": "left_option"
-                            },
-                            "to": {
-                                "key_code": "left_command"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "disable_built_in_keyboard_if_exists": false,
-                    "fn_function_keys": [],
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "is_pointing_device": false,
-                        "product_id": 4621,
-                        "vendor_id": 1204
-                    },
-                    "ignore": false,
-                    "manipulate_caps_lock_led": false,
-                    "simple_modifications": [
-                        {
-                            "from": {
-                                "key_code": "left_command"
-                            },
-                            "to": {
-                                "key_code": "left_option"
-                            }
-                        },
-                        {
-                            "from": {
-                                "key_code": "left_option"
-                            },
-                            "to": {
-                                "key_code": "left_command"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "disable_built_in_keyboard_if_exists": false,
-                    "fn_function_keys": [],
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "is_pointing_device": false,
-                        "product_id": 632,
+                        "product_id": 627,
                         "vendor_id": 1452
                     },
                     "ignore": false,
@@ -2532,12 +2493,29 @@
                     "identifiers": {
                         "is_keyboard": true,
                         "is_pointing_device": false,
-                        "product_id": 617,
-                        "vendor_id": 1241
+                        "product_id": 1957,
+                        "vendor_id": 1118
                     },
                     "ignore": false,
                     "manipulate_caps_lock_led": false,
-                    "simple_modifications": []
+                    "simple_modifications": [
+                        {
+                            "from": {
+                                "key_code": "left_command"
+                            },
+                            "to": {
+                                "key_code": "left_option"
+                            }
+                        },
+                        {
+                            "from": {
+                                "key_code": "left_option"
+                            },
+                            "to": {
+                                "key_code": "left_command"
+                            }
+                        }
+                    ]
                 }
             ],
             "fn_function_keys": [
@@ -2642,8 +2620,7 @@
             "selected": true,
             "simple_modifications": [],
             "virtual_hid_keyboard": {
-                "caps_lock_delay_milliseconds": 0,
-                "keyboard_type": "ansi"
+                "country_code": 0
             }
         }
     ]
