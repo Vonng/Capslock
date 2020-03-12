@@ -160,16 +160,15 @@ karabiner://karabiner/assets/complex_modifications/import?url=https%3A%2F%2Fpqrs
 
 | Origin | Maps to                 | Comment                                         |
 | ------ | ----------------------- | ----------------------------------------------- |
-| `E`              | Open Safari             | Open Web Browser                         |
-| `⌘E`             | Open Finder             | Open File Browser                        |
+| `E`    | Open Safari             | Open Web Browser                                |
+| `⌘E`   | Open Finder             | Open File Browser                               |
 | `R`    | Open iTerm2             | Great terminal for osx (`Run`)                  |
 | `⌘R`   | Open Preview            | Switch to opened picture, pdf, etc...           |
 | `T`    | Open Visual Studio Code | Text Editor: Visual Studio Code                 |
 | `⌘T`   | Open Typora             | Text Editor: Typora , a great WYSIWYG md editor |
-| `⌘D` | Open Dictionary | Find words |
+| `⌘D`   | Open Dictionary         | Find words                                      |
 | `⌘F`   | Open Dash               | Find API Document                               |
-| `F` | Open Alfred | Leaves to `⌃⌥⇧⌘F` |
-| `⌘D`  | Open Dictionary         | Find words                                      |
+| `F`    | Open Alfred             | Leaves to `⌃⌥⇧⌘F`                               |
 | `G`    | Open Intellij IDEA      | Open IDE                                        |
 | `⌘G`   | Open Chrome             | Google Chrome                                   |
 
