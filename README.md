@@ -106,7 +106,7 @@ karabiner://karabiner/assets/complex_modifications/import?url=https%3A%2F%2Fpqrs
 ### Mousekey
 
 * Emulate mouse with keyboard
-* Also can be archived by `⌥`  with `HJKL`
+* Also can be achieved by `⌥` with `HJKL`
 
 | Origin | Maps to        | Comment                  |
 | ------ | -------------- | ------------------------ |
