@@ -1,4 +1,4 @@
-# Capslock (v3)
+# Capslock
 
 *让Capslock再次伟大！*
 
@@ -19,63 +19,45 @@
 * **鼠标集成**：忘掉鼠标吧！用键盘来完成所有鼠标相关操作！
 * **轻量便携**：只是简单轻量的键盘定义，随带随走，随下随用，兼容MacOS与Windows。
 
+### 版本与操作系统支持
+
+|                Capslock 版本                 |                     支持的 Mac 操作系统                      | 支持的Windows操作系统 |
+| :------------------------------------------: | :----------------------------------------------------------: | :-------------------: |
+| [Capslock Mac V3](mac_v3/)    (2021 - 至今 ) |                    MacOS Big Sur (11.0 )                     |      Windows 10       |
+|   [Capslock Mac V2](mac/)    (2018 - 2021)   |                    MacOS Catalina (10.15)                    |       Windows 8       |
+|  [Capslock Mac V1](mac_v1)    (2015 - 2018)  |                  MacOS High Sierra (10.13)                   |       Windows 7       |
+|     [Capslock Win](win)    (2013 - 2015)     |                     MacOS Sierra (10.12)                     |     Windows Vista     |
+|                                              |                   MacOS EI Capitan (10.11)                   |      Windows XP       |
+|                                              | MacOS Yosemite (10.10) or lower<br /> (via [mac v1](mac_v1/)) |    via [win](win/)    |
 
 
-## Install (MacOS)
+
+## 快速开始
 
 在MacOS上，Capslock通过 [**Karabiner-Elements**](https://karabiner-elements.pqrs.org/) 提供服务
 
-### 版本说明
-
-* [Capslock V3](mac_v3) (2021-now)：最新版配置文件
-* [Capslock V2](mac/) (2018-2021)：支持MacOS 10.11 - 11
-* [Capslock V1](mac_v1) (2015-2018)：由MacOS Yosemite 10.10及以下的系统使用，不再维护。
-
-### 安装方式
-
 1. 下载并安装 [**Karabiner Elements**](https://karabiner-elements.pqrs.org/)，按照安装向导提示完成安装并赋予所需权限。
-2. 点击链接加载Capslock配置文件：[**最新配置文件**](karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac/capslock.json)，[**Karabiner官方陈列的配置文件**](karabiner://karabiner/assets/complex_modifications/import?url=https%3A%2F%2Fpqrs.org%2Fosx%2Fkarabiner%2Fcomplex_modifications%2Fjson%2Fcaps_lock_enhancement.json)
 
-3. 打开Karabiner-Elements，切至第三标签页`ComplexModification`，点击左下方按钮 `Add Rules`按需启用Capslock预置规则即可。
+2. 将 [**capslock.json**](mac/capslock.json) 下载至` ~/.config/karabiner/assets/complex_modifications/` 目录。
 
-![](mac_v3/images/config-karabiner.png)
+   或使用Safari打开下面的链接，将自动启动Karabiner并加载Capslock配置文件。
 
-### 配置说明
+   ```yaml
+   # Capslock Mac V3 (当前项目最新配置文件)
+   karabiner://karabiner/assets/complex_modifications/import?url=https://github.com/Vonng/Capslock/blob/master/mac_v3/capslock.json
+   ```
 
-Karabiner的配置文件可以通过URL加载，在Safari中打开以下链接可以直接打开Karabiner-Elements并导入Capslock配置文件：
-
-* 本项目中的最新配置文件：[https://raw.githubusercontent.com/Vonng/Capslock/master/mac/capslock.json](karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac/capslock.json)
-* Karabiner官方陈列的配置文件：[https://pqrs.org/osx/karabiner/complex_modifications/json/caps_lock_enhancement.json](karabiner://karabiner/assets/complex_modifications/import?url=https%3A%2F%2Fpqrs.org%2Fosx%2Fkarabiner%2Fcomplex_modifications%2Fjson%2Fcaps_lock_enhancement.json)
-
-```bash
-# Capslock Repo
-karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac/capslock.json
-
-# Karabiner-Elements Offical Script Gallery
-karabiner://karabiner/assets/complex_modifications/import?url=https://pqrs.org/osx/karabiner/complex_modifications/json/caps_lock_enhancement.json
-```
-
-若无法访问上述URL，也可以手工下载 [**配置文件**](mac/capslock.json) 至Karabiner默认配置目录：` ~/.config/karabiner/assets/complex_modifications/`
-
-[**capslock.json**](mac/capslock.json) 是最终的配置文件，而 [**capslock.yml**](mac/capslock.yml) 则是用于手工编辑的可读性更强的版本。YAML定义可以通过`make compile`等效转换为JSON格式的定义文件。  
-
-### 系统支持
-
--  MacOS Big Sur (11.0 )
--  MacOS Catalina (10.15)
--  MacOS Mojave (10.14)
--  MacOS High Sierra (10.13)
--  MacOS Sierra (10.12)
--  MacOS EI Capitan (10.11)
--  MacOS Yosemite (10.10) 或更低
-
-> 其中，macOS Yosemite (10.10) 及更低版本的MacOS可以使用：[**Capslock Mac V1**](mac_v1/)，但该分支已不再维护。
+3. 打开Karabiner-Elements，切至第三选项卡`ComplexModification`，点击左下方按钮 `Add Rules`按需启用Capslock预置规则即可
 
 
 
 ## 功能
 
-Capslock以ASCI布局键盘为蓝本，对Capslock之外的**所有按键**进行了功能定制与修饰，主要分为10大类功能。
+Capslock以**ANSI**布局键盘为蓝本，对Capslock之外的 [**所有按键**](#符号) 进行了功能定制与修饰，主要分为10大类功能。
+
+![](mac_v3/images/keyboard.png)
+
+> [**控制平面**](控制平面) 由左侧修饰键的排列组合所定义：根据 ⌘⌥⌃⇧的状态，最多有16个额外的控制平面。上图为0号控制平面布局。
 
 |         类目          |  颜色  | 说明                                                         |
 | :-------------------: | :----: | :----------------------------------------------------------- |
@@ -90,83 +72,76 @@ Capslock以ASCI布局键盘为蓝本，对Capslock之外的**所有按键**进�
 | [上档变换](#上档变换) |   橙   | 将一些键映射至常用高频字符。                                 |
 | [功能控制](#功能控制) |   青   | 将F1-F2转义回原本的功能，截屏录屏，音量灯光的精密控制。      |
 
-![](images/keyboard.png)
-
-
-
 ### 基础功能
 
-|  Key   |   MapsTo   | Comment                                                      |
+|  按键  |   映射为   | 说明                                                         |
 | :----: | :--------: | ------------------------------------------------------------ |
 | ⇪ 点击 |  ⎋ Escape  | 单击Capslock发送ESC                                          |
 | ⇪ 按住 |  ✱  Hyper  | 按住Capslock启用Hyper                                        |
 |   ✱⎋   | ⇪ Capslock | **单击**ESC启用大写锁定，**按住**关闭大写锁定（按住Capslock时） |
-|   ✱␣   |     ⌃␣     | **单击**空格切换输入法（按住Capslock时）                     |
+|   ✱␣   |     ⌃␣     | **单击**空格切换输入法，+⌘时打开表情符号页                   |
 
 注意，✱ 在实现上被定义为同时按下所有的右侧⌘⌥⌃⇧修饰符，这样设计的主要原因是将快捷键透传到外部应用。（如Alfred，Moom等）
+
+后续介绍如果没有特殊说明，均假定 ✱  Hyper 处于按下状态。
 
 ### 导航功能
 
 * `H`, `J`, `K`, `L`, `U`, `I`, `O`, `P`  被用作**基本导航键**，分别映射为←↓↑→⇞↖↘⇟（左下上右/PgUp/Home/End/PgDn），位于图中粉色区域。
 * 基本导航键配合**左侧修饰键**可启用多种导航功能，默认配置了9个**控制平面**。
-* 按住额外的 ⌥ Option，效果为**词段移动**，移动到词语或段落的首尾部。（等效于 ⌥ Option + 方向键）
-* 按住额外的 ⌘ Command，效果为**文本选择**。 （等效于 ⇧ Shift + 方向键）
-* 按住额外的 ⌥ Option 与 ⌘ Command，效果为**词段选择**。（等效于 ⇧ Shift + ⌥ Option + 方向键）
-* 按住额外的 ⌃ Control，效果为**桌面管理**（等效于⌃Ctrl + 方向键）
-* 按住额外的 ⇧ Shift，效果为**标签页与窗口切换**。
-* 按住额外的 ⇧ Shift 与⌘/⌥/⌃三者之一时，效果为**鼠标动作**。其中 ⌥ 映射为**光标移动**，⌃ 为滚轮滚动。⌘为**反向滚轮滚动**。
+* 按住 ⌘ Command，效果为**文本选择**，额外按住⌥ Option 时，选择单位会变为**前后词语**与**上下3行**。
+* 按住⇧ Shift 的效果为**应用/窗口/标签切换**，按住⌃ Control 的效果为**桌面管理**。
+* 按住 ⌥ Option 效果为🖱️**鼠标移动**， 额外按下⇧Shift将**移速翻倍** ⏫。  (`U`, `I`, `O`, `P` 映射为鼠标左击，右击，后退，前进)。
+* 按住⇧⌥将导航键变为 🖲️ **鼠标滚轮**，⇧⌘**移速翻倍** 。其中HJKL为正常滚动，UIOP自然滚动（反向）。
 
-| 键\修饰  |    ✱     |    ⌥     |    ⌘     |    ⌘⌥    |     ⌃     |      ⇧       |    ⇧⌃    |    ⇧⌥    |     ⇧⌘     |
-| :------: | :------: | :------: | :------: | :------: | :-------: | :----------: | :------: | :------: | :--------: |
-| **功能** | **移动** | **跳动** | **选择** | **跳选** | **桌面**  |   **窗口**   | **滚动** | **鼠标** |  **反滚**  |
-|    H     |    ←     | 左移一词 | 左选一字 | 左选一词 | 上个桌面  |  前一个Tab   |   左滚   |  鼠标左  |  自然左滚  |
-|    J     |    ↓     | 移至段尾 | 下选一行 | 选至段尾 | 聚焦窗口  |  下一个应用  |   下滚   |  鼠标下  |  自然下滚  |
-|    K     |    ↑     | 移至段首 | 上选一行 | 选至段首 | 暴露所有  |  前一个应用  |   上滚   |  鼠标上  |  自然上滚  |
-|    L     |    →     | 右移一词 | 右选一字 | 右选一词 | 下个桌面  |  后一个Tab   |   右滚   |  鼠标右  |  自然右滚  |
-|    U     |  PageUp  | 整行上移 | 选至上页 | 选至上页 |   全屏    |   缩放缩小   | 快速左滚 | 鼠标后退 | 快速左反滚 |
-|    I     |   Home   | 选至行首 | 选至行首 | 选至行首 | 隐藏窗口  | 同应用前窗口 | 快速下滚 | 鼠标左键 | 快速下反滚 |
-|    O     |   End    | 选至行尾 | 选至行尾 | 选至行尾 | 暴露所有  | 同应用后窗口 | 快速上滚 | 鼠标右键 | 快速上反滚 |
-|    P     |  PageDn  | 整行下移 | 选至下页 | 选至下页 | LaunchPad |   缩放放大   | 快速右滚 | 鼠标前进 | 快速右反滚 |
+| **功能** | **移动** | **选择** | **快速选择** | **窗口管理** | **桌面管理** | **跳动** | **滚动** | **鼠标** | **反滚** |
+| :------: | :------: | :------: | :----------: | :----------: | :----------: | :------: | :------: | :------: | :------: |
+| 键\修饰  |    ✱     |    ⌘     |      ⌘⌥      |      ⇧       |      ⌃       |    ⌥     |    ⇧⌃    |    ⇧⌥    |    ⇧⌘    |
+|    H     |    ⬅️     | 左选一字 |   左选一词   |   先前Tab    |   上个桌面   |    ⬅️     |    ⬅️⏫    |    ⬅️     |    ⬅️⏫    |
+|    J     |    ⬇️     | 下选一行 |   下选三行   |   切换应用   |   聚焦窗口   |    ⬇️     |    ⬇️⏫    |    ⬇️     |    ⬇️⏫    |
+|    K     |    ⬆️     | 上选一行 |   上选三行   |   先前应用   |   暴露所有   |    ⬆️     |    ⬆️⏫    |    ⬆️     |    ⬆️⏫    |
+|    L     |    ➡️     | 右选一字 |   右选一词   |   切换Tab    |   下个桌面   |    ➡️     |    ➡️⏫    |    ➡️     |    ➡️⏫    |
+|    U     |   PgUp   | 选至上页 |   选至上页   |     缩小     |     全屏     |    🖱️L    |    🖱️L    |    ➡️     |    ➡️⏫    |
+|    I     |   Home   | 选至行首 |   选至行首   |   上个窗口   |   隐藏窗口   |    🖱️R    |    🖱️R    |    ⬆️     |    ⬆️⏫    |
+|    O     |   End    | 选至行尾 |   选至行尾   |   切换窗口   |   隐藏所有   |    🖱️B    |    🖱️B    |    ⬇️     |    ⬇️⏫    |
+|    P     |   PgDn   | 选至下页 |   选至下页   |     放大     |   启动菜单   |    🖱️F    |    🖱️F    |    ⬅️     |    ⬅️⏫    |
 
 #### 方向键导航
 
-* 使用上下左右光标键←↓↑→模拟**鼠标移动**，按住 ⌥ Option **速度移动变慢**，按住⌘ Command **移动速度变快**。
-* 按住⇧ Shift 时转换为**鼠标滚轮滚动模式**，⌥ Option 时**减速**，按住⌘ Command **加速**。
+* 方向键 ←↓↑→ 用于模拟 🖱️**鼠标移动**。额外按住 ⌥ Option ⏬ **减速**，额外按住 ⌘ Command ⏫ **加速**。
+* 按住 ⇧Shift 切换至 🖲️**滚轮移动**。额外按住 ⌥ Option ⏬ **减速**，额外按住⌘ Command ⏫ **加速**。
 * 按下↩回车键为鼠标左键单击，配合⌘⌥⌃⇧使用时会相应转化为鼠标的右键，中键，后退键，前进键。
 
-| 键\修饰  |      ✱       |      ⌥       |      ⌘       |      ⇧       |      ⇧⌥      |      ⇧⌘      |
-| :------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
-| **功能** | **鼠标移动** | **慢速移动** | **快速移动** | **滚轮滚动** | **慢速滚动** | **快速滚动** |
-|   ←↓↑→   |   速度1600   |    移速/2    |    移速*2    |   速度=32    |    滚速/2    |    滚速*2    |
-|    ↩     |   左键单击   |   中键单击   |   右键单击   |   左键单击   |   鼠标后退   |   鼠标前进   |
+| **功能** |     🖱️     |   🖱️⏬   |   🖱️⏫   |    🖲️    |   🖲️⏬   |   🖲️⏫   |
+| :------: | :-------: | :----: | :----: | :-----: | :----: | :----: |
+| 键\修饰  |     ✱     |   ⌥    |   ⌘    |    ⇧    |   ⇧⌥   |   ⇧⌘   |
+|   ←↓↑→   | 移速=1600 | 移速÷2 | 移速×2 | 滚速=32 | 滚速÷2 | 滚速×2 |
+|    ↩     |    🖱️L     |   🖱️M   |   🖱️R   |   🖱️L    |   🖱️B   |   🖱️F   |
 
 ### 删除功能
 
- `N` `M` `,` `.`  用做删除键
-
-删除操作位于导航键`HJKL`下方，用于快速执行文本删除。
+ `N` `M` `,` `.`  用做删除键。删除操作位于导航键`HJKL`下方，用于快速执行文本删除。
 
 | 键\修饰 |    ✱     |      ⌘       |    ⌥     |
 | :-----: | :------: | :----------: | :------: |
-|   `N`   | 前删一词 |   删至行首   | 整行删除 |
-|   `M`   | 前删一字 |   前删一词   | 整行删除 |
-|   `,`   | 后删一字 |   后删一词   | 整行删除 |
-|   `.`   | 后删一词 |   删至行尾   | 整行删除 |
-|   `⌫`   | 删除文件 | 永久删除文件 |          |
+|    N    | 前删一词 |   删至行首   | 整行删除 |
+|    M    | 前删一字 |   前删一词   | 将行下移 |
+|    ,    | 后删一字 |   后删一词   | 将行上移 |
+|    .    | 后删一词 |   删至行尾   | 整行删除 |
+|    ⌫    | 删除文件 | 永久删除文件 |          |
 
 ### 鼠标键
 
-* 数字小键盘映射为鼠标相关功能，因为有8个方向，使用起来会更灵活。
-* 1-9号数字控制**鼠标移动**方向，额外按住 ⌥ Option 时**减速**，按住⌘ Command **加速**。
-*  按住⇧ Shift 切换为**鼠标滚动**模式，在此模式下，依然是额外按住 ⌥ Option 时**减速**，按住⌘ Command **加速**。
+* 1-9号数字控制🖱️ **鼠标移动**方向，额外按住 ⌥ Option 时 ⏬**减速**，按住⌘ Command 时 ⏫**加速**。
+* 按住⇧ Shift 切换为🖲️ **滚轮滚轮**，在此模式下，额外按住 ⌥ Option 时 ⏬ **减速**，额外按住⌘ Command ⏫ **加速**。
 * 第一行（`numlock`, `=`, `/`, `*`）转换为鼠标滚动操作，右下侧其余按键（`0`, `.`, `⌤`, `+`, `-`）转换为鼠标的5个按键.
 
-| `numlock` ⬅️  | `=` ⬇️ |    `/` ⬆️     |    `*` ➡️     |
-| :----------: | :---: | :----------: | :----------: |
-|    `7` ↖️     |  8 ⬆️  |    `9` ↗️     | **`-` 后退** |
-|    `4` ⬅️     |  `5`  |    `6` ➡️     | **`+` 前进** |
-|     `1`↙️     |  2 ⬇️  |    `3` ↘️     |              |
-| **`0` 左键** |       | **`.` 中键** | **`⌤` 右键** |
+| `⇭`  🖲️⬅️ | `=` 🖲️⬇️ | `/`  🖲️⬆️ | `*`  🖲️➡️ |
+| :-----: | :----: | :-----: | :-----: |
+| `7` 🖱️↖️  |  8 🖱️⬆️  | `9` 🖱️↗️  | `-` 🖱️B  |
+| `4`🖱️ ⬅️  |  `5`🖱️  | `6` 🖱️➡️  | `+` 🖱️F  |
+|  `1`🖱️↙️  |  2 🖱️⬇️  | `3` 🖱️↘️  |         |
+| `0` 🖱️L  |        | `.` 🖱️M  | `⌤` 🖱️R  |
 
 ### 窗口管理
 
@@ -201,25 +176,25 @@ Capslock以ASCI布局键盘为蓝本，对Capslock之外的**所有按键**进�
 
 `D`, `Z`, `X`, `C`, `V`, `B` 用于终端控制，发送信号与IDE命令，位于图中绿色区域。
 
-| 键\修饰 |                         ✱                          |          ⌘          |
-| :-----: | :------------------------------------------------: | :-----------------: |
-|    D    |                 `⌃D` Ctrl+D (EOF)                  |   定义 (压感点击)   |
-|    Z    |               `⌃Z` Ctrl+Z  (SIGTSTP)               | F5 (VS Code Debug)  |
-|    X    |               `⌃R` Ctrl+R (IDE Run)                |  ⌃F5 (VS Code Run)  |
-|    C    |                `⌃C`Ctrl+C (SIGINT)                 | ⇧F5（VS Code Stop） |
-|    V    |              `⌃V`Ctrl+V (Vim Prefix)               |                     |
-|    B    | `⌃B`Ctrl+B ([Tmux](http://tmux.github.io)  Prefix) |                     |
+| 键\修饰 |                     ✱                      |          ⌘          |
+| :-----: | :----------------------------------------: | :-----------------: |
+|    D    |                 ⌃D  (EOF)                  |   定义 (压感点击)   |
+|    Z    |               ⌃Z   (SIGTSTP)               | F5 (VS Code Debug)  |
+|    X    |               ⌃R  (IDE Run)                |  ⌃F5 (VS Code Run)  |
+|    C    |                ⌃C (SIGINT)                 | ⇧F5（VS Code Stop） |
+|    V    |              ⌃V (Vim Prefix)               |                     |
+|    B    | ⌃B ([Tmux](http://tmux.github.io)  Prefix) |                     |
 
 ### 文本剪贴
 
-* 数字键 1, 2, …, 9, 0 用作剪贴板，位于图中紫色区域。按下 ⌘ Command +数字键**拷贝**，按下数字键粘贴。
+* 数字键 1, 2, …, 9, 0 用作剪贴板，按下 ⌘ Command +数字键**拷贝**，按下数字键粘贴。位于图中紫色区域。
 
-| 键\修饰 |   ✱    |   ⌘    |
-| :-----: | :----: | :----: |
-|   `1`   | 粘贴1  | 复制1  |
-|   `2`   | 粘贴2  | 复制2  |
-|   ……    |   ……   |   ……   |
-|   `0`   | 粘贴10 | 复制10 |
+| 键\修饰 |       ✱       |       ⌘       |
+| :-----: | :-----------: | :-----------: |
+|    1    | 从剪贴板1粘贴 | 拷贝至剪贴板1 |
+|    2    | 从剪贴板2粘贴 | 拷贝至剪贴板2 |
+|   ……    |      ……       |      ……       |
+|    0    | 从剪贴板0粘贴 | 拷贝至剪贴板0 |
 
 ### 上档变换
 
@@ -228,20 +203,20 @@ Capslock以ASCI布局键盘为蓝本，对Capslock之外的**所有按键**进�
 - 部分字符会针对开发者有特殊优化映射，例如`;'`会被映射为`:=`，或`!=`（⌘），便于输入比较与赋值表达式。
 
 
-|      键\修饰       |       ✱        |    ⌘     |  ⌥   |
-| :----------------: | :------------: | :------: | :--: |
-|     `-` Minus      |      `_`       | 页面缩小 |      |
-|     `=` Equal      |      `+`       | 页面放大 |      |
-|  `[` Left Bracket  |      `(`       |   `{`    | `<`  |
-| `]`  Right Bracket |      `)`       |   `}`    | `>`  |
-|   `;` Semicolon    |      `!`       |   `:`    |      |
-|  `'` Single Quote  |      `=`       |   `=`    |      |
-|     `/` Slash      | `⌘/`  （注释） |          |      |
-|   `\` Backslash    | `⌘/`  （注释） |          |      |
+| 键\修饰 |  ✱   |    ⌘     |  ⌥   |
+| :-----: | :--: | :------: | :--: |
+|   `-`   | `_`  | 页面缩小 |      |
+|   `=`   | `+`  | 页面放大 |      |
+|   `[`   | `(`  |   `{`    | `<`  |
+|   `]`   | `)`  |   `}`    | `>`  |
+|   `;`   | `!`  |   `:`    |      |
+|   `'`   | `=`  |   `=`    |      |
+|   `/`   |  ⌘/  |          |      |
+|   `\`   |  ⌘/  |          |      |
 
 ### 功能控制
 
-- 将 F1,F2,..., F12等用作标准功能键，按下✱将其转义回原来的功能
+- 将 F1,F2,..., F12等用作标准功能键，按下✱将其转义回原来的功能，位于图中青色区域。
 
 - ⌘Command + F1/F2/F3 为切换桌面快捷键，但您必须先在启用系统相关快捷键：
 
@@ -251,61 +226,93 @@ Capslock以ASCI布局键盘为蓝本，对Capslock之外的**所有按键**进�
 
   **Karabiner-Elements** → **Function Keys** → **Use all F1, F2, etc. keys as standard function keys** 
 
-|      键\修饰      |           ✱           |  ⌘   | Comment          |
-| :---------------: | :-------------------: | :--: | ---------------- |
-|        `~`        |         ⌃⇧⌘4          | ⇧⌘4  | 区域选择截图     |
-|       `F1`        |   `BrightnessDown`    |  ⌃1  | 调低亮度/桌面1   |
-|       `F2`        |    `BrightnessUp`     |  ⌃2  | 调高亮度/桌面2   |
-|       `F3`        |      `ExposeAll`      |  ⌃3  | 暴露窗口/桌面3   |
-|       `F4`        |      `LaunchPad`      |      | 启动面板         |
-|       `F5`        |  `KeyboardLightDown`  |      | 调暗键盘灯       |
-|       `F6`        |   `KeyboardLightUp`   |      | 调亮键盘灯       |
-|       `F7`        |      `MusicPrev`      |      | 上一首歌         |
-|       `F8`        |      `MusicPlay`      |      | 播放/暂停        |
-|       `F9`        |      `MusicNext`      |      | 下一首歌         |
-|       `F10`       |        `Mute`         |      | 静音             |
-|       `F11`       |     `VolumeDown`      |      | 调低音量         |
-|       `F12`       |      `VolumeUp`       |      | 调高音量         |
-| `F13` PrintScreen |         ⌃⇧⌘3          | ⇧⌘3  | 全屏截图存桌面   |
-| `F14` ScrollLock  |          ⇧⌘5          | ⇧⌘6  | 调出截图录屏菜单 |
-|    `F15` Pause    |      `MusicPlay`      |      | 播放/暂停        |
-|     `Insert`      |   ⇧⌥`BrightnessUp`    |      | 平滑调高亮度     |
-|     `Delete`      |  ⇧⌥`BrightnessDown`   |      | 平滑调低亮度     |
-|      `Home`       |  ⇧⌥`KeyboardLightUp`  |      | 平滑调亮键盘灯   |
-|       `End`       | ⇧⌥`KeyboardLightDown` |      | 平滑调暗键盘灯   |
-|      `PgUp`       |     ⇧⌥`VolumeUp`      |      | 平滑调高音量     |
-|      `PgDn`       |    ⇧⌥`VolumeDown`     |      | 平滑调低音量     |
+| 键\修饰  |                  ✱                   |  ⌘   | 说明                         |
+| :------: | :----------------------------------: | :--: | ---------------------------- |
+|    `     |                 ⌃⇧⌘4                 | ⇧⌘4  | 区域选择截图（+⌘保存至桌面） |
+|    F1    | display_brightness_decrement  \|  ⌃1 |  ⌃1  | 调低屏幕亮度/桌面1           |
+|    F2    |  display_brightness_increment \| ⌃2  |  ⌃2  | 调高屏幕亮度/桌面2           |
+|    F3    |              ⌃↑  \|  ⌃3              |  ⌃3  | 暴露窗口/桌面3               |
+|    F4    |              Launchpad               |      | 启动面板                     |
+|    F5    |        illumination_decrement        |      | 调暗键盘灯                   |
+|    F6    |        illumination_increment        |      | 调亮键盘灯                   |
+|    F7    |                rewind                |      | 上一首音乐                   |
+|    F8    |            play_or_pause             |      | 播放 / 暂停                  |
+|    F9    |             fastforward              |      | 下一首音乐                   |
+|   F10    |                 mute                 |      | 静音                         |
+|   F11    |           volume_decrement           |      | 调低音量                     |
+|   F12    |           volume_increment           |      | 调高音量                     |
+|   F13    |                 ⌃⇧⌘3                 | ⇧⌘3  | 全屏截图｜（+⌘保存至桌面）   |
+|   F14    |                 ⇧⌘5                  | ⇧⌘6  | 截图菜单｜（+⌘触控栏截图）   |
+|   F15    |            play_or_pause             |      | 播放 / 暂停                  |
+|  Insert  |   ⇧⌥ display_brightness_increment    |      | 平滑调高亮度                 |
+| Delete ⌦ |   ⇧⌥ display_brightness_decrement    |      | 平滑调低亮度                 |
+|  Home ↖  |      ⇧⌥ illumination_increment       |      | 平滑调亮键盘灯               |
+|  End ↘   |      ⇧⌥ illumination_decrement       |      | 平滑调暗键盘灯               |
+|  PgUp ⇞  |         ⇧⌥ volume_increment          |      | 平滑调高音量                 |
+|  PgDn ⇟  |         ⇧⌥ volume_decrement          |      | 平滑调低音量                 |
 
 
 
-## 符号参考
-
-| Glyph |  Mac   | Glyph |  Win ⊞  |
-| :---: | :-----: | :---: | :-----: |
-|   ✱   |  Hyper  |   ✱   |  Hyper  |
-|   ⌃   | Control |   ⌃   | Control |
-|   ⌥   | Option  |   ⊞   | Windows |
-|   ⇧   |  Shift  |   ⇧   |  Shift  |
-|   ⌘   | Command |   ⎇   |  Alter  |
-
-|  Glyph  |            Name            | Glyph |                                |
-| :-----: | :------------------------: | :---: | :----------------------------: |
-|    ⌘    |    Command, Cmd, Clover    |   ←   |           Left arrow           |
-|    ⌃    |     Control, Ctl, Ctrl     |   ↓   |           Down arrow           |
-|    ⌥    | Option, Opt, (Windows) Alt |   ↑   |            Up arrow            |
-|    ⎇    |            Alt             |   →   |          Right arrow           |
-|    ⇧    |           Shift            |   ⇞   |         Page Up, PgUp          |
-|    ⇪    |          Capslock          |   ⇟   |        Page Down, PgDn         |
-|    ⏏    |           Eject            |   ↖   |              Home              |
-| ↩, ↵, ⏎ |  Return, Carriage Return   |   ↘   |              End               |
-|    ⌤    |           Enter            |   ⇥   | Tab, Tab Right, Horizontal Tab |
-|    ⌫    |     Delete, Backspace      |   ⇤   | Shift Tab, Tab Left, Back-tab  |
-|    ⌦    |       Forward Delete       | ␣ / ␢ |          Space, Blank          |
-|    ⎋    |        Escape, Esc         |   ❘⃝   |             Power              |
-|    ⌧    |           Clear            |   ⇭   |            Num lock            |
-|    ?⃝    |            Help            |      |          Context menu          |
 
 
+## 参考
+
+### 符号释义
+
+| Glyph |             Name             | Glyph |           Name           |
+| :---: | :--------------------------: | :---: | :----------------------: |
+|   ⇪   |           Capslock           |   ✱   |          Hyper           |
+|   ⎋   |            Escape            |   ␣   |          Space           |
+|   ⌘   |        Command (Mac)         |   ⎇   |       Alter (Win)        |
+|   ⌥   |         Option (Mac)         |   ⊞   |        Win (Win)         |
+|   ⌃   |           Control            |   ⇧   |          Shift           |
+|   ↩   |            Return            |   ⌤   |          Enter           |
+| ←↓↑→  |         Arrow Cursor         |  ↖↘   |         Home/End         |
+|  ⇥⇤   |             Tab              |  ⌫⌦   |  Delete / ForwardDelete  |
+|   ⇭   |           Numlock            |  ⏫⏬   |       Fast / Slow        |
+|  🖱️L   |  Mouse Left Click (Button1)  |  🖱️B   | Mouse Backward (Button4) |
+|  🖱️R   | Mouse Right Click (Button2)  |  🖱️F   | Mouse Forward (Button5)  |
+|  🖱️M   | Mouse Middle Click (Button3) |   🖲️   |       Mouse Wheel        |
+
+### 控制平面
+
+| Plane | Modifiers | Plane | Modifiers | Plane | Modifiers |
+| :---: | :-------: | :---: | :-------: | :---: | :-------: |
+| **0** |     ✱     |   3   |    ✱⌘⌥    |   7   |   ✱⌘⌥⌃    |
+|   1   |    ✱⌘     |   5   |    ✱⌘⌃    |  11   |   ✱⌘⌥⇧    |
+|   2   |    ✱⌥     |   6   |    ✱⌥⌃    |  13   |   ✱⌘⌃⇧    |
+|   4   |    ✱⌃     |   9   |    ✱⌘⇧    |  14   |   ✱⌥⌃⇧    |
+|   8   |    ✱⇧     |  10   |    ✱⌥⇧    |  15   |   ✱⌘⌥⌃⇧   |
+|       |           |  12   |    ✱⌃⇧    |       |           |
+
+### MacOS安装
+
+在MacOS上，Capslock通过 [**Karabiner-Elements** 提供服务](https://karabiner-elements.pqrs.org/)
+
+1. 下载并安装 [**Karabiner Elements**](https://karabiner-elements.pqrs.org/)，按照安装向导提示完成安装并赋予所需权限。
+
+
+2. 将 [**capslock.json**](mac/capslock.json) 下载至` ~/.config/karabiner/assets/complex_modifications/` 目录。
+
+   或使用Safari打开下面的链接，将自动启动Karabiner并加载Capslock配置文件。
+
+   ```yaml
+   # Capslock Mac V3 (当前项目最新配置文件)
+   karabiner://karabiner/assets/complex_modifications/import?url=https://github.com/Vonng/Capslock/blob/master/mac_v3/capslock.json
+   ```
+
+
+3. 打开Karabiner-Elements，切至第三标签页`ComplexModification`，点击左下方按钮 `Add Rules`按需启用Capslock预置规则即可。
+
+   ![](mac_v3/images/config-karabiner.png)
+
+
+### Windows安装
+
+Capslock 在Windows上基于 [**AutoHotKey**](https://www.autohotkey.com/) 提供服务。
+
+1. 下载并安装 [**AutoHotKey**](https://www.autohotkey.com/)，加载配置文件 [`capslock.ahk`](win/CapsLock.ahk) 。
+2. 或下载并使用直接预编译好的二进制程序 [CapsLock.exe](win/CapsLock.exe)。
 
 
 
@@ -314,6 +321,22 @@ Capslock以ASCI布局键盘为蓝本，对Capslock之外的**所有按键**进�
 **问：为什么使用 ✱ 作为Hyper功能修饰键的符号？**
 
 答：因为 * 的 ASCII代码正好是42，也就是生命、宇宙以及任何事情的终极答案。✱ (Heavy-Asterisk) 是 * 的加强版，看上去更好看一些。
+
+
+
+**问：Capslock Mac v3有什么新花样？**
+
+答：原本的v2只定义了1到3个控制平面，v3最多使用了9个控制平面。添加了大量的功能，使得Capslock可有的修饰键⌘⌥⌃⇧产生化学反应。以一种符合逻辑的方式排列组合出更多的功能。
+
+
+
+**问：Capslock Mac v3相对于v2有什么不兼容之处？**
+
+V3在整体上采用前向兼容策略，但确实有三个地方进行了不兼容的调整。
+
+* 第二行的数字键1-0原本只是简单地上档转移为对应字符，现在变成了10个特殊的剪贴板。
+* F13 / F14 原本用做 前后切歌 ，现在修改为截图功能，更符合这两个键的原本语义。
+* ⌘D 原来是打开词典App，现在则变为 定义词语（⌘⌃D，或重按触控板的功能），词典App被新挂在了⌥F下。
 
 
 
@@ -358,12 +381,6 @@ Capslock以ASCI布局键盘为蓝本，对Capslock之外的**所有按键**进�
 **问：后面还会有变动与修改吗？**
 
 答：习惯这种东西一旦养成是很难改，所以这种配置文件不适合频繁修改。实际上从13年第一次设计完后，基本除了一些边边角角的地方，没有特别大的变动。不过最近（2021）会有一次非常大的升级（Capslock mac v3），会将原有的约3个控制平面扩充到16个，并填充大量累积改进。当然在功能上肯定是老版本的功能超集，不会影响现有用户的使用习惯。
-
-
-
-**问：Capslock Mac v3有什么变化？**
-
-答：原本的v2只定义了1到3个控制平面，v3最多使用了9个控制平面。添加了大量的功能，使得Capslock可有的修饰键⌘⌥⌃⇧产生化学反应。以一种符合逻辑的方式排列组合出更多的功能。V3在整体上对V2保持兼容，主要有以下4个不兼容点：⌥+导航从鼠标移动变为跳词移动，F13/F4由音乐播放变为截屏，数字键从普通上档符号输入变为剪贴板，⌘D从打开字典应用变为了Define。
 
 
 
