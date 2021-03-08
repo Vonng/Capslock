@@ -191,13 +191,63 @@ Hold  **✱ Hyper** to enable hyper functionalites. We will assume and omit that
 
 ### Mousekey
 
-* Turn keypad into a mouse.  with 8 direction movement
-
 * Numbers maps to 8 direction mouse move. Hold ⌥ Option to **slow down**, hold ⌘ Command  to **speed up**.
-
 * Hold additional ⇧ Shift  turns to **wheel move**.  Extra ⌥ Option to **slow down**, and extra ⌘ Command  to **speed up**.
-
 * First line maps to wheel move and `0`, `.`, `⌤`, `+`, `-` maps to five mouse buttons.
+
+| Origin    | Maps to                            | Comment             |
+| --------- | ---------------------------------- | ------------------- |
+| `N`       | `⌥⌫`  Option + ForwardDelete       | Delete a word ahead |
+| `M`       | `⌫` ForwardDelete                  | Delete a char ahead |
+| `,`       | `⌦` Delete                         | Delete a char after |
+| `.`       | `⌥⌦` Option + Delete               | Delete a word after |
+| `⌘M`,`⌘N` | `⌘⌥⌫` Command+Option+ForwardDelete | Delete to line head |
+
+### Window Control
+
+| Origin           | Maps to                 | Comment                                  |
+| ---------------- | ----------------------- | ---------------------------------------- |
+| `⇥` Tab          | `⌘⇥` Command+Tab        | Switch Window                            |
+| `⌘⇥` Command+Tab | `⌘⇧⇥` Command+Shift+Tab | Switch Window Reversely                  |
+| `Q`              | `⌘Q`                    | Close Window                             |
+| `W`              | `⌘W`                    | Close Tab                                |
+| `A`              | `⌃⌥⇧⌘A`                 | Leaves to [Moom](https://manytricks.com/moom/), ※a window resize app |
+| `⌘A`             | `⌃↑`  Ctrl+UpArrow      | OSX Expose All                           |
+| `S`              | `⌃⇥`  Ctrl+Tab          | Switch Tab                               |
+| `⌘S`             | `⌃⇧⇥` Ctrl+Shift+Tab    | Swtich Tab Reversely                     |
+| `⌘D`             | `F11`                   | Show Desktop                             |
+
+### Bash Control
+
+- Common bash utils: EOF, SIGINT, SIGTSTP, VIM/Tmux Prefix
+
+| Origin | Maps to     | Comment                                      |
+| ------ | ----------- | -------------------------------------------- |
+| `Z`    | `⌃Z` Ctrl+Z | SIGTSTP                                      |
+| `X`    | `⌃R` Ctrl+R | IDE Run                                      |
+| `C`    | `⌃C`Ctrl+C  | SIGINT                                       |
+| `V`    | `⌃V`Ctrl+V  | Vim Prefix                                   |
+| `B`    | `⌃B`Ctrl+B  | [Tmux](http://tmux.github.io) Default Prefix |
+| `D`    | `⌃D` Ctrl+D | EOF                                          |
+
+#### Applications
+
+- Maybe you'd like overwrite these with your own favorite apps.
+
+| Origin | Maps to                 | Comment                                         |
+| ------ | ----------------------- | ----------------------------------------------- |
+| `E`    | Open Safari             | Open Web Browser                                |
+| `⌘E`   | Open Finder             | Open File Browser                               |
+| `R`    | Open iTerm2             | Great terminal for osx (`Run`)                  |
+| `⌘R`   | Open Preview            | Switch to opened picture, pdf, etc...           |
+| `T`    | Open Visual Studio Code | Text Editor: Visual Studio Code                 |
+| `⌘T`   | Open Typora             | Text Editor: Typora , a great WYSIWYG md editor |
+| `⌘D`   | Open Dictionary         | Find words                                      |
+| `⌘F`   | Open Dash               | Find API Document                               |
+| `F`    | Open Alfred             | Leaves to `⌃⌥⇧⌘F`                               |
+| `G`    | Open Intellij IDEA      | Open IDE                                        |
+| `⌘G`   | Open Chrome             | Google Chrome                                   |
+>>>>>>> f59e11302fd30230e0cc45d65f0fc9488faea87a
 
 | `numlock`  wheel ⬅️ | `=` wheel ⬇️ | `/` wheel ⬆️ | `*` wheel ➡️ |
 | :----------------: | :---------: | :---------: | :---------: |
