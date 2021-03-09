@@ -1,17 +1,27 @@
 # Capslock
 
+*Make CapsLock Great Again!*  
 
 
-## CapsLock ([v3](mac3/))
+
+![](images/trump.jpg)
+
+*Transform ⇪CapsLock into a powerful **modifier** **✱ Hyper** that miraculously increases your work productivity!*
+
+[**Capslock Website**](http://capslock.vonng.com/en/)
+
+[**Chinese Documentation 中文文档** ](README_ZH.md)
+
+
+
+## CapsLock ([v3](mac_v3/))
 
 * **Powerful**: Transform Capslock into a great modifier: **Hyper(✱)**. (such as ⇧⌃⌥⌘)
 * **Useful**: Navigation, mousekey, clipboard, win/term ctrl, shortcuts, etc... **Redefine the keyboard!**
 * **Speed-Up**: Optimized for developers, high-frequency move **stay in hot zone**.
 * **Extensible**: Work with existing modifiers, which introduce **16 extra control planes**.
 * **MouseKey**: Manipulate mouse cursor and wheels with keyboard
-* **Cross-Platform**: MacOS and Windows. Lightwegith and portabl
-
-
+* **Cross-Platform**: MacOS and Windows. Light-Weight and portable
 
 ## Version
 
@@ -20,7 +30,7 @@
 |              Capslock Version               |                       MacOS Supported                        |       Win Supported        |
 | :-----------------------------------------: | :----------------------------------------------------------: | :------------------------: |
 | [Capslock Mac V3](mac_v3/)    (2021 - now ) |                    MacOS Big Sur (11.0 )                     |         Windows 10         |
-|  [Capslock Mac V2](mac/)    (2017 - 2021)   |                    MacOS Catalina (10.15)                    |         Windows 8          |
+|  [Capslock Mac V2](mac_v2/)    (2017 - 2021)   |                    MacOS Catalina (10.15)                    |         Windows 8          |
 | [Capslock Mac V1](mac_v1)    (2015 - 2017)  |                  MacOS High Sierra (10.13)                   |         Windows 7          |
 |    [Capslock Win](win)    (2013 - 2015)     |                     MacOS Sierra (10.12)                     |       Windows Vista        |
 |                                             |                   MacOS EI Capitan (10.11)                   |         Windows XP         |
@@ -34,7 +44,7 @@ Capslock serves via  [**Karabiner-Elements**](https://karabiner-elements.pqrs.or
 
 1. Download and install [**Karabiner Elements**](https://karabiner-elements.pqrs.org/), following the wizard and grant required permissions.
 
-2. Download [**capslock.json**](mac/capslock.json) to：` ~/.config/karabiner/assets/complex_modifications/` .  Or open this link with Safari to launch karabiner and load config from URL:
+2. Download [**capslock.json**](mac_v3/capslock.json) to：` ~/.config/karabiner/assets/complex_modifications/` .  Or open this link with Safari to launch karabiner and load config from URL:
 
    ```yaml
    karabiner://karabiner/assets/complex_modifications/import?url=https://github.com/Vonng/Capslock/blob/master/mac_v3/capslock.json
@@ -48,7 +58,7 @@ Capslock serves via  [**Karabiner-Elements**](https://karabiner-elements.pqrs.or
 
 Capslock works on **ANSI** keyboards and similar layouts. It literally remaps every [**keys**](#Symbols) on the keyboard. Including 10 categories.
 
-![](mac_v3/images/keyboard.png)
+![](images/keyboard.png)
 
 > **[Control Planes](#Control-Planes)** are defined by combination of four extra left modifiers: ⌘⌥⌃⇧.This image shows the layout of control plane 0.
 
@@ -74,7 +84,7 @@ Capslock works on **ANSI** keyboards and similar layouts. It literally remaps ev
 |   ✱⎋    | ⇪ Capslock | Press to enable Capslock, Hold to disable Capslock |
 |   ✱␣    |     ⌃␣     | Switch input source, +⌘ to emoji                   |
 
-Note that ✱ is implemented as combinition of **ALL RIGHT MODIFIERS**:  ⌘⌥⌃⇧. Mainly for compatible & intergration reasons.
+Note that ✱ is implemented as combination of **ALL RIGHT MODIFIERS**:  ⌘⌥⌃⇧. Mainly for compatible & intergration reasons.
 
 Hold  **✱ Hyper** to enable hyper functionalites. We will assume and omit that in subsequent document.
 
@@ -282,7 +292,7 @@ Capslock serves via  [**Karabiner-Elements**](https://karabiner-elements.pqrs.or
 
 1. Download and install [**Karabiner Elements**](https://karabiner-elements.pqrs.org/), following the wizard and grant required permissions.
 
-2. Download [**capslock.json**](mac/capslock.json) to：` ~/.config/karabiner/assets/complex_modifications/` .  Or open this link with Safari to launch karabiner and load config from URL:
+2. Download [**capslock.json**](mac_v3/capslock.json) to：` ~/.config/karabiner/assets/complex_modifications/` .  Or open this link with Safari to launch karabiner and load config from URL:
 
    ```yaml
    # Capslock Mac V3 (this repo)

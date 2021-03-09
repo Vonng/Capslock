@@ -6,7 +6,9 @@
 
 将 ⇪CapsLock（大写锁定键）改造为一个强力的**功能修饰键（✱ Hyper ）**，奇迹般地提高操作效率与生产力。
 
-[**English Documentation** ](README.md)
+[**Capslock网站**](http://capslock.vonng.com/zh/)
+
+[**English Documentation**](README.md)
 
 
 
@@ -24,7 +26,7 @@
 |                Capslock 版本                 |                     支持的 Mac 操作系统                      | 支持的Windows操作系统 |
 | :------------------------------------------: | :----------------------------------------------------------: | :-------------------: |
 | [Capslock Mac V3](mac_v3/)    (2021 - 至今 ) |                    MacOS Big Sur (11.0 )                     |      Windows 10       |
-|   [Capslock Mac V2](mac/)    (2018 - 2021)   |                    MacOS Catalina (10.15)                    |       Windows 8       |
+|   [Capslock Mac V2](mac_v2/)    (2018 - 2021)   |                    MacOS Catalina (10.15)                    |       Windows 8       |
 |  [Capslock Mac V1](mac_v1)    (2015 - 2018)  |                  MacOS High Sierra (10.13)                   |       Windows 7       |
 |     [Capslock Win](win)    (2013 - 2015)     |                     MacOS Sierra (10.12)                     |     Windows Vista     |
 |                                              |                   MacOS EI Capitan (10.11)                   |      Windows XP       |
@@ -38,7 +40,7 @@
 
 1. 下载并安装 [**Karabiner Elements**](https://karabiner-elements.pqrs.org/)，按照安装向导提示完成安装并赋予所需权限。
 
-2. 将 [**capslock.json**](mac/capslock.json) 下载至` ~/.config/karabiner/assets/complex_modifications/` 目录。
+2. 将 [**capslock.json**](mac_v3/capslock.json) 下载至` ~/.config/karabiner/assets/complex_modifications/` 目录。
 
    或使用Safari打开下面的链接，将自动启动Karabiner并加载Capslock配置文件。
 
@@ -292,7 +294,7 @@ Capslock以**ANSI**布局键盘为蓝本，对Capslock之外的 [**所有按键*
 1. 下载并安装 [**Karabiner Elements**](https://karabiner-elements.pqrs.org/)，按照安装向导提示完成安装并赋予所需权限。
 
 
-2. 将 [**capslock.json**](mac/capslock.json) 下载至` ~/.config/karabiner/assets/complex_modifications/` 目录。
+2. 将 [**capslock.json**](mac_v3/capslock.json) 下载至` ~/.config/karabiner/assets/complex_modifications/` 目录。
 
    或使用Safari打开下面的链接，将自动启动Karabiner并加载Capslock配置文件。
 
