@@ -25,24 +25,32 @@
 
 ## Version
 
-**Latest Version**:  [**Capslock Mac v3**](mac_v3)
+* [**Capslock Mac V3**](mac_v3/): 2021.03 - now (Latest version) 
+* [**Capslock Mac V2**](mac_v2/): 2017 - 2021
+* [**Capslock Mac V1**](mac_v1/): 2015 - 2017
+* [**Capslock Win**](win/): 2013 - 2015
+
 
 <details>
+<summary>OS Support</summary>
 
-|              Capslock Version               |                       MacOS Supported                        |       Win Supported        |
-| :-----------------------------------------: | :----------------------------------------------------------: | :------------------------: |
-| [Capslock Mac V3](mac_v3/)    (2021 - now ) |                    MacOS Big Sur (11.0 )                     |         Windows 10         |
-|  [Capslock Mac V2](mac_v2/)    (2017 - 2021)   |                    MacOS Catalina (10.15)                    |         Windows 8          |
-| [Capslock Mac V1](mac_v1)    (2015 - 2017)  |                  MacOS High Sierra (10.13)                   |         Windows 7          |
-|    [Capslock Win](win)    (2013 - 2015)     |                     MacOS Sierra (10.12)                     |       Windows Vista        |
-|                                             |                   MacOS EI Capitan (10.11)                   |         Windows XP         |
-|                                             | MacOS Yosemite (10.10) or lower<br /> (via [Capslock Mac v1](mac_v1/)) | (via [Capslock Win](win/)) |
+|                       MacOS Supported                        |       Win Supported        |
+| :----------------------------------------------------------: | :------------------------: |
+|                    MacOS Big Sur (11.0 )                     |         Windows 10         |
+|                    MacOS Catalina (10.15)                    |         Windows 8          |
+|                  MacOS High Sierra (10.13)                   |         Windows 7          |
+|                     MacOS Sierra (10.12)                     |       Windows Vista        |
+|                   MacOS EI Capitan (10.11)                   |         Windows XP         |
+| MacOS Yosemite (10.10) or lower<br /> (via [Capslock Mac v1](mac_v1/)) | (via [Capslock Win](win/)) |
 
 </details>
 
 
 
 ## Quick Start
+
+<details>
+<summary>Installation Guide</summary>
 
 Capslock serves via  [**Karabiner-Elements**](https://karabiner-elements.pqrs.org/)  on MacOS
 
@@ -56,6 +64,7 @@ Capslock serves via  [**Karabiner-Elements**](https://karabiner-elements.pqrs.or
 
 3. Launch **Karabiner-Element** →  **Tab: ComplexModification** → **Button: Add Rules**, then enabled rulesets.
 
+</details>
 
 
 ## Usage
@@ -94,6 +103,8 @@ Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalites. We will assume an
 
 ### Navigation
 
+<details>
+<summary>navigation</summary>
 
 * <kbd>H</kbd>, <kbd>J</kbd>, <kbd>K</kbd>, <kbd>L</kbd>, <kbd>U</kbd>, <kbd>I</kbd>, <kbd>O</kbd>, <kbd>P</kbd> are used as **Navigators**. Maps to <kbd>←</kbd><kbd>↓</kbd><kbd>↑</kbd><kbd>→</kbd><kbd>⇞</kbd><kbd>↖</kbd><kbd>↘</kbd><kbd>⇟</kbd> by default. (pink area). 
 * 9 control planes has already been allocated for navigators.
@@ -114,10 +125,15 @@ Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalites. We will assume an
 |    <kbd>O</kbd>    |   End    |  line end  |  head2end   |  next win  |  hide all   |  🖱️B  |   🖱️B   |  ⬇️   |  ⬇️⏫  |
 |    <kbd>P</kbd>    |   PgDn   | next page  |  next page  |   zoom+    |  Launchpad  |  🖱️F  |   🖱️F   |  ⬅️   |  ⬅️⏫  |
 
+</details>
+
+
 #### Arrow Navigation
 
-* Arrows <kbd>←</kbd>↓<kbd>↑</kbd>→ to 🖱️ **mouse**  actions too. Hold <kbd>⌥</kbd> Option to ⏬ **slow down**, hold <kbd>⌘</kbd> Command  to ⏫ **speed up**.
+<details>
+<summary>arrow navigation</summary>
 
+* Arrows <kbd>←</kbd>↓<kbd>↑</kbd>→ to 🖱️ **mouse**  actions too. Hold <kbd>⌥</kbd> Option to ⏬ **slow down**, hold <kbd>⌘</kbd> Command  to ⏫ **speed up**.
 * Hold  <kbd>⇧</kbd> Shift  turns to 🖲️ **wheel move**.  Extra <kbd>⌥</kbd> Option to ⏬ **slow down**, extra <kbd>⌘</kbd> Command  to ⏫ **speed up**.
 * <kbd>↩</kbd> Return maps to left **click**.  And additional <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>⇧</kbd> turns into right click, middle click, backward, forward.
 
@@ -127,7 +143,12 @@ Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalites. We will assume an
 | <kbd>←</kbd><kbd>↓</kbd><kbd>↑</kbd><kbd>→</kbd> | speed = 1600 | speed ÷ 2 | speed × 2 | speed = 32 | speed ÷ 2 | speed × 2 |
 |      <kbd>↩</kbd>      |      🖱️L      |    🖱️M     |    🖱️R     |     🖱️L     |    🖱️B     |    🖱️F     |
 
+</details>
+
 ### Deletion
+
+<details>
+<summary>deletion</summary>
 
  <kbd>N</kbd> <kbd>M</kbd> <kbd>,</kbd> <kbd>.</kbd>  are used as **Deletor keys**. Right below the navigators for fast access (brown area). 
 
@@ -137,9 +158,14 @@ Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalites. We will assume an
 |    <kbd>M</kbd>    | del a char ahead |  del a word ahead  |  move line below   |
 |    <kbd>,</kbd>    | del a char after |  del a word after  |  move line above   |
 |    <kbd>.</kbd>    | del a word after | del till line end  | del the whole line |
-|    <kbd><kbd>⌫</kbd></kbd>    |     del file     |     purge file     |                    |
+|    <kbd>⌫</kbd>    |     del file     |     purge file     |                    |
+
+</details>
 
 ### Mousekey
+
+<details>
+<summary>mouse key</summary>
 
 * Turn **Keypad** into a fully funcional 🖱️ **mouse**.
 * Numbers maps to 8 direction 🖱️ **mouse move**. Hold <kbd>⌥</kbd> Option to ⏬ **slow down**, hold <kbd>⌘</kbd> Command  to ⏫ **speed up**.
@@ -148,12 +174,17 @@ Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalites. We will assume an
 
 | `<kbd>⇭</kbd>`  🖲️⬅️ | <kbd>=</kbd> 🖲️⬇️ | <kbd>/</kbd>  🖲️⬆️ | <kbd>*</kbd>  🖲️➡️ |
 | :-----: | :----: | :-----: | :-----: |
-| <kbd>7</kbd> 🖱️<kbd>↖</kbd>️  |  <kbd>8</kbd> 🖱️⬆️  | <kbd>9</kbd> 🖱️↗️  | <kbd>-</kbd> 🖱️B  |
+| <kbd>7</kbd>🖱️ ↖️ |  <kbd>8</kbd> 🖱️⬆️  | <kbd>9</kbd> 🖱️↗️  | <kbd>-</kbd> 🖱️B  |
 | <kbd>4</kbd>🖱️ ⬅️  |  <kbd>5</kbd>🖱️  | <kbd>6</kbd> 🖱️➡️  | <kbd>+</kbd> 🖱️F  |
-|  <kbd>1</kbd>🖱️↙️  |  <kbd>2</kbd> 🖱️⬇️  | <kbd>3</kbd> 🖱️<kbd>↘</kbd>️  |         |
-| <kbd>0</kbd> <kbd>🖱️L |        | <kbd>.</kbd> 🖱️M  | `<kbd>⌤</kbd>` 🖱️R  |
+|  <kbd>1</kbd>🖱️↙️  |  <kbd>2</kbd> 🖱️⬇️  | <kbd>3</kbd> 🖱️↘️ |         |
+| <kbd>0</kbd> 🖱️L |        | <kbd>.</kbd> 🖱️M  | <kbd>⌤</kbd> 🖱️R  |
+
+</details>
 
 ### Window Control
+
+<details>
+<summary>window control</summary>
 
 * `Tab`, <kbd>Q</kbd>, <kbd>W</kbd>, <kbd>A</kbd>, <kbd>s</kbd> used as window control keys. Focuing on close/switch applications / windows / tabs / desktops. (azure area)
 * Windows management (resize, layout) leaves to external application such as [Moom](https://manytricks.com/moom/), [Magnet](https://apps.apple.com/us/app/magnet/id441258766), and [Slate](https://github.com/jigish/slate). Bind <kbd>⌃</kbd><kbd>⌥</kbd><kbd>⇧</kbd><kbd>⌘</kbd>A manually.
@@ -167,7 +198,12 @@ Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalites. We will assume an
 |    <kbd>A</kbd>    | **win app** |  expose all   |  show desktop  |   LaunchPad   |            |
 |    <kbd>S</kbd>    |  next tab   |   prev tab    |    next win    |   prev win    |            |
 
+</details>
+
 ### App Shortcuts
+
+<details>
+<summary>app shortcuts</summary>
 
 * <kbd>E</kbd> <kbd>R</kbd> <kbd>T</kbd> <kbd>Y</kbd> <kbd>F</kbd> <kbd>G</kbd> are used as application shortcuts. (yellow area)
 * Popular apps and dev tools are registed to 3 default planes: <kbd>✱</kbd>/<kbd>⌘</kbd>/<kbd>⌥</kbd>. Assign these shortcuts according to your own needs.
@@ -181,7 +217,12 @@ Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalites. We will assume an
 |    <kbd>F</kbd>    |      Alfred 4      |   Dash    | Dictionary  |
 |    <kbd>G</kbd>    |   Intellij IDEA    |  Chrome   |  Calender   |
 
+</details>
+
 ### Terminal Control
+
+<details>
+<summary>terminal control</summary>
 
 <kbd>D</kbd>, <kbd>Z</kbd>, <kbd>X</kbd>, <kbd>C</kbd>, <kbd>V</kbd>, <kbd>B</kbd> are used as terminal control keys. Sending singals and IDE commands. (green area)
 
@@ -194,7 +235,12 @@ Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalites. We will assume an
 |    <kbd>V</kbd>    |              <kbd>⌃</kbd><kbd>V</kbd>Ctrl+V (Vim Prefix)               |                      |
 |    <kbd>B</kbd>    | <kbd>⌃</kbd><kbd>B</kbd>Ctrl+B ([Tmux](http://tmux.github.io)  Prefix) |                      |
 
+</details>
+
 ### Clipboard
+
+<details>
+<summary>clipboard</summary>
 
 Number keys <kbd>1</kbd>, <kbd>2</kbd>, …, <kbd>9</kbd>, <kbd>0</kbd> are used as **(text) clipboard**. Hold <kbd>⌘</kbd> to **copy**, and press to **paste**. (purple area)
 
@@ -205,7 +251,12 @@ Number keys <kbd>1</kbd>, <kbd>2</kbd>, …, <kbd>9</kbd>, <kbd>0</kbd> are used
 |   ……    |        ……         |       ……        |
 |    <kbd>0</kbd>    | Paste from clip 0 | Copy to clip 10 |
 
+</details>
+
 ### Shifter
+
+<details>
+<summary>shifter</summary>
 
 * Trivial transformation for misc characters. (orange area)
 * Some special tricks for developers. Such as `;'` maps to `:=` or `!=` (<kbd>⌘</kbd>)
@@ -222,14 +273,19 @@ Number keys <kbd>1</kbd>, <kbd>2</kbd>, …, <kbd>9</kbd>, <kbd>0</kbd> are used
 |   <kbd>/</kbd>   |  <kbd>⌘</kbd><kbd>/</kbd>  |          |      |
 |   <kbd>\\</kbd>   |  <kbd>⌘</kbd><kbd>/</kbd>  |          |      |
 
+
+</details>
+
+
 ### Functional
 
-- Use F1,…F12 as standard functional keys, while hold **<kbd>✱</kbd> Hyper** to turn them back. (cyan area)
+<details>
+<summary>functional</summary>
 
+- Use F1,…F12 as standard functional keys, while hold **<kbd>✱</kbd> Hyper** to turn them back. (cyan area)
 - <kbd>⌘</kbd>Command  + F1 / F2 / F3 are used as desktop switcher. Enable shortcuts in system preference first:
 
   **Preference** → **Keyboard** → **Shortcuts** → **MissionControl** → Switch to Desktop 1/2/3
-
 - If you are using RMBP with Bar, consider changing your bar back to function keys with:
 
   **Karabiner-Elements** → **Function Keys** → **Use all F1, F2, etc. keys as standard function keys** 
@@ -237,28 +293,30 @@ Number keys <kbd>1</kbd>, <kbd>2</kbd>, …, <kbd>9</kbd>, <kbd>0</kbd> are used
 | Key\Mod  |                  <kbd>✱</kbd>                   |  <kbd>⌘</kbd>   | Comment                              |
 | :------: | :----------------------------------: | :--: | ------------------------------------ |
 | <kbd>`</kbd> |                 <kbd>⌃</kbd><kbd>⇧</kbd><kbd>⌘</kbd><kbd>4</kbd>                 | <kbd>⇧</kbd><kbd>⌘</kbd><kbd>4</kbd> | Area selection screenshot(<kbd>⌘</kbd> to file) |
-|    <kbd>F1</kbd>    | display_brightness_decrement  \|  <kbd>⌃</kbd><kbd>1</kbd> |  <kbd>⌃</kbd><kbd>1</kbd>  | Brightness Down / Desktop 1          |
-|    <kbd>F2</kbd>    |  display_brightness_increment \| <kbd>⌃</kbd><kbd>2</kbd>  |  <kbd>⌃</kbd><kbd>2</kbd>  | Brightness Up / Desktop 2            |
+|    <kbd>F1</kbd>    | <kbd>display_brightness_decrement</kbd>  \|  <kbd>⌃</kbd><kbd>1</kbd> |  <kbd>⌃</kbd><kbd>1</kbd>  | Brightness Down / Desktop 1          |
+|    <kbd>F2</kbd>    |  <kbd>display_brightness_increment</kbd> \| <kbd>⌃</kbd><kbd>2</kbd>  |  <kbd>⌃</kbd><kbd>2</kbd>  | Brightness Up / Desktop 2            |
 |    <kbd>F3</kbd>    |              <kbd>⌃</kbd><kbd>↑</kbd>  \|  <kbd>⌃</kbd><kbd>3</kbd>              |  <kbd>⌃</kbd><kbd>3</kbd>  | Expose All / Desktop 3               |
-|    <kbd>F4</kbd>    |              Launchpad               |      | Launchpad                            |
-|    <kbd>F5</kbd>    |        illumination_decrement        |      | Keyboard Light Down                  |
-|    <kbd>F6</kbd>    |        illumination_increment        |      | Keyboard Light Up                    |
-|    <kbd>F7</kbd>    |                rewind                |      | Music Prev                           |
-|    <kbd>F8</kbd>    |            play_or_pause             |      | Play / Pause                         |
-|    <kbd>F9</kbd>    |             fastforward              |      | Music Next                           |
-|   <kbd>F10</kbd>   |                 mute                 |      | Mute                                 |
+|    <kbd>F4</kbd>    |        <kbd>Launchpad</kbd>          |      | Launchpad                            |
+|    <kbd>F5</kbd>    |        <kbd>illumination_decrement</kbd>        |      | Keyboard Light Down                  |
+|    <kbd>F6</kbd>    |        <kbd>illumination_increment</kbd>        |      | Keyboard Light Up                    |
+|    <kbd>F7</kbd>    |                <kbd>rewind</kbd>                |      | Music Prev                           |
+|    <kbd>F8</kbd>    |      <kbd>play_or_pause</kbd>        |      | Play / Pause                         |
+|    <kbd>F9</kbd>    |       <kbd>fastforward</kbd>         |      | Music Next                           |
+|   <kbd>F10</kbd>   |                 <kbd>mute</kbd>                 |      | Mute                                 |
 |   <kbd>F11</kbd>   |           <kbd>volume_decrement</kbd>           |      | Volume Down                          |
-|   <kbd>F12</kbd>   |           volume_increment           |      | Volume Up                            |
+|   <kbd>F12</kbd>   |           <kbd>volume_increment</kbd>           |      | Volume Up                            |
 |   <kbd>F13</kbd>   |                 <kbd>⌃</kbd><kbd>⇧</kbd><kbd>⌘</kbd><kbd>3</kbd>                 | <kbd>⇧</kbd><kbd>⌘</kbd><kbd>3</kbd> | Full Screentshot (<kbd>⌘</kbd> to file)         |
 |   <kbd>F14</kbd>   |            <kbd>⇧</kbd><kbd>⌘</kbd><kbd>5</kbd>            | <kbd>⇧</kbd><kbd>⌘</kbd><kbd>6</kbd> | Screenshot menu (<kbd>⌘</kbd> touchbar snap)    |
-|   <kbd>F15</kbd>   |            play_or_pause             |      | Play / Pause                         |
-|  <kbd>Insert</kbd>  |   <kbd>⇧</kbd><kbd>⌥</kbd> display_brightness_increment    |      | Fine-Grained Brightness Up           |
-| Delete <kbd>⌦</kbd> |   <kbd>⇧</kbd><kbd>⌥</kbd> display_brightness_decrement    |      | Fine-Grained Brightness Down         |
-|  Home <kbd>↖</kbd>  |      <kbd>⇧</kbd><kbd>⌥</kbd> illumination_increment       |      | Fine-GrainedKeyboard Light Up        |
-|  End <kbd>↘</kbd>   |      <kbd>⇧</kbd><kbd>⌥</kbd> illumination_decrement       |      | Fine-Grained Keyboard Light Down     |
-|  PgUp <kbd>⇞</kbd>  |         <kbd>⇧</kbd><kbd>⌥</kbd> volume_increment          |      | Fine-Grained Volume Up               |
-|  PgDn <kbd>⇟</kbd>  |         <kbd>⇧</kbd><kbd>⌥</kbd> volume_decrement          |      | Fine-Grained Volume Down             |
+|   <kbd>F15</kbd>   |      <kbd>play_or_pause</kbd>        |      | Play / Pause                         |
+|  <kbd>Insert</kbd>  | <kbd>⇧</kbd><kbd>⌥</kbd> <kbd>display_brightness_increment</kbd> |      | Fine-Grained Brightness Up           |
+| Delete <kbd>⌦</kbd> | <kbd>⇧</kbd><kbd>⌥</kbd> <kbd>display_brightness_decrement</kbd> |      | Fine-Grained Brightness Down         |
+|  Home <kbd>↖</kbd>  | <kbd>⇧</kbd><kbd>⌥</kbd> <kbd>illumination_increment</kbd> |      | Fine-GrainedKeyboard Light Up        |
+|  End <kbd>↘</kbd>   | <kbd>⇧</kbd><kbd>⌥</kbd> <kbd>illumination_decrement</kbd> |      | Fine-Grained Keyboard Light Down     |
+|  PgUp <kbd>⇞</kbd>  |    <kbd>⇧</kbd><kbd>⌥</kbd> <kbd>volume_increment</kbd>    |      | Fine-Grained Volume Up               |
+|  PgDn <kbd>⇟</kbd>  |    <kbd>⇧</kbd><kbd>⌥</kbd> <kbd>volume_decrement</kbd>    |      | Fine-Grained Volume Down             |
 
+
+</details>
 
 
 ## References
@@ -288,7 +346,7 @@ Number keys <kbd>1</kbd>, <kbd>2</kbd>, …, <kbd>9</kbd>, <kbd>0</kbd> are used
 ### Control Planes
 
 <details>
-<summary>details</summary>
+<summary>control planes</summary>
 
 | Plane | Modifiers | Plane | Modifiers | Plane | Modifiers |
 | :---: | :-------: | :---: | :-------: | :---: | :-------: |
@@ -302,6 +360,9 @@ Number keys <kbd>1</kbd>, <kbd>2</kbd>, …, <kbd>9</kbd>, <kbd>0</kbd> are used
 </details>
 
 ### MacOS Installation
+
+<details>
+<summary>macos installation</summary>
 
 Capslock serves via  [**Karabiner-Elements**](https://karabiner-elements.pqrs.org/)  on MacOS
 
@@ -320,16 +381,24 @@ Capslock serves via  [**Karabiner-Elements**](https://karabiner-elements.pqrs.or
 
    ![](mac_v3/images/config-karabiner.png)
 
+</details>
+
 ### Windows Installation
+
+<details>
+<summary>window installation</summary>
 
 Capslock serves via   [**AutoHotKey**](https://www.autohotkey.com/) on Windows.
 
 1. Download and install [**AutoHotKey**](https://www.autohotkey.com/).  Load [`capslock.ahk`](win/CapsLock.ahk) in AutoHotKey.
 2. You can also use pre-compiled capslock ahk binary [CapsLock.exe](win/CapsLock.exe).
 
-
+</details>
 
 ## FAQ
+
+<details>
+<summary>FAQ</summary>
 
 #### Q: Why using <kbd>✱</kbd> as the symbol for Hyper? 
 
@@ -369,7 +438,7 @@ Capslock serves via   [**AutoHotKey**](https://www.autohotkey.com/) on Windows.
 
 **A**: I'm the first one to make a capslock overhaul schema as far as I know. The original win AHK version was wrote in 2013.  The first mac version was wrote in 2015. It is the first capslock emulation schema in karabiner's [gallary](https://ke-complex-modifications.pqrs.org/#emulation-modes).
 
-
+</details>
 
 
 
