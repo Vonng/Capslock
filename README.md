@@ -12,6 +12,8 @@
 
 [**Chinese Documentation 中文文档** ](README_ZH.md)
 
+[**Karabiner-Elements Official Gallery**](https://ke-complex-modifications.pqrs.org/#emulation-modes)
+
 
 
 ## CapsLock ([v3](mac_v3/))
@@ -49,9 +51,6 @@
 
 ## Quick Start
 
-<details>
-<summary>Installation Guide</summary>
-
 Capslock serves via  [**Karabiner-Elements**](https://karabiner-elements.pqrs.org/)  on MacOS
 
 1. Download and install [**Karabiner Elements**](https://karabiner-elements.pqrs.org/), following the wizard and grant required permissions.
@@ -64,7 +63,6 @@ Capslock serves via  [**Karabiner-Elements**](https://karabiner-elements.pqrs.or
 
 3. Launch **Karabiner-Element** →  **Tab: ComplexModification** → **Button: Add Rules**, then enabled rulesets.
 
-</details>
 
 
 ## Usage
@@ -97,14 +95,11 @@ Capslock works on **ANSI** keyboards and similar layouts. It literally remaps ev
 |   <kbd>✱</kbd><kbd>⎋</kbd>    | <kbd>⇪</kbd> Capslock | Press to switch Capslock status |
 |   <kbd>✱</kbd><kbd>␣</kbd>    |     <kbd>⌃</kbd><kbd>␣</kbd>     | Switch input source, +<kbd>⌘</kbd> to emoji                   |
 
-Note that <kbd>✱</kbd> is implemented as combination of **ALL RIGHT MODIFIERS**:  <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>⇧</kbd>. Mainly for compatible & intergration reasons.
+Note that <kbd>✱</kbd> is implemented as combination of **ALL RIGHT MODIFIERS**:  <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>⇧</kbd>. 
 
-Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalites. We will assume and omit that in subsequent document.
+Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalities. We will assume and omit that in subsequent document.
 
 ### Navigation
-
-<details>
-<summary>navigation</summary>
 
 * <kbd>H</kbd>, <kbd>J</kbd>, <kbd>K</kbd>, <kbd>L</kbd>, <kbd>U</kbd>, <kbd>I</kbd>, <kbd>O</kbd>, <kbd>P</kbd> are used as **Navigators**. Maps to <kbd>←</kbd><kbd>↓</kbd><kbd>↑</kbd><kbd>→</kbd><kbd>⇞</kbd><kbd>↖</kbd><kbd>↘</kbd><kbd>⇟</kbd> by default. (pink area). 
 * 9 control planes has already been allocated for navigators.
@@ -125,7 +120,6 @@ Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalites. We will assume an
 |    <kbd>O</kbd>    |   End    |  line end  |  head2end   |  next win  |  hide all   |  🖱️B  |   🖱️B   |  ⬇️   |  ⬇️⏫  |
 |    <kbd>P</kbd>    |   PgDn   | next page  |  next page  |   zoom+    |  Launchpad  |  🖱️F  |   🖱️F   |  ⬅️   |  ⬅️⏫  |
 
-</details>
 
 
 #### Arrow Navigation
@@ -444,6 +438,6 @@ Capslock serves via   [**AutoHotKey**](https://www.autohotkey.com/) on Windows.
 
 ## About
 
-Author： [**Vonng**](https://vonng.com/en/) (rh@vonng.com)  (2013 - 2021)
+Author： [**Vonng**](https://vonng.com/en/) (rh@vonng.com)  
 
 License：Apache 2.0 License
