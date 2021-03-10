@@ -48,29 +48,9 @@
           "from": {
             "key_code": "escape",
             "modifiers": {
-              "mandatory": [
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "caps_lock",
-              "modifiers": [
-                "left_control"
-              ]
-            }
-          ]
-        },
-        {
-          "description": "escape = capslock switch",
-          "type": "basic",
-          "from": {
-            "key_code": "escape",
-            "modifiers": {
+              "optional": [
+                "caps_lock"
+              ],
               "mandatory": [
                 "right_command",
                 "right_control",

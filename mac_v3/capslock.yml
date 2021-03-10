@@ -1,7 +1,7 @@
 ---
 title: Capslock Enhancement
 url: https://vonng.com/capslock.json
-version: 3.0.0
+version: 3.0.1
 maintainers: [ Vonng ]
 author: Vonng(rh@vonng.com)
 website: http://capslock.vonng.com
@@ -27,12 +27,7 @@ rules:
 
       - description: 'escape = capslock switch'
         type: basic
-        from: { key_code: escape, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
-        to: [ { key_code: caps_lock , modifiers: [ left_control ] } ]
-
-      - description: 'escape = capslock switch'
-        type: basic
-        from: { key_code: escape, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        from: { key_code: escape, modifiers: { optional: [ caps_lock ], mandatory: [ right_command,right_control,right_shift,right_option ] } }
         to: [ { key_code: caps_lock , modifiers: [ left_control ] } ]
 
       - description: 'spacebar = language switch'
@@ -44,7 +39,6 @@ rules:
         type: basic
         from: { key_code: spacebar, modifiers: { mandatory: [ left_command,  right_command,right_control,right_shift,right_option ] } }
         to: [ { key_code: spacebar , modifiers: [ left_control,left_command ] } ]
-
 
 
   ################################################################
