@@ -2,7 +2,7 @@
 
 *让Capslock再次伟大！*
 
-![](images/trump.jpg)
+![](images/logo.svg)
 
 将 ⇪CapsLock（大写锁定键）改造为一个强力的**功能修饰键（✱ Hyper ）**，奇迹般地提高操作效率与生产力。
 

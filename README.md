@@ -2,13 +2,11 @@
 
 *Make CapsLock Great Again!*  
 
-
-
-![](images/trump.jpg)
+![](images/logo.svg)
 
 *Transform <kbd>⇪</kbd>CapsLock into a powerful **modifier** **<kbd>✱</kbd> Hyper** that miraculously increases your work productivity!*
 
-[**Capslock Website**](http://capslock.vonng.com/en/)
+[**Capslock Official Website**](http://capslock.vonng.com/en/) / [**ZH Site**](http://capslock.vonng.com/zh/)
 
 [**Chinese Documentation 中文文档** ](README_ZH.md)
 
