@@ -61,7 +61,7 @@ Capslock serves via  [**Karabiner-Elements**](https://karabiner-elements.pqrs.or
    ```
 
     Or check karabiner official [gallery](https://ke-complex-modifications.pqrs.org/#emulation-modes) and load it there.
-   
+
 3. Launch **Karabiner-Element** →  **Tab: ComplexModification** → **Button: Add Rules**, then enabled rulesets.
 
 
@@ -358,7 +358,7 @@ Capslock serves via  [**Karabiner-Elements**](https://karabiner-elements.pqrs.or
 
    ```yaml
    # Capslock Mac V3 (this repo)
-   karabiner://karabiner/assets/complex_modifications/import?url=https://github.com/Vonng/Capslock/blob/master/mac_v3/capslock.json
+   karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json
    
    # Karabiner-Elements Offical Script Gallery (v2)
    karabiner://karabiner/assets/complex_modifications/import?url=https://pqrs.org/osx/karabiner/complex_modifications/json/caps_lock_enhancement.json
