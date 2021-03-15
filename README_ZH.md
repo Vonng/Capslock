@@ -46,7 +46,7 @@
 
    ```yaml
    # Capslock Mac V3 (当前项目最新配置文件)
-   karabiner://karabiner/assets/complex_modifications/import?url=https://github.com/Vonng/Capslock/blob/master/mac_v3/capslock.json
+   karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json
    ```
 
 3. 打开Karabiner-Elements，切至第三选项卡`ComplexModification`，点击左下方按钮 `Add Rules`按需启用Capslock预置规则即可
