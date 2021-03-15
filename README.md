@@ -2,11 +2,11 @@
 
 *Make CapsLock Great Again!*  
 
-![](images/logo.svg)
+[![](images/logo.svg)](http://capslock.vonng.com)
 
 *Transform <kbd>⇪</kbd>CapsLock into a powerful **modifier** **<kbd>✱</kbd> Hyper** that miraculously increases your work productivity!*
 
-[**Capslock Official Website**](http://capslock.vonng.com/en/) / [**ZH Site**](http://capslock.vonng.com/zh/)
+[**Capslock  Website**](http://capslock.vonng.com/en/) / [**ZH Site**](http://capslock.vonng.com/zh/)
 
 [**Chinese Documentation 中文文档** ](README_ZH.md)
 
@@ -53,12 +53,15 @@ Capslock serves via  [**Karabiner-Elements**](https://karabiner-elements.pqrs.or
 
 1. Download and install [**Karabiner Elements**](https://karabiner-elements.pqrs.org/), following the wizard and grant required permissions.
 
-2. Download [**capslock.json**](mac_v3/capslock.json) to：` ~/.config/karabiner/assets/complex_modifications/` .  Or open this link with Safari to launch karabiner and load config from URL:
+2. Download [**capslock.json**](mac_v3/capslock.json) to：` ~/.config/karabiner/assets/complex_modifications/` .  
+    Or just open this link with Safari to launch karabiner and load config from URL:
 
    ```yaml
-   karabiner://karabiner/assets/complex_modifications/import?url=https://github.com/Vonng/Capslock/blob/master/mac_v3/capslock.json
+   karabiner://karabiner/assets/complex_modifications/import?url=https://vonng.com/capslock.json
    ```
 
+    Or check karabiner official [gallery](https://ke-complex-modifications.pqrs.org/#emulation-modes) and load it there.
+   
 3. Launch **Karabiner-Element** →  **Tab: ComplexModification** → **Button: Add Rules**, then enabled rulesets.
 
 
@@ -104,7 +107,7 @@ Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalities. We will assume a
 * Hold additional <kbd>⌘</kbd> Command for **selection**.  (like holding <kbd>⇧</kbd>shift in normal), additional <kbd>⌥</kbd> Option for **word/para selection**.
 * Hold additional <kbd>⇧</kbd> Shift for **app/win/tab switching**.  Hold additional <kbd>⌃</kbd> Control for **desktop management** .
 * Hold additional <kbd>⌥</kbd> Option for 🖱️ **mouse move**.  Add <kbd>⇧</kbd>shift to **⏫ accelerate**.  (<kbd>U</kbd>, <kbd>I</kbd>, <kbd>O</kbd>, <kbd>P</kbd> maps to mouse buttons) .
-* <kbd>⇧</kbd><kbd>⌥</kbd> turns navigator to **🖲️ mouse wheel**, and <kbd>⇧</kbd><kbd>⌘</kbd> is the ⏫ **accelerated** version .  `HJKL` for wheel, wihle `UIOP` for reversed.
+* <kbd>⇧</kbd><kbd>⌥</kbd> turns navigator to **🖲️ mouse wheel**, and <kbd>⇧</kbd><kbd>⌘</kbd> is the ⏫ **accelerated** version .  `HJKL` for wheel, wihle `UIOP` for reversed wheel move.
 
 | Feature | **Move** | **Select** | **WordSel** | **Window** | **Desktop** |  🖱️   | **🖱️⏫** |  🖲️   |  🖲️⏫  |
 | :-----: | :------: | :--------: | :---------: | :--------: | :---------: | :--: | :----: | :--: | :--: |
@@ -122,8 +125,6 @@ Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalities. We will assume a
 
 #### Arrow Navigation
 
-<details>
-<summary>arrow navigation</summary>
 
 * Arrows <kbd>←</kbd>↓<kbd>↑</kbd>→ to 🖱️ **mouse**  actions too. Hold <kbd>⌥</kbd> Option to ⏬ **slow down**, hold <kbd>⌘</kbd> Command  to ⏫ **speed up**.
 * Hold  <kbd>⇧</kbd> Shift  turns to 🖲️ **wheel move**.  Extra <kbd>⌥</kbd> Option to ⏬ **slow down**, extra <kbd>⌘</kbd> Command  to ⏫ **speed up**.
@@ -135,12 +136,8 @@ Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalities. We will assume a
 | <kbd>←</kbd><kbd>↓</kbd><kbd>↑</kbd><kbd>→</kbd> | speed = 1600 | speed ÷ 2 | speed × 2 | speed = 32 | speed ÷ 2 | speed × 2 |
 |      <kbd>↩</kbd>      |      🖱️L      |    🖱️M     |    🖱️R     |     🖱️L     |    🖱️B     |    🖱️F     |
 
-</details>
 
 ### Deletion
-
-<details>
-<summary>deletion</summary>
 
  <kbd>N</kbd> <kbd>M</kbd> <kbd>,</kbd> <kbd>.</kbd>  are used as **Deletor keys**. Right below the navigators for fast access (brown area). 
 
@@ -152,7 +149,6 @@ Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalities. We will assume a
 |    <kbd>.</kbd>    | del a word after | del till line end  | del the whole line |
 |    <kbd>⌫</kbd>    |     del file     |     purge file     |                    |
 
-</details>
 
 ### Mousekey
 
@@ -315,8 +311,6 @@ Number keys <kbd>1</kbd>, <kbd>2</kbd>, …, <kbd>9</kbd>, <kbd>0</kbd> are used
 
 ### Symbols
 
-<details>
-<summary>details</summary>
 
 | Glyph |             Name             | Glyph |           Name           |
 | :---: | :--------------------------: | :---: | :----------------------: |
@@ -333,7 +327,7 @@ Number keys <kbd>1</kbd>, <kbd>2</kbd>, …, <kbd>9</kbd>, <kbd>0</kbd> are used
 |  🖱️R   | Mouse Right Click (Button2)  |  🖱️F   | Mouse Forward (Button5)  |
 |  🖱️M   | Mouse Middle Click (Button3) |   🖲️   |       Mouse Wheel        |
 
-</details>
+
 
 ### Control Planes
 
