@@ -1,6 +1,6 @@
 # Capslock
 
-*Make CapsLock Great Again!*  
+*Make CapsLock Great Again!*   [![Visits Badge](https://badges.pufler.dev/visits/Vonng/Capslock)](https://badges.pufler.dev)
 
 [![](images/logo.svg)](http://capslock.vonng.com)
 
@@ -360,7 +360,10 @@ Capslock serves via  [**Karabiner-Elements**](https://karabiner-elements.pqrs.or
    # Capslock Mac V3 (this repo)
    karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json
    
-   # Karabiner-Elements Offical Script Gallery (v2)
+   # Capslock Official Site (v3)
+   karabiner://karabiner/assets/complex_modifications/import?url=https://vonng.com/capslock.json
+   
+   # Karabiner-Elements Offical Script Gallery (v3)
    karabiner://karabiner/assets/complex_modifications/import?url=https://pqrs.org/osx/karabiner/complex_modifications/json/caps_lock_enhancement.json
    ```
 3. Launch Karabiner-Elements.  **Tab: ComplexModification** → **Button: Add Rules**, then enabled rulesets.

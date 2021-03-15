@@ -1,19 +1,33 @@
-# Capslock (v3)
+# Capslock补完计划 (mac v3)
 
-*让Capslock再次伟大！*
 
-![](images/trump.jpg)
 
-将 ⇪CapsLock（大写锁定键）改造为一个强力的**功能修饰键（✱ Hyper ）**，奇迹般地提高操作效率与生产力。
+### MacOS安装
 
-[**English Documentation** ](README.md)
+在MacOS上，Capslock通过 [**Karabiner-Elements** 提供服务](https://karabiner-elements.pqrs.org/)
 
-* **功能强大**：将Capslock改造为一个全新的功能修饰键 **✱ Hyper** ，类似于 ⇧⌃⌥⌘ 。
-* **用途丰富**：预制大量实用功能，导航、删除、窗口管理，终端信号，应用捷径，功能键等等。重新定义键盘！
-* **提速赋能**：根据**开发者**的典型操作习惯进行优化与与设计，高频操作手指无需离开键盘热区，提高操作效率！
-* **扩展定制**：✱ 可与⇧⌃⌥⌘组合使用，提供多达十六个额外的控制平面，自由定制所需功能！
-* **鼠标集成**：忘掉鼠标吧！用键盘来完成所有鼠标相关操作！
-* **轻量便携**：只是简单轻量的键盘定义，随带随走，随下随用，兼容MacOS与Windows。
+1. 下载并安装 [**Karabiner Elements**](https://karabiner-elements.pqrs.org/)，按照安装向导提示完成安装并赋予所需权限。
+
+
+2. 将 [**capslock.json**](mac_v3/capslock.json) 下载至` ~/.config/karabiner/assets/complex_modifications/` 目录。
+
+   或使用Safari打开下面的链接，将自动启动Karabiner并加载Capslock配置文件。
+
+   ```yaml
+   # Capslock 官方网站 (v3)
+   karabiner://karabiner/assets/complex_modifications/import?url=https://vonng.com/capslock.json
+   
+   # Capslock Mac V3 (当前Repo)
+   karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json
+   
+   # Karabiner-Elements 官方陈列馆（Emulation Mode第一个）
+   karabiner://karabiner/assets/complex_modifications/import?url=https://pqrs.org/osx/karabiner/complex_modifications/json/caps_lock_enhancement.json
+   ```
+
+
+3. 打开Karabiner-Elements，切至第三标签页`ComplexModification`，点击左下方按钮 `Add Rules`按需启用Capslock预置规则即可。
+
+   ![](images/config-karabiner.png)
 
 
 
@@ -27,7 +41,7 @@ Capslock以**ANSI**布局键盘为蓝本，对Capslock之外的 [**所有按键*
 
 |         类目          |  颜色  | 说明                                                         |
 | :-------------------: | :----: | :----------------------------------------------------------- |
-| [基础功能](#基础功能) |   蓝   | 单击Capslock发送**Esc**，按住Capslock启用✱功能，大小写锁定为✱Esc，输入法切换为✱空格。 |
+| [基础功能](#基础功能) |   蓝   | 单击Capslock发送**Esc**，按住Capslock启用✱功能。✱Esc切换大小写锁，✱空格切换输入法。 |
 | [导航功能](#导航功能) |   粉   | VI式导航，结合⌃⌥⌘⇧启用多种功能：光标移动，词句选择，窗口管理，鼠标移动等等… |
 | [删除功能](#删除功能) |   棕   | 快速执行字/词/句/行/页的删除操作，手无需离开核心区。         |
 |   [鼠标键](#鼠标键)   | 小键盘 | 将小键盘映射为一个功能完整的鼠标。                           |
@@ -40,12 +54,12 @@ Capslock以**ANSI**布局键盘为蓝本，对Capslock之外的 [**所有按键*
 
 ### 基础功能
 
-|  按键  |   映射为   | 说明                                                         |
-| :----: | :--------: | ------------------------------------------------------------ |
-| ⇪ 点击 |  ⎋ Escape  | 单击Capslock发送ESC                                          |
-| ⇪ 按住 |  ✱  Hyper  | 按住Capslock启用Hyper                                        |
-|   ✱⎋   | ⇪ Capslock | **单击**ESC启用大写锁定，**按住**关闭大写锁定（按住Capslock时） |
-|   ✱␣   |     ⌃␣     | **单击**空格切换输入法，+⌘时打开表情符号页                   |
+|  按键  |   映射为   | 说明                                       |
+| :----: | :--------: | ------------------------------------------ |
+| ⇪ 点击 |  ⎋ Escape  | 单击Capslock发送ESC                        |
+| ⇪ 按住 |  ✱  Hyper  | 按住Capslock启用Hyper                      |
+|   ✱⎋   | ⇪ Capslock | **单击**ESC切换大写锁定                    |
+|   ✱␣   |     ⌃␣     | **单击**空格切换输入法，+⌘时打开表情符号页 |
 
 注意，✱ 在实现上被定义为同时按下所有的右侧⌘⌥⌃⇧修饰符，这样设计的主要原因是将快捷键透传到外部应用。（如Alfred，Moom等）
 
@@ -60,17 +74,17 @@ Capslock以**ANSI**布局键盘为蓝本，对Capslock之外的 [**所有按键*
 * 按住 ⌥ Option 效果为🖱️**鼠标移动**， 额外按下⇧Shift将**移速翻倍** ⏫。  (`U`, `I`, `O`, `P` 映射为鼠标左击，右击，后退，前进)。
 * 按住⇧⌥将导航键变为 🖲️ **鼠标滚轮**，⇧⌘**移速翻倍** 。其中HJKL为正常滚动，UIOP自然滚动（反向）。
 
-| **功能** | **移动** | **选择** | **快速选择** | **窗口管理** | **桌面管理** | **跳动** | **滚动** | **鼠标** | **反滚** |
-| :------: | :------: | :------: | :----------: | :----------: | :----------: | :------: | :------: | :------: | :------: |
-| 键\修饰  |    ✱     |    ⌘     |      ⌘⌥      |      ⇧       |      ⌃       |    ⌥     |    ⇧⌃    |    ⇧⌥    |    ⇧⌘    |
-|    H     |    ⬅️     | 左选一字 |   左选一词   |   先前Tab    |   上个桌面   |    ⬅️     |    ⬅️⏫    |    ⬅️     |    ⬅️⏫    |
-|    J     |    ⬇️     | 下选一行 |   下选三行   |   切换应用   |   聚焦窗口   |    ⬇️     |    ⬇️⏫    |    ⬇️     |    ⬇️⏫    |
-|    K     |    ⬆️     | 上选一行 |   上选三行   |   先前应用   |   暴露所有   |    ⬆️     |    ⬆️⏫    |    ⬆️     |    ⬆️⏫    |
-|    L     |    ➡️     | 右选一字 |   右选一词   |   切换Tab    |   下个桌面   |    ➡️     |    ➡️⏫    |    ➡️     |    ➡️⏫    |
-|    U     |   PgUp   | 选至上页 |   选至上页   |     缩小     |     全屏     |    🖱️L    |    🖱️L    |    ➡️     |    ➡️⏫    |
-|    I     |   Home   | 选至行首 |   选至行首   |   上个窗口   |   隐藏窗口   |    🖱️R    |    🖱️R    |    ⬆️     |    ⬆️⏫    |
-|    O     |   End    | 选至行尾 |   选至行尾   |   切换窗口   |   隐藏所有   |    🖱️B    |    🖱️B    |    ⬇️     |    ⬇️⏫    |
-|    P     |   PgDn   | 选至下页 |   选至下页   |     放大     |   启动菜单   |    🖱️F    |    🖱️F    |    ⬅️     |    ⬅️⏫    |
+| **功能** | **移动** | **选择** | **快速选择** | **窗口管理** | **桌面管理** |  🖱️   | **🖱️⏫** |  🖲️   |  🖲️⏫  |
+| :------: | :------: | :------: | :----------: | :----------: | :----------: | :--: | :----: | :--: | :--: |
+| 键\修饰  |    ✱     |    ⌘     |      ⌘⌥      |      ⇧       |      ⌃       |  ⌥   |   ⇧⌃   |  ⇧⌥  |  ⇧⌘  |
+|    H     |    ⬅️     | 左选一字 |   左选一词   |   先前Tab    |   上个桌面   |  ⬅️   |   ⬅️⏫   |  ⬅️   |  ⬅️⏫  |
+|    J     |    ⬇️     | 下选一行 |   下选三行   |   切换应用   |   聚焦窗口   |  ⬇️   |   ⬇️⏫   |  ⬇️   |  ⬇️⏫  |
+|    K     |    ⬆️     | 上选一行 |   上选三行   |   先前应用   |   暴露所有   |  ⬆️   |   ⬆️⏫   |  ⬆️   |  ⬆️⏫  |
+|    L     |    ➡️     | 右选一字 |   右选一词   |   切换Tab    |   下个桌面   |  ➡️   |   ➡️⏫   |  ➡️   |  ➡️⏫  |
+|    U     |   PgUp   | 选至上页 |   选至上页   |     缩小     |     全屏     |  🖱️L  |   🖱️L   |  ➡️   |  ➡️   |
+|    I     |   Home   | 选至行首 |   尾至行首   |   上个窗口   |   隐藏窗口   |  🖱️R  |   🖱️R   |  ⬆️   |  ⬆️⏫  |
+|    O     |   End    | 选至行尾 |   首至行尾   |   切换窗口   |   隐藏所有   |  🖱️B  |   🖱️B   |  ⬇️   |  ⬇️⏫  |
+|    P     |   PgDn   | 选至下页 |   选至下页   |     放大     |   启动菜单   |  🖱️F  |   🖱️F   |  ⬅️   |  ⬅️⏫  |
 
 #### 方向键导航
 
@@ -102,12 +116,12 @@ Capslock以**ANSI**布局键盘为蓝本，对Capslock之外的 [**所有按键*
 * 按住⇧ Shift 切换为🖲️ **滚轮滚轮**，在此模式下，额外按住 ⌥ Option 时 ⏬ **减速**，额外按住⌘ Command ⏫ **加速**。
 * 第一行（`numlock`, `=`, `/`, `*`）转换为鼠标滚动操作，右下侧其余按键（`0`, `.`, `⌤`, `+`, `-`）转换为鼠标的5个按键.
 
-| `⇭`  🖲️⬅️ | `=` 🖲️⬇️ | `/`  🖲️⬆️ | `*`  🖲️➡️ |
-| :-----: | :----: | :-----: | :-----: |
-| `7` 🖱️↖️  |  8 🖱️⬆️  | `9` 🖱️↗️  | `-` 🖱️B  |
-| `4`🖱️ ⬅️  |  `5`🖱️  | `6` 🖱️➡️  | `+` 🖱️F  |
-|  `1`🖱️↙️  |  2 🖱️⬇️  | `3` 🖱️↘️  |         |
-| `0` 🖱️L  |        | `.` 🖱️M  | `⌤` 🖱️R  |
+| <kbd>⇭</kbd>  🖲️⬅️ | <kbd>=</kbd> 🖲️⬇️ | <kbd>/</kbd>  🖲️⬆️ | <kbd>*</kbd>  🖲️➡️ |
+| :--------------: | :-------------: | :--------------: | :--------------: |
+| <kbd>7</kbd>🖱️ ↖️  | <kbd>8</kbd> 🖱️⬆️ | <kbd>9</kbd> 🖱️↗️  | <kbd>-</kbd> 🖱️B  |
+| <kbd>4</kbd>🖱️ ⬅️  |  <kbd>5</kbd>🖱️  | <kbd>6</kbd> 🖱️➡️  | <kbd>+</kbd> 🖱️F  |
+|  <kbd>1</kbd>🖱️↙️  | <kbd>2</kbd> 🖱️⬇️ | <kbd>3</kbd> 🖱️↘️  |                  |
+| <kbd>0</kbd> 🖱️L  |                 | <kbd>.</kbd> 🖱️M  | <kbd>⌤</kbd> 🖱️R  |
 
 ### 窗口管理
 
@@ -225,138 +239,19 @@ Capslock以**ANSI**布局键盘为蓝本，对Capslock之外的 [**所有按键*
 
 ### 符号释义
 
-| Glyph |             Name             | Glyph |           Name           |
-| :---: | :--------------------------: | :---: | :----------------------: |
-|   ⇪   |           Capslock           |   ✱   |          Hyper           |
-|   ⎋   |            Escape            |   ␣   |          Space           |
-|   ⌘   |        Command (Mac)         |   ⎇   |       Alter (Win)        |
-|   ⌥   |         Option (Mac)         |   ⊞   |        Win (Win)         |
-|   ⌃   |           Control            |   ⇧   |          Shift           |
-|   ↩   |            Return            |   ⌤   |          Enter           |
-| ←↓↑→  |         Arrow Cursor         |  ↖↘   |         Home/End         |
-|  ⇥⇤   |             Tab              |  ⌫⌦   |  Delete / ForwardDelete  |
-|   ⇭   |           Numlock            |  ⏫⏬   |       Fast / Slow        |
-|  🖱️L   |  Mouse Left Click (Button1)  |  🖱️B   | Mouse Backward (Button4) |
-|  🖱️R   | Mouse Right Click (Button2)  |  🖱️F   | Mouse Forward (Button5)  |
-|  🖱️M   | Mouse Middle Click (Button3) |   🖲️   |       Mouse Wheel        |
 
-### 控制平面
-
-| Plane | Modifiers | Plane | Modifiers | Plane | Modifiers |
-| :---: | :-------: | :---: | :-------: | :---: | :-------: |
-| **0** |     ✱     |   3   |    ✱⌘⌥    |   7   |   ✱⌘⌥⌃    |
-|   1   |    ✱⌘     |   5   |    ✱⌘⌃    |  11   |   ✱⌘⌥⇧    |
-|   2   |    ✱⌥     |   6   |    ✱⌥⌃    |  13   |   ✱⌘⌃⇧    |
-|   4   |    ✱⌃     |   9   |    ✱⌘⇧    |  14   |   ✱⌥⌃⇧    |
-|   8   |    ✱⇧     |  10   |    ✱⌥⇧    |  15   |   ✱⌘⌥⌃⇧   |
-|       |           |  12   |    ✱⌃⇧    |       |           |
-
-### MacOS安装
-
-在MacOS上，Capslock通过 [**Karabiner-Elements** 提供服务](https://karabiner-elements.pqrs.org/)
-
-1. 下载并安装 [**Karabiner Elements**](https://karabiner-elements.pqrs.org/)，按照安装向导提示完成安装并赋予所需权限。
-
-
-2. 将 [**capslock.json**](mac/capslock.json) 下载至` ~/.config/karabiner/assets/complex_modifications/` 目录。
-
-   或使用Safari打开下面的链接，将自动启动Karabiner并加载Capslock配置文件。
-
-   ```yaml
-   # Capslock Mac V3 (当前项目最新配置文件)
-   karabiner://karabiner/assets/complex_modifications/import?url=https://github.com/Vonng/Capslock/blob/master/mac_v3/capslock.json
-   ```
-
-
-3. 打开Karabiner-Elements，切至第三标签页`ComplexModification`，点击左下方按钮 `Add Rules`按需启用Capslock预置规则即可。
-
-   ![](mac_v3/images/config-karabiner.png)
-
-
-### Windows安装
-
-Capslock 在Windows上基于 [**AutoHotKey**](https://www.autohotkey.com/) 提供服务。
-
-1. 下载并安装 [**AutoHotKey**](https://www.autohotkey.com/)，加载配置文件 [`capslock.ahk`](win/CapsLock.ahk) 。
-2. 或下载并使用直接预编译好的二进制程序 [CapsLock.exe](win/CapsLock.exe)。
-
-
-
-## 常见问题
-
-**问：为什么使用 ✱ 作为Hyper功能修饰键的符号？**
-
-答：因为 * 的 ASCII代码正好是42，也就是生命、宇宙以及任何事情的终极答案。✱ (Heavy-Asterisk) 是 * 的加强版，看上去更好看一些。
-
-
-
-**问：Capslock Mac v3有什么新花样？**
-
-答：原本的v2只定义了1到3个控制平面，v3最多使用了9个控制平面。添加了大量的功能，使得Capslock可有的修饰键⌘⌥⌃⇧产生化学反应。以一种符合逻辑的方式排列组合出更多的功能。
-
-
-
-**问：Capslock Mac v3相对于v2有什么不兼容之处？**
-
-V3在整体上采用前向兼容策略，但确实有三个地方进行了不兼容的调整。
-
-* 第二行的数字键1-0原本只是简单地上档转移为对应字符，现在变成了10个特殊的剪贴板。
-* F13 / F14 原本用做 前后切歌 ，现在修改为截图功能，更符合这两个键的原本语义。
-* ⌘D 原来是打开词典App，现在则变为 定义词语（⌘⌃D，或重按触控板的功能），词典App被新挂在了⌥F下。
-
-
-
-**问：为什么没有Linux操作系统支持？**
-
-答：Linux的桌面环境较为复杂不好搞。主要是我通过MacOS终端来使用Linux，Capslock的功能全都有，用起来比原生Linux爽多了。
-
-
-
-**问：为什么不再维护Windows版本的Capslock配置文件？**
-
-答：除了打游戏，我已经很久不用Windows了。
-
-
-
-**问：MacOS中为什么有一个旧版本？**
-
-答：曾经有一个旧版本的Karabiner，使用XML格式的配置文件。Apple在MacOS Sierra（10.12）中修改了内核架构，很多程序都要大改。所以后来就有了Karabiner的新版本，也就是现在还在使用的Karabiner-Elements了。
-
-
-
-**问：怎样按自己的需求定制？**
-
-只需要Fork一份配置文件，按照规则照葫芦画瓢即可。
-
-
-
-**问：这么好用的东西，是原创吗？**
-
-答：据我所知，我应该是第一个弄这种Capslock改造的，因为当时没找到什么相关资料。
-
-最早的AHK版本具体可以追溯到2013年，15年还有一篇文章介绍背后的设计理念：[CapsLock魔改大法——变废为宝实现高效编辑](https://www.cnblogs.com/Vonng/p/4240219.html)。
-
-大部分能搜索到的Capslock方案，特别是基于Karabiner与AutoHotKey的改造基本都能看到这里的影子。
-
-这个配置也是Karabiner官方[Gallary](https://ke-complex-modifications.pqrs.org/#emulation-modes)收录的第一个Capslock全面改造方案，
-
-最近我倒是发现一些Fork不讲武德，卖钱也不署名来源，所以开源协议从WTFPL修改为Apache License 2.0。卖钱虽好，但还是要尊重一下原作者，至少保留个署名吧？
-
-
-
-**问：后面还会有变动与修改吗？**
-
-答：习惯这种东西一旦养成是很难改，所以这种配置文件不适合频繁修改。实际上从13年第一次设计完后，基本除了一些边边角角的地方，没有特别大的变动。不过最近（2021）会有一次非常大的升级（Capslock mac v3），会将原有的约3个控制平面扩充到16个，并填充大量累积改进。当然在功能上肯定是老版本的功能超集，不会影响现有用户的使用习惯。
-
-
-
-
-
-## 关于
-
-作者： [**Vonng**](http://vonng.com/) （rh@vonng.com） （2013-2021）
-
-协议：Apache 2.0 License
-
-
+|                      Glyph                       |     Name      |          Glyph           |          Name          |
+| :----------------------------------------------: | :-----------: | :----------------------: | :--------------------: |
+|                   <kbd>⇪</kbd>                   |   Capslock    |       <kbd>✱</kbd>       |         Hyper          |
+|                   <kbd>⎋</kbd>                   |    Escape     |       <kbd>␣</kbd>       |         Space          |
+|                   <kbd>⌘</kbd>                   | Command (Mac) |       <kbd>⎇</kbd>       |      Alter (Win)       |
+|                   <kbd>⌥</kbd>                   | Option (Mac)  |       <kbd>⊞</kbd>       |       Win (Win)        |
+|                   <kbd>⌃</kbd>                   |    Control    |       <kbd>⇧</kbd>       |         Shift          |
+|                   <kbd>↩</kbd>                   |    Return     |       <kbd>⌤</kbd>       |         Enter          |
+| <kbd>←</kbd><kbd>↓</kbd><kbd>↑</kbd><kbd>→</kbd> | Arrow Cursor  | <kbd>↖</kbd><kbd>↘</kbd> |        Home/End        |
+|             <kbd>⇥</kbd><kbd>⇤</kbd>             |      Tab      | <kbd>⌫</kbd><kbd>⌦</kbd> | Delete / ForwardDelete |
+|                   <kbd>⇭</kbd>                   |    Numlock    |            ⏫⏬            |      Fast / Slow       |
+|                        🖱️L                        |   左键单击    |            🖱️B            |        鼠标后退        |
+|                        🖱️R                        |   右键单击    |            🖱️F            |        鼠标前进        |
+|                        🖱️M                        |   中键单击    |            🖲️             |        鼠标滚轮        |
 

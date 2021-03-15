@@ -1,6 +1,6 @@
 # Capslock
 
-*让Capslock再次伟大！*
+*让Capslock再次伟大！*  [![Visits Badge](https://badges.pufler.dev/visits/Vonng/Capslock)](https://badges.pufler.dev)
 
 ![](images/logo.svg)
 
@@ -42,11 +42,17 @@
 
 2. 将 [**capslock.json**](mac_v3/capslock.json) 下载至` ~/.config/karabiner/assets/complex_modifications/` 目录。
 
-   或使用Safari打开下面的链接，将自动启动Karabiner并加载Capslock配置文件。
+   或使用Safari打开下面的链接（任意皆可），将自动启动Karabiner并加载Capslock配置文件。
 
    ```yaml
-   # Capslock Mac V3 (当前项目最新配置文件)
+   # Capslock 官方网站 (v3)
+   karabiner://karabiner/assets/complex_modifications/import?url=https://vonng.com/capslock.json
+   
+   # Capslock Mac V3 (当前Repo)
    karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json
+   
+   # Karabiner-Elements 官方陈列馆（Emulation Mode第一个）
+   karabiner://karabiner/assets/complex_modifications/import?url=https://pqrs.org/osx/karabiner/complex_modifications/json/caps_lock_enhancement.json
    ```
 
 3. 打开Karabiner-Elements，切至第三选项卡`ComplexModification`，点击左下方按钮 `Add Rules`按需启用Capslock预置规则即可
