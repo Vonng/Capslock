@@ -1,7 +1,7 @@
 ---
 title: Capslock Enhancement
 url: https://vonng.com/capslock.json
-version: 3.0.1
+version: 3.0.2
 maintainers: [ Vonng ]
 author: Vonng(rh@vonng.com)
 website: http://capslock.vonng.com
@@ -1427,11 +1427,20 @@ rules:
       # ( v ) -->  Vim Prefix Meta Key                           #
       #==========================================================#
       # - description: 'v = vim meta key'
+      - description: 'v = ctrl-v'
+        type: basic
+        from: { key_code: v, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: v , modifiers: [ left_control ] } ]
+
 
       #==========================================================#
       # ( b ) -->  Tmux Prefix Meta Key                          #
       #==========================================================#
       # - description: 'b = tmux meta key'
+      - description: 'b = ctrl-b'
+        type: basic
+        from: { key_code: b, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: b , modifiers: [ left_control ] } ]
 
 
 
