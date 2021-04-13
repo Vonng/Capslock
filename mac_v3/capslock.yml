@@ -1,7 +1,7 @@
 ---
 title: Capslock Enhancement
 url: https://vonng.com/capslock.json
-version: 3.0.2
+version: 3.0.3
 maintainers: [ Vonng ]
 author: Vonng(rh@vonng.com)
 website: http://capslock.vonng.com
@@ -1142,7 +1142,7 @@ rules:
       - description: 'command tab = alter app rev'
         type: basic
         from: { key_code: tab, modifiers: { mandatory: [ left_command,  right_command,right_control,right_shift,right_option ] } }
-        to: [ { key_code: tab , modifiers: [ left_command,lelft_shift ] } ]
+        to: [ { key_code: tab , modifiers: [ left_command,left_shift ] } ]
 
       - description: 'tab = alter app'
         type: basic
@@ -1166,7 +1166,7 @@ rules:
         type: basic
         from: { key_code: q, modifiers: { mandatory: [ left_command,  right_command,right_control,right_shift,right_option ] } }
         to: [ { key_code: q , modifiers: [ left_command ] } ]
-        # to: [ { key_code: escape , modifiers: [ left_command,lelft_option ] } ]  # TODO: May not work
+        # to: [ { key_code: escape , modifiers: [ left_command,left_option ] } ]  # TODO: May not work
 
       - description: 'q = close app'
         type: basic
@@ -1191,7 +1191,7 @@ rules:
         type: basic
         from: { key_code: w, modifiers: { mandatory: [ left_command,  right_command,right_control,right_shift,right_option ] } }
         to: [ { key_code: w , modifiers: [ left_command ] } ]
-        # to: [ { key_code: w , modifiers: [ left_command,lelft_option ] } ]  # TODO: May not work
+        # to: [ { key_code: w , modifiers: [ left_command,left_option ] } ]  # TODO: May not work
 
       - description: 'w = close tab'
         type: basic
@@ -1236,7 +1236,7 @@ rules:
       - description: 'command + s = alter tab sheet rev'
         type: basic
         from: { key_code: s, modifiers: { mandatory: [ left_command,  right_command,right_control,right_shift,right_option ] } }
-        to: [ { key_code: tab , modifiers: [ left_control,lelft_shift ] } ]
+        to: [ { key_code: tab , modifiers: [ left_control,left_shift ] } ]
 
       - description: 's = alter tab sheet'
         type: basic
@@ -1403,7 +1403,7 @@ rules:
       - description: 'command + x = ctrl + F5 (vscode run)'
         type: basic
         from: { key_code: x, modifiers: { mandatory: [ left_command,  right_command,right_control,right_shift,right_option ] } }
-        to: [ { key_code: f5 } , modifiers: [ left_control ] ]
+        to: [ { key_code: f5 , modifiers: [ left_control ] } ]
 
       - description: 'x = ctrl-r'
         type: basic
@@ -1416,7 +1416,7 @@ rules:
       - description: 'command + c = shift + F5 (vscode stop)'
         type: basic
         from: { key_code: c, modifiers: { mandatory: [ left_command,  right_command,right_control,right_shift,right_option ] } }
-        to: [ { key_code: f5 } , modifiers: [ left_shift ] ]
+        to: [ { key_code: f5 , modifiers: [ left_shift ] } ]
 
       - description: 'c = ctrl-c'
         type: basic
@@ -1441,7 +1441,6 @@ rules:
         type: basic
         from: { key_code: b, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
         to: [ { key_code: b , modifiers: [ left_control ] } ]
-
 
 
 

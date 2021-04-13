@@ -1,7 +1,7 @@
 {
   "title": "Capslock Enhancement",
   "url": "https://vonng.com/capslock.json",
-  "version": "3.0.1",
+  "version": "3.0.3",
   "maintainers": [
     "Vonng"
   ],
@@ -4394,7 +4394,7 @@
               "key_code": "tab",
               "modifiers": [
                 "left_command",
-                "lelft_shift"
+                "left_shift"
               ]
             }
           ]
@@ -4743,7 +4743,7 @@
               "key_code": "tab",
               "modifiers": [
                 "left_control",
-                "lelft_shift"
+                "left_shift"
               ]
             }
           ]
@@ -5262,9 +5262,7 @@
           },
           "to": [
             {
-              "key_code": "f5"
-            },
-            {
+              "key_code": "f5",
               "modifiers": [
                 "left_control"
               ]
@@ -5311,9 +5309,7 @@
           },
           "to": [
             {
-              "key_code": "f5"
-            },
-            {
+              "key_code": "f5",
               "modifiers": [
                 "left_shift"
               ]
@@ -5337,6 +5333,52 @@
           "to": [
             {
               "key_code": "c",
+              "modifiers": [
+                "left_control"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "v = ctrl-v",
+          "type": "basic",
+          "from": {
+            "key_code": "v",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "v",
+              "modifiers": [
+                "left_control"
+              ]
+            }
+          ]
+        },
+        {
+          "description": "b = ctrl-b",
+          "type": "basic",
+          "from": {
+            "key_code": "b",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "b",
               "modifiers": [
                 "left_control"
               ]
