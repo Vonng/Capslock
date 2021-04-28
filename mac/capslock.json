@@ -4943,7 +4943,7 @@
           ]
         },
         {
-          "description": "t = iTerm2",
+          "description": "t = vscode",
           "type": "basic",
           "from": {
             "key_code": "t",
