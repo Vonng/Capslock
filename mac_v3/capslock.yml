@@ -1273,7 +1273,7 @@ rules:
 
 
       #==========================================================#
-      # ( r ) --> safari / finder / mail                         #
+      # ( r ) --> iterm / preview / terminal                     #
       #==========================================================#
       - description: 'command + r = preview'
         type: basic
@@ -1303,13 +1303,13 @@ rules:
         from: { key_code: t, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
         to: [ { shell_command: open -a notes } ]
 
-      - description: 't = iTerm2'
+      - description: 't = vscode'
         type: basic
         from: { key_code: t, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
         to: [ { shell_command: open -a 'Visual Studio Code' } ]
 
       #==========================================================#
-      # ( y ) --> siri / karabiner / amphetamine                  #
+      # ( y ) --> siri / karabiner / amphetamine                 #
       #==========================================================#
       - description: 'command + y = karabiner'
         type: basic
