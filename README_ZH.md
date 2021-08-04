@@ -2,7 +2,7 @@
 
 *让Capslock再次伟大！*  [![Visits Badge](https://badges.pufler.dev/visits/Vonng/Capslock)](https://badges.pufler.dev)
 
-![](images/logo.svg)
+![](docs/img/logo.svg)
 
 将 ⇪CapsLock（大写锁定键）改造为一个强力的**功能修饰键（✱ Hyper ）**，奇迹般地提高操作效率与生产力。
 
@@ -63,7 +63,7 @@
 
 Capslock以**ANSI**布局键盘为蓝本，对Capslock之外的 [**所有按键**](#符号) 进行了功能定制与修饰，主要分为10大类功能。
 
-![](mac_v3/images/keyboard.png)
+![](mac_v3/docs/img/keyboard.png)
 
 > [**控制平面**](控制平面) 由左侧修饰键的排列组合所定义：根据 ⌘⌥⌃⇧的状态，最多有16个额外的控制平面。上图为0号控制平面布局。
 
@@ -316,7 +316,7 @@ Capslock以**ANSI**布局键盘为蓝本，对Capslock之外的 [**所有按键*
 
 3. 打开Karabiner-Elements，切至第三标签页`ComplexModification`，点击左下方按钮 `Add Rules`按需启用Capslock预置规则即可。
 
-   ![](mac_v3/images/config-karabiner.png)
+   ![](mac_v3/docs/img/config-karabiner.png)
 
 
 ### Windows安装
@@ -384,7 +384,7 @@ V3在整体上采用前向兼容策略，但确实有三个地方进行了不兼
 
 大部分能搜索到的Capslock方案，特别是基于Karabiner与AutoHotKey的改造基本都能看到这里的影子。
 
-这个配置也是Karabiner官方[Gallary](https://ke-complex-modifications.pqrs.org/#emulation-modes)收录的第一个Capslock全面改造方案，
+这个配置也是Karabiner官方[Gallery](https://ke-complex-modifications.pqrs.org/#emulation-modes)收录的第一个Capslock全面改造方案，
 
 最近我倒是发现一些Fork不讲武德，卖钱也不署名来源，所以开源协议从WTFPL修改为Apache License 2.0。卖钱虽好，但还是要尊重一下原作者，至少保留个署名吧？
 

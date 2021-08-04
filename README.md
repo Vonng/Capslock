@@ -2,13 +2,11 @@
 
 *Make CapsLock Great Again!*   [![Visits Badge](https://badges.pufler.dev/visits/Vonng/Capslock)](https://badges.pufler.dev)
 
-[![](images/logo.svg)](http://capslock.vonng.com)
+![](docs/img/logo.svg)
 
 *Transform <kbd>⇪</kbd>CapsLock into a powerful **modifier** **<kbd>✱</kbd> Hyper** that miraculously increases your work productivity!*
 
-[**Capslock  Website**](http://capslock.vonng.com/en/) / [**ZH Site**](http://capslock.vonng.com/zh/)
-
-[**Chinese Documentation 中文文档** ](README_ZH.md)
+[**zh-cn docs 中文文档** ](README_ZH.md)
 
 [**Karabiner-Elements Official Gallery**](https://ke-complex-modifications.pqrs.org/#emulation-modes)
 
@@ -57,7 +55,7 @@ Capslock serves via  [**Karabiner-Elements**](https://karabiner-elements.pqrs.or
     Or just open this link with Safari to launch karabiner and load config from URL:
 
    ```yaml
-   karabiner://karabiner/assets/complex_modifications/import?url=https://vonng.com/capslock.json
+   karabiner://karabiner/assets/complex_modifications/import?url=https://github.com/Vonng/Capslock/blob/master/mac_v3/capslock.json
    ```
 
     Or check karabiner official [gallery](https://ke-complex-modifications.pqrs.org/#emulation-modes) and load it there.
@@ -70,7 +68,7 @@ Capslock serves via  [**Karabiner-Elements**](https://karabiner-elements.pqrs.or
 
 Capslock works on **ANSI** keyboards and similar layouts. It literally remaps every [**keys**](#Symbols) on the keyboard. Including 10 categories.
 
-![](images/keyboard.png)
+![](docs/img/keyboard.png)
 
 > **[Control Planes](#Control-Planes)** are defined by combination of four extra left modifiers: <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>⇧</kbd>.This image shows the layout of control plane 0.
 
@@ -107,7 +105,7 @@ Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalities. We will assume a
 * Hold additional <kbd>⌘</kbd> Command for **selection**.  (like holding <kbd>⇧</kbd>shift in normal), additional <kbd>⌥</kbd> Option for **word/para selection**.
 * Hold additional <kbd>⇧</kbd> Shift for **app/win/tab switching**.  Hold additional <kbd>⌃</kbd> Control for **desktop management** .
 * Hold additional <kbd>⌥</kbd> Option for 🖱️ **mouse move**.  Add <kbd>⇧</kbd>shift to **⏫ accelerate**.  (<kbd>U</kbd>, <kbd>I</kbd>, <kbd>O</kbd>, <kbd>P</kbd> maps to mouse buttons) .
-* <kbd>⇧</kbd><kbd>⌥</kbd> turns navigator to **🖲️ mouse wheel**, and <kbd>⇧</kbd><kbd>⌘</kbd> is the ⏫ **accelerated** version .  `HJKL` for wheel, wihle `UIOP` for reversed wheel move.
+* <kbd>⇧</kbd><kbd>⌥</kbd> turns navigator to **🖲️ mouse wheel**, and <kbd>⇧</kbd><kbd>⌘</kbd> is the ⏫ **accelerated** version .  `HJKL` for wheel, while `UIOP` for reversed wheel move.
 
 | Feature | **Move** | **Select** | **WordSel** | **Window** | **Desktop** |  🖱️   | **🖱️⏫** |  🖲️   |  🖲️⏫  |
 | :-----: | :------: | :--------: | :---------: | :--------: | :---------: | :--: | :----: | :--: | :--: |
@@ -128,7 +126,7 @@ Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalities. We will assume a
 
 * Arrows <kbd>←</kbd>↓<kbd>↑</kbd>→ to 🖱️ **mouse**  actions too. Hold <kbd>⌥</kbd> Option to ⏬ **slow down**, hold <kbd>⌘</kbd> Command  to ⏫ **speed up**.
 * Hold  <kbd>⇧</kbd> Shift  turns to 🖲️ **wheel move**.  Extra <kbd>⌥</kbd> Option to ⏬ **slow down**, extra <kbd>⌘</kbd> Command  to ⏫ **speed up**.
-* <kbd>↩</kbd> Return maps to left **click**.  And additional <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>⇧</kbd> turns into right click, middle click, backward, forward.
+* <kbd>↩</kbd> Return maps to left **click**. Additional <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>⇧</kbd> turns into right click, middle click, backward, forward.
 
 |   Feature   |      🖱️       |    🖱️⏬     |    🖱️⏫     |     🖲️      |    🖲️⏬     |    🖲️⏫     |
 | :---------: | :----------: | :-------: | :-------: | :--------: | :-------: | :-------: |
@@ -194,7 +192,7 @@ Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalities. We will assume a
 <summary>app shortcuts</summary>
 
 * <kbd>E</kbd> <kbd>R</kbd> <kbd>T</kbd> <kbd>Y</kbd> <kbd>F</kbd> <kbd>G</kbd> are used as application shortcuts. (yellow area)
-* Popular apps and dev tools are registed to 3 default planes: <kbd>✱</kbd>/<kbd>⌘</kbd>/<kbd>⌥</kbd>. Assign these shortcuts according to your own needs.
+* Popular apps and dev tools are registered to 3 default planes: <kbd>✱</kbd>/<kbd>⌘</kbd>/<kbd>⌥</kbd>. Assign these shortcuts according to your own needs.
 
 | Key\Mod |         <kbd>✱</kbd>          |     <kbd>⌘</kbd>     |      <kbd>⌥</kbd>      |
 | :-----: | :----------------: | :-------: | :---------: |
@@ -212,7 +210,7 @@ Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalities. We will assume a
 <details>
 <summary>terminal control</summary>
 
-<kbd>D</kbd>, <kbd>Z</kbd>, <kbd>X</kbd>, <kbd>C</kbd>, <kbd>V</kbd>, <kbd>B</kbd> are used as terminal control keys. Sending singals and IDE commands. (green area)
+<kbd>D</kbd>, <kbd>Z</kbd>, <kbd>X</kbd>, <kbd>C</kbd>, <kbd>V</kbd>, <kbd>B</kbd> are used as terminal control keys. Sending singles and IDE commands. (green area)
 
 | Key\Mod |                         <kbd>✱</kbd>                          |          <kbd>⌘</kbd>           |
 | :-----: | :------------------------------------------------: | :------------------: |
@@ -363,12 +361,12 @@ Capslock serves via  [**Karabiner-Elements**](https://karabiner-elements.pqrs.or
    # Capslock Official Site (v3)
    karabiner://karabiner/assets/complex_modifications/import?url=https://vonng.com/capslock.json
    
-   # Karabiner-Elements Offical Script Gallery (v3)
+   # Karabiner-Elements Official Script Gallery (v3)
    karabiner://karabiner/assets/complex_modifications/import?url=https://pqrs.org/osx/karabiner/complex_modifications/json/caps_lock_enhancement.json
    ```
 3. Launch Karabiner-Elements.  **Tab: ComplexModification** → **Button: Add Rules**, then enabled rulesets.
 
-   ![](mac_v3/images/config-karabiner.png)
+   ![](mac_v3/docs/img/config-karabiner.png)
 
 </details>
 
@@ -396,7 +394,7 @@ Capslock serves via   [**AutoHotKey**](https://www.autohotkey.com/) on Windows.
 
 #### Q: What's new in V3? 
 
-**A**: The original v2 only use 1 ~ 3 control planes. While v3 uses up to 9 control planes. A large number of functions have been added to make the additional modifier <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>⇧</kbd> functioning in a reasonable way.
+**A**: The original v2 only use 1 ~ 3 control planes. While v3 uses up to 9 control planes. Numerous functions have been added to make the additional modifier <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>⇧</kbd> functioning reasonably.
 
 #### Q: Is there any incompatible changes in V3 compare to V2 ?
 
@@ -417,7 +415,7 @@ Capslock serves via   [**AutoHotKey**](https://www.autohotkey.com/) on Windows.
 
 #### Q: Why is there an older version in MacOS? 
 
-**A**: There was an older version of Karabiner that used XML config.  Apple modified it's kernel architecture in MacOS Sierra (10.12) and many programs had to be overhauled. So then there was a new version of Karabiner, the Karabiner-Elements, which is still in use today.
+**A**: There was an older version of Karabiner that used XML config.  Apple modified its kernel architecture in MacOS Sierra (10.12) and many programs had to be overhauled. So then there was a new version of Karabiner, the Karabiner-Elements, which is still in use today.
 
 #### Q: How can I customize it to my needs? 
 
@@ -425,7 +423,7 @@ Capslock serves via   [**AutoHotKey**](https://www.autohotkey.com/) on Windows.
 
 #### Q: Is this original? 
 
-**A**: I'm the first one to make a capslock overhaul schema as far as I know. The original win AHK version was wrote in 2013.  The first mac version was wrote in 2015. It is the first capslock emulation schema in karabiner's [gallary](https://ke-complex-modifications.pqrs.org/#emulation-modes).
+**A**: I'm the first one to make a capslock overhaul schema as far as I know. The original win AHK version was wrote in 2013.  The first mac version was wrote in 2015. It is the first capslock emulation schema in karabiner's [gallery](https://ke-complex-modifications.pqrs.org/#emulation-modes).
 
 </details>
 
