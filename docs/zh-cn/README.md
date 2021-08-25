@@ -1,6 +1,8 @@
 # CapsLock
 
 > *让Capslock再次伟大！*
+>
+> [中文文档](https://capslock.vonng.com/#/zh-cn/) | [EN DOCS](https://capslock.vonng.com/) | [Karabiner Gallery](https://ke-complex-modifications.pqrs.org/#caps_lock_enhancement) | [Github Repo](https://github.com/Vonng/Capslock) | [Github Pages](https://vonng.github.io/Capslock) | [Import URL](karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json)
 > 
 > [![Visits Badge](https://badges.pufler.dev/visits/Vonng/Capslock)](https://badges.pufler.dev)
 
@@ -43,7 +45,7 @@
 - [上档变换](#上档变换)：将一些键映射至常用高频字符。
 - [功能控制](#功能控制)：将F1-F2转义回原本的功能，截屏录屏，音量灯光的精密控制。
 
-![](../img/feature_zh2.jpg)
+![](../img/feature_zh.jpg)
 
 
 ------------------------
@@ -422,8 +424,8 @@ V3在整体上采用前向兼容策略，但确实有三个地方进行了不兼
 
 ## 关于
 
-作者： [**Vonng**](https://vonng.com/) （ [rh@vonng.com](mailto:rh@vonng.com) ） （2013-2021）
+作者： [**Vonng**](https://vonng.com/) （ [rh@vonng.com](mailto:rh@vonng.com) ）
 
-协议：Apache 2.0 License
+协议：[Apache 2.0 License](https://github.com/Vonng/Capslock/blob/master/LICENSE)
 
-
+备案：[浙ICP备15016890-3号](https://beian.miit.gov.cn/)
