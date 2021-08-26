@@ -2,7 +2,7 @@
 
 > *Make CapsLock Great Again!*
 >
-> [中文文档](https://capslock.vonng.com/#/zh-cn/) | [EN DOCS](https://capslock.vonng.com/) | [Karabiner Gallery](https://ke-complex-modifications.pqrs.org/#caps_lock_enhancement) | [Github Repo](https://github.com/Vonng/Capslock) | [Import URL](karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json)
+> [中文文档](docs/zh-cn/) | [EN DOCS](http://capslock.vonng.com/) | [Karabiner Gallery](https://ke-complex-modifications.pqrs.org/#caps_lock_enhancement) | [Github Repo](https://github.com/Vonng/Capslock) | [Import URL](karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json)
 >
 > [![Visits Badge](https://badges.pufler.dev/visits/Vonng/Capslock)](https://badges.pufler.dev)
 
@@ -13,7 +13,7 @@
 
 *Transform <kbd>⇪</kbd>CapsLock into a powerful **modifier** **<kbd>✱</kbd> Hyper** that miraculously increases your work productivity!*
 
-![control-plane-0](docs/img/keyboard.png)
+![control-plane-0](docs/img/keyboard.jpg)
 
 > [Control Plane](#control-planes) 0 Layout (There are 15 more!)
 
@@ -29,7 +29,7 @@
 * **MouseKey**: Manipulate mouse cursor and wheels with keyboard
 * **Cross-Platform**: MacOS and Windows. Light-Weight and portable
 
-![](docs/img/highlight.png)
+![](docs/img/highlight.jpg)
 
 ------------------------
 
@@ -46,7 +46,7 @@
 - [Shifter](#Shifter)             :  Turn some keys into common code symbols.
 - [Functional](#Functional)       :  Screenshtots. Fine-grained light/volume control. Take function keys' function back!
 
-![](docs/img/feature.png)
+![](docs/img/feature.jpg)
 
 ------------------------
 
@@ -73,7 +73,7 @@ Capslock serves via    on MacOS
    > * [Karabiner Gallery](karabiner://karabiner/assets/complex_modifications/import?url=https://ke-complex-modifications.pqrs.org/json/caps_lock_enhancement.json)：https://ke-complex-modifications.pqrs.org/json/caps_lock_enhancement.json
    > * [GitHub Repo](karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json)： https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json
    > * [Capslock Website](karabiner://karabiner/assets/complex_modifications/import?url=https://vonng.com/capslock.json)： https://vonng.com/capslock.json
-   > * Or download [**capslock.json**](https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json) to ` ~/.config/karabiner/assets/complex_modifications/` manually.
+   > * Or download [**capslock.json**](mac_v3/capslock.json) to ` ~/.config/karabiner/assets/complex_modifications/` manually.
 
    Click `Enable All` for `Capslock Enhancement` on pop-up dialog. It will affect immediately.
 
@@ -88,7 +88,7 @@ Capslock serves via    on MacOS
 
 Capslock works on **ANSI** keyboards and similar layouts. It literally remaps every [**keys**](#Symbols) on the keyboard. Including 10 categories.
 
-![](docs/img/keyboard.png)
+![](docs/img/keyboard.jpg)
 
 > **[Control Planes](#Control-Planes)** are defined by combination of four extra left modifiers: <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>⇧</kbd>.This image shows the layout of control plane 0.
 
@@ -336,10 +336,10 @@ Number keys <kbd>1</kbd>, <kbd>2</kbd>, …, <kbd>9</kbd>, <kbd>0</kbd> are used
 
 ## Version
 
-* [**Capslock Mac V3**](https://github.com/Vonng/Capslock/tree/master/mac_v3/): 2021.03 - now (The Latest version)
-* [**Capslock Mac V2**](https://github.com/Vonng/Capslock/tree/master/mac_v2): 2017 - 2021
-* [**Capslock Mac V1**](https://github.com/Vonng/Capslock/tree/master/mac_v1): 2015 - 2017
-* [**Capslock Win**](https://github.com/Vonng/Capslock/tree/master/win): 2013 - 2015
+* [**Capslock Mac V3**](mac_v3/): 2021.03 - now (The Latest version)
+* [**Capslock Mac V2**](mac_v2): 2017 - 2021
+* [**Capslock Mac V1**](mac_v1): 2015 - 2017
+* [**Capslock Win**](win): 2013 - 2015
 
 |                       MacOS Supported                        |       Win Supported        |
 | :----------------------------------------------------------: | :------------------------: |
@@ -399,7 +399,7 @@ You can edit the more human-readable format `mac_v3/capslock.yml` then compile i
 
 ## Feedbacks
 
-![](docs/img/feedback.png)
+![](docs/img/feedback.jpg)
 
 
 ------------------------
