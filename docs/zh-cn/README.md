@@ -424,7 +424,7 @@ V3在整体上采用前向兼容策略，但确实有三个地方进行了不兼
 
 ## 关于
 
-作者： [**Vonng**](https://vonng.com/) （ [rh@vonng.com](mailto:rh@vonng.com) ）
+作者： [Vonng](https://vonng.com/) ([rh@vonng.com](mailto:rh@vonng.com))
 
 协议：[Apache 2.0 License](https://github.com/Vonng/Capslock/blob/master/LICENSE)
 

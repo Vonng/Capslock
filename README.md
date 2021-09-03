@@ -406,6 +406,8 @@ You can edit the more human-readable format `mac_v3/capslock.yml` then compile i
 
 ## About
 
-Author： [**Vonng**](https://vonng.com/en) （ [rh@vonng.com](mailto:rh@vonng.com) ） （2013-2021）
+Author： [Vonng](https://vonng.com/en) ([rh@vonng.com](mailto:rh@vonng.com))
 
-License：Apache 2.0 License
+License: [Apache 2.0 License](LICENSE)
+
+Beian: [浙ICP备15016890-3号](https://beian.miit.gov.cn/)

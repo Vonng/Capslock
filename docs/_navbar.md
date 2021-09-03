@@ -1,3 +1,5 @@
+- [Author](https://vonng.com/en/)
+
 - [Gallery](https://ke-complex-modifications.pqrs.org/#caps_lock_enhancement)
 
 - Version
