@@ -9,7 +9,7 @@
 - 由 [Karabiner-Elements](https://karabiner-elements.pqrs.org/) 强力驱动
 
 [使用说明](#CapsLock)
-[下载软件](https://github.com/pqrs-org/Karabiner-Elements/releases/download/v13.5.0/Karabiner-Elements-13.5.0.dmg)
+[下载软件](https://github.com/pqrs-org/Karabiner-Elements/releases/download/v14.2.0/Karabiner-Elements-14.2.0.dmg)
 [启用配置](karabiner://karabiner/assets/complex_modifications/import?url=https://ke-complex-modifications.pqrs.org/json/caps_lock_enhancement.json)
 
 

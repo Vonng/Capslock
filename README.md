@@ -8,7 +8,6 @@
 
 ------------------------
 
-
 ## CapsLock Enhancement Mac v3
 
 *Transform <kbd>⇪</kbd>CapsLock into a powerful **modifier** **<kbd>✱</kbd> Hyper** that miraculously increases your work productivity!*
@@ -35,6 +34,7 @@
 
 
 ## Features
+
 - [Basic](#Basic)                 :  Press <kbd>⇪</kbd> Capslock  emit an  **<kbd>⎋</kbd> Escape**. Hold it enabling the **<kbd>✱</kbd> Hyper Modifier**.
 - [Navigation](#Navigation)       :  Vim style navigation. Cursor move, text selection, switch desktop/window/tab, mouse move/wheel,etc...
 - [Deletion](#Deletion)           :  Maps `BNM,` to deletion operation to perform fast char/word/line deletion without hand move.
@@ -55,15 +55,13 @@
 
 It only takes two steps to enable Capslock on your Mac: Download & Enable
 
-Capslock serves via    on MacOS
-
-1. Download
+1. [Download](https://github.com/pqrs-org/Karabiner-Elements/releases/download/v14.2.0/Karabiner-Elements-14.2.0.dmg)
 
    Download & Install [**Karabiner-Elements**](https://karabiner-elements.pqrs.org/).
 
    Following the wizard and grant required permissions (Settings - Security - Privacy)
 
-2. Enable
+2. [Enable](karabiner://karabiner/assets/complex_modifications/import?url=https://ke-complex-modifications.pqrs.org/json/caps_lock_enhancement.json)
 
    Open this [link](karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json) with Safari. It will launch Karabiner-Elements and load configuration.
 
