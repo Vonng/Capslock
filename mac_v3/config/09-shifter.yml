@@ -1,0 +1,155 @@
+---
+################################################################
+#                        Hyper Shifter                         #
+################################################################
+
+rules:
+  - description: Hyper Shifter
+    manipulators:
+
+      #==========================================================#
+      # ( number ) -->  shifter symbols                          #
+      #==========================================================#
+      # - description: '1 = !'
+      #   type: basic
+      #   from: { key_code: '1', modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+      #   to: [ { key_code: '1' , modifiers: [ left_shift ] } ]
+
+      # - description: '2 = @'
+      #   type: basic
+      #   from: { key_code: '2', modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+      #   to: [ { key_code: '2' , modifiers: [ left_shift ] } ]
+
+      # - description: '3 = #'
+      #   type: basic
+      #   from: { key_code: '3', modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+      #   to: [ { key_code: '3' , modifiers: [ left_shift ] } ]
+
+      # - description: '4 = $'
+      #   type: basic
+      #   from: { key_code: '4', modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+      #   to: [ { key_code: '4' , modifiers: [ left_shift ] } ]
+
+      # - description: '5 = %'
+      #   type: basic
+      #   from: { key_code: '5', modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+      #   to: [ { key_code: '5' , modifiers: [ left_shift ] } ]
+
+      # - description: '6 = ^'
+      #   type: basic
+      #   from: { key_code: '6', modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+      #   to: [ { key_code: '6' , modifiers: [ left_shift ] } ]
+
+      # - description: '7 = &'
+      #   type: basic
+      #   from: { key_code: '7', modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+      #   to: [ { key_code: '7' , modifiers: [ left_shift ] } ]
+
+      # - description: '8 = *'
+      #   type: basic
+      #   from: { key_code: '8', modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+      #   to: [ { key_code: '8' , modifiers: [ left_shift ] } ]
+
+      # - description: '9 = ('
+      #   type: basic
+      #   from: { key_code: '9', modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+      #   to: [ { key_code: '9' , modifiers: [ left_shift ] } ]
+
+      # - description: '0 = )'
+      #   type: basic
+      #   from: { key_code: '0', modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+      #   to: [ { key_code: '0' , modifiers: [ left_shift ] } ]
+
+      - description: 'command + hyphen = scale down'
+        type: basic
+        from: { key_code: hyphen, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: hyphen , modifiers: [ left_command ] } ]
+
+      - description: 'hyphen = _'
+        type: basic
+        from: { key_code: hyphen, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: hyphen , modifiers: [ left_shift ] } ]
+
+      - description: 'command + equal_sign = scale up'
+        type: basic
+        from: { key_code: equal_sign, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: equal_sign , modifiers: [ left_command ] } ]
+
+      - description: 'equal_sign = +'
+        type: basic
+        from: { key_code: equal_sign, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: equal_sign , modifiers: [ left_shift ] } ]
+
+
+      #==========================================================#
+      # [] -> () command:{}  option:<>
+      #==========================================================#
+      - description: 'command + open_bracket [ = {'
+        type: basic
+        from: { key_code: open_bracket, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: open_bracket , modifiers: [ left_shift ] } ]
+
+      - description: 'option + open_bracket [ = <'
+        type: basic
+        from: { key_code: open_bracket, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: comma , modifiers: [ left_shift ] } ]
+
+      - description: 'open_bracket [ = ('
+        type: basic
+        from: { key_code: open_bracket, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: '9' , modifiers: [ left_shift ] } ]
+
+      - description: 'command + close_bracket ] = }'
+        type: basic
+        from: { key_code: close_bracket, modifiers: { mandatory: [ left_command,  right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: close_bracket , modifiers: [ left_shift ] } ]
+
+      - description: 'option + close_bracket ] = }'
+        type: basic
+        from: { key_code: close_bracket, modifiers: { mandatory: [ left_option,  right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: period , modifiers: [ left_shift ] } ]
+
+      - description: 'close_bracket ] = )'
+        type: basic
+        from: { key_code: close_bracket, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: '0' , modifiers: [ left_shift ] } ]
+
+
+      #==========================================================#
+      # slash/backslash to comment
+      #==========================================================#
+      - description: 'backslash \ = command + / (comment)'
+        type: basic
+        from: { key_code: backslash, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: slash , modifiers: [ left_command ] } ]
+
+      - description: 'slash / = command + / (comment)'
+        type: basic
+        from: { key_code: slash, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: slash , modifiers: [ left_command ] } ]
+
+
+      #==========================================================#
+      # semicolon / quote -->  !=   (+command) :"
+      #==========================================================#
+      - description: 'command + semicolon = !'
+        type: basic
+        from: { key_code: semicolon, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: '1' , modifiers: [ left_shift ] } ]
+
+      - description: 'semicolon = :'
+        type: basic
+        from: { key_code: semicolon, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: semicolon , modifiers: [ left_shift ] } ]
+
+      - description: 'command + quote = equal_sign'
+        type: basic
+        from: { key_code: quote, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: equal_sign } ]
+
+      - description: 'quote = equal_sign'
+        type: basic
+        from: { key_code: quote, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: equal_sign } ]
+
+...

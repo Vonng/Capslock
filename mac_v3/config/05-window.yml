@@ -1,0 +1,127 @@
+---
+################################################################
+#                        Hyper Window                          #
+################################################################
+
+rules:
+  - description: Hyper Window
+    manipulators:
+
+      #==========================================================#
+      # ( tab ) --> win/desktop switch                           #
+      #==========================================================#
+      - description: 'shift + tab = alter tab'
+        type: basic
+        from: { key_code: tab, modifiers: { mandatory: [ left_shift,  right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: tab , modifiers: [ left_control ] } ]
+
+      - description: 'option + tab = alter desktop'
+        type: basic
+        from: { key_code: tab, modifiers: { mandatory: [ left_option,  right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: right_arrow , modifiers: [ left_control ] } ]
+
+      - description: 'command tab = alter app rev'
+        type: basic
+        from: { key_code: tab, modifiers: { mandatory: [ left_command,  right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: tab , modifiers: [ left_command,left_shift ] } ]
+
+      - description: 'tab = alter app'
+        type: basic
+        from: { key_code: tab, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: tab , modifiers: [ left_command ] } ]
+
+      #==========================================================#
+      # ( q ) --> exit                                           #
+      #==========================================================#
+      - description: 'control + q = lock screen'
+        type: basic
+        from: { key_code: q, modifiers: { mandatory: [ left_control,  right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: q , modifiers: [ left_control,left_command ] } ]
+
+      - description: 'shift + q = logout'
+        type: basic
+        from: { key_code: q, modifiers: { mandatory: [ left_shift,  right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: q , modifiers: [ left_shift,left_command ] } ]
+
+      - description: 'command + q = force close app'
+        type: basic
+        from: { key_code: q, modifiers: { mandatory: [ left_command,  right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: q , modifiers: [ left_command ] } ]
+        # to: [ { key_code: escape , modifiers: [ left_command,left_option ] } ]  # TODO: May not work
+
+      - description: 'q = close app'
+        type: basic
+        from: { key_code: q, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: q , modifiers: [ left_command ] } ]
+
+
+      #==========================================================#
+      # ( w ) --> close tab                                      #
+      #==========================================================#
+      - description: 'shift + w = sleep'
+        type: basic
+        from: { key_code: w, modifiers: { mandatory: [ left_shift,  right_command,right_control,right_shift,right_option ] } }
+        to: [ { shell_command: pmset sleepnow } ]
+
+      - description: 'option + w = display sleep'
+        type: basic
+        from: { key_code: w, modifiers: { mandatory: [ left_option,  right_command,right_control,right_shift,right_option ] } }
+        to: [ { shell_command: pmset displaysleepnow } ]
+
+      - description: 'command + w = close all tab of app'
+        type: basic
+        from: { key_code: w, modifiers: { mandatory: [ left_command,  right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: w , modifiers: [ left_command ] } ]
+        # to: [ { key_code: w , modifiers: [ left_command,left_option ] } ]  # TODO: May not work
+
+      - description: 'w = close tab'
+        type: basic
+        from: { key_code: w, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: w , modifiers: [ left_command ] } ]
+
+
+      #==========================================================#
+      # ( a ) --> window management                              #
+      #==========================================================#
+      - description: 'control + a = launchpad'
+        type: basic
+        from: { key_code: a, modifiers: { mandatory: [ left_control,  right_command,right_control,right_shift,right_option ] } }
+        to: [ { shell_command: open -a 'Launchpad' } ]
+
+      - description: 'option + a = show desktop'
+        type: basic
+        from: { key_code: a, modifiers: { mandatory: [ left_option,  right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: f11 } ]
+
+      - description: 'command + a = expose all'
+        type: basic
+        from: { key_code: a, modifiers: { mandatory: [ left_command,  right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: up_arrow , modifiers: [ left_control ] } ]
+
+      # - description: 'a = window resize meta key' (passing via ⇧⌃⌥⌘A)
+
+
+      #==========================================================#
+      # ( s ) --> switch tab/win                                 #
+      #==========================================================#
+      - description: 'control + s = alter app-win rev'
+        type: basic
+        from: { key_code: s, modifiers: { mandatory: [ left_control,  right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: grave_accent_and_tilde , modifiers: [ left_command, left_shift ] } ]
+
+      - description: 'option + s = alter app-win'
+        type: basic
+        from: { key_code: s, modifiers: { mandatory: [ left_option,  right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: grave_accent_and_tilde , modifiers: [ left_command ] } ]
+
+      - description: 'command + s = alter tab sheet rev'
+        type: basic
+        from: { key_code: s, modifiers: { mandatory: [ left_command,  right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: tab , modifiers: [ left_control,left_shift ] } ]
+
+      - description: 's = alter tab sheet'
+        type: basic
+        from: { key_code: s, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: tab , modifiers: [ left_control ] } ]
+
+...

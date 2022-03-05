@@ -1,0 +1,13 @@
+---
+title: Capslock Enhancement
+url: https://vonng.com/capslock.json
+version: 3.0.3
+maintainers: [ Vonng ]
+author: Vonng(rh@vonng.com)
+website: http://capslock.vonng.com
+json_url: https://vonng.com/capslock.json
+import_url: karabiner://karabiner/assets/complex_modifications/import?url=https://vonng.com/capslock.json
+gallery_url: https://ke-complex-modifications.pqrs.org/#emulation-modes
+repo: https://github.com/Vonng/Capslock
+
+...
