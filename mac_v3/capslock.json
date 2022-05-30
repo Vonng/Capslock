@@ -2175,7 +2175,7 @@
           "to": [
             {
               "mouse_key": {
-                "vertical_wheel": 256
+                "vertical_wheel": -256
               }
             }
           ]
@@ -2199,7 +2199,7 @@
           "to": [
             {
               "mouse_key": {
-                "vertical_wheel": -256
+                "vertical_wheel": 256
               }
             }
           ]
