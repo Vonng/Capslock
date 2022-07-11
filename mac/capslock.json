@@ -1,7 +1,7 @@
 {
   "title": "Capslock Enhancement",
   "url": "https://vonng.com/capslock.json",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "maintainers": [
     "Vonng"
   ],
@@ -33,12 +33,14 @@
                 "right_command",
                 "right_control",
                 "right_option"
-              ]
+              ],
+              "lazy": true
             }
           ],
           "to_if_alone": [
             {
-              "key_code": "escape"
+              "key_code": "escape",
+              "lazy": true
             }
           ]
         },
