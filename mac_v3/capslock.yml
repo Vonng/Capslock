@@ -1,7 +1,7 @@
 ---
 title: Capslock Enhancement
 url: https://vonng.com/capslock.json
-version: 3.0.3
+version: 3.0.4
 maintainers: [ Vonng ]
 author: Vonng(rh@vonng.com)
 website: http://capslock.vonng.com
@@ -22,8 +22,8 @@ rules:
       - description: 'capslock = esc(click) | hyper(hold)'
         type: basic
         from: { key_code: caps_lock ,modifiers: { optional: [ any ] } }
-        to: [ { key_code: right_shift,modifiers: [ right_command,right_control,right_option ] } ]
-        to_if_alone: [ { key_code: escape } ]
+        to: [ { key_code: right_shift,modifiers: [ right_command,right_control,right_option ], lazy: true } ]
+        to_if_alone: [ { key_code: escape, lazy: true } ]
 
       - description: 'escape = capslock switch'
         type: basic
