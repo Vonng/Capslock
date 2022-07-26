@@ -1,0 +1,31 @@
+---
+################################################################
+#                    Capslock to Esc/Hyper                     #
+################################################################
+
+rules:
+  - description: CapsLock to Hyper
+    manipulators:
+
+      - description: 'capslock = esc(click) | hyper(hold)'
+        type: basic
+        from: { key_code: caps_lock ,modifiers: { optional: [ any ] } }
+        to: [ { key_code: right_shift,modifiers: [ right_command,right_control,right_option ] } ]
+        to_if_alone: [ { key_code: escape } ]
+
+      - description: 'escape = capslock switch'
+        type: basic
+        from: { key_code: escape, modifiers: { optional: [ caps_lock ], mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: caps_lock , modifiers: [ left_control ] } ]
+
+      - description: 'spacebar = language switch'
+        type: basic
+        from: { key_code: spacebar, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: spacebar , modifiers: [ left_control ] } ]
+
+      - description: 'command + spacebar = emoji'
+        type: basic
+        from: { key_code: spacebar, modifiers: { mandatory: [ left_command,  right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: spacebar , modifiers: [ left_control,left_command ] } ]
+
+...

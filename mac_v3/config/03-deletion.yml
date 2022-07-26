@@ -1,0 +1,73 @@
+---
+################################################################
+#                       Hyper Deletion                         #
+################################################################
+
+rules:
+  - description: Hyper Deletion
+    manipulators:
+
+      # + option = delete whole line / move line up /down
+      - description: 'option + n = delete whole line'
+        type: basic
+        from: { key_code: n, modifiers: { mandatory: [ left_option,  right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: delete_or_backspace, modifiers: [ left_command ] } ]
+
+      - description: 'option + m = move line down'
+        type: basic
+        from: { key_code: m, modifiers: { mandatory: [ left_option,  right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: down_arrow, modifiers: [ left_option, left_shift ] } ]
+
+      - description: 'option + , = move line up'
+        type: basic
+        from: { key_code: comma, modifiers: { mandatory: [ left_option,  right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: up_arrow, modifiers: [ left_option, left_shift ] } ]
+
+      - description: 'option + . = delete whole line'
+        type: basic
+        from: { key_code: period, modifiers: { mandatory: [ left_option,  right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: delete_or_backspace, modifiers: [ left_command ] } ]
+
+      # + command = delete line
+      - description: 'command + n = delete whole line'
+        type: basic
+        from: { key_code: n, modifiers: { mandatory: [ left_command,  right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: left_arrow, modifiers: [ left_shift,left_command ] } , { key_code: delete_or_backspace } ]
+
+      - description: 'command + m = delete word ahead'
+        type: basic
+        from: { key_code: m, modifiers: { mandatory: [ left_command,  right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: delete_or_backspace, modifiers: [ left_option ] } ]
+
+      - description: 'command + , = delete word after'
+        type: basic
+        from: { key_code: comma, modifiers: { mandatory: [ left_command,  right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: delete_forward, modifiers: [ left_option ] } ]
+
+      - description: 'command + . = delete whole line'
+        type: basic
+        from: { key_code: period, modifiers: { mandatory: [ left_command,  right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: right_arrow, modifiers: [ left_shift,left_command ] } , { key_code: delete_or_backspace } ]
+
+      # delete char and word
+      - description: 'n = delete a word ahead'
+        type: basic
+        from: { key_code: n, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: delete_or_backspace, modifiers: [ left_option ] } ]
+
+      - description: 'm = delete a char ahead'
+        type: basic
+        from: { key_code: m, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: delete_or_backspace } ]
+
+      - description: ', = delete a char after'
+        type: basic
+        from: { key_code: comma, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: delete_forward } ]
+
+      - description: '. = delete a word after'
+        type: basic
+        from: { key_code: period, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: delete_forward, modifiers: [ left_option ] } ]
+
+...

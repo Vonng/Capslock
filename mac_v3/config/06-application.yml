@@ -1,0 +1,120 @@
+---
+################################################################
+#                      Hyper Application                       #
+################################################################
+
+rules:
+  - description: Hyper Application
+    manipulators:
+
+
+      #==========================================================#
+      # ( e ) --> safari / finder / mail                         #
+      #==========================================================#
+      - description: 'command + e = finder'
+        type: basic
+        from: { key_code: e, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
+        to: [ { shell_command: open -a finder } ]
+
+      - description: 'option + e = mail'
+        type: basic
+        from: { key_code: e, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
+        to: [ { shell_command: open -a mail } ]
+
+      - description: 'e = safari'
+        type: basic
+        from: { key_code: e, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { shell_command: open -a Safari } ]
+
+
+      #==========================================================#
+      # ( r ) --> iterm / preview / terminal                     #
+      #==========================================================#
+      - description: 'command + r = preview'
+        type: basic
+        from: { key_code: r, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
+        to: [ { shell_command: open -a Preview } ]
+
+      - description: 'option + r = terminal'
+        type: basic
+        from: { key_code: r, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
+        to: [ { shell_command: open -a terminal } ]
+
+      - description: 'r = iTerm2'
+        type: basic
+        from: { key_code: r, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { shell_command: open -a iTerm } ]
+
+      #==========================================================#
+      # ( t ) --> vscode / typora / notes                        #
+      #==========================================================#
+      - description: 'command + t = typora'
+        type: basic
+        from: { key_code: t, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
+        to: [ { shell_command: open -a Typora } ]
+
+      - description: 'option + t = notes'
+        type: basic
+        from: { key_code: t, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
+        to: [ { shell_command: open -a notes } ]
+
+      - description: 't = vscode'
+        type: basic
+        from: { key_code: t, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { shell_command: open -a 'Visual Studio Code' } ]
+
+      #==========================================================#
+      # ( y ) --> siri / karabiner / amphetamine                 #
+      #==========================================================#
+      - description: 'command + y = karabiner'
+        type: basic
+        from: { key_code: y, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
+        to: [ { shell_command: open -a Karabiner-Elements } ]
+
+      - description: 'option + y = amphetamine'
+        type: basic
+        from: { key_code: y, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
+        to: [ { shell_command: open -a amphetamine } ]
+
+      - description: 'y = Siri'
+        type: basic
+        from: { key_code: y, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { shell_command: open -a Siri } ]
+
+      #==========================================================#
+      # ( f ) --> alfred 4 / Dash / Dictionary                   #
+      #==========================================================#
+      - description: 'command + f = Dash'
+        type: basic
+        from: { key_code: f, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
+        to: [ { shell_command: open -a Dash } ]
+
+      - description: 'option + f = Dictionary'
+        type: basic
+        from: { key_code: f, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
+        to: [ { shell_command: open -a Dictionary } ]
+
+      - description: 'f = Alfred 4'
+        type: basic
+        from: { key_code: f, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { shell_command: open -a 'Alfred 4' } ]
+
+      #==========================================================#
+      # ( g ) --> idea / chrome / calender                       #
+      #==========================================================#
+      - description: 'command + g = Chrome'
+        type: basic
+        from: { key_code: g, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
+        to: [ { shell_command: open -a 'Google Chrome' } ]
+
+      - description: 'option + g = Calender'
+        type: basic
+        from: { key_code: g, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
+        to: [ { shell_command: open -a Calendar } ]
+
+      - description: 'g = Intellij IDEA'
+        type: basic
+        from: { key_code: g, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { shell_command: open -a 'IntelliJ IDEA' } ]
+
+...

@@ -1,5 +1,5 @@
 compile:
-	yq eval capslock.yml -o=json > capslock.json
+	yq eval-all '. as $$item ireduce ({}; . *+ $$item )' config/*.yml -o=json > capslock.json
 
 install: compile
 	mkdir -p $$HOME/.config/karabiner/assets/complex_modifications/

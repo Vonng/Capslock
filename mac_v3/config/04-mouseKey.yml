@@ -1,0 +1,358 @@
+---
+################################################################
+#                        Hyper MouseKey                        #
+################################################################
+
+rules:
+  - description: Hyper MouseKey
+    manipulators:
+
+      #==========================================================#
+      # ( keypad 0.⌤-+ )  -> ( mouse buttons )                   #
+      #==========================================================#
+      # 0.enter+- to mouse buttons
+      - description: 'keypad0 = mouse left click'
+        type: basic
+        from: { key_code: keypad_0, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ], optional: [ left_shift, left_command, left_option, left_control ] } }
+        to: [ { pointing_button: button1 } ]
+
+      - description: 'keypad_enter = mouse right click'
+        type: basic
+        from: { key_code: keypad_enter, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ], optional: [ left_shift, left_command, left_option, left_control ] } }
+        to: [ { pointing_button: button2 } ]
+
+      - description: 'keypad. = mouse middle click'
+        type: basic
+        from: { key_code: keypad_period ,modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] , optional: [ left_shift, left_command, left_option, left_control ] } }
+        to: [ { pointing_button: button3 } ]
+
+      - description: 'keypad+ = mouse button 5 forward'
+        type: basic
+        from: { key_code: keypad_plus , modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] , optional: [ left_shift, left_command, left_option, left_control ] } }
+        to: [ { pointing_button: button5 } ]
+
+      - description: 'keypad- = mouse button 4 back'
+        type: basic
+        from: { key_code: keypad_hyphen ,modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] , optional: [ left_shift, left_command, left_option, left_control ] } }
+        to: [ { pointing_button: button4 } ]
+
+
+      #==========================================================#
+      # ( numlock=/* )   ->  ( mouse wheel )                     #
+      #==========================================================#
+      - description: 'keypad_num_lock = mouse wheel left'
+        type: basic
+        from: { key_code: keypad_num_lock, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { horizontal_wheel: -32 } } ]
+
+      - description: 'keypad_equal_sign = slow mouse wheel down'
+        type: basic
+        from: { key_code: keypad_equal_sign, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { vertical_wheel: 32 } } ]
+
+      - description: 'keypad_slash = slow mouse wheel up'
+        type: basic
+        from: { key_code: keypad_slash, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { vertical_wheel: -32 } } ]
+
+      - description: 'keypad_asterisk = mouse wheel right'
+        type: basic
+        from: { key_code: keypad_asterisk, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { horizontal_wheel: 32 } } ]
+
+
+      #==========================================================#
+      # mouse wheel (shift)                                      #
+      #==========================================================#
+      - description: 'shift + 1 = wheel ↙️'
+        type: basic
+        from: { key_code: keypad_1, modifiers: { mandatory: [ left_shift, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { horizontal_wheel: 45, vertical_wheel: 45 } } ]
+
+      - description: 'shift + 2 = wheel ⬇️️'
+        type: basic
+        from: { key_code: keypad_2, modifiers: { mandatory: [ left_shift, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { vertical_wheel: 64 } } ]
+
+      - description: 'shift + 3 = wheel ↘️️️'
+        type: basic
+        from: { key_code: keypad_3, modifiers: { mandatory: [ left_shift, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { horizontal_wheel: -45, vertical_wheel: 45 } } ]
+
+      - description: 'shift + 4 = wheel ⬅️'
+        type: basic
+        from: { key_code: keypad_4, modifiers: { mandatory: [ left_shift, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { horizontal_wheel: 64 } } ]
+
+      - description: 'shift + 5 = wheel ·'
+        type: basic
+        from: { key_code: keypad_5, modifiers: { mandatory: [ left_shift, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { horizontal_wheel: 0, vertical_wheel: 0 } } ]
+
+      - description: 'shift + 6 = wheel ➡️'
+        type: basic
+        from: { key_code: keypad_6, modifiers: { mandatory: [ left_shift, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { horizontal_wheel: -64 } } ]
+
+      - description: 'shift + 7 = wheel ↖️'
+        type: basic
+        from: { key_code: keypad_7, modifiers: { mandatory: [ left_shift, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { horizontal_wheel: 45, vertical_wheel: -45 } } ]
+
+      - description: 'shift + 8 = wheel ⬆️'
+        type: basic
+        from: { key_code: keypad_8, modifiers: { mandatory: [ left_shift, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { vertical_wheel: -64 } } ]
+
+      - description: 'shift + 9 = wheel ↗️️'
+        type: basic
+        from: { key_code: keypad_9, modifiers: { mandatory: [ left_shift, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { horizontal_wheel: -45, vertical_wheel: -45 } } ]
+
+
+      #==========================================================#
+      # slow mouse wheel  (shift + option)                       #
+      #==========================================================#
+      - description: 'shift + option + 1 = wheel ↙️'
+        type: basic
+        from: { key_code: keypad_1, modifiers: { mandatory: [ left_shift,left_option, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { horizontal_wheel: 23, vertical_wheel: 23 } } ]
+
+      - description: 'shift + option + 2 = wheel ⬇️️'
+        type: basic
+        from: { key_code: keypad_2, modifiers: { mandatory: [ left_shift,left_option, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { vertical_wheel: 32 } } ]
+
+      - description: 'shift + option + 3 = wheel ↘️️️'
+        type: basic
+        from: { key_code: keypad_3, modifiers: { mandatory: [ left_shift,left_option, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { horizontal_wheel: -23, vertical_wheel: 23 } } ]
+
+      - description: 'shift + option + 4 = wheel ⬅️'
+        type: basic
+        from: { key_code: keypad_4, modifiers: { mandatory: [ left_shift,left_option, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { horizontal_wheel: 32 } } ]
+
+      - description: 'shift + option + 5 = wheel ·'
+        type: basic
+        from: { key_code: keypad_5, modifiers: { mandatory: [ left_shift,left_option, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { horizontal_wheel: 0, vertical_wheel: 0 } } ]
+
+      - description: 'shift + option + 6 = wheel ➡️'
+        type: basic
+        from: { key_code: keypad_6, modifiers: { mandatory: [ left_shift,left_option, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { horizontal_wheel: -32 } } ]
+
+      - description: 'shift + option + 7 = wheel ↖️'
+        type: basic
+        from: { key_code: keypad_7, modifiers: { mandatory: [ left_shift,left_option, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { horizontal_wheel: 23, vertical_wheel: -23 } } ]
+
+      - description: 'shift + option + 8 = wheel ⬆️'
+        type: basic
+        from: { key_code: keypad_8, modifiers: { mandatory: [ left_shift,left_option, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { vertical_wheel: -32 } } ]
+
+      - description: 'shift + option + 9 = wheel ↗️️'
+        type: basic
+        from: { key_code: keypad_9, modifiers: { mandatory: [ left_shift,left_option, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { horizontal_wheel: -23, vertical_wheel: -23 } } ]
+
+
+      #==========================================================#
+      # fast mouse wheel (shift + command)                       #
+      #==========================================================#
+      - description: 'shift + command + 1 = wheel ↙️'
+        type: basic
+        from: { key_code: keypad_1, modifiers: { mandatory: [ left_shift,left_command, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { horizontal_wheel: 91, vertical_wheel: 91 } } ]
+
+      - description: 'shift + command + 2 = wheel ⬇️️'
+        type: basic
+        from: { key_code: keypad_2, modifiers: { mandatory: [ left_shift,left_command, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { vertical_wheel: 128 } } ]
+
+      - description: 'shift + command + 3 = wheel ↘️️️'
+        type: basic
+        from: { key_code: keypad_3, modifiers: { mandatory: [ left_shift,left_command, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { horizontal_wheel: -91, vertical_wheel: 91 } } ]
+
+      - description: 'shift + command + 4 = wheel ⬅️'
+        type: basic
+        from: { key_code: keypad_4, modifiers: { mandatory: [ left_shift,left_command, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { horizontal_wheel: 128 } } ]
+
+      - description: 'shift + command + 5 = wheel ·'
+        type: basic
+        from: { key_code: keypad_5, modifiers: { mandatory: [ left_shift,left_command, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { horizontal_wheel: 0, vertical_wheel: 0 } } ]
+
+      - description: 'shift + command + 6 = wheel ➡️'
+        type: basic
+        from: { key_code: keypad_6, modifiers: { mandatory: [ left_shift,left_command, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { horizontal_wheel: -128 } } ]
+
+      - description: 'shift + command + 7 = wheel ↖️'
+        type: basic
+        from: { key_code: keypad_7, modifiers: { mandatory: [ left_shift,left_command, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { horizontal_wheel: 91, vertical_wheel: -91 } } ]
+
+      - description: 'shift + command + 8 = wheel ⬆️'
+        type: basic
+        from: { key_code: keypad_8, modifiers: { mandatory: [ left_shift,left_command, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { vertical_wheel: -128 } } ]
+
+      - description: 'shift + command + 9 = wheel ↗️️'
+        type: basic
+        from: { key_code: keypad_9, modifiers: { mandatory: [ left_shift,left_command, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { horizontal_wheel: -91, vertical_wheel: -91 } } ]
+
+
+
+      #==========================================================#
+      # slow mouse move (option)                                 #
+      #==========================================================#
+      - description: 'option + 1 = ↙️ slow'
+        type: basic
+        from: { key_code: keypad_1, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { x: -561, y: 561 } } ]
+
+      - description: 'option + 2 = ⬇️️ slow'
+        type: basic
+        from: { key_code: keypad_2, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { y: 800 } } ]
+
+      - description: 'option + 3 = ↘️️️ slow'
+        type: basic
+        from: { key_code: keypad_3, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { x: 561, y: 561 } } ]
+
+      - description: 'option + 4 = ⬅️ slow'
+        type: basic
+        from: { key_code: keypad_4, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { x: -800 } } ]
+
+      - description: 'option + 5 = · slow'
+        type: basic
+        from: { key_code: keypad_5, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { x: 0, y: 0 } } ]
+
+      - description: 'option + 6 = ➡️ slow'
+        type: basic
+        from: { key_code: keypad_6, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { x: 800 } } ]
+
+      - description: 'option + 7 = ↖️ slow'
+        type: basic
+        from: { key_code: keypad_7, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { x: -561, y: -561 } } ]
+
+      - description: 'option + 8 = ⬆️ slow'
+        type: basic
+        from: { key_code: keypad_8, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { y: -800 } } ]
+
+      - description: 'option + 9 = ↗️️ slow'
+        type: basic
+        from: { key_code: keypad_9, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { x: 561, y: -561 } } ]
+
+
+      #==========================================================#
+      # fast mouse move (command)                                #
+      #==========================================================#
+      - description: 'command + 1 = ↙️ fast'
+        type: basic
+        from: { key_code: keypad_1, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { x: -2262, y: 2262 } } ]
+
+      - description: 'command + 2 = ⬇️️ fast'
+        type: basic
+        from: { key_code: keypad_2, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { y: 3200 } } ]
+
+      - description: 'command + 3 = ↘️️️ fast'
+        type: basic
+        from: { key_code: keypad_3, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { x: 2262, y: 2262 } } ]
+
+      - description: 'command + 4 = ⬅️ fast'
+        type: basic
+        from: { key_code: keypad_4, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { x: -3200 } } ]
+
+      - description: 'command + 5 = · fast'
+        type: basic
+        from: { key_code: keypad_5, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { x: 0, y: 0 } } ]
+
+      - description: 'command + 6 = ➡️ fast'
+        type: basic
+        from: { key_code: keypad_6, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { x: 3200 } } ]
+
+      - description: 'command + 7 = ↖️ fast'
+        type: basic
+        from: { key_code: keypad_7, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { x: -2262, y: -2262 } } ]
+
+      - description: 'command + 8 = ⬆️ fast'
+        type: basic
+        from: { key_code: keypad_8, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { y: -3200 } } ]
+
+      - description: 'command + 9 = ↗️️ fast'
+        type: basic
+        from: { key_code: keypad_9, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { x: 2262, y: -2262 } } ]
+
+
+      #==========================================================#
+      # mouse move                                               #
+      #==========================================================#
+      - description: '1 = ↙️'
+        type: basic
+        from: { key_code: keypad_1, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { x: -1131, y: 1131 } } ]
+
+      - description: '2 = ⬇️️'
+        type: basic
+        from: { key_code: keypad_2, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { y: 1600 } } ]
+
+      - description: '3 = ↘️️️'
+        type: basic
+        from: { key_code: keypad_3, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { x: 1131, y: 1131 } } ]
+
+      - description: '4 = ⬅️'
+        type: basic
+        from: { key_code: keypad_4, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { x: -1600 } } ]
+
+      - description: '5 = ·'
+        type: basic
+        from: { key_code: keypad_5, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { x: 0, y: 0 } } ]
+
+      - description: '6 = ➡️'
+        type: basic
+        from: { key_code: keypad_6, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { x: 1600 } } ]
+
+      - description: '7 = ↖️'
+        type: basic
+        from: { key_code: keypad_7, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { x: -1131, y: -1131 } } ]
+
+      - description: '8 = ⬆️'
+        type: basic
+        from: { key_code: keypad_8, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { y: -1600 } } ]
+
+      - description: '9 = ↗️️'
+        type: basic
+        from: { key_code: keypad_9, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { mouse_key: { x: 1131, y: -1131 } } ]
+
+...

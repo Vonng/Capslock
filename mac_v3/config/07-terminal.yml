@@ -1,0 +1,81 @@
+---
+################################################################
+#                       Hyper Terminal                         #
+################################################################
+
+rules:
+  - description: Hyper Terminal
+    manipulators:
+
+      #==========================================================#
+      # ( d ) -->  Ctrl-D (EOF)   |  Define                      #
+      #==========================================================#
+      - description: 'command + d = define'
+        type: basic
+        from: { key_code: d, modifiers: { mandatory: [ left_command,  right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: d, modifiers: [ left_control, left_command ] } ]
+
+      - description: 'd = ctrl-d (EOF)'
+        type: basic
+        from: { key_code: d, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: d , modifiers: [ left_control ] } ]
+
+      #==========================================================#
+      # ( z ) -->  Ctrl-Z (SIGTSTP)  |  F5 (VS Code Debug)       #
+      #==========================================================#
+      - description: 'command + z = F5 (vscode debug)'
+        type: basic
+        from: { key_code: z, modifiers: { mandatory: [ left_command,  right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: f5 } ]
+
+      - description: 'z = ctrl-z'
+        type: basic
+        from: { key_code: z, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: z , modifiers: [ left_control ] } ]
+
+      #==========================================================#
+      # ( x ) -->  Ctrl-R (Run)  |  Ctrl+F5 (VS Code Run)        #
+      #==========================================================#
+      - description: 'command + x = ctrl + F5 (vscode run)'
+        type: basic
+        from: { key_code: x, modifiers: { mandatory: [ left_command,  right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: f5 , modifiers: [ left_control ] } ]
+
+      - description: 'x = ctrl-r'
+        type: basic
+        from: { key_code: x, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: r , modifiers: [ left_control ] } ]
+
+      #==========================================================#
+      # ( c ) -->  Ctrl-C (SIGINT)  |  Shift+F5 (VS Code Stop)   #
+      #==========================================================#
+      - description: 'command + c = shift + F5 (vscode stop)'
+        type: basic
+        from: { key_code: c, modifiers: { mandatory: [ left_command,  right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: f5 , modifiers: [ left_shift ] } ]
+
+      - description: 'c = ctrl-c'
+        type: basic
+        from: { key_code: c, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: c , modifiers: [ left_control ] } ]
+
+      #==========================================================#
+      # ( v ) -->  Vim Prefix Meta Key                           #
+      #==========================================================#
+      # - description: 'v = vim meta key'
+      - description: 'v = ctrl-v'
+        type: basic
+        from: { key_code: v, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: v , modifiers: [ left_control ] } ]
+
+
+      #==========================================================#
+      # ( b ) -->  Tmux Prefix Meta Key                          #
+      #==========================================================#
+      # - description: 'b = tmux meta key'
+      - description: 'b = ctrl-b'
+        type: basic
+        from: { key_code: b, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: b , modifiers: [ left_control ] } ]
+
+...
