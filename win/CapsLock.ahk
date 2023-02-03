@@ -70,77 +70,42 @@ CapsLock::Send, {ESC}                                                ;|
 ;                      CapsLock + l |  Right                         ;|
 ;                      Ctrl, Alt Compatible                          ;|
 ;-----------------------------------o---------------------------------o
-CapsLock & h::                                                       ;|
-if GetKeyState("control") = 0                                        ;|
-{                                                                    ;|
-    if GetKeyState("alt") = 0                                        ;|
-        Send, {Left}                                                 ;|
-    else                                                             ;|
-        Send, +{Left}                                                ;|
-    return                                                           ;|
-}                                                                    ;|
-else {                                                               ;|
-    if GetKeyState("alt") = 0                                        ;|
-        Send, ^{Left}                                                ;|
-    else                                                             ;|
-        Send, +^{Left}                                               ;|
-    return                                                           ;|
-}                                                                    ;|
-return                                                               ;|
+MoveCursor(key) {                                                    ;|
+    control := GetKeyState("CONTROL","P")                            ;|
+    shift := GetKeyState("SHIFT","P")                                ;|
+    alt := GetKeyState("ALT","P")                                    ;|
+    win := GetKeyState("LWIN","P")                                   ;|
+    ctrlShift := control && shift                                    ;|
+    ctrlAlt := control && alt                                        ;|
+    altShift := alt && shift                                         ;|
+    ctrlAltShift := control && alt && shift                          ;|
+    if ctrlAltShift {                                                ;|
+       Send, ^!+%key%                                                ;|
+    } else if altShift {                                             ;|
+    Send, !+%key%                                                    ;|
+ } else if ctrlShift {                                               ;|
+    Send, ^+%key%                                                    ;|
+ } else if ctrlAlt {                                                 ;|
+    Send, ^!%key%                                                    ;|
+ } else if control {                                                 ;|
+    Send, ^%key%                                                     ;|
+ } else if shift {                                                   ;|
+    Send, +%key%                                                     ;|
+ } else if alt {                                                     ;|
+    Send, !%key%                                                     ;|
+ } else if win {                                                     ;|
+    Send, #%key%                                                     ;|
+ }else  {                                                            ;|
+    Send, %key%                                                      ;|
+ }}                                                                  ;|
+;-----------------------------------o---------------------------------o
+CapsLock & h::MoveCursor("{LEFT}")                                   ;|
 ;-----------------------------------o                                ;|
-CapsLock & j::                                                       ;|
-if GetKeyState("control") = 0                                        ;|
-{                                                                    ;|
-    if GetKeyState("alt") = 0                                        ;|
-        Send, {Down}                                                 ;|
-    else                                                             ;|
-        Send, +{Down}                                                ;|
-    return                                                           ;|
-}                                                                    ;|
-else {                                                               ;|
-    if GetKeyState("alt") = 0                                        ;|
-        Send, ^{Down}                                                ;|
-    else                                                             ;|
-        Send, +^{Down}                                               ;|
-    return                                                           ;|
-}                                                                    ;|
-return                                                               ;|
+CapsLock & j::MoveCursor("{DOWN}")                                   ;|
 ;-----------------------------------o                                ;|
-CapsLock & k::                                                       ;|
-if GetKeyState("control") = 0                                        ;|
-{                                                                    ;|
-    if GetKeyState("alt") = 0                                        ;|
-        Send, {Up}                                                   ;|
-    else                                                             ;|
-        Send, +{Up}                                                  ;|
-    return                                                           ;|
-}                                                                    ;|
-else {                                                               ;|
-    if GetKeyState("alt") = 0                                        ;|
-        Send, ^{Up}                                                  ;|
-    else                                                             ;|
-        Send, +^{Up}                                                 ;|
-    return                                                           ;|
-}                                                                    ;|
-return                                                               ;|
+CapsLock & k::MoveCursor("{UP}")                                     ;|
 ;-----------------------------------o                                ;|
-CapsLock & l::                                                       ;|
-if GetKeyState("control") = 0                                        ;|
-{                                                                    ;|
-    if GetKeyState("alt") = 0                                        ;|
-        Send, {Right}                                                ;|
-    else                                                             ;|
-        Send, +{Right}                                               ;|
-    return                                                           ;|
-}                                                                    ;|
-else {                                                               ;|
-    if GetKeyState("alt") = 0                                        ;|
-        Send, ^{Right}                                               ;|
-    else                                                             ;|
-        Send, +^{Right}                                              ;|
-    return                                                           ;|
-}                                                                    ;|
-return                                                               ;|
+CapsLock & l::MoveCursor("{RIGHT}")                                  ;|
 ;---------------------------------------------------------------------o
 
 
