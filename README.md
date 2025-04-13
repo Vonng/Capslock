@@ -1,411 +1,257 @@
-# CapsLock
-
-> *Make CapsLock Great Again!*
->
-> [中文文档](docs/zh-cn/) | [EN DOCS](http://capslock.vonng.com/) | [Karabiner Gallery](https://ke-complex-modifications.pqrs.org/#caps_lock_enhancement) | [Github Repo](https://github.com/Vonng/Capslock) | [Import URL](karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json)
->
-> [![Visits Badge](https://badges.pufler.dev/visits/Vonng/Capslock)](https://badges.pufler.dev)
-
-------------------------
-
-## CapsLock Enhancement Mac v3
-
-*Transform <kbd>⇪</kbd>CapsLock into a powerful **modifier** **<kbd>✱</kbd> Hyper** that miraculously increases your work productivity!*
-
-![control-plane-0](docs/img/keyboard.jpg)
-
-> [Control Plane](#control-planes) 0 Layout (There are 15 more!)
-
-------------------------
-
-
-## Highlights
-
-* **Powerful**: Transform Capslock into a great modifier: **Hyper(<kbd>✱</kbd>)**. (such as <kbd>⇧</kbd><kbd>⌃</kbd><kbd>⌥</kbd><kbd>⌘</kbd>)
-* **Useful**: Navigation, mousekey, clipboard, win/term ctrl, shortcuts, etc... **Redefine the keyboard!**
-* **Speed-Up**: Optimized for developers, high-frequency move **stay in hot zone**.
-* **Extensible**: Work with existing modifiers, which introduce **16 extra control planes**.
-* **MouseKey**: Manipulate mouse cursor and wheels with keyboard
-* **Cross-Platform**: MacOS and Windows. Light-Weight and portable
-
-![](docs/img/highlight.jpg)
-
-------------------------
-
-
-## Features
-
-- [Basic](#Basic)                 :  Press <kbd>⇪</kbd> Capslock  emit an  **<kbd>⎋</kbd> Escape**. Hold it enabling the **<kbd>✱</kbd> Hyper Modifier**.
-- [Navigation](#Navigation)       :  Vim style navigation. Cursor move, text selection, switch desktop/window/tab, mouse move/wheel,etc...
-- [Deletion](#Deletion)           :  Maps `BNM,` to deletion operation to perform fast char/word/line deletion without hand move.
-- [MouseKey](#MouseKey)           :  Maps keypad to fully functional mouse
-- [Window](#window-control)       :  Close app/win/tab, Switch app/win/tab/desktop, integration with win-manager app such as Moom,Slate,Magnet
-- [Application](#app-shortcuts)   :  Shortcuts for launching or switching frequently used applications
-- [Terminal](#terminal-control)   :  Sending high-freq signals (Ctrl-Z, Ctrl-D, Ctrl-C) and vim/tmux prefix meta key via  <kbd>✱</kbd>
-- [Clipboard](#Clipboard)         :  Turn numkeys into 10 different text clipboard. <kbd>✱</kbd><kbd>⌘</kbd>n copy and <kbd>✱</kbd>n paste.
-- [Shifter](#Shifter)             :  Turn some keys into common code symbols.
-- [Functional](#Functional)       :  Screenshtots. Fine-grained light/volume control. Take function keys' function back!
-
-![](docs/img/feature.jpg)
-
-------------------------
-
-
-## Install
-
-It only takes two steps to enable Capslock on your Mac: Download & Enable
-
-1. [Download](https://github.com/pqrs-org/Karabiner-Elements/releases/download/v14.2.0/Karabiner-Elements-14.2.0.dmg)
-
-   Download & Install [**Karabiner-Elements**](https://karabiner-elements.pqrs.org/).
-
-   Following the wizard and grant required permissions (Settings - Security - Privacy)
-
-2. [Enable](karabiner://karabiner/assets/complex_modifications/import?url=https://ke-complex-modifications.pqrs.org/json/caps_lock_enhancement.json)
-
-   Open this [link](karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json) with Safari. It will launch Karabiner-Elements and load configuration.
-
-   `karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json`
-
-   > #### Alternative Links
-   > * [Karabiner Gallery](karabiner://karabiner/assets/complex_modifications/import?url=https://ke-complex-modifications.pqrs.org/json/caps_lock_enhancement.json)：https://ke-complex-modifications.pqrs.org/json/caps_lock_enhancement.json
-   > * [GitHub Repo](karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json)： https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json
-   > * [Capslock Website](karabiner://karabiner/assets/complex_modifications/import?url=https://vonng.com/capslock.json)： https://vonng.com/capslock.json
-   > * Or download [**capslock.json**](mac_v3/capslock.json) to ` ~/.config/karabiner/assets/complex_modifications/` manually.
-
-   Click `Enable All` for `Capslock Enhancement` on pop-up dialog. It will affect immediately.
-
-   You can now try moving cursor with ⇪ + h,j,k,l , And exploring more features below.
+# Capslock补完计划 (mac v3)
 
 
 
-------------------------
+### MacOS安装
+
+在MacOS上，Capslock通过 [**Karabiner-Elements** 提供服务](https://karabiner-elements.pqrs.org/)
+
+1. 下载并安装 [**Karabiner Elements**](https://karabiner-elements.pqrs.org/)，按照安装向导提示完成安装并赋予所需权限。
 
 
-## Usage
+2. 将 [**capslock.json**](mac_v3/capslock.json) 下载至` ~/.config/karabiner/assets/complex_modifications/` 目录。
 
-Capslock works on **ANSI** keyboards and similar layouts. It literally remaps every [**keys**](#Symbols) on the keyboard. Including 10 categories.
+   或使用Safari打开下面的链接，将自动启动Karabiner并加载Capslock配置文件。
 
-![](docs/img/keyboard.jpg)
-
-> **[Control Planes](#Control-Planes)** are defined by combination of four extra left modifiers: <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>⇧</kbd>.This image shows the layout of control plane 0.
-
-|           Category            | Color  | Description                                                  |
-| :---------------------------: | :----: | :----------------------------------------------------------- |
-|        [Basic](#Basic)        |  Blue  | Press <kbd>⇪</kbd> Capslock  emit an  **<kbd>⎋</kbd> Escape**. Hold it enabling the **<kbd>✱</kbd> Hyper Modifier**. |
-|   [Navigation](#Navigation)   |  Pink  | Vim style navigation. Cursor move, text selection, switch desktop/window/tab, mouse move/wheel,etc... |
-|     [Deletion](#Deletion)     | Brown  | Maps `BNM,` to deletion operation to perform fast char/word/line deletion without hand move. |
-|     [MouseKey](#MouseKey)     | Keypad | Maps keypad to fully functional mouse                        |
-|   [Window](#window-control)   | Azure  | Close app/win/tab, Switch app/win/tab/desktop, intergration with win-manager app such as Moom,Slate,Magnet |
-| [Application](#app-shortcuts) | Yellow | Shortcuts for launching or switching frequently used applications |
-| [Terminal](#terminal-control) | Green  | Sending high-freq signals (Ctrl-Z, Ctrl-D, Ctrl-C) and vim/tmux prefix meta key via  <kbd>✱</kbd> |
-|    [Clipboard](#Clipboard)    | Purple | Turn numkeys into 10 different text clipboard. <kbd>✱</kbd><kbd>⌘</kbd>n copy and <kbd>✱</kbd>n paste. |
-|      [Shifter](#Shifter)      | Orange | Turn some keys into common code symbols.                     |
-|   [Functional](#Functional)   |  Cyan  | Screenshtots. Fine-grained light/volume control. Take function keys' function back! |
-
-### Basic
-
-|   Key   |   MapsTo   | Comment                                            |
-| :-----: | :--------: | -------------------------------------------------- |
-| <kbd>⇪</kbd> Press |  <kbd>⎋</kbd> Escape  | Click Capslock to emit Escape                      |
-| <kbd>⇪</kbd> Hold  |  <kbd>✱</kbd>  Hyper  | Hold Capslock to enable **Hyper** modifier.        |
-|   <kbd>✱</kbd><kbd>⎋</kbd>    | <kbd>⇪</kbd> Capslock | Press to switch Capslock status |
-|   <kbd>✱</kbd><kbd>␣</kbd>    |     <kbd>⌃</kbd><kbd>␣</kbd>     | Switch input source, +<kbd>⌘</kbd> to emoji                   |
-
-> Note that <kbd>✱</kbd> is implemented as combination of **ALL RIGHT MODIFIERS**:  <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>⇧</kbd>.
->
-> Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalities. We will assume and omit that in subsequent document.
-
-### Navigation
-
-* <kbd>H</kbd>, <kbd>J</kbd>, <kbd>K</kbd>, <kbd>L</kbd>, <kbd>U</kbd>, <kbd>I</kbd>, <kbd>O</kbd>, <kbd>P</kbd> are used as **Navigators**. Maps to <kbd>←</kbd><kbd>↓</kbd><kbd>↑</kbd><kbd>→</kbd><kbd>⇞</kbd><kbd>↖</kbd><kbd>↘</kbd><kbd>⇟</kbd> by default. (pink area).
-* 9 control planes has already been allocated for navigators.
-* Hold additional <kbd>⌘</kbd> Command for **selection**.  (like holding <kbd>⇧</kbd>shift in normal), additional <kbd>⌥</kbd> Option for **word/para selection**.
-* Hold additional <kbd>⇧</kbd> Shift for **app/win/tab switching**.  Hold additional <kbd>⌃</kbd> Control for **desktop management** .
-* Hold additional <kbd>⌥</kbd> Option for 🖱️ **mouse move**.  Add <kbd>⇧</kbd>shift to **⏫ accelerate**.  (<kbd>U</kbd>, <kbd>I</kbd>, <kbd>O</kbd>, <kbd>P</kbd> maps to mouse buttons) .
-* <kbd>⇧</kbd><kbd>⌥</kbd> turns navigator to **🖲️ mouse wheel**, and <kbd>⇧</kbd><kbd>⌘</kbd> is the ⏫ **accelerated** version .  `HJKL` for wheel, wihle `UIOP` for reversed wheel move.
-
-| Feature | **Move** | **Select** | **WordSel** | **Window** | **Desktop** |  🖱️   | **🖱️⏫** |  🖲️   |  🖲️⏫  |
-| :-----: | :------: | :--------: | :---------: | :--------: | :---------: | :--: | :----: | :--: | :--: |
-| Key\Mod |    <kbd>✱</kbd>     |     <kbd>⌘</kbd>      |     <kbd>⌘</kbd><kbd>⌥</kbd>      |     <kbd>⇧</kbd>      |      <kbd>⌃</kbd>      |  <kbd>⌥</kbd>   |   <kbd>⇧</kbd><kbd>⌥</kbd>   |  <kbd>⇧</kbd><kbd>⌃</kbd>  |  <kbd>⇧</kbd><kbd>⌘</kbd>  |
-|    <kbd>H</kbd>    |   Left   | word left  |  word left  |  prev tab  |  prev desk  |  ⬅️   |   ⬅️⏫   |  ⬅️   |  ⬅️⏫  |
-|    <kbd>J</kbd>    |   Down   | line down  | 3 line down |  next app  |    focus    |  ⬇️   |   ⬇️⏫   |  ⬇️   |  ⬇️⏫  |
-|    <kbd>K</kbd>    |    Up    |  line up   |  3 line up  |  prev app  | expose all  |  ⬆️   |   ⬆️⏫   |  ⬆️   |  ⬆️⏫  |
-|    <kbd>L</kbd>    |  Right   | word right | word right  |  next tab  |  next desk  |  ➡️   |   ➡️⏫   |  ➡️   |  ➡️⏫  |
-|    <kbd>U</kbd>    |   PgUp   | prev page  |  prev page  |   zoom-    | fullscreen  |  🖱️L  |   🖱️L   |  ➡️   |  ➡️⏫  |
-|    <kbd>I</kbd>    |   Home   | line head  |  end2head   |  prev win  |    hide     |  🖱️R  |   🖱️R   |  ⬆️   |  ⬆️⏫  |
-|    <kbd>O</kbd>    |   End    |  line end  |  head2end   |  next win  |  hide all   |  🖱️B  |   🖱️B   |  ⬇️   |  ⬇️⏫  |
-|    <kbd>P</kbd>    |   PgDn   | next page  |  next page  |   zoom+    |  Launchpad  |  🖱️F  |   🖱️F   |  ⬅️   |  ⬅️⏫  |
-
-**Arrow Navigation**
-
-* Arrows <kbd>←</kbd>↓<kbd>↑</kbd>→ to 🖱️ **mouse**  actions too. Hold <kbd>⌥</kbd> Option to ⏬ **slow down**, hold <kbd>⌘</kbd> Command  to ⏫ **speed up**.
-* Hold  <kbd>⇧</kbd> Shift  turns to 🖲️ **wheel move**.  Extra <kbd>⌥</kbd> Option to ⏬ **slow down**, extra <kbd>⌘</kbd> Command  to ⏫ **speed up**.
-* <kbd>↩</kbd> Return maps to left **click**.  And additional <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>⇧</kbd> turns into right click, middle click, backward, forward.
-
-|   Feature   |      🖱️       |    🖱️⏬     |    🖱️⏫     |     🖲️      |    🖲️⏬     |    🖲️⏫     |
-| :---------: | :----------: | :-------: | :-------: | :--------: | :-------: | :-------: |
-| **Key\Mod** |      <kbd>✱</kbd>       |     <kbd>⌥</kbd>     |     <kbd>⌘</kbd>     |     <kbd>⇧</kbd>      |    <kbd>⇧</kbd><kbd>⌥</kbd>     |    <kbd>⇧</kbd><kbd>⌘</kbd>     |
-| <kbd>←</kbd><kbd>↓</kbd><kbd>↑</kbd><kbd>→</kbd> | speed = 1600 | speed ÷ 2 | speed × 2 | speed = 32 | speed ÷ 2 | speed × 2 |
-|      <kbd>↩</kbd>      |      🖱️L      |    🖱️M     |    🖱️R     |     🖱️L     |    🖱️B     |    🖱️F     |
+   ```yaml
+   # Capslock 官方网站 (v3)
+   karabiner://karabiner/assets/complex_modifications/import?url=https://vonng.com/capslock.json
+   
+   # Capslock Mac V3 (当前Repo)
+   karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json
+   
+   # Karabiner-Elements 官方陈列馆（Emulation Mode第一个）
+   karabiner://karabiner/assets/complex_modifications/import?url=https://pqrs.org/osx/karabiner/complex_modifications/json/caps_lock_enhancement.json
+   ```
 
 
-### Deletion
+3. 打开Karabiner-Elements，切至第三标签页`ComplexModification`，点击左下方按钮 `Add Rules`按需启用Capslock预置规则即可。
 
-<kbd>N</kbd> <kbd>M</kbd> <kbd>,</kbd> <kbd>.</kbd>  are used as **Deletor keys**. Right below the navigators for fast access (brown area).
-
-| Key\Mod |        <kbd>✱</kbd>         |         <kbd>⌘</kbd>          |         <kbd>⌥</kbd>          |
-| :-----: | :--------------: | :----------------: | :----------------: |
-|    <kbd>N</kbd>    | del a word ahead | del till line head | del the whole line |
-|    <kbd>M</kbd>    | del a char ahead |  del a word ahead  |  move line below   |
-|    <kbd>,</kbd>    | del a char after |  del a word after  |  move line above   |
-|    <kbd>.</kbd>    | del a word after | del till line end  | del the whole line |
-|    <kbd>⌫</kbd>    |     del file     |     purge file     |                    |
+   ![](images/config-karabiner.png)
 
 
-### MouseKey
 
+## 功能
 
-* Turn **Keypad** into a fully funcional 🖱️ **mouse**.
-* Numbers maps to 8 direction 🖱️ **mouse move**. Hold <kbd>⌥</kbd> Option to ⏬ **slow down**, hold <kbd>⌘</kbd> Command  to ⏫ **speed up**.
-* Hold additional <kbd>⇧</kbd> Shift  turns to 🖲️ **wheel move**.  Extra <kbd>⌥</kbd> Option to ⏬ **slow down**, and extra <kbd>⌘</kbd> Command  to ⏫ **speed up**.
-* First line maps to wheel move and <kbd>0</kbd>, <kbd>.</kbd>, <kbd>⌤</kbd>, <kbd>+</kbd>, <kbd>-</kbd> maps to five mouse buttons.
+Capslock以**ANSI**布局键盘为蓝本，对Capslock之外的 [**所有按键**](#符号) 进行了功能定制与修饰，主要分为10大类功能。
+
+![](images/keyboard.png)
+
+> [**控制平面**](控制平面) 由左侧修饰键的排列组合所定义：根据 ⌘⌥⌃⇧的状态，最多有16个额外的控制平面。上图为0号控制平面布局。
+
+|         类目          |  颜色  | 说明                                                         |
+| :-------------------: | :----: | :----------------------------------------------------------- |
+| [基础功能](#基础功能) |   蓝   | 单击Capslock发送**Esc**，按住Capslock启用✱功能。✱Esc切换大小写锁，✱空格切换输入法。 |
+| [导航功能](#导航功能) |   粉   | VI式导航，结合⌃⌥⌘⇧启用多种功能：光标移动，词句选择，窗口管理，鼠标移动等等… |
+| [删除功能](#删除功能) |   棕   | 快速执行字/词/句/行/页的删除操作，手无需离开核心区。         |
+|   [鼠标键](#鼠标键)   | 小键盘 | 将小键盘映射为一个功能完整的鼠标。                           |
+| [窗口管理](#窗口管理) |  淡蓝  | 切换或关闭桌面/应用/窗口/选项卡，睡眠/锁屏/熄屏/登出。集成外部窗口管理应用。 |
+| [应用捷径](#应用捷径) |   黄   | 启动或切换至常用应用，预置MacOS高频应用与流行的开发者工具。  |
+| [终端控制](#终端控制) |   绿   | 发送常用终端控制信号，IDE运行命令，Vim/Tmux的元按键。        |
+| [文本剪贴](#文本剪贴) |   紫   | 将数字键用做10个额外的文本剪贴板：⌘n复制，n粘贴。            |
+| [上档变换](#上档变换) |   橙   | 将一些键映射至常用高频字符。                                 |
+| [功能控制](#功能控制) |   青   | 将F1-F2转义回原本的功能，截屏录屏，音量灯光的精密控制。      |
+
+### 基础功能
+
+|  按键  |   映射为   | 说明                                       |
+| :----: | :--------: | ------------------------------------------ |
+| ⇪ 点击 |  ⎋ Escape  | 单击Capslock发送ESC                        |
+| ⇪ 按住 |  ✱  Hyper  | 按住Capslock启用Hyper                      |
+|   ✱⎋   | ⇪ Capslock | **单击**ESC切换大写锁定                    |
+|   ✱␣   |     ⌃␣     | **单击**空格切换输入法，+⌘时打开表情符号页 |
+
+注意，✱ 在实现上被定义为同时按下所有的右侧⌘⌥⌃⇧修饰符，这样设计的主要原因是将快捷键透传到外部应用。（如Alfred，Moom等）
+
+后续介绍如果没有特殊说明，均假定 ✱  Hyper 处于按下状态。
+
+### 导航功能
+
+* `H`, `J`, `K`, `L`, `U`, `I`, `O`, `P`  被用作**基本导航键**，分别映射为←↓↑→⇞↖↘⇟（左下上右/PgUp/Home/End/PgDn），位于图中粉色区域。
+* 基本导航键配合**左侧修饰键**可启用多种导航功能，默认配置了9个**控制平面**。
+* 按住 ⌘ Command，效果为**文本选择**，额外按住⌥ Option 时，选择单位会变为**前后词语**与**上下3行**。
+* 按住⇧ Shift 的效果为**应用/窗口/标签切换**，按住⌃ Control 的效果为**桌面管理**。
+* 按住 ⌥ Option 效果为🖱️**鼠标移动**， 额外按下⇧Shift将**移速翻倍** ⏫。  (`U`, `I`, `O`, `P` 映射为鼠标左击，右击，后退，前进)。
+* 按住⇧⌥将导航键变为 🖲️ **鼠标滚轮**，⇧⌘**移速翻倍** 。其中HJKL为正常滚动，UIOP自然滚动（反向）。
+
+| **功能** | **移动** | **选择** | **快速选择** | **窗口管理** | **桌面管理** |  🖱️   | **🖱️⏫** |  🖲️   |  🖲️⏫  |
+| :------: | :------: | :------: | :----------: | :----------: | :----------: | :--: | :----: | :--: | :--: |
+| 键\修饰  |    ✱     |    ⌘     |      ⌘⌥      |      ⇧       |      ⌃       |  ⌥   |   ⇧⌃   |  ⇧⌥  |  ⇧⌘  |
+|    H     |    ⬅️     | 左选一字 |   左选一词   |   先前Tab    |   上个桌面   |  ⬅️   |   ⬅️⏫   |  ⬅️   |  ⬅️⏫  |
+|    J     |    ⬇️     | 下选一行 |   下选三行   |   切换应用   |   聚焦窗口   |  ⬇️   |   ⬇️⏫   |  ⬇️   |  ⬇️⏫  |
+|    K     |    ⬆️     | 上选一行 |   上选三行   |   先前应用   |   暴露所有   |  ⬆️   |   ⬆️⏫   |  ⬆️   |  ⬆️⏫  |
+|    L     |    ➡️     | 右选一字 |   右选一词   |   切换Tab    |   下个桌面   |  ➡️   |   ➡️⏫   |  ➡️   |  ➡️⏫  |
+|    U     |   PgUp   | 选至上页 |   选至上页   |     缩小     |     全屏     |  🖱️L  |   🖱️L   |  ➡️   |  ➡️   |
+|    I     |   Home   | 选至行首 |   尾至行首   |   上个窗口   |   隐藏窗口   |  🖱️R  |   🖱️R   |  ⬆️   |  ⬆️⏫  |
+|    O     |   End    | 选至行尾 |   首至行尾   |   切换窗口   |   隐藏所有   |  🖱️B  |   🖱️B   |  ⬇️   |  ⬇️⏫  |
+|    P     |   PgDn   | 选至下页 |   选至下页   |     放大     |   启动菜单   |  🖱️F  |   🖱️F   |  ⬅️   |  ⬅️⏫  |
+
+#### 方向键导航
+
+* 方向键 ←↓↑→ 用于模拟 🖱️**鼠标移动**。额外按住 ⌥ Option ⏬ **减速**，额外按住 ⌘ Command ⏫ **加速**。
+* 按住 ⇧Shift 切换至 🖲️**滚轮移动**。额外按住 ⌥ Option ⏬ **减速**，额外按住⌘ Command ⏫ **加速**。
+* 按下↩回车键为鼠标左键单击，配合⌘⌥⌃⇧使用时会相应转化为鼠标的右键，中键，后退键，前进键。
+
+| **功能** |     🖱️     |   🖱️⏬   |   🖱️⏫   |    🖲️    |   🖲️⏬   |   🖲️⏫   |
+| :------: | :-------: | :----: | :----: | :-----: | :----: | :----: |
+| 键\修饰  |     ✱     |   ⌥    |   ⌘    |    ⇧    |   ⇧⌥   |   ⇧⌘   |
+|   ←↓↑→   | 移速=1600 | 移速÷2 | 移速×2 | 滚速=32 | 滚速÷2 | 滚速×2 |
+|    ↩     |    🖱️L     |   🖱️M   |   🖱️R   |   🖱️L    |   🖱️B   |   🖱️F   |
+
+### 删除功能
+
+ `N` `M` `,` `.`  用做删除键。删除操作位于导航键`HJKL`下方，用于快速执行文本删除。
+
+| 键\修饰 |    ✱     |      ⌘       |    ⌥     |
+| :-----: | :------: | :----------: | :------: |
+|    N    | 前删一词 |   删至行首   | 整行删除 |
+|    M    | 前删一字 |   前删一词   | 将行下移 |
+|    ,    | 后删一字 |   后删一词   | 将行上移 |
+|    .    | 后删一词 |   删至行尾   | 整行删除 |
+|    ⌫    | 删除文件 | 永久删除文件 |          |
+
+### 鼠标键
+
+* 1-9号数字控制🖱️ **鼠标移动**方向，额外按住 ⌥ Option 时 ⏬**减速**，按住⌘ Command 时 ⏫**加速**。
+* 按住⇧ Shift 切换为🖲️ **滚轮滚轮**，在此模式下，额外按住 ⌥ Option 时 ⏬ **减速**，额外按住⌘ Command ⏫ **加速**。
+* 第一行（`numlock`, `=`, `/`, `*`）转换为鼠标滚动操作，右下侧其余按键（`0`, `.`, `⌤`, `+`, `-`）转换为鼠标的5个按键.
 
 | <kbd>⇭</kbd>  🖲️⬅️ | <kbd>=</kbd> 🖲️⬇️ | <kbd>/</kbd>  🖲️⬆️ | <kbd>*</kbd>  🖲️➡️ |
-| :-----: | :----: | :-----: | :-----: |
-| <kbd>7</kbd>🖱️ ↖️ |  <kbd>8</kbd> 🖱️⬆️  | <kbd>9</kbd> 🖱️↗️  | <kbd>-</kbd> 🖱️B  |
+| :--------------: | :-------------: | :--------------: | :--------------: |
+| <kbd>7</kbd>🖱️ ↖️  | <kbd>8</kbd> 🖱️⬆️ | <kbd>9</kbd> 🖱️↗️  | <kbd>-</kbd> 🖱️B  |
 | <kbd>4</kbd>🖱️ ⬅️  |  <kbd>5</kbd>🖱️  | <kbd>6</kbd> 🖱️➡️  | <kbd>+</kbd> 🖱️F  |
-|  <kbd>1</kbd>🖱️↙️  |  <kbd>2</kbd> 🖱️⬇️  | <kbd>3</kbd> 🖱️↘️ |         |
-| <kbd>0</kbd> 🖱️L |        | <kbd>.</kbd> 🖱️M  | <kbd>⌤</kbd> 🖱️R  |
+|  <kbd>1</kbd>🖱️↙️  | <kbd>2</kbd> 🖱️⬇️ | <kbd>3</kbd> 🖱️↘️  |                  |
+| <kbd>0</kbd> 🖱️L  |                 | <kbd>.</kbd> 🖱️M  | <kbd>⌤</kbd> 🖱️R  |
 
-### Window Control
+### 窗口管理
 
+* `Tab`, `Q`, `W`, `A`, `s`用于窗口管理，关注应用/窗口/标签页/桌面的切换，关闭等功能。位于图中天蓝色区域。
 
-* `Tab`, <kbd>Q</kbd>, <kbd>W</kbd>, <kbd>A</kbd>, <kbd>s</kbd> used as window control keys. Focuing on close/switch applications / windows / tabs / desktops. (azure area)
-* Windows management (resize, layout) leaves to external application such as [Moom](https://manytricks.com/moom/), [Magnet](https://apps.apple.com/us/app/magnet/id441258766), and [Slate](https://github.com/jigish/slate). Bind <kbd>⌃</kbd><kbd>⌥</kbd><kbd>⇧</kbd><kbd>⌘</kbd>A manually.
+* 窗口管理功能（调整大小布局）是通过外部应用完成的，例如[Moom](https://manytricks.com/moom/)，[Magnet](https://apps.apple.com/us/app/magnet/id441258766)，[Slate](https://github.com/jigish/slate)等，您需要为其绑定⌃⌥⇧⌘A作为触发快捷键。
 
+| 键\修饰 |      ✱       |     ⌘      |       ⌥        |       ⌃        |    ⇧    |
+| :-----: | :----------: | :--------: | :------------: | :------------: | :-----: |
+| `⇥` Tab |   上个应用   |  下个应用  |    下个桌面    |                | 切换Tab |
+|   `Q`   |   关闭应用   |  关闭应用  |                |      锁屏      |  注销   |
+|   `W`   |   关闭窗口   |  关闭窗口  |                |      熄屏      |  睡眠   |
+|   `A`   | **窗口管理** |  暴露窗口  |    显示桌面    |   LaunchPad    |         |
+|   `S`   |  下个标签页  | 上个标签页 | 上个同应用窗口 | 下个同应用窗口 |         |
 
-| Key\Mod |      <kbd>✱</kbd>      |       <kbd>⌘</kbd>       |       <kbd>⌥</kbd>        |       <kbd>⌃</kbd>       |     <kbd>⇧</kbd>      |
-| :-----: | :---------: | :-----------: | :------------: | :-----------: | :--------: |
-|    <kbd>⇥</kbd>    |  next app   |   prev app    | switch desktop |               | switch tab |
-|    <kbd>Q</kbd>    |  close app  |   close app   |                |  Lock Screen  |   Logout   |
-|    <kbd>W</kbd>    |  close tab  | close all win |                | Display Sleep |   Sleep    |
-|    <kbd>A</kbd>    | **win app** |  expose all   |  show desktop  |   LaunchPad   |            |
-|    <kbd>S</kbd>    |  next tab   |   prev tab    |    next win    |   prev win    |            |
+### 应用捷径
 
+* `E` `R` `T` `Y` `F` `G`  被用作默认的应用捷径热键，位于图中黄色区域。
+* 高频系统应用与流行的开发者工具已经被默认分配至3个控制平面中 ✱/⌘/⌥。
+* 您可以通过修改配置文件自行定制喜欢的应用。
 
-### App Shortcuts
+| 键\修饰 |          ✱          |     ⌘     |      ⌥      |  ……  |
+| :-----: | :-----------------: | :-------: | :---------: | :--: |
+|    E    |       Safari        |  Finder   |    Mail     |      |
+|    R    |       iTerm2        |  Preview  |  Terminal   |      |
+|    T    | Visual Studio Code  |  Typora   |    Note     |      |
+|    Y    |        Siri         | Karabiner | Amphetamine |      |
+|    F    | Alfred (bind ⌃⌥⇧⌘F) |   Dash    | Dictionary  |      |
+|    G    |    Intellij IDEA    |  Chrome   |  Calender   |      |
 
-* <kbd>E</kbd> <kbd>R</kbd> <kbd>T</kbd> <kbd>Y</kbd> <kbd>F</kbd> <kbd>G</kbd> are used as application shortcuts. (yellow area)
-* Popular apps and dev tools are registed to 3 default planes: <kbd>✱</kbd>/<kbd>⌘</kbd>/<kbd>⌥</kbd>. Assign these shortcuts according to your own needs.
+### 终端控制
 
-| Key\Mod |         <kbd>✱</kbd>          |     <kbd>⌘</kbd>     |      <kbd>⌥</kbd>      |
-| :-----: | :----------------: | :-------: | :---------: |
-|    <kbd>E</kbd>    |       Safari       |  Finder   |    Mail     |
-|    <kbd>R</kbd>    |       iTerm2       |  Preview  |  Terminal   |
-|    <kbd>T</kbd>    | Visual Studio Code |  Typora   |    Note     |
-|    <kbd>Y</kbd>    |        Siri        | Karabiner | Amphetamine |
-|    <kbd>F</kbd>    |      Alfred 4      |   Dash    | Dictionary  |
-|    <kbd>G</kbd>    |   Intellij IDEA    |  Chrome   |  Calender   |
+`D`, `Z`, `X`, `C`, `V`, `B` 用于终端控制，发送信号与IDE命令，位于图中绿色区域。
 
+| 键\修饰 |                     ✱                      |          ⌘          |
+| :-----: | :----------------------------------------: | :-----------------: |
+|    D    |                 ⌃D  (EOF)                  |   定义 (压感点击)   |
+|    Z    |               ⌃Z   (SIGTSTP)               | F5 (VS Code Debug)  |
+|    X    |               ⌃R  (IDE Run)                |  ⌃F5 (VS Code Run)  |
+|    C    |                ⌃C (SIGINT)                 | ⇧F5（VS Code Stop） |
+|    V    |              ⌃V (Vim Prefix)               |                     |
+|    B    | ⌃B ([Tmux](http://tmux.github.io)  Prefix) |                     |
 
-### Terminal Control
+### 文本剪贴
 
-<kbd>D</kbd>, <kbd>Z</kbd>, <kbd>X</kbd>, <kbd>C</kbd>, <kbd>V</kbd>, <kbd>B</kbd> are used as terminal control keys. Sending singals and IDE commands. (green area)
+* 数字键 1, 2, …, 9, 0 用作剪贴板，按下 ⌘ Command +数字键**拷贝**，按下数字键粘贴。位于图中紫色区域。
 
-| Key\Mod |                         <kbd>✱</kbd>                          |          <kbd>⌘</kbd>           |
-| :-----: | :------------------------------------------------: | :------------------: |
-|    <kbd>D</kbd>    |               <kbd>⌃</kbd><kbd>D</kbd> Ctrl+D (Send EOF)               | Define (Force touch) |
-|    <kbd>Z</kbd>    |               <kbd>⌃</kbd><kbd>Z</kbd> Ctrl+Z  (SIGTSTP)               |  <kbd>F5</kbd> (VS Code Debug)  |
-|    <kbd>X</kbd>    |               <kbd>⌃</kbd><kbd>R</kbd> Ctrl+R (IDE Run)                |  <kbd>⌃</kbd><kbd>F5</kbd> (VS Code Run)   |
-|    <kbd>C</kbd>    |                <kbd>⌃</kbd><kbd>C</kbd>  Ctrl+C (SIGINT)                 | <kbd>⇧</kbd><kbd>>F5</kbd>（VS Code Stop） |
-|    <kbd>V</kbd>    |              <kbd>⌃</kbd><kbd>V</kbd>Ctrl+V (Vim Prefix)               |                      |
-|    <kbd>B</kbd>    | <kbd>⌃</kbd><kbd>B</kbd>Ctrl+B ([Tmux](http://tmux.github.io)  Prefix) |                      |
+| 键\修饰 |       ✱       |       ⌘       |
+| :-----: | :-----------: | :-----------: |
+|    1    | 从剪贴板1粘贴 | 拷贝至剪贴板1 |
+|    2    | 从剪贴板2粘贴 | 拷贝至剪贴板2 |
+|   ……    |      ……       |      ……       |
+|    0    | 从剪贴板0粘贴 | 拷贝至剪贴板0 |
 
-
-### Clipboard
-
-Number keys <kbd>1</kbd>, <kbd>2</kbd>, …, <kbd>9</kbd>, <kbd>0</kbd> are used as **(text) clipboard**. Hold <kbd>⌘</kbd> to **copy**, and press to **paste**. (purple area)
-
-| Key\Mod |         <kbd>✱</kbd>         |        <kbd>⌘</kbd>        |
-| :-----: | :---------------: | :-------------: |
-|    <kbd>1</kbd>    | Paste from clip 1 | Copy to clip 1  |
-|    <kbd>2</kbd>    | Paste from clip 2 | Copy to clip 2  |
-|   ……    |        ……         |       ……        |
-|    <kbd>0</kbd>    | Paste from clip 0 | Copy to clip 10 |
-
-
-### Shifter
-
-* Trivial transformation for misc characters. (orange area)
-* Some special tricks for developers. Such as `;'` maps to `:=` or `!=` (<kbd>⌘</kbd>)
+### 上档变换
 
 
-| Key\Mod |  <kbd>✱</kbd>   |    <kbd>⌘</kbd>     |  <kbd>⌥</kbd>   |
+- 朴素的字符映射，将一些字符转换为另一些常用字符，便于输入，位于图中橙色区域。
+- 部分字符会针对开发者有特殊优化映射，例如`;'`会被映射为`:=`，或`!=`（⌘），便于输入比较与赋值表达式。
+
+
+| 键\修饰 |  ✱   |    ⌘     |  ⌥   |
 | :-----: | :--: | :------: | :--: |
-|   <kbd>-</kbd>   | <kbd>_</kbd>  | Zoom Out |      |
-|   <kbd>=</kbd>   | <kbd>+</kbd>  | Zoom In  |      |
-|   <kbd>[</kbd>   | <kbd>(</kbd>  |   <kbd>{</kbd>    | <kbd><</kbd>  |
-|   <kbd>]</kbd>   | <kbd>)</kbd>  |   <kbd>}</kbd>    | <kbd>></kbd>  |
-|   <kbd>;</kbd>   | <kbd>!</kbd>  |   <kbd>:</kbd>    |      |
-|   <kbd>'</kbd>   | <kbd>=</kbd>  |   <kbd>=</kbd>    |      |
-|   <kbd>/</kbd>   |  <kbd>⌘</kbd><kbd>/</kbd>  |          |      |
-|   <kbd>\\</kbd>   |  <kbd>⌘</kbd><kbd>/</kbd>  |          |      |
+|   `-`   | `_`  | 页面缩小 |      |
+|   `=`   | `+`  | 页面放大 |      |
+|   `[`   | `(`  |   `{`    | `<`  |
+|   `]`   | `)`  |   `}`    | `>`  |
+|   `;`   | `!`  |   `:`    |      |
+|   `'`   | `=`  |   `=`    |      |
+|   `/`   |  ⌘/  |          |      |
+|   `\`   |  ⌘/  |          |      |
 
+### 功能控制
 
-### Functional
+- 将 F1,F2,..., F12等用作标准功能键，按下✱将其转义回原来的功能，位于图中青色区域。
 
-- Use F1,…F12 as standard functional keys, while hold **<kbd>✱</kbd> Hyper** to turn them back. (cyan area)
-- <kbd>⌘</kbd>Command  + F1 / F2 / F3 are used as desktop switcher. Enable shortcuts in system preference first:
+- ⌘Command + F1/F2/F3 为切换桌面快捷键，但您必须先在启用系统相关快捷键：
 
-  **Preference** → **Keyboard** → **Shortcuts** → **MissionControl** → Switch to Desktop 1/2/3
-- If you are using RMBP with Bar, consider changing your bar back to function keys with:
+  **系统设置** → **键盘** → **快捷键** → **调度中心** → 启用桌面切换快捷键。
 
-  **Karabiner-Elements** → **Function Keys** → **Use all F1, F2, etc. keys as standard function keys**
+- 如果您使用带TouchBar的Macbook键盘，可以将TouchBar修改回标准功能键组。
 
-| Key\Mod  |                  <kbd>✱</kbd>                   |  <kbd>⌘</kbd>   | Comment                              |
-| :------: | :----------------------------------: | :--: | ------------------------------------ |
-| <kbd>`</kbd> |                 <kbd>⌃</kbd><kbd>⇧</kbd><kbd>⌘</kbd><kbd>4</kbd>                 | <kbd>⇧</kbd><kbd>⌘</kbd><kbd>4</kbd> | Area selection screenshot(<kbd>⌘</kbd> to file) |
-|    <kbd>F1</kbd>    | <kbd>display_brightness_decrement</kbd>  \|  <kbd>⌃</kbd><kbd>1</kbd> |  <kbd>⌃</kbd><kbd>1</kbd>  | Brightness Down / Desktop 1          |
-|    <kbd>F2</kbd>    |  <kbd>display_brightness_increment</kbd> \| <kbd>⌃</kbd><kbd>2</kbd>  |  <kbd>⌃</kbd><kbd>2</kbd>  | Brightness Up / Desktop 2            |
-|    <kbd>F3</kbd>    |              <kbd>⌃</kbd><kbd>↑</kbd>  \|  <kbd>⌃</kbd><kbd>3</kbd>              |  <kbd>⌃</kbd><kbd>3</kbd>  | Expose All / Desktop 3               |
-|    <kbd>F4</kbd>    |        <kbd>Launchpad</kbd>          |      | Launchpad                            |
-|    <kbd>F5</kbd>    |        <kbd>illumination_decrement</kbd>        |      | Keyboard Light Down                  |
-|    <kbd>F6</kbd>    |        <kbd>illumination_increment</kbd>        |      | Keyboard Light Up                    |
-|    <kbd>F7</kbd>    |                <kbd>rewind</kbd>                |      | Music Prev                           |
-|    <kbd>F8</kbd>    |      <kbd>play_or_pause</kbd>        |      | Play / Pause                         |
-|    <kbd>F9</kbd>    |       <kbd>fastforward</kbd>         |      | Music Next                           |
-|   <kbd>F10</kbd>   |                 <kbd>mute</kbd>                 |      | Mute                                 |
-|   <kbd>F11</kbd>   |           <kbd>volume_decrement</kbd>           |      | Volume Down                          |
-|   <kbd>F12</kbd>   |           <kbd>volume_increment</kbd>           |      | Volume Up                            |
-|   <kbd>F13</kbd>   |                 <kbd>⌃</kbd><kbd>⇧</kbd><kbd>⌘</kbd><kbd>3</kbd>                 | <kbd>⇧</kbd><kbd>⌘</kbd><kbd>3</kbd> | Full Screentshot (<kbd>⌘</kbd> to file)         |
-|   <kbd>F14</kbd>   |            <kbd>⇧</kbd><kbd>⌘</kbd><kbd>5</kbd>            | <kbd>⇧</kbd><kbd>⌘</kbd><kbd>6</kbd> | Screenshot menu (<kbd>⌘</kbd> touchbar snap)    |
-|   <kbd>F15</kbd>   |      <kbd>play_or_pause</kbd>        |      | Play / Pause                         |
-|  <kbd>Insert</kbd>  | <kbd>⇧</kbd><kbd>⌥</kbd> <kbd>display_brightness_increment</kbd> |      | Fine-Grained Brightness Up           |
-| Delete <kbd>⌦</kbd> | <kbd>⇧</kbd><kbd>⌥</kbd> <kbd>display_brightness_decrement</kbd> |      | Fine-Grained Brightness Down         |
-|  Home <kbd>↖</kbd>  | <kbd>⇧</kbd><kbd>⌥</kbd> <kbd>illumination_increment</kbd> |      | Fine-GrainedKeyboard Light Up        |
-|  End <kbd>↘</kbd>   | <kbd>⇧</kbd><kbd>⌥</kbd> <kbd>illumination_decrement</kbd> |      | Fine-Grained Keyboard Light Down     |
-|  PgUp <kbd>⇞</kbd>  |    <kbd>⇧</kbd><kbd>⌥</kbd> <kbd>volume_increment</kbd>    |      | Fine-Grained Volume Up               |
-|  PgDn <kbd>⇟</kbd>  |    <kbd>⇧</kbd><kbd>⌥</kbd> <kbd>volume_decrement</kbd>    |      | Fine-Grained Volume Down             |
+  **Karabiner-Elements** → **Function Keys** → **Use all F1, F2, etc. keys as standard function keys** 
 
-
-------------------------
-
-## References
-
-### Symbols
-
-
-| Glyph |             Name             | Glyph |           Name           |
-| :---: | :--------------------------: | :---: | :----------------------: |
-|   <kbd>⇪</kbd>   |           Capslock           |   <kbd>✱</kbd>   |          Hyper           |
-|   <kbd>⎋</kbd>   |            Escape            |   <kbd>␣</kbd>   |          Space           |
-|   <kbd>⌘</kbd>   |        Command (Mac)         |   <kbd>⎇</kbd>   |       Alter (Win)        |
-|   <kbd>⌥</kbd>   |         Option (Mac)         |   <kbd>⊞</kbd>   |        Win (Win)         |
-|   <kbd>⌃</kbd>   |           Control            |   <kbd>⇧</kbd>   |          Shift           |
-|   <kbd>↩</kbd>   |            Return            |   <kbd>⌤</kbd>   |          Enter           |
-| <kbd>←</kbd><kbd>↓</kbd><kbd>↑</kbd><kbd>→</kbd> |         Arrow Cursor         |  <kbd>↖</kbd><kbd>↘</kbd>   |         Home/End         |
-|  <kbd>⇥</kbd><kbd>⇤</kbd>   |             Tab              |  <kbd>⌫</kbd><kbd>⌦</kbd>   |  Delete / ForwardDelete  |
-|   <kbd>⇭</kbd>   |           Numlock            |  ⏫⏬   |       Fast / Slow        |
-|  🖱️L   |  Mouse Left Click (Button1)  |  🖱️B   | Mouse Backward (Button4) |
-|  🖱️R   | Mouse Right Click (Button2)  |  🖱️F   | Mouse Forward (Button5)  |
-|  🖱️M   | Mouse Middle Click (Button3) |   🖲️   |       Mouse Wheel        |
+| 键\修饰  |                  ✱                   |  ⌘   | 说明                         |
+| :------: | :----------------------------------: | :--: | ---------------------------- |
+|    `     |                 ⌃⇧⌘4                 | ⇧⌘4  | 区域选择截图（+⌘保存至桌面） |
+|    F1    | display_brightness_decrement  \|  ⌃1 |  ⌃1  | 调低屏幕亮度/桌面1           |
+|    F2    |  display_brightness_increment \| ⌃2  |  ⌃2  | 调高屏幕亮度/桌面2           |
+|    F3    |              ⌃↑  \|  ⌃3              |  ⌃3  | 暴露窗口/桌面3               |
+|    F4    |              Launchpad               |      | 启动面板                     |
+|    F5    |        illumination_decrement        |      | 调暗键盘灯                   |
+|    F6    |        illumination_increment        |      | 调亮键盘灯                   |
+|    F7    |                rewind                |      | 上一首音乐                   |
+|    F8    |            play_or_pause             |      | 播放 / 暂停                  |
+|    F9    |             fastforward              |      | 下一首音乐                   |
+|   F10    |                 mute                 |      | 静音                         |
+|   F11    |           volume_decrement           |      | 调低音量                     |
+|   F12    |           volume_increment           |      | 调高音量                     |
+|   F13    |                 ⌃⇧⌘3                 | ⇧⌘3  | 全屏截图｜（+⌘保存至桌面）   |
+|   F14    |                 ⇧⌘5                  | ⇧⌘6  | 截图菜单｜（+⌘触控栏截图）   |
+|   F15    |            play_or_pause             |      | 播放 / 暂停                  |
+|  Insert  |   ⇧⌥ display_brightness_increment    |      | 平滑调高亮度                 |
+| Delete ⌦ |   ⇧⌥ display_brightness_decrement    |      | 平滑调低亮度                 |
+|  Home ↖  |      ⇧⌥ illumination_increment       |      | 平滑调亮键盘灯               |
+|  End ↘   |      ⇧⌥ illumination_decrement       |      | 平滑调暗键盘灯               |
+|  PgUp ⇞  |         ⇧⌥ volume_increment          |      | 平滑调高音量                 |
+|  PgDn ⇟  |         ⇧⌥ volume_decrement          |      | 平滑调低音量                 |
 
 
 
-### Control Planes
-
-<details>
-<summary>control planes</summary>
-
-| Plane | Modifiers | Plane | Modifiers | Plane | Modifiers |
-| :---: | :-------: | :---: | :-------: | :---: | :-------: |
-| **0** |     <kbd>✱</kbd>     |   3   |    <kbd>✱</kbd><kbd>⌘</kbd><kbd>⌥</kbd>    |   7   |   <kbd>✱</kbd><kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd>    |
-|   1   |    <kbd>✱</kbd><kbd>⌘</kbd>     |   5   |    <kbd>✱</kbd><kbd>⌘</kbd><kbd>⌃</kbd>    |  11   |   <kbd>✱</kbd><kbd>⌘</kbd><kbd>⌥</kbd><kbd>⇧</kbd>    |
-|   2   |    <kbd>✱</kbd><kbd>⌥</kbd>     |   6   |    <kbd>✱</kbd><kbd>⌥</kbd><kbd>⌃</kbd>    |  13   |   <kbd>✱</kbd><kbd>⌘</kbd><kbd>⌃</kbd><kbd>⇧</kbd>    |
-|   4   |    <kbd>✱</kbd><kbd>⌃</kbd>     |   9   |    <kbd>✱</kbd><kbd>⌘</kbd><kbd>⇧</kbd>    |  14   |   <kbd>✱</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>⇧</kbd>    |
-|   8   |    <kbd>✱</kbd><kbd>⇧</kbd>     |  10   |    <kbd>✱</kbd><kbd>⌥</kbd><kbd>⇧</kbd>    |  15   |   <kbd>✱</kbd><kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>⇧</kbd>   |
-|       |           |  12   |    <kbd>✱</kbd><kbd>⌃</kbd><kbd>⇧</kbd>    |       |           |
-
-</details>
 
 
-------------------------
+## 参考
 
-## Version
-
-* [**Capslock Mac V3**](mac_v3/): 2021.03 - now (The Latest version)
-* [**Capslock Mac V2**](mac_v2): 2017 - 2021
-* [**Capslock Mac V1**](mac_v1): 2015 - 2017
-* [**Capslock Win**](win): 2013 - 2015
-
-|                       MacOS Supported                        |       Win Supported        |
-| :----------------------------------------------------------: | :------------------------: |
-|                    MacOS Big Sur (11.0 )                     |         Windows 10         |
-|                    MacOS Catalina (10.15)                    |         Windows 8          |
-|                  MacOS High Sierra (10.13)                   |         Windows 7          |
-|                     MacOS Sierra (10.12)                     |       Windows Vista        |
-|                   MacOS EI Capitan (10.11)                   |         Windows XP         |
-| MacOS Yosemite (10.10) or lower<br /> (via [Capslock Mac v1](https://github.com/Vonng/Capslock/tree/master/mac_v1) | (via [Capslock Win](win/)) |
-
-MacOS v3 is actively maintained, available on MacOS 10.11 - 11.x. Yosemite (10.10) or lower are supported via [Capslock Mac v1](https://github.com/Vonng/Capslock/tree/master/mac_v1)
-
-Windows version is already archived. You can use [pre-compiled binary](https://github.com/Vonng/Capslock/tree/master/win) or install [**AutoHotKey**](https://www.autohotkey.com/) and load [capslock.ahk](https://github.com/Vonng/Capslock/blob/master/win/CapsLock.ahk) manually
+### 符号释义
 
 
-------------------------
+|                      Glyph                       |     Name      |          Glyph           |          Name          |
+| :----------------------------------------------: | :-----------: | :----------------------: | :--------------------: |
+|                   <kbd>⇪</kbd>                   |   Capslock    |       <kbd>✱</kbd>       |         Hyper          |
+|                   <kbd>⎋</kbd>                   |    Escape     |       <kbd>␣</kbd>       |         Space          |
+|                   <kbd>⌘</kbd>                   | Command (Mac) |       <kbd>⎇</kbd>       |      Alter (Win)       |
+|                   <kbd>⌥</kbd>                   | Option (Mac)  |       <kbd>⊞</kbd>       |       Win (Win)        |
+|                   <kbd>⌃</kbd>                   |    Control    |       <kbd>⇧</kbd>       |         Shift          |
+|                   <kbd>↩</kbd>                   |    Return     |       <kbd>⌤</kbd>       |         Enter          |
+| <kbd>←</kbd><kbd>↓</kbd><kbd>↑</kbd><kbd>→</kbd> | Arrow Cursor  | <kbd>↖</kbd><kbd>↘</kbd> |        Home/End        |
+|             <kbd>⇥</kbd><kbd>⇤</kbd>             |      Tab      | <kbd>⌫</kbd><kbd>⌦</kbd> | Delete / ForwardDelete |
+|                   <kbd>⇭</kbd>                   |    Numlock    |            ⏫⏬            |      Fast / Slow       |
+|                        🖱️L                        |   左键单击    |            🖱️B            |        鼠标后退        |
+|                        🖱️R                        |   右键单击    |            🖱️F            |        鼠标前进        |
+|                        🖱️M                        |   中键单击    |            🖲️             |        鼠标滚轮        |
 
-## FAQ
-
-**Q: Why using <kbd>✱</kbd> as the symbol for Hyper?**
-
-**A**: Because the ASCII code for <kbd>\*</kbd> is exactly 42, which is the ultimate answer to life, universe, and everything. <kbd>✱</kbd>
-(Heavy-Asterisk) is a pretty version of <kbd>*</kbd>.
-
-**Q: What's new in v3?**
-
-**A**: The original v2 only use 1 ~ 3 control planes. While v3 uses up to 9 control planes. A large number of functions have been added to make the additional modifier <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>⇧</kbd> functioning in a reasonable way.
-
-**Q: Is there any incompatible changes in V3 compare to V2 ?**
-
-**A**:  There are three minor **incompatible** changes:
-
-* F13/F4 from music prev/next  to screenshot;
-
-* Number keys are used as clipboard instead of shifter
-* <kbd>⌘</kbd><kbd>D</kbd> now perform **define**(force touch) instead of opening dictionary app.
-
-**Q: Why is there no Linux OS support?**
-
-**A**: I'm using Linux through MacOS terminal. It actually feels much better than raw Linux 😆. This feature can be achieved via `xmodmap`, contribution are welcome!
-
-**Q: Why is there an older version in MacOS?**
-
-**A**: There was an older version of Karabiner that used XML config.  Apple modified it's kernel architecture in MacOS Sierra (10.12) and many programs had to be overhauled. So then there was a new version of Karabiner, the Karabiner-Elements, which is still in use today.
-
-**Q: How can I customize it to my needs?**
-
-**A**: Just fork this repo and make modification to `mac_v3/capslock.json` according to [documentation](https://karabiner-elements.pqrs.org/docs/)
-You can edit the more human-readable format `mac_v3/capslock.yml` then compile it into `capslock.json` format with `make compile`.
-
-**Q: Is this original?**
-
-**A**: I'm the first one to make a capslock overhaul schema as far as I know. The original win AHK version was wrote in 2013.  The first mac version was wrote in 2015. It is the first capslock emulation schema in karabiner's [gallery](https://ke-complex-modifications.pqrs.org/#caps_lock_enhancement).
-
-
-------------------------
-
-## Feedbacks
-
-![](docs/img/feedback.jpg)
-
-
-------------------------
-
-## About
-
-Author： [Vonng](https://vonng.com/en) ([rh@vonng.com](mailto:rh@vonng.com))
-
-License: [Apache 2.0 License](LICENSE)
-
-Beian: [浙ICP备15016890-3号](https://beian.miit.gov.cn/)

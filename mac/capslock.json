@@ -66,54 +66,6 @@
               ]
             }
           ]
-        },
-        {
-          "description": "spacebar = language switch",
-          "type": "basic",
-          "from": {
-            "key_code": "spacebar",
-            "modifiers": {
-              "mandatory": [
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "spacebar",
-              "modifiers": [
-                "left_control"
-              ]
-            }
-          ]
-        },
-        {
-          "description": "command + spacebar = emoji",
-          "type": "basic",
-          "from": {
-            "key_code": "spacebar",
-            "modifiers": {
-              "mandatory": [
-                "left_command",
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "spacebar",
-              "modifiers": [
-                "left_control",
-                "left_command"
-              ]
-            }
-          ]
         }
       ]
     },
@@ -987,6 +939,36 @@
               ]
             }
           ]
+        },
+        {
+          "description": "Disable comma: ctl+shift+option+command+comma(,)",
+          "type": "basic",
+          "from": {
+            "key_code": "comma",
+            "modifiers": {
+              "mandatory": [
+                "command",
+                "control",
+                "shift",
+                "option"
+              ]
+            }
+          }
+        },
+        {
+          "description": "Disable period: ctl+shift+option+command+period(.)",
+          "type": "basic",
+          "from": {
+            "key_code": "period",
+            "modifiers": {
+              "mandatory": [
+                "command",
+                "control",
+                "shift",
+                "option"
+              ]
+            }
+          }
         }
       ]
     },

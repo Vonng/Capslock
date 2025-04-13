@@ -1,38 +1,92 @@
-# Capslock Enhancement (mac v3) 
+# CapsLock
+
+> *Make CapsLock Great Again!*
+>
+> [中文文档](docs/zh-cn/) | [EN DOCS](http://capslock.vonng.com/) | [Karabiner Gallery](https://ke-complex-modifications.pqrs.org/#caps_lock_enhancement) | [Github Repo](https://github.com/Vonng/Capslock) | [Import URL](karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json)
+>
+> [![Visits Badge](https://badges.pufler.dev/visits/Vonng/Capslock)](https://badges.pufler.dev)
+
+------------------------
+
+## CapsLock Enhancement Mac v3
+
+*Transform <kbd>⇪</kbd>CapsLock into a powerful **modifier** **<kbd>✱</kbd> Hyper** that miraculously increases your work productivity!*
+
+![control-plane-0](docs/img/keyboard.jpg)
+
+> [Control Plane](#control-planes) 0 Layout (There are 15 more!)
+
+------------------------
+
+
+## Highlights
+
+* **Powerful**: Transform Capslock into a great modifier: **Hyper(<kbd>✱</kbd>)**. (such as <kbd>⇧</kbd><kbd>⌃</kbd><kbd>⌥</kbd><kbd>⌘</kbd>)
+* **Useful**: Navigation, mousekey, clipboard, win/term ctrl, shortcuts, etc... **Redefine the keyboard!**
+* **Speed-Up**: Optimized for developers, high-frequency move **stay in hot zone**.
+* **Extensible**: Work with existing modifiers, which introduce **16 extra control planes**.
+* **MouseKey**: Manipulate mouse cursor and wheels with keyboard
+* **Cross-Platform**: MacOS and Windows. Light-Weight and portable
+
+![](docs/img/highlight.jpg)
+
+------------------------
+
+
+## Features
+
+- [Basic](#Basic)                 :  Press <kbd>⇪</kbd> Capslock  emit an  **<kbd>⎋</kbd> Escape**. Hold it enabling the **<kbd>✱</kbd> Hyper Modifier**.
+- [Navigation](#Navigation)       :  Vim style navigation. Cursor move, text selection, switch desktop/window/tab, mouse move/wheel,etc...
+- [Deletion](#Deletion)           :  Maps `BNM,` to deletion operation to perform fast char/word/line deletion without hand move.
+- [MouseKey](#MouseKey)           :  Maps keypad to fully functional mouse
+- [Window](#window-control)       :  Close app/win/tab, Switch app/win/tab/desktop, integration with win-manager app such as Moom,Slate,Magnet
+- [Application](#app-shortcuts)   :  Shortcuts for launching or switching frequently used applications
+- [Terminal](#terminal-control)   :  Sending high-freq signals (Ctrl-Z, Ctrl-D, Ctrl-C) and vim/tmux prefix meta key via  <kbd>✱</kbd>
+- [Clipboard](#Clipboard)         :  Turn numkeys into 10 different text clipboard. <kbd>✱</kbd><kbd>⌘</kbd>n copy and <kbd>✱</kbd>n paste.
+- [Shifter](#Shifter)             :  Turn some keys into common code symbols.
+- [Functional](#Functional)       :  Screenshtots. Fine-grained light/volume control. Take function keys' function back!
+
+![](docs/img/feature.jpg)
+
+------------------------
+
+
+## Install
+
+It only takes two steps to enable Capslock on your Mac: Download & Enable
+
+1. [Download](https://github.com/pqrs-org/Karabiner-Elements/releases/download/v14.2.0/Karabiner-Elements-14.2.0.dmg)
+
+   Download & Install [**Karabiner-Elements**](https://karabiner-elements.pqrs.org/).
+
+   Following the wizard and grant required permissions (Settings - Security - Privacy)
+
+2. [Enable](karabiner://karabiner/assets/complex_modifications/import?url=https://ke-complex-modifications.pqrs.org/json/caps_lock_enhancement.json)
+
+   Open this [link](karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json) with Safari. It will launch Karabiner-Elements and load configuration.
+
+   `karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json`
+
+   > #### Alternative Links
+   > * [Karabiner Gallery](karabiner://karabiner/assets/complex_modifications/import?url=https://ke-complex-modifications.pqrs.org/json/caps_lock_enhancement.json)：https://ke-complex-modifications.pqrs.org/json/caps_lock_enhancement.json
+   > * [GitHub Repo](karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json)： https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json
+   > * [Capslock Website](karabiner://karabiner/assets/complex_modifications/import?url=https://vonng.com/capslock.json)： https://vonng.com/capslock.json
+   > * Or download [**capslock.json**](mac_v3/capslock.json) to ` ~/.config/karabiner/assets/complex_modifications/` manually.
+
+   Click `Enable All` for `Capslock Enhancement` on pop-up dialog. It will affect immediately.
+
+   You can now try moving cursor with ⇪ + h,j,k,l , And exploring more features below.
 
 
 
-### MacOS Installation
-
-
-Capslock serves via  [**Karabiner-Elements**](https://karabiner-elements.pqrs.org/)  on MacOS
-
-1. Download and install [**Karabiner Elements**](https://karabiner-elements.pqrs.org/), following the wizard and grant required permissions.
-
-2. Download [**capslock.json**](mac_v3/capslock.json) to：` ~/.config/karabiner/assets/complex_modifications/` .  Or open this link with Safari to launch karabiner and load config from URL:
-
-   ```yaml
-   # Capslock Mac V3 (this repo)
-   karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json
-   
-   # Capslock Official Site (v3)
-   karabiner://karabiner/assets/complex_modifications/import?url=https://vonng.com/capslock.json
-   
-   # Karabiner-Elements Offical Script Gallery (v3)
-   karabiner://karabiner/assets/complex_modifications/import?url=https://pqrs.org/osx/karabiner/complex_modifications/json/caps_lock_enhancement.json
-   ```
-
-3. Launch Karabiner-Elements.  **Tab: ComplexModification** → **Button: Add Rules**, then enabled rulesets.
-
-   ![](/Volumes/Data/dev/env/Capslock/mac_v3/images/config-karabiner.png)
-
+------------------------
 
 
 ## Usage
 
 Capslock works on **ANSI** keyboards and similar layouts. It literally remaps every [**keys**](#Symbols) on the keyboard. Including 10 categories.
 
-![](images/keyboard.png)
+![](docs/img/keyboard.jpg)
 
 > **[Control Planes](#Control-Planes)** are defined by combination of four extra left modifiers: <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>⇧</kbd>.This image shows the layout of control plane 0.
 
@@ -58,13 +112,13 @@ Capslock works on **ANSI** keyboards and similar layouts. It literally remaps ev
 |   <kbd>✱</kbd><kbd>⎋</kbd>    | <kbd>⇪</kbd> Capslock | Press to switch Capslock status |
 |   <kbd>✱</kbd><kbd>␣</kbd>    |     <kbd>⌃</kbd><kbd>␣</kbd>     | Switch input source, +<kbd>⌘</kbd> to emoji                   |
 
-Note that <kbd>✱</kbd> is implemented as combination of **ALL RIGHT MODIFIERS**:  <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>⇧</kbd>. 
-
-Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalities. We will assume and omit that in subsequent document.
+> Note that <kbd>✱</kbd> is implemented as combination of **ALL RIGHT MODIFIERS**:  <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>⇧</kbd>.
+>
+> Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalities. We will assume and omit that in subsequent document.
 
 ### Navigation
 
-* <kbd>H</kbd>, <kbd>J</kbd>, <kbd>K</kbd>, <kbd>L</kbd>, <kbd>U</kbd>, <kbd>I</kbd>, <kbd>O</kbd>, <kbd>P</kbd> are used as **Navigators**. Maps to <kbd>←</kbd><kbd>↓</kbd><kbd>↑</kbd><kbd>→</kbd><kbd>⇞</kbd><kbd>↖</kbd><kbd>↘</kbd><kbd>⇟</kbd> by default. (pink area). 
+* <kbd>H</kbd>, <kbd>J</kbd>, <kbd>K</kbd>, <kbd>L</kbd>, <kbd>U</kbd>, <kbd>I</kbd>, <kbd>O</kbd>, <kbd>P</kbd> are used as **Navigators**. Maps to <kbd>←</kbd><kbd>↓</kbd><kbd>↑</kbd><kbd>→</kbd><kbd>⇞</kbd><kbd>↖</kbd><kbd>↘</kbd><kbd>⇟</kbd> by default. (pink area).
 * 9 control planes has already been allocated for navigators.
 * Hold additional <kbd>⌘</kbd> Command for **selection**.  (like holding <kbd>⇧</kbd>shift in normal), additional <kbd>⌥</kbd> Option for **word/para selection**.
 * Hold additional <kbd>⇧</kbd> Shift for **app/win/tab switching**.  Hold additional <kbd>⌃</kbd> Control for **desktop management** .
@@ -83,10 +137,7 @@ Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalities. We will assume a
 |    <kbd>O</kbd>    |   End    |  line end  |  head2end   |  next win  |  hide all   |  🖱️B  |   🖱️B   |  ⬇️   |  ⬇️⏫  |
 |    <kbd>P</kbd>    |   PgDn   | next page  |  next page  |   zoom+    |  Launchpad  |  🖱️F  |   🖱️F   |  ⬅️   |  ⬅️⏫  |
 
-
-
-#### Arrow Navigation
-
+**Arrow Navigation**
 
 * Arrows <kbd>←</kbd>↓<kbd>↑</kbd>→ to 🖱️ **mouse**  actions too. Hold <kbd>⌥</kbd> Option to ⏬ **slow down**, hold <kbd>⌘</kbd> Command  to ⏫ **speed up**.
 * Hold  <kbd>⇧</kbd> Shift  turns to 🖲️ **wheel move**.  Extra <kbd>⌥</kbd> Option to ⏬ **slow down**, extra <kbd>⌘</kbd> Command  to ⏫ **speed up**.
@@ -101,7 +152,7 @@ Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalities. We will assume a
 
 ### Deletion
 
- <kbd>N</kbd> <kbd>M</kbd> <kbd>,</kbd> <kbd>.</kbd>  are used as **Deletor keys**. Right below the navigators for fast access (brown area). 
+<kbd>N</kbd> <kbd>M</kbd> <kbd>,</kbd> <kbd>.</kbd>  are used as **Deletor keys**. Right below the navigators for fast access (brown area).
 
 | Key\Mod |        <kbd>✱</kbd>         |         <kbd>⌘</kbd>          |         <kbd>⌥</kbd>          |
 | :-----: | :--------------: | :----------------: | :----------------: |
@@ -112,8 +163,7 @@ Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalities. We will assume a
 |    <kbd>⌫</kbd>    |     del file     |     purge file     |                    |
 
 
-### Mousekey
-
+### MouseKey
 
 
 * Turn **Keypad** into a fully funcional 🖱️ **mouse**.
@@ -128,10 +178,7 @@ Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalities. We will assume a
 |  <kbd>1</kbd>🖱️↙️  |  <kbd>2</kbd> 🖱️⬇️  | <kbd>3</kbd> 🖱️↘️ |         |
 | <kbd>0</kbd> 🖱️L |        | <kbd>.</kbd> 🖱️M  | <kbd>⌤</kbd> 🖱️R  |
 
-
-
 ### Window Control
-
 
 
 * `Tab`, <kbd>Q</kbd>, <kbd>W</kbd>, <kbd>A</kbd>, <kbd>s</kbd> used as window control keys. Focuing on close/switch applications / windows / tabs / desktops. (azure area)
@@ -147,10 +194,7 @@ Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalities. We will assume a
 |    <kbd>S</kbd>    |  next tab   |   prev tab    |    next win    |   prev win    |            |
 
 
-
 ### App Shortcuts
-
-
 
 * <kbd>E</kbd> <kbd>R</kbd> <kbd>T</kbd> <kbd>Y</kbd> <kbd>F</kbd> <kbd>G</kbd> are used as application shortcuts. (yellow area)
 * Popular apps and dev tools are registed to 3 default planes: <kbd>✱</kbd>/<kbd>⌘</kbd>/<kbd>⌥</kbd>. Assign these shortcuts according to your own needs.
@@ -165,10 +209,7 @@ Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalities. We will assume a
 |    <kbd>G</kbd>    |   Intellij IDEA    |  Chrome   |  Calender   |
 
 
-
 ### Terminal Control
-
-
 
 <kbd>D</kbd>, <kbd>Z</kbd>, <kbd>X</kbd>, <kbd>C</kbd>, <kbd>V</kbd>, <kbd>B</kbd> are used as terminal control keys. Sending singals and IDE commands. (green area)
 
@@ -182,10 +223,7 @@ Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalities. We will assume a
 |    <kbd>B</kbd>    | <kbd>⌃</kbd><kbd>B</kbd>Ctrl+B ([Tmux](http://tmux.github.io)  Prefix) |                      |
 
 
-
 ### Clipboard
-
-
 
 Number keys <kbd>1</kbd>, <kbd>2</kbd>, …, <kbd>9</kbd>, <kbd>0</kbd> are used as **(text) clipboard**. Hold <kbd>⌘</kbd> to **copy**, and press to **paste**. (purple area)
 
@@ -198,7 +236,6 @@ Number keys <kbd>1</kbd>, <kbd>2</kbd>, …, <kbd>9</kbd>, <kbd>0</kbd> are used
 
 
 ### Shifter
-
 
 * Trivial transformation for misc characters. (orange area)
 * Some special tricks for developers. Such as `;'` maps to `:=` or `!=` (<kbd>⌘</kbd>)
@@ -216,11 +253,7 @@ Number keys <kbd>1</kbd>, <kbd>2</kbd>, …, <kbd>9</kbd>, <kbd>0</kbd> are used
 |   <kbd>\\</kbd>   |  <kbd>⌘</kbd><kbd>/</kbd>  |          |      |
 
 
-
-
 ### Functional
-
-
 
 - Use F1,…F12 as standard functional keys, while hold **<kbd>✱</kbd> Hyper** to turn them back. (cyan area)
 - <kbd>⌘</kbd>Command  + F1 / F2 / F3 are used as desktop switcher. Enable shortcuts in system preference first:
@@ -228,7 +261,7 @@ Number keys <kbd>1</kbd>, <kbd>2</kbd>, …, <kbd>9</kbd>, <kbd>0</kbd> are used
   **Preference** → **Keyboard** → **Shortcuts** → **MissionControl** → Switch to Desktop 1/2/3
 - If you are using RMBP with Bar, consider changing your bar back to function keys with:
 
-  **Karabiner-Elements** → **Function Keys** → **Use all F1, F2, etc. keys as standard function keys** 
+  **Karabiner-Elements** → **Function Keys** → **Use all F1, F2, etc. keys as standard function keys**
 
 | Key\Mod  |                  <kbd>✱</kbd>                   |  <kbd>⌘</kbd>   | Comment                              |
 | :------: | :----------------------------------: | :--: | ------------------------------------ |
@@ -256,8 +289,7 @@ Number keys <kbd>1</kbd>, <kbd>2</kbd>, …, <kbd>9</kbd>, <kbd>0</kbd> are used
 |  PgDn <kbd>⇟</kbd>  |    <kbd>⇧</kbd><kbd>⌥</kbd> <kbd>volume_decrement</kbd>    |      | Fine-Grained Volume Down             |
 
 
-
-
+------------------------
 
 ## References
 
@@ -279,3 +311,101 @@ Number keys <kbd>1</kbd>, <kbd>2</kbd>, …, <kbd>9</kbd>, <kbd>0</kbd> are used
 |  🖱️R   | Mouse Right Click (Button2)  |  🖱️F   | Mouse Forward (Button5)  |
 |  🖱️M   | Mouse Middle Click (Button3) |   🖲️   |       Mouse Wheel        |
 
+
+
+### Control Planes
+
+<details>
+<summary>control planes</summary>
+
+| Plane | Modifiers | Plane | Modifiers | Plane | Modifiers |
+| :---: | :-------: | :---: | :-------: | :---: | :-------: |
+| **0** |     <kbd>✱</kbd>     |   3   |    <kbd>✱</kbd><kbd>⌘</kbd><kbd>⌥</kbd>    |   7   |   <kbd>✱</kbd><kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd>    |
+|   1   |    <kbd>✱</kbd><kbd>⌘</kbd>     |   5   |    <kbd>✱</kbd><kbd>⌘</kbd><kbd>⌃</kbd>    |  11   |   <kbd>✱</kbd><kbd>⌘</kbd><kbd>⌥</kbd><kbd>⇧</kbd>    |
+|   2   |    <kbd>✱</kbd><kbd>⌥</kbd>     |   6   |    <kbd>✱</kbd><kbd>⌥</kbd><kbd>⌃</kbd>    |  13   |   <kbd>✱</kbd><kbd>⌘</kbd><kbd>⌃</kbd><kbd>⇧</kbd>    |
+|   4   |    <kbd>✱</kbd><kbd>⌃</kbd>     |   9   |    <kbd>✱</kbd><kbd>⌘</kbd><kbd>⇧</kbd>    |  14   |   <kbd>✱</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>⇧</kbd>    |
+|   8   |    <kbd>✱</kbd><kbd>⇧</kbd>     |  10   |    <kbd>✱</kbd><kbd>⌥</kbd><kbd>⇧</kbd>    |  15   |   <kbd>✱</kbd><kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>⇧</kbd>   |
+|       |           |  12   |    <kbd>✱</kbd><kbd>⌃</kbd><kbd>⇧</kbd>    |       |           |
+
+</details>
+
+
+------------------------
+
+## Version
+
+* [**Capslock Mac V3**](mac_v3/): 2021.03 - now (The Latest version)
+* [**Capslock Mac V2**](mac_v2): 2017 - 2021
+* [**Capslock Mac V1**](mac_v1): 2015 - 2017
+* [**Capslock Win**](win): 2013 - 2015
+
+|                       MacOS Supported                        |       Win Supported        |
+| :----------------------------------------------------------: | :------------------------: |
+|                    MacOS Big Sur (11.0 )                     |         Windows 10         |
+|                    MacOS Catalina (10.15)                    |         Windows 8          |
+|                  MacOS High Sierra (10.13)                   |         Windows 7          |
+|                     MacOS Sierra (10.12)                     |       Windows Vista        |
+|                   MacOS EI Capitan (10.11)                   |         Windows XP         |
+| MacOS Yosemite (10.10) or lower<br /> (via [Capslock Mac v1](https://github.com/Vonng/Capslock/tree/master/mac_v1) | (via [Capslock Win](win/)) |
+
+MacOS v3 is actively maintained, available on MacOS 10.11 - 11.x. Yosemite (10.10) or lower are supported via [Capslock Mac v1](https://github.com/Vonng/Capslock/tree/master/mac_v1)
+
+Windows version is already archived. You can use [pre-compiled binary](https://github.com/Vonng/Capslock/tree/master/win) or install [**AutoHotKey**](https://www.autohotkey.com/) and load [capslock.ahk](https://github.com/Vonng/Capslock/blob/master/win/CapsLock.ahk) manually
+
+
+------------------------
+
+## FAQ
+
+**Q: Why using <kbd>✱</kbd> as the symbol for Hyper?**
+
+**A**: Because the ASCII code for <kbd>\*</kbd> is exactly 42, which is the ultimate answer to life, universe, and everything. <kbd>✱</kbd>
+(Heavy-Asterisk) is a pretty version of <kbd>*</kbd>.
+
+**Q: What's new in v3?**
+
+**A**: The original v2 only use 1 ~ 3 control planes. While v3 uses up to 9 control planes. A large number of functions have been added to make the additional modifier <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>⇧</kbd> functioning in a reasonable way.
+
+**Q: Is there any incompatible changes in V3 compare to V2 ?**
+
+**A**:  There are three minor **incompatible** changes:
+
+* F13/F4 from music prev/next  to screenshot;
+
+* Number keys are used as clipboard instead of shifter
+* <kbd>⌘</kbd><kbd>D</kbd> now perform **define**(force touch) instead of opening dictionary app.
+
+**Q: Why is there no Linux OS support?**
+
+**A**: I'm using Linux through MacOS terminal. It actually feels much better than raw Linux 😆. This feature can be achieved via `xmodmap`, contribution are welcome!
+
+**Q: Why is there an older version in MacOS?**
+
+**A**: There was an older version of Karabiner that used XML config.  Apple modified it's kernel architecture in MacOS Sierra (10.12) and many programs had to be overhauled. So then there was a new version of Karabiner, the Karabiner-Elements, which is still in use today.
+
+**Q: How can I customize it to my needs?**
+
+**A**: Just fork this repo and make modification to `mac_v3/capslock.json` according to [documentation](https://karabiner-elements.pqrs.org/docs/)
+You can edit the more human-readable format `mac_v3/capslock.yml` then compile it into `capslock.json` format with `make compile`.
+
+**Q: Is this original?**
+
+**A**: I'm the first one to make a capslock overhaul schema as far as I know. The original win AHK version was wrote in 2013.  The first mac version was wrote in 2015. It is the first capslock emulation schema in karabiner's [gallery](https://ke-complex-modifications.pqrs.org/#caps_lock_enhancement).
+
+
+------------------------
+
+## Feedbacks
+
+![](docs/img/feedback.jpg)
+
+
+------------------------
+
+## About
+
+Author： [Vonng](https://vonng.com/en) ([rh@vonng.com](mailto:rh@vonng.com))
+
+License: [Apache 2.0 License](LICENSE)
+
+Beian: [浙ICP备15016890-3号](https://beian.miit.gov.cn/)
