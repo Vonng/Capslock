@@ -1,6 +1,6 @@
 # Capslock补完计划 (mac v3)
 
-
+原始仓库 [**Vonng/Capslock**](https://github.com/Vonng/Capslock)
 
 ### MacOS安装
 
@@ -10,19 +10,6 @@
 
 
 2. 将 [**capslock.json**](mac_v3/capslock.json) 下载至` ~/.config/karabiner/assets/complex_modifications/` 目录。
-
-   或使用Safari打开下面的链接，将自动启动Karabiner并加载Capslock配置文件。
-
-   ```yaml
-   # Capslock 官方网站 (v3)
-   karabiner://karabiner/assets/complex_modifications/import?url=https://vonng.com/capslock.json
-   
-   # Capslock Mac V3 (当前Repo)
-   karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json
-   
-   # Karabiner-Elements 官方陈列馆（Emulation Mode第一个）
-   karabiner://karabiner/assets/complex_modifications/import?url=https://pqrs.org/osx/karabiner/complex_modifications/json/caps_lock_enhancement.json
-   ```
 
 
 3. 打开Karabiner-Elements，切至第三标签页`ComplexModification`，点击左下方按钮 `Add Rules`按需启用Capslock预置规则即可。
@@ -69,34 +56,28 @@ Capslock以**ANSI**布局键盘为蓝本，对Capslock之外的 [**所有按键*
 
 * `H`, `J`, `K`, `L`, `U`, `I`, `O`, `P`  被用作**基本导航键**，分别映射为←↓↑→⇞↖↘⇟（左下上右/PgUp/Home/End/PgDn），位于图中粉色区域。
 * 基本导航键配合**左侧修饰键**可启用多种导航功能，默认配置了9个**控制平面**。
-* 按住 ⌘ Command，效果为**文本选择**，额外按住⌥ Option 时，选择单位会变为**前后词语**与**上下3行**。
-* 按住⇧ Shift 的效果为**应用/窗口/标签切换**，按住⌃ Control 的效果为**桌面管理**。
-* 按住 ⌥ Option 效果为🖱️**鼠标移动**， 额外按下⇧Shift将**移速翻倍** ⏫。  (`U`, `I`, `O`, `P` 映射为鼠标左击，右击，后退，前进)。
-* 按住⇧⌥将导航键变为 🖲️ **鼠标滚轮**，⇧⌘**移速翻倍** 。其中HJKL为正常滚动，UIOP自然滚动（反向）。
+* 按住 ⌘ Command，效果为**文本选择**，额外按住⌥ Option 时，选择单位会变为**前后词语**
 
-| **功能** | **移动** | **选择** | **快速选择** | **窗口管理** | **桌面管理** |  🖱️   | **🖱️⏫** |  🖲️   |  🖲️⏫  |
-| :------: | :------: | :------: | :----------: | :----------: | :----------: | :--: | :----: | :--: | :--: |
-| 键\修饰  |    ✱     |    ⌘     |      ⌘⌥      |      ⇧       |      ⌃       |  ⌥   |   ⇧⌃   |  ⇧⌥  |  ⇧⌘  |
-|    H     |    ⬅️     | 左选一字 |   左选一词   |   先前Tab    |   上个桌面   |  ⬅️   |   ⬅️⏫   |  ⬅️   |  ⬅️⏫  |
-|    J     |    ⬇️     | 下选一行 |   下选三行   |   切换应用   |   聚焦窗口   |  ⬇️   |   ⬇️⏫   |  ⬇️   |  ⬇️⏫  |
-|    K     |    ⬆️     | 上选一行 |   上选三行   |   先前应用   |   暴露所有   |  ⬆️   |   ⬆️⏫   |  ⬆️   |  ⬆️⏫  |
-|    L     |    ➡️     | 右选一字 |   右选一词   |   切换Tab    |   下个桌面   |  ➡️   |   ➡️⏫   |  ➡️   |  ➡️⏫  |
-|    U     |   PgUp   | 选至上页 |   选至上页   |     缩小     |     全屏     |  🖱️L  |   🖱️L   |  ➡️   |  ➡️   |
-|    I     |   Home   | 选至行首 |   尾至行首   |   上个窗口   |   隐藏窗口   |  🖱️R  |   🖱️R   |  ⬆️   |  ⬆️⏫  |
-|    O     |   End    | 选至行尾 |   首至行尾   |   切换窗口   |   隐藏所有   |  🖱️B  |   🖱️B   |  ⬇️   |  ⬇️⏫  |
-|    P     |   PgDn   | 选至下页 |   选至下页   |     放大     |   启动菜单   |  🖱️F  |   🖱️F   |  ⬅️   |  ⬅️⏫  |
+| **功能** | **移动** | **选择** | **快速选择** |
+| :------: | :------: | :------: | :----------: | 
+| 键\修饰  |    ✱     |    ⌘     |      ⌘⌥      |
+|    H     |    ⬅️     | 左选一字 |   左选一词   | 
+|    J     |    ⬇️     | 下选一行 |   下选三行   | 
+|    K     |    ⬆️     | 上选一行 |   上选三行   | 
+|    L     |    ➡️     | 右选一字 |   右选一词   |
+|    U     |   Home   | 选至行首/页首 |     | 
+|    I     |   Control+A   | 选至行首 |    | 
+|    O     |   Control+E    | 选至行尾 |    |
+|    P     |   End   | 选至行尾/页尾 |    |  
 
-#### 方向键导航
+#### 禁用sysdiagnose
+control+shift+option+command+comma(,) 是mac系统级sysdiagnose快捷键，会生成sysdiagnose文件，因此禁用
 
-* 方向键 ←↓↑→ 用于模拟 🖱️**鼠标移动**。额外按住 ⌥ Option ⏬ **减速**，额外按住 ⌘ Command ⏫ **加速**。
-* 按住 ⇧Shift 切换至 🖲️**滚轮移动**。额外按住 ⌥ Option ⏬ **减速**，额外按住⌘ Command ⏫ **加速**。
-* 按下↩回车键为鼠标左键单击，配合⌘⌥⌃⇧使用时会相应转化为鼠标的右键，中键，后退键，前进键。
+| **修饰键** |**按键** | **映射** | 
+| :------: | :------: |  :------: | 
+| ⌘⌥⌃⇪  |  ,(comma)   | 空   | 
+| ⌘⌥⌃⇪  |  .(period)  | 空   |
 
-| **功能** |     🖱️     |   🖱️⏬   |   🖱️⏫   |    🖲️    |   🖲️⏬   |   🖲️⏫   |
-| :------: | :-------: | :----: | :----: | :-----: | :----: | :----: |
-| 键\修饰  |     ✱     |   ⌥    |   ⌘    |    ⇧    |   ⇧⌥   |   ⇧⌘   |
-|   ←↓↑→   | 移速=1600 | 移速÷2 | 移速×2 | 滚速=32 | 滚速÷2 | 滚速×2 |
-|    ↩     |    🖱️L     |   🖱️M   |   🖱️R   |   🖱️L    |   🖱️B   |   🖱️F   |
 
 ### 删除功能
 
