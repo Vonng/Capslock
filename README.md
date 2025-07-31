@@ -1,6 +1,9 @@
 # CapsLock
 
-[![Webite: ddia](https://img.shields.io/badge/Website-caps.vonng.com-slategray?style=flat)](https://caps.vonng.com) [![Webite: ddia](https://img.shields.io/badge/中文网站-caps.vonng.com/zh-slategray?style=flat)](https://caps.vonng.com/zh)
+[![Webite: Capslock](https://img.shields.io/badge/Website-capslock.vonng.com-slategray?style=flat)](https://capslock.vonng.com)
+[![Webite: capslock](https://img.shields.io/badge/中文网站-capslock.vonng.com/zh-slategray?style=flat)](https://capslock.vonng.com/zh)
+[![Version: v3.0.3](https://img.shields.io/badge/version-v3.0.3-slategray?style=flat&logo=cilium&logoColor=white)](https://github.com/Vonng/Capslock/releases/tag/v3.0.3)
+[![License: Apache-2.0](https://img.shields.io/github/license/Vonng/Capslock?logo=opensourceinitiative&logoColor=green&color=slategray)](LICENSE)
 
 > *Make CapsLock Great Again!*
 
@@ -37,7 +40,7 @@
 
 ## Features
 
-- [Basic](#Basic)               : Press <kbd>⇪</kbd> Capslock  emit an  **<kbd>⎋</kbd> Escape**. Hold it enabling the **<kbd>✱</kbd> Hyper Modifier**.
+- [Basic](#Basic)               : Press <kbd>⇪</kbd> Capslock emit an **<kbd>⎋</kbd> Escape**. Hold it enabling the **<kbd>✱</kbd> Hyper Modifier**.
 - [Navigation](#Navigation)     : Vim style navigation. Cursor move, text selection, switch desktop/window/tab, mouse move/wheel,etc...
 - [Deletion](#Deletion)         : Maps `BNM,` to deletion operation to perform fast char/word/line deletion without hand move.
 - [MouseKey](#MouseKey)         : Maps keypad to fully functional mouse
@@ -61,7 +64,7 @@ It only takes two steps to enable Capslock on your Mac: Download & Enable
 
    Download & Install [**Karabiner-Elements**](https://karabiner-elements.pqrs.org/).
 
-   Following the wizard and grant required permissions (Settings - Security - Privacy)
+   Follow the wizard and grant required permissions (Settings - Security - Privacy)
 
 2. [Enable](karabiner://karabiner/assets/complex_modifications/import?url=https://ke-complex-modifications.pqrs.org/json/caps_lock_enhancement.json)
 
@@ -98,7 +101,7 @@ Capslock works on **ANSI** keyboards and similar layouts. It literally remaps ev
 |   [Navigation](#Navigation)   |  Pink  | Vim style navigation. Cursor move, text selection, switch desktop/window/tab, mouse move/wheel,etc...                |
 |     [Deletion](#Deletion)     | Brown  | Maps `BNM,` to deletion operation to perform fast char/word/line deletion without hand move.                         |
 |     [MouseKey](#MouseKey)     | Keypad | Maps keypad to fully functional mouse                                                                                |
-|   [Window](#window-control)   | Azure  | Close app/win/tab, Switch app/win/tab/desktop, intergration with win-manager app such as Moom,Slate,Magnet           |
+|   [Window](#window-control)   | Azure  | Close app/win/tab, Switch app/win/tab/desktop, integration with win-manager app such as Moom,Slate,Magnet            |
 | [Application](#app-shortcuts) | Yellow | Shortcuts for launching or switching frequently used applications                                                    |
 | [Terminal](#terminal-control) | Green  | Sending high-freq signals (Ctrl-Z, Ctrl-D, Ctrl-C) and vim/tmux prefix meta key via  <kbd>✱</kbd>                    |
 |    [Clipboard](#Clipboard)    | Purple | Turn numkeys into 10 different text clipboard. <kbd>✱</kbd><kbd>⌘</kbd>n copy and <kbd>✱</kbd>n paste.               |
@@ -121,11 +124,11 @@ Capslock works on **ANSI** keyboards and similar layouts. It literally remaps ev
 ### Navigation
 
 * <kbd>H</kbd>, <kbd>J</kbd>, <kbd>K</kbd>, <kbd>L</kbd>, <kbd>U</kbd>, <kbd>I</kbd>, <kbd>O</kbd>, <kbd>P</kbd> are used as **Navigators**. Maps to <kbd>←</kbd><kbd>↓</kbd><kbd>↑</kbd><kbd>→</kbd><kbd>⇞</kbd><kbd>↖</kbd><kbd>↘</kbd><kbd>⇟</kbd> by default. (pink area).
-* 9 control planes has already been allocated for navigators.
+* 9 control planes have already been allocated for navigators.
 * Hold additional <kbd>⌘</kbd> Command for **selection**.  (like holding <kbd>⇧</kbd>shift in normal), additional <kbd>⌥</kbd> Option for **word/para selection**.
 * Hold additional <kbd>⇧</kbd> Shift for **app/win/tab switching**.  Hold additional <kbd>⌃</kbd> Control for **desktop management**.
-* Hold the additional <kbd>⌥</kbd> Option for 🖱️ **mouse move**.  Add <kbd>⇧</kbd>shift to **⏫ accelerate**.  (<kbd>U</kbd>, <kbd>I</kbd>, <kbd>O</kbd>, <kbd>P</kbd> maps to mouse buttons) .
-* <kbd>⇧</kbd><kbd>⌥</kbd> turns navigator to **🖲️ mouse wheel**, and <kbd>⇧</kbd><kbd>⌘</kbd> is the ⏫ **accelerated** version .  `HJKL` for wheel, wihle `UIOP` for reversed wheel move.
+* Hold the additional <kbd>⌥</kbd> Option for 🖱️ **mouse move**.  Add <kbd>⇧</kbd>shift to **⏫ accelerate**.  (<kbd>U</kbd>, <kbd>I</kbd>, <kbd>O</kbd>, <kbd>P</kbd> maps to mouse buttons).
+* <kbd>⇧</kbd><kbd>⌥</kbd> turns navigator to **🖲️ mouse wheel**, and <kbd>⇧</kbd><kbd>⌘</kbd> is the ⏫ **accelerated** version .  `HJKL` for wheel, while `UIOP` for reversed wheel move.
 
 |   Feature    |   **Move**   |  **Select**  |       **WordSel**        |  **Window**  | **Desktop**  |     🖱️      |         **🖱️⏫**         |           🖲️            |           🖲️⏫           |
 |:------------:|:------------:|:------------:|:------------------------:|:------------:|:------------:|:------------:|:------------------------:|:------------------------:|:------------------------:|
@@ -141,7 +144,7 @@ Capslock works on **ANSI** keyboards and similar layouts. It literally remaps ev
 
 **Arrow Navigation**
 
-* Arrows <kbd>←</kbd>↓<kbd>↑</kbd>→ to 🖱️ **mouse**  actions too. Hold <kbd>⌥</kbd> Option to ⏬ **slow down**, hold <kbd>⌘</kbd> Command to ⏫ **speed up**.
+* Arrows <kbd>←</kbd>↓<kbd>↑</kbd>→ to 🖱️ **mouse** actions too. Hold <kbd>⌥</kbd> Option to ⏬ **slow down**, hold <kbd>⌘</kbd> Command to ⏫ **speed up**.
 * Hold <kbd>⇧</kbd> Shift turns to 🖲️ **wheel move**.  Extra <kbd>⌥</kbd> Option to ⏬ **slow down**, extra <kbd>⌘</kbd> Command to ⏫ **speed up**.
 * <kbd>↩</kbd> Return maps to left-**click**.  And additional <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>⇧</kbd> turns into right click, middle-click, backward, forward.
 
@@ -370,7 +373,7 @@ Windows version is already archived. You can use [pre-compiled binary](https://g
 
 **A**: There are three minor **incompatible** changes:
 
-* F13/F4 from music prev/next  to screenshot;
+* F13/F4 from music prev/next to screenshot;
 
 * Number keys are used as clipboard instead of shifter
 * <kbd>⌘</kbd><kbd>D</kbd> now perform **define**(force touch) instead of opening dictionary app.
