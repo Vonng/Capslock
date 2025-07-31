@@ -1,25 +1,29 @@
-# CapsLock
+---
+title: CapsLock Enhancement
+cascade:
+  type: docs
+breadcrumbs: false
+---
 
-[![Webite: ddia](https://img.shields.io/badge/Website-caps.vonng.com-slategray?style=flat)](https://caps.vonng.com) [![Webite: ddia](https://img.shields.io/badge/中文网站-caps.vonng.com/zh-slategray?style=flat)](https://caps.vonng.com/zh)
-
-> *Make CapsLock Great Again!*
+*Transform <kbd>⇪</kbd>CapsLock into a powerful **modifier** **<kbd>✱</kbd> Hyper** that miraculously increases your work productivity!* **Make CapsLock Great Again!**
 
 
-[Karabiner Gallery](https://ke-complex-modifications.pqrs.org/#caps_lock_enhancement) | [GitHub Repo](https://github.com/Vonng/Capslock) | [Import URL](karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json)
+{{% steps %}}
+
+### Download & Install
+
+Download and install the [Karabiner-Elements](https://github.com/pqrs-org/Karabiner-Elements/releases/download/v15.5.0/Karabiner-Elements-15.5.0.dmg) (the latest version: 15.5.0)
+
+### Enable Configuration
+
+Enable CapsLock Enhancement Config by [Clicking This](karabiner://karabiner/assets/complex_modifications/import?url=https://ke-complex-modifications.pqrs.org/json/caps_lock_enhancement.json)
+
+{{% /steps %}}
 
 
-------------------------
+![control-plane-0](/img/keyboard.jpg)
 
-## CapsLock Enhancement Mac v3
-
-*Transform <kbd>⇪</kbd>CapsLock into a powerful **modifier** **<kbd>✱</kbd> Hyper** that miraculously increases your work productivity!*
-
-![control-plane-0](static/img/keyboard.jpg)
-
-> [Control Plane](#control-planes) 0 Layout (There are 15 more!)
-
-------------------------
-
+> [Control Plane](#control-planes) 0 Layout (There are 15 more available!)
 
 ## Highlights
 
@@ -30,67 +34,57 @@
 * **MouseKey**: Manipulate mouse cursor and wheels with keyboard
 * **Cross-Platform**: macOS and Windows. Light-Weight and portable
 
-![](static/img/highlight.jpg)
-
-------------------------
 
 
 ## Features
-
 - [Basic](#Basic)               : Press <kbd>⇪</kbd> Capslock  emit an  **<kbd>⎋</kbd> Escape**. Hold it enabling the **<kbd>✱</kbd> Hyper Modifier**.
 - [Navigation](#Navigation)     : Vim style navigation. Cursor move, text selection, switch desktop/window/tab, mouse move/wheel,etc...
 - [Deletion](#Deletion)         : Maps `BNM,` to deletion operation to perform fast char/word/line deletion without hand move.
 - [MouseKey](#MouseKey)         : Maps keypad to fully functional mouse
-- [Window](#window-control)     : Close app/win/tab, Switch app/win/tab/desktop, integration with win-manager app such as Moom,Slate,Magnet
+- [Window](#window-control)     : Close app/win/tab, Switch app/win/tab/desktop, integration with win-manager app such as Moom, Slate, Magnet
 - [Application](#app-shortcuts) : Shortcuts for launching or switching frequently used applications
-- [Terminal](#terminal-control) : Sending high-freq signals (Ctrl-Z, Ctrl-D, Ctrl-C) and vim/tmux prefix meta key via  <kbd>✱</kbd>
+- [Terminal](#terminal-control) : Sending high-freq signals (Ctrl-Z, Ctrl-D, Ctrl-C) and vim/tmux prefix meta key via <kbd>✱</kbd>
 - [Clipboard](#Clipboard)       : Turn numkeys into 10 different text clipboards. <kbd>✱</kbd><kbd>⌘</kbd>n copy and <kbd>✱</kbd>n paste.
 - [Shifter](#Shifter)           : Turn some keys into common code symbols.
 - [Functional](#Functional)     : Screenshots. Fine-grained light/volume control. Take function keys' function back!
-
-![](static/img/feature.jpg)
-
-------------------------
-
 
 ## Install
 
 It only takes two steps to enable Capslock on your Mac: Download & Enable
 
-1. [Download](https://github.com/pqrs-org/Karabiner-Elements/releases/download/v14.2.0/Karabiner-Elements-14.2.0.dmg)
+Capslock serves via on macOS
+
+1. Download
 
    Download & Install [**Karabiner-Elements**](https://karabiner-elements.pqrs.org/).
 
-   Following the wizard and grant required permissions (Settings - Security - Privacy)
+   Follow the wizard and grant required permissions (Settings - Security - Privacy)
 
-2. [Enable](karabiner://karabiner/assets/complex_modifications/import?url=https://ke-complex-modifications.pqrs.org/json/caps_lock_enhancement.json)
+2. Enable
 
    Open this [link](karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json) with Safari. It will launch Karabiner-Elements and load configuration.
 
-   `karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json`
+   karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json
 
    > #### Alternative Links
    > * [Karabiner Gallery](karabiner://karabiner/assets/complex_modifications/import?url=https://ke-complex-modifications.pqrs.org/json/caps_lock_enhancement.json)：https://ke-complex-modifications.pqrs.org/json/caps_lock_enhancement.json
    > * [GitHub Repo](karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json)： https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json
    > * [Capslock Website](karabiner://karabiner/assets/complex_modifications/import?url=https://vonng.com/capslock.json)： https://vonng.com/capslock.json
-   > * Or download [**capslock.json**](mac_v3/capslock.json) to ` ~/.config/karabiner/assets/complex_modifications/` manually.
+   > * Or download [**capslock.json**](https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json) to ` ~/.config/karabiner/assets/complex_modifications/` manually.
 
    Click `Enable All` for `Capslock Enhancement` on pop-up dialog. It will affect immediately.
 
-   You can now try moving the cursor with ⇪ + h,j,k,l, And exploring more features below.
+   You can now try moving the cursor with ⇪ + h,j,k,l, and explore more features below.
 
-
-
-------------------------
 
 
 ## Usage
 
-Capslock works on **ANSI** keyboards and similar layouts. It literally remaps every [**keys**](#Symbols) on the keyboard. Including 10 categories.
+Capslock works on **ANSI** keyboards and similar layouts. It literally remaps every [**keys**](#symbols) on the keyboard. Including 10 categories.
 
-![](static/img/keyboard.jpg)
+![](/img/keyboard.jpg)
 
-> **[Control Planes](#Control-Planes)** are defined by combination of four extra left modifiers: <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>⇧</kbd>.This image shows the layout of control plane 0.
+> **[Control Planes](#control-planes)** are defined by combination of four extra left modifiers: <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>⇧</kbd>.This image shows the layout of control plane 0,1,2.
 
 |           Category            | Color  | Description                                                                                                          |
 |:-----------------------------:|:------:|:---------------------------------------------------------------------------------------------------------------------|
@@ -124,8 +118,8 @@ Capslock works on **ANSI** keyboards and similar layouts. It literally remaps ev
 * 9 control planes has already been allocated for navigators.
 * Hold additional <kbd>⌘</kbd> Command for **selection**.  (like holding <kbd>⇧</kbd>shift in normal), additional <kbd>⌥</kbd> Option for **word/para selection**.
 * Hold additional <kbd>⇧</kbd> Shift for **app/win/tab switching**.  Hold additional <kbd>⌃</kbd> Control for **desktop management**.
-* Hold the additional <kbd>⌥</kbd> Option for 🖱️ **mouse move**.  Add <kbd>⇧</kbd>shift to **⏫ accelerate**.  (<kbd>U</kbd>, <kbd>I</kbd>, <kbd>O</kbd>, <kbd>P</kbd> maps to mouse buttons) .
-* <kbd>⇧</kbd><kbd>⌥</kbd> turns navigator to **🖲️ mouse wheel**, and <kbd>⇧</kbd><kbd>⌘</kbd> is the ⏫ **accelerated** version .  `HJKL` for wheel, wihle `UIOP` for reversed wheel move.
+* Hold the additional <kbd>⌥</kbd> Option for 🖱️ **mouse move**.  Add <kbd>⇧</kbd>shift to **⏫ accelerate**.  (<kbd>U</kbd>, <kbd>I</kbd>, <kbd>O</kbd>, <kbd>P</kbd> maps to mouse buttons).
+* <kbd>⇧</kbd><kbd>⌥</kbd> turns navigator to **🖲️ mouse wheel**, and <kbd>⇧</kbd><kbd>⌘</kbd> is the ⏫ **accelerated** version .  `HJKL` for wheel, while `UIOP` for reversed wheel move.
 
 |   Feature    |   **Move**   |  **Select**  |       **WordSel**        |  **Window**  | **Desktop**  |     🖱️      |         **🖱️⏫**         |           🖲️            |           🖲️⏫           |
 |:------------:|:------------:|:------------:|:------------------------:|:------------:|:------------:|:------------:|:------------------------:|:------------------------:|:------------------------:|
@@ -154,7 +148,7 @@ Capslock works on **ANSI** keyboards and similar layouts. It literally remaps ev
 
 ### Deletion
 
-<kbd>N</kbd> <kbd>M</kbd> <kbd>,</kbd> <kbd>.</kbd> are used as **Deletor keys**. Right below the navigators for fast access (brown area).
+<kbd>N</kbd> <kbd>M</kbd> <kbd>,</kbd> <kbd>.</kbd>  are used as **Deletor keys**. Right below the navigators for fast access (brown area).
 
 |   Key\Mod    |   <kbd>✱</kbd>   |    <kbd>⌘</kbd>    |    <kbd>⌥</kbd>    |
 |:------------:|:----------------:|:------------------:|:------------------:|
@@ -167,8 +161,7 @@ Capslock works on **ANSI** keyboards and similar layouts. It literally remaps ev
 
 ### MouseKey
 
-
-* Turn **Keypad** into a fully funcional 🖱️ **mouse**.
+* Turn **Keypad** into a fully functional 🖱️ **mouse**.
 * Numbers maps to 8 direction 🖱️ **mouse move**. Hold <kbd>⌥</kbd> Option to ⏬ **slow down**, hold <kbd>⌘</kbd> Command to ⏫ **speed up**.
 * Hold additional <kbd>⇧</kbd> Shift turns to 🖲️ **wheel move**.  Extra <kbd>⌥</kbd> Option to ⏬ **slow down**, and extra <kbd>⌘</kbd> Command to ⏫ **speed up**.
 * First line maps to wheel move and <kbd>0</kbd>, <kbd>.</kbd>, <kbd>⌤</kbd>, <kbd>+</kbd>, <kbd>-</kbd> maps to five mouse buttons.
@@ -181,7 +174,6 @@ Capslock works on **ANSI** keyboards and similar layouts. It literally remaps ev
 |  <kbd>0</kbd> 🖱️L  |                    |  <kbd>.</kbd> 🖱️M  |  <kbd>⌤</kbd> 🖱️R  |
 
 ### Window Control
-
 
 * `Tab`, <kbd>Q</kbd>, <kbd>W</kbd>, <kbd>A</kbd>, <kbd>s</kbd> used as window control keys. Focusing on close/switch applications / windows / tabs / desktops. (azure area)
 * Windows management (resize, layout) leaves to external application such as [Moom](https://manytricks.com/moom/), [Magnet](https://apps.apple.com/us/app/magnet/id441258766), and [Slate](https://github.com/jigish/slate). Bind <kbd>⌃</kbd><kbd>⌥</kbd><kbd>⇧</kbd><kbd>⌘</kbd>A manually.
@@ -205,7 +197,7 @@ Capslock works on **ANSI** keyboards and similar layouts. It literally remaps ev
 |:------------:|:------------------:|:------------:|:------------:|
 | <kbd>E</kbd> |       Safari       |    Finder    |     Mail     |
 | <kbd>R</kbd> |       iTerm2       |   Preview    |   Terminal   |
-| <kbd>T</kbd> | Visual Studio Code |    Typora    |     Note     |
+| <kbd>T</kbd> | Visual Studio Code |  Typography  |     Note     |
 | <kbd>Y</kbd> |        Siri        |  Karabiner   | Amphetamine  |
 | <kbd>F</kbd> |      Alfred 4      |     Dash     |  Dictionary  |
 | <kbd>G</kbd> |   Intellij IDEA    |    Chrome    |   Calender   |
@@ -213,7 +205,7 @@ Capslock works on **ANSI** keyboards and similar layouts. It literally remaps ev
 
 ### Terminal Control
 
-<kbd>D</kbd>, <kbd>Z</kbd>, <kbd>X</kbd>, <kbd>C</kbd>, <kbd>V</kbd>, <kbd>B</kbd> are used as terminal control keys. Sending singals and IDE commands. (green area)
+<kbd>D</kbd>, <kbd>Z</kbd>, <kbd>X</kbd>, <kbd>C</kbd>, <kbd>V</kbd>, <kbd>B</kbd> are used as terminal control keys. Sending signals and IDE commands. (green area)
 
 |   Key\Mod    |                              <kbd>✱</kbd>                              |               <kbd>⌘</kbd>               |
 |:------------:|:----------------------------------------------------------------------:|:----------------------------------------:|
@@ -241,6 +233,7 @@ Number keys <kbd>1</kbd>, <kbd>2</kbd>, …, <kbd>9</kbd>, <kbd>0</kbd> are used
 
 * Trivial transformation for misc characters. (orange area)
 * Some special tricks for developers. Such as `;'` maps to `:=` or `!=` (<kbd>⌘</kbd>)
+
 
 |    Key\Mod    |       <kbd>✱</kbd>       | <kbd>⌘</kbd> | <kbd>⌥</kbd> |
 |:-------------:|:------------------------:|:------------:|:------------:|
@@ -327,17 +320,27 @@ Number keys <kbd>1</kbd>, <kbd>2</kbd>, …, <kbd>9</kbd>, <kbd>0</kbd> are used
 |   8   | <kbd>✱</kbd><kbd>⇧</kbd> |  10   | <kbd>✱</kbd><kbd>⌥</kbd><kbd>⇧</kbd> |  15   | <kbd>✱</kbd><kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>⇧</kbd> |
 |       |                          |  12   | <kbd>✱</kbd><kbd>⌃</kbd><kbd>⇧</kbd> |       |                                                              |
 
+![](/img/plane0.png)
+
+> Plane 0
+
+![](/img/plane1.png)
+
+> Plane 1
+
+![](/img/plane2.png)
+
+> Plane 2
+
 </details>
 
 
-------------------------
-
 ## Version
 
-* [**Capslock Mac V3**](mac_v3/): 2021.03 - now (The Latest version)
-* [**Capslock Mac V2**](mac_v2): 2017 - 2021
-* [**Capslock Mac V1**](mac_v1): 2015 - 2017
-* [**Capslock Win**](win): 2013 - 2015
+* [**Capslock Mac V3**](https://github.com/Vonng/Capslock/tree/master/mac_v3/): 2021.03 - now (The Latest version)
+* [**Capslock Mac V2**](https://github.com/Vonng/Capslock/tree/master/mac_v2): 2017 - 2021
+* [**Capslock Mac V1**](https://github.com/Vonng/Capslock/tree/master/mac_v1): 2015 - 2017
+* [**Capslock Win**](https://github.com/Vonng/Capslock/tree/master/win): 2013 - 2015
 
 |                                                  macOS Supported                                                   |       Win Supported        |
 |:------------------------------------------------------------------------------------------------------------------:|:--------------------------:|
@@ -353,8 +356,6 @@ macOS v3 is actively maintained, available on macOS 10.11 — 11.x. Yosemite (10
 Windows version is already archived. You can use [pre-compiled binary](https://github.com/Vonng/Capslock/tree/master/win) or install [**AutoHotKey**](https://www.autohotkey.com/) and load [capslock.ahk](https://github.com/Vonng/Capslock/blob/master/win/CapsLock.ahk) manually
 
 
-------------------------
-
 ## FAQ
 
 **Q: Why using <kbd>✱</kbd> as the symbol for Hyper?**
@@ -366,18 +367,18 @@ Windows version is already archived. You can use [pre-compiled binary](https://g
 
 **A**: The original v2 only use 1 ~ 3 control planes. While v3 uses up to 9 control planes. A large number of functions have been added to make the additional modifier <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>⇧</kbd> functioning in a reasonable way.
 
-**Q: Are there any incompatible changes in V3 compared to V2 ?**
+**Q: Is there any incompatible changes in V3 compared to V2 ?**
 
-**A**: There are three minor **incompatible** changes:
+**A**:  There are three minor **incompatible** changes:
 
-* F13/F4 from music prev/next  to screenshot;
+* F13/F4 from music prev/next to screenshot;
 
 * Number keys are used as clipboard instead of shifter
 * <kbd>⌘</kbd><kbd>D</kbd> now perform **define**(force touch) instead of opening dictionary app.
 
 **Q: Why is there no Linux OS support?**
 
-**A**: I'm using Linux through macOS terminal. It actually feels much better than raw Linux 😆. This feature can be achieved via `xmodmap`, contributions are welcome!
+**A**: I'm using Linux through macOS terminal. It actually feels much better than raw Linux 😆. This feature can be achieved via `xmodmap`, contribution is welcome!
 
 **Q: Why is there an older version in macOS?**
 
@@ -390,20 +391,20 @@ You can edit the more human-readable format `mac_v3/capslock.yml` then compile i
 
 **Q: Is this original?**
 
-**A**: I'm the first one to make a capslock overhaul schema as far as I know. The original win AHK version was wrote in 2013.  The first mac version was wrote in 2015. It is the first capslock emulation schema in karabiner's [gallery](https://ke-complex-modifications.pqrs.org/#caps_lock_enhancement).
+**A**: I'm the first one to make a capslock overhaul schema as far as I know. The original win AHK version was written in 2013.  The first macOS version was written in 2015. It is the first capslock emulation schema in karabiner's [gallery](https://ke-complex-modifications.pqrs.org/#caps_lock_enhancement).
 
 
 ------------------------
 
-## Feedbacks
+## User Feedback
 
-![](static/img/feedback.jpg)
+![](/img/feedback.jpg)
 
 
 ------------------------
 
 ## About
 
-Author： [Vonng](https://vonng.com/en) ([rh@vonng.com](mailto:rh@vonng.com))
+Author: [Vonng](https://vonng.com/en) ([rh@vonng.com](mailto:rh@vonng.com))
 
-License: [Apache 2.0 License](LICENSE)
+License: [Apache 2.0 License](https://github.com/Vonng/Capslock/blob/master/LICENSE)

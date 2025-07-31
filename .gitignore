@@ -77,3 +77,13 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+
+.code/
+__pycache__/
+.DS_Store
+tmp/
+output/
+public/
+.hugo_build.lock
+.claude
+CLAUDE.md
