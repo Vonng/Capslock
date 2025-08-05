@@ -6,8 +6,6 @@ cascade:
 breadcrumbs: false
 ---
 
-
-
 将 ⇪CapsLock（大写锁定键）改造为一个强力的**功能修饰键（✱ Hyper ）**，奇迹般地提高操作效率与生产力。**让 Capslock 再次伟大！**
 
 {{% steps %}}
@@ -426,3 +424,5 @@ V3在整体上采用前向兼容策略，但确实有三个地方进行了不兼
 
 协议：[Apache 2.0 License](https://github.com/Vonng/Capslock/blob/master/LICENSE)
 
+
+![featured.jpg](/img/featured.jpg)

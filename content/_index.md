@@ -7,7 +7,6 @@ breadcrumbs: false
 
 *Transform <kbd>⇪</kbd>CapsLock into a powerful **modifier** **<kbd>✱</kbd> Hyper** that miraculously increases your work productivity!* **Make CapsLock Great Again!**
 
-
 {{% steps %}}
 
 ### Download & Install
@@ -408,3 +407,6 @@ You can edit the more human-readable format `mac_v3/capslock.yml` then compile i
 Author: [Vonng](https://vonng.com/en) ([rh@vonng.com](mailto:rh@vonng.com))
 
 License: [Apache 2.0 License](https://github.com/Vonng/Capslock/blob/master/LICENSE)
+
+
+![featured.jpg](/img/featured.jpg)
