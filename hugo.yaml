@@ -29,6 +29,16 @@ languages:
     weight: 1
     title: Capslock Enhancement
     menu:
+      main:
+        - name: GitHub
+          weight: 1
+          url: "https://github.com/Vonng/Capslock"
+          params:
+            icon: github
+        - name: Search
+          weight: 2
+          params:
+            type: search
       sidebar:
         - identifier: simplified-chinese
           name: "简体中文 ↗"
@@ -52,7 +62,7 @@ languages:
           weight: 14
         - identifier: vonng-blog
           name: "Ruohang Feng's Blog ↗"
-          url: "https://vonng.com/en"
+          url: "https://blog.vonng.com/"
           weight: 15
         - identifier: pigsty
           name: "Pigsty Documentation ↗"
@@ -68,11 +78,17 @@ languages:
     languageCode: zh
     weight: 2
     title: Capslock 强化改造
-    params:
-      hextra:
-        footer:
-          copyright: '<a class="hx:flex hx:text-sm hx:items-center hx:gap-1 hx:text-current" target="_blank" rel="noopener noreferrer" title="Vonng" href="https://vonng.com"><span>© 2025 冯若航 版权所有</span></a>'
     menu:
+      main:
+        - name: GitHub
+          weight: 1
+          url: "https://github.com/Vonng/Capslock"
+          params:
+            icon: github
+        - name: Search
+          weight: 2
+          params:
+            type: search
       sidebar:
         - identifier: english
           name: "English ↗"
@@ -96,7 +112,7 @@ languages:
           weight: 14
         - identifier: vonng-blog
           name: "博客：老冯云数 ↗"
-          url: "https://vonng.com"
+          url: "https://blog.vonng.com"
           weight: 15
         - identifier: pigsty
           name: "Pigsty 文档 ↗"
@@ -122,27 +138,9 @@ markup:
           inline: [['\(', '\)']]
         enable: true
 
-menu:
-  main:
-    - name: Search
-      weight: 1
-      params:
-        type: search
-    - name: GitHub
-      weight: 2
-      url: "https://github.com/Vonng/Capslock"
-      params:
-        icon: github
-
-
 
 params:
   description: Tun Capslock into a hyper modifier key for your keyboard.
-  
-  hextra:
-    footer:
-      copyright: '<a class="hx:flex hx:text-sm hx:items-center hx:gap-1 hx:text-current" target="_blank" rel="noopener noreferrer" title="Vonng" href="https://vonng.com/en"><span>© 2025 Ruohang Feng</span></a>'
-
   navbar:
     displayTitle: true
     displayLogo: true
@@ -161,7 +159,7 @@ params:
     displayToggle: true
 
   footer:
-    enable: true
+    enable: false
     displayCopyright: false
     displayPoweredBy: false
     width: normal

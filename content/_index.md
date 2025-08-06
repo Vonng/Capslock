@@ -408,5 +408,4 @@ Author: [Vonng](https://vonng.com/en) ([rh@vonng.com](mailto:rh@vonng.com))
 
 License: [Apache 2.0 License](https://github.com/Vonng/Capslock/blob/master/LICENSE)
 
-
 ![featured.jpg](/img/featured.jpg)
