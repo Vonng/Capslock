@@ -11,11 +11,11 @@ breadcrumbs: false
 
 ### Download & Install
 
-Download and install the [Karabiner-Elements](https://github.com/pqrs-org/Karabiner-Elements/releases/download/v15.5.0/Karabiner-Elements-15.5.0.dmg) (the latest version: 15.5.0)
+Download [Karabiner-Elements](https://karabiner-elements.pqrs.org/). This guide was verified with version 16.1.0 in August 2026; use the official site for the current release and support matrix.
 
 ### Enable Configuration
 
-Enable CapsLock Enhancement Config by [Clicking This](karabiner://karabiner/assets/complex_modifications/import?url=https://ke-complex-modifications.pqrs.org/json/caps_lock_enhancement.json)
+Import the current CapsLock Enhancement configuration by [clicking here](karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/main/mac_v3/capslock.json).
 
 {{% /steps %}}
 
@@ -31,7 +31,7 @@ Enable CapsLock Enhancement Config by [Clicking This](karabiner://karabiner/asse
 * **Speed-Up**: Optimized for developers, high-frequency move **stay in hot zone**.
 * **Extensible**: Work with existing modifiers, which introduce **16 extra control planes**.
 * **MouseKey**: Manipulate mouse cursor and wheels with keyboard
-* **Cross-Platform**: macOS and Windows. Light-Weight and portable
+* **Lightweight**: The actively maintained V3 configuration targets macOS; the historical Windows version remains archived.
 
 
 
@@ -42,38 +42,34 @@ Enable CapsLock Enhancement Config by [Clicking This](karabiner://karabiner/asse
 - [MouseKey](#MouseKey)         : Maps keypad to fully functional mouse
 - [Window](#window-control)     : Close app/win/tab, Switch app/win/tab/desktop, integration with win-manager app such as Moom, Slate, Magnet
 - [Application](#app-shortcuts) : Shortcuts for launching or switching frequently used applications
-- [Terminal](#terminal-control) : Sending high-freq signals (Ctrl-Z, Ctrl-D, Ctrl-C) and vim/tmux prefix meta key via <kbd>✱</kbd>
-- [Clipboard](#Clipboard)       : Turn numkeys into 10 different text clipboards. <kbd>✱</kbd><kbd>⌘</kbd>n copy and <kbd>✱</kbd>n paste.
+- [Terminal](#terminal-control) : Send terminal/IDE commands, launch Codex or Claude, and use Vim/Tmux prefix keys via <kbd>✱</kbd>.
+- [Clipboard](#Clipboard)       : Turn number keys 6–0 into five text clipboards. <kbd>✱</kbd><kbd>⌘</kbd>n copies and <kbd>✱</kbd>n pastes.
 - [Shifter](#Shifter)           : Turn some keys into common code symbols.
-- [Functional](#Functional)     : Screenshots. Fine-grained light/volume control. Take function keys' function back!
+- [Functional](#Functional)     : Screenshots, standard function keys, and fine-grained brightness, keyboard-light, and volume control.
 
 ## Install
 
-It only takes two steps to enable Capslock on your Mac: Download & Enable
+This guide was verified with Karabiner-Elements 16.1.0 in August 2026. The current release supports macOS 13–27 on Intel and Apple silicon.
 
-Capslock serves via on macOS
+1. Install Karabiner-Elements
 
-1. Download
+   Download [Karabiner-Elements](https://karabiner-elements.pqrs.org/), open the DMG, and run `Karabiner-Elements.pkg`.
 
-   Download & Install [**Karabiner-Elements**](https://karabiner-elements.pqrs.org/).
+   Open Karabiner-Elements Settings and follow its System Settings prompts. Allow the privileged and non-privileged background services, Accessibility, Input Monitoring, and the Driver Extension. In **Virtual Keyboard**, select the layout matching your physical keyboard. See the [official installation guide](https://karabiner-elements.pqrs.org/docs/getting-started/installation/).
 
-   Follow the wizard and grant required permissions (Settings - Security - Privacy)
+2. Import and enable the configuration
 
-2. Enable
+   Open this [import link](karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/main/mac_v3/capslock.json), or copy it into your browser:
 
-   Open this [link](karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json) with Safari. It will launch Karabiner-Elements and load configuration.
+   ```text
+   karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/main/mac_v3/capslock.json
+   ```
 
-   karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json
+   In Karabiner-Elements Settings, use **Complex Modifications → Add predefined rule → Import more rules from the internet**. Complete **Import/Allow**, enable the rules you need, and verify the result with Karabiner-EventViewer. See the [official complex-modifications guide](https://karabiner-elements.pqrs.org/docs/manual/configuration/configure-complex-modifications/).
 
-   > #### Alternative Links
-   > * [Karabiner Gallery](karabiner://karabiner/assets/complex_modifications/import?url=https://ke-complex-modifications.pqrs.org/json/caps_lock_enhancement.json)：https://ke-complex-modifications.pqrs.org/json/caps_lock_enhancement.json
-   > * [GitHub Repo](karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json)： https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json
-   > * [Capslock Website](karabiner://karabiner/assets/complex_modifications/import?url=https://vonng.com/capslock.json)： https://vonng.com/capslock.json
-   > * Or download [**capslock.json**](https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json) to ` ~/.config/karabiner/assets/complex_modifications/` manually.
+   For manual installation, download [**capslock.json**](https://raw.githubusercontent.com/Vonng/Capslock/main/mac_v3/capslock.json) into `~/.config/karabiner/assets/complex_modifications/`, then choose **Add predefined rule**.
 
-   Click `Enable All` for `Capslock Enhancement` on pop-up dialog. It will affect immediately.
-
-   You can now try moving the cursor with ⇪ + h,j,k,l, and explore more features below.
+   You can now try moving the cursor with ⇪ + h,j,k,l and explore the other features below.
 
 
 
@@ -83,7 +79,7 @@ Capslock works on **ANSI** keyboards and similar layouts. It literally remaps ev
 
 ![](/img/keyboard.jpg)
 
-> **[Control Planes](#control-planes)** are defined by combination of four extra left modifiers: <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>⇧</kbd>.This image shows the layout of control plane 0,1,2.
+> **[Control Planes](#control-planes)** are defined by combinations of four extra left modifiers: <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>⇧</kbd>. This image shows control plane 0.
 
 |           Category            | Color  | Description                                                                                                          |
 |:-----------------------------:|:------:|:---------------------------------------------------------------------------------------------------------------------|
@@ -91,12 +87,12 @@ Capslock works on **ANSI** keyboards and similar layouts. It literally remaps ev
 |   [Navigation](#Navigation)   |  Pink  | Vim style navigation. Cursor move, text selection, switch desktop/window/tab, mouse move/wheel,etc...                |
 |     [Deletion](#Deletion)     | Brown  | Maps `BNM,` to deletion operation to perform fast char/word/line deletion without hand move.                         |
 |     [MouseKey](#MouseKey)     | Keypad | Maps keypad to fully functional mouse                                                                                |
-|   [Window](#window-control)   | Azure  | Close app/win/tab, Switch app/win/tab/desktop, intergration with win-manager app such as Moom,Slate,Magnet           |
+|   [Window](#window-control)   | Azure  | Close or switch apps, windows, tabs, and desktops; integrate with an external window manager.                       |
 | [Application](#app-shortcuts) | Yellow | Shortcuts for launching or switching frequently used applications                                                    |
-| [Terminal](#terminal-control) | Green  | Sending high-freq signals (Ctrl-Z, Ctrl-D, Ctrl-C) and vim/tmux prefix meta key via  <kbd>✱</kbd>                    |
-|    [Clipboard](#Clipboard)    | Purple | Turn numkeys into 10 different text clipboard. <kbd>✱</kbd><kbd>⌘</kbd>n copy and <kbd>✱</kbd>n paste.               |
+| [Terminal](#terminal-control) | Green  | Send terminal/IDE commands, launch Codex or Claude, and use Vim/Tmux prefix keys via <kbd>✱</kbd>.                  |
+|    [Clipboard](#Clipboard)    | Purple | Turn number keys 6–0 into five text clipboards. <kbd>✱</kbd><kbd>⌘</kbd>n copies and <kbd>✱</kbd>n pastes.          |
 |      [Shifter](#Shifter)      | Orange | Turn some keys into common code symbols.                                                                             |
-|   [Functional](#Functional)   |  Cyan  | Screenshtots. Fine-grained light/volume control. Take function keys' function back!                                  |
+|   [Functional](#Functional)   |  Cyan  | Screenshots, standard function keys, and fine-grained light/volume control.                                          |
 
 ### Basic
 
@@ -130,7 +126,7 @@ Capslock works on **ANSI** keyboards and similar layouts. It literally remaps ev
 | <kbd>U</kbd> |     PgUp     |  prev page   |        prev page         |    zoom-     |  fullscreen  |     🖱️L     |           🖱️L           |            ➡️            |           ➡️⏫            |
 | <kbd>I</kbd> |     Home     |  line head   |         end2head         |   prev win   |     hide     |     🖱️R     |           🖱️R           |            ⬆️            |           ⬆️⏫            |
 | <kbd>O</kbd> |     End      |   line end   |         head2end         |   next win   |   hide all   |     🖱️B     |           🖱️B           |            ⬇️            |           ⬇️⏫            |
-| <kbd>P</kbd> |     PgDn     |  next page   |        next page         |    zoom+     |  Launchpad   |     🖱️F     |           🖱️F           |            ⬅️            |           ⬅️⏫            |
+| <kbd>P</kbd> |     PgDn     |  next page   |        next page         |    zoom+     |  Spotlight   |     🖱️F     |           🖱️F           |            ⬅️            |           ⬅️⏫            |
 
 **Arrow Navigation**
 
@@ -175,7 +171,7 @@ Capslock works on **ANSI** keyboards and similar layouts. It literally remaps ev
 ### Window Control
 
 * `Tab`, <kbd>Q</kbd>, <kbd>W</kbd>, <kbd>A</kbd>, <kbd>s</kbd> used as window control keys. Focusing on close/switch applications / windows / tabs / desktops. (azure area)
-* Windows management (resize, layout) leaves to external application such as [Moom](https://manytricks.com/moom/), [Magnet](https://apps.apple.com/us/app/magnet/id441258766), and [Slate](https://github.com/jigish/slate). Bind <kbd>⌃</kbd><kbd>⌥</kbd><kbd>⇧</kbd><kbd>⌘</kbd>A manually.
+* Window layout is delegated to an external application such as [Moom](https://manytricks.com/moom/) or [Magnet](https://magnet.crowdcafe.com/). Bind <kbd>⌃</kbd><kbd>⌥</kbd><kbd>⇧</kbd><kbd>⌘</kbd>A manually. [Slate](https://github.com/jigish/slate) is retained only as a legacy example.
 
 
 |   Key\Mod    | <kbd>✱</kbd> | <kbd>⌘</kbd>  |  <kbd>⌥</kbd>  | <kbd>⌃</kbd>  | <kbd>⇧</kbd> |
@@ -183,7 +179,7 @@ Capslock works on **ANSI** keyboards and similar layouts. It literally remaps ev
 | <kbd>⇥</kbd> |   next app   |   prev app    | switch desktop |               |  switch tab  |
 | <kbd>Q</kbd> |  close app   |   close app   |                |  Lock Screen  |    Logout    |
 | <kbd>W</kbd> |  close tab   | close all win |                | Display Sleep |    Sleep     |
-| <kbd>A</kbd> | **win app**  |  expose all   |  show desktop  |   LaunchPad   |              |
+| <kbd>A</kbd> | **win app**  |  expose all   |  show desktop  |   Spotlight   |              |
 | <kbd>S</kbd> |   next tab   |   prev tab    |    next win    |   prev win    |              |
 
 
@@ -196,36 +192,36 @@ Capslock works on **ANSI** keyboards and similar layouts. It literally remaps ev
 |:------------:|:------------------:|:------------:|:------------:|
 | <kbd>E</kbd> |       Safari       |    Finder    |     Mail     |
 | <kbd>R</kbd> |       iTerm2       |   Preview    |   Terminal   |
-| <kbd>T</kbd> | Visual Studio Code |  Typography  |     Note     |
-| <kbd>Y</kbd> |        Siri        |  Karabiner   | Amphetamine  |
-| <kbd>F</kbd> |      Alfred 4      |     Dash     |  Dictionary  |
-| <kbd>G</kbd> |   Intellij IDEA    |    Chrome    |   Calender   |
+| <kbd>T</kbd> | Visual Studio Code |    Typora    |    Notes     |
+| <kbd>Y</kbd> |        Siri        | Karabiner-Elements | Amphetamine  |
+| <kbd>F</kbd> |      Alfred 5      |     Dash     |  Dictionary  |
+| <kbd>G</kbd> |   IntelliJ IDEA    |    Chrome    |   Calendar   |
 
 
 ### Terminal Control
 
-<kbd>D</kbd>, <kbd>Z</kbd>, <kbd>X</kbd>, <kbd>C</kbd>, <kbd>V</kbd>, <kbd>B</kbd> are used as terminal control keys. Sending signals and IDE commands. (green area)
+<kbd>D</kbd>, <kbd>Z</kbd>, <kbd>X</kbd>, <kbd>C</kbd>, <kbd>V</kbd>, <kbd>B</kbd> provide terminal and IDE commands, launch Codex or Claude, and expose Vim/Tmux prefix keys. (green area)
 
 |   Key\Mod    |                              <kbd>✱</kbd>                              |               <kbd>⌘</kbd>               |
 |:------------:|:----------------------------------------------------------------------:|:----------------------------------------:|
 | <kbd>D</kbd> |               <kbd>⌃</kbd><kbd>D</kbd> Ctrl+D (Send EOF)               |           Define (Force touch)           |
 | <kbd>Z</kbd> |               <kbd>⌃</kbd><kbd>Z</kbd> Ctrl+Z  (SIGTSTP)               |      <kbd>F5</kbd> (VS Code Debug)       |
 | <kbd>X</kbd> |               <kbd>⌃</kbd><kbd>R</kbd> Ctrl+R (IDE Run)                | <kbd>⌃</kbd><kbd>F5</kbd> (VS Code Run)  |
-| <kbd>C</kbd> |               <kbd>⌃</kbd><kbd>C</kbd>  Ctrl+C (SIGINT)                | <kbd>⇧</kbd><kbd>>F5</kbd>（VS Code Stop） |
+| <kbd>C</kbd> |                              Open Codex                               |                  Open Claude               |
 | <kbd>V</kbd> |              <kbd>⌃</kbd><kbd>V</kbd>Ctrl+V (Vim Prefix)               |                                          |
-| <kbd>B</kbd> | <kbd>⌃</kbd><kbd>B</kbd>Ctrl+B ([Tmux](http://tmux.github.io)  Prefix) |                                          |
+| <kbd>B</kbd> | <kbd>⌃</kbd><kbd>B</kbd>Ctrl+B ([Tmux](https://github.com/tmux/tmux/wiki) Prefix) |                                          |
 
 
 ### Clipboard
 
-Number keys <kbd>1</kbd>, <kbd>2</kbd>, …, <kbd>9</kbd>, <kbd>0</kbd> are used as **(text) clipboard**. Hold <kbd>⌘</kbd> to **copy**, and press to **paste**. (purple area)
+Number keys <kbd>6</kbd>, <kbd>7</kbd>, <kbd>8</kbd>, <kbd>9</kbd>, <kbd>0</kbd> provide five **text clipboards**. Hold <kbd>⌘</kbd> to **copy**, and press a number to **paste**. (purple area)
 
 |   Key\Mod    |   <kbd>✱</kbd>    |  <kbd>⌘</kbd>   |
 |:------------:|:-----------------:|:---------------:|
-| <kbd>1</kbd> | Paste from clip 1 | Copy to clip 1  |
-| <kbd>2</kbd> | Paste from clip 2 | Copy to clip 2  |
+| <kbd>6</kbd> | Paste from clip 6 | Copy to clip 6  |
+| <kbd>7</kbd> | Paste from clip 7 | Copy to clip 7  |
 |      ……      |        ……         |       ……        |
-| <kbd>0</kbd> | Paste from clip 0 | Copy to clip 10 |
+| <kbd>0</kbd> | Paste from clip 0 | Copy to clip 0  |
 
 
 ### Shifter
@@ -248,13 +244,15 @@ Number keys <kbd>1</kbd>, <kbd>2</kbd>, …, <kbd>9</kbd>, <kbd>0</kbd> are used
 
 ### Functional
 
-- Use F1,…F12 as standard functional keys, while hold **<kbd>✱</kbd> Hyper** to turn them back. (cyan area)
-- <kbd>⌘</kbd>Command + F1 / F2 / F3 is used as desktop switcher. Enable shortcuts in system preference first:
+- Use F1,…F12 as standard function keys, while holding **<kbd>✱</kbd> Hyper** sends their media/system functions. (cyan area)
+- <kbd>⌘</kbd>Command + F1 / F2 / F3 switches desktops. Enable the shortcuts first:
 
-  **Preference** → **Keyboard** → **Shortcuts** → **MissionControl** → Switch to Desktop 1/2/3
-- If you are using RMBP with Bar, consider changing your bar back to function keys with:
+  **System Settings** → **Keyboard** → **Keyboard Shortcuts…** → **Mission Control** → Switch to Desktop 1/2/3
+- Karabiner-Elements 15.1 and later use the macOS function-key setting. Configure it in:
 
-  **Karabiner-Elements** → **Function Keys** → **Use all F1, F2, etc. keys as standard function keys**
+  **System Settings** → **Keyboard** → **Keyboard Shortcuts…** → **Function Keys** → **Use F1, F2, etc. keys as standard function keys**
+
+  Touch Bar instructions apply only to legacy Touch Bar Macs; see the [official troubleshooting note](https://karabiner-elements.pqrs.org/docs/help/troubleshooting/touch-bar-function-keys/).
 
 |       Key\Mod       |                             <kbd>✱</kbd>                              |             <kbd>⌘</kbd>             | Comment                                         |
 |:-------------------:|:---------------------------------------------------------------------:|:------------------------------------:|-------------------------------------------------|
@@ -262,7 +260,7 @@ Number keys <kbd>1</kbd>, <kbd>2</kbd>, …, <kbd>9</kbd>, <kbd>0</kbd> are used
 |    <kbd>F1</kbd>    | <kbd>display_brightness_decrement</kbd>  \|  <kbd>⌃</kbd><kbd>1</kbd> |       <kbd>⌃</kbd><kbd>1</kbd>       | Brightness Down / Desktop 1                     |
 |    <kbd>F2</kbd>    |  <kbd>display_brightness_increment</kbd> \| <kbd>⌃</kbd><kbd>2</kbd>  |       <kbd>⌃</kbd><kbd>2</kbd>       | Brightness Up / Desktop 2                       |
 |    <kbd>F3</kbd>    |        <kbd>⌃</kbd><kbd>↑</kbd>  \|  <kbd>⌃</kbd><kbd>3</kbd>         |       <kbd>⌃</kbd><kbd>3</kbd>       | Expose All / Desktop 3                          |
-|    <kbd>F4</kbd>    |                         <kbd>Launchpad</kbd>                          |                                      | Launchpad                                       |
+|    <kbd>F4</kbd>    |                         <kbd>Spotlight</kbd>                          |                                      | Spotlight                                       |
 |    <kbd>F5</kbd>    |                   <kbd>illumination_decrement</kbd>                   |                                      | Keyboard Light Down                             |
 |    <kbd>F6</kbd>    |                   <kbd>illumination_increment</kbd>                   |                                      | Keyboard Light Up                               |
 |    <kbd>F7</kbd>    |                           <kbd>rewind</kbd>                           |                                      | Music Prev                                      |
@@ -271,8 +269,8 @@ Number keys <kbd>1</kbd>, <kbd>2</kbd>, …, <kbd>9</kbd>, <kbd>0</kbd> are used
 |   <kbd>F10</kbd>    |                            <kbd>mute</kbd>                            |                                      | Mute                                            |
 |   <kbd>F11</kbd>    |                      <kbd>volume_decrement</kbd>                      |                                      | Volume Down                                     |
 |   <kbd>F12</kbd>    |                      <kbd>volume_increment</kbd>                      |                                      | Volume Up                                       |
-|   <kbd>F13</kbd>    |           <kbd>⌃</kbd><kbd>⇧</kbd><kbd>⌘</kbd><kbd>3</kbd>            | <kbd>⇧</kbd><kbd>⌘</kbd><kbd>3</kbd> | Full Screentshot (<kbd>⌘</kbd> to file)         |
-|   <kbd>F14</kbd>    |                 <kbd>⇧</kbd><kbd>⌘</kbd><kbd>5</kbd>                  | <kbd>⇧</kbd><kbd>⌘</kbd><kbd>6</kbd> | Screenshot menu (<kbd>⌘</kbd> touchbar snap)    |
+|   <kbd>F13</kbd>    |           <kbd>⌃</kbd><kbd>⇧</kbd><kbd>⌘</kbd><kbd>3</kbd>            | <kbd>⇧</kbd><kbd>⌘</kbd><kbd>3</kbd> | Full screenshot (<kbd>⌘</kbd> to file)          |
+|   <kbd>F14</kbd>    |                 <kbd>⇧</kbd><kbd>⌘</kbd><kbd>5</kbd>                  | <kbd>⇧</kbd><kbd>⌘</kbd><kbd>6</kbd> | Screenshot menu (<kbd>⌘</kbd>: legacy Touch Bar screenshot) |
 |   <kbd>F15</kbd>    |                       <kbd>play_or_pause</kbd>                        |                                      | Play / Pause                                    |
 |  <kbd>Insert</kbd>  |   <kbd>⇧</kbd><kbd>⌥</kbd> <kbd>display_brightness_increment</kbd>    |                                      | Fine-Grained Brightness Up                      |
 | Delete <kbd>⌦</kbd> |   <kbd>⇧</kbd><kbd>⌥</kbd> <kbd>display_brightness_decrement</kbd>    |                                      | Fine-Grained Brightness Down                    |
@@ -336,23 +334,14 @@ Number keys <kbd>1</kbd>, <kbd>2</kbd>, …, <kbd>9</kbd>, <kbd>0</kbd> are used
 
 ## Version
 
-* [**Capslock Mac V3**](https://github.com/Vonng/Capslock/tree/master/mac_v3/): 2021.03 - now (The Latest version)
-* [**Capslock Mac V2**](https://github.com/Vonng/Capslock/tree/master/mac_v2): 2017 - 2021
-* [**Capslock Mac V1**](https://github.com/Vonng/Capslock/tree/master/mac_v1): 2015 - 2017
-* [**Capslock Win**](https://github.com/Vonng/Capslock/tree/master/win): 2013 - 2015
+* [**Capslock Mac V3**](https://github.com/Vonng/Capslock/tree/main/mac_v3/): 2021.03 - present (actively maintained)
+* [**Capslock Mac V2**](https://github.com/Vonng/Capslock/tree/main/mac_v2): 2017 - 2021
+* [**Capslock Mac V1**](https://github.com/Vonng/Capslock/tree/main/mac_v1): 2015 - 2017
+* [**Capslock Win**](https://github.com/Vonng/Capslock/tree/main/win): 2013 - 2015 (archived)
 
-|                                                  macOS Supported                                                   |       Win Supported        |
-|:------------------------------------------------------------------------------------------------------------------:|:--------------------------:|
-|                                               macOS Big Sur (11.0 )                                                |         Windows 10         |
-|                                               macOS Catalina (10.15)                                               |         Windows 8          |
-|                                             macOS High Sierra (10.13)                                              |         Windows 7          |
-|                                                macOS Sierra (10.12)                                                |       Windows Vista        |
-|                                              macOS EI Capitan (10.11)                                              |         Windows XP         |
-| macOS Yosemite (10.10) or lower<br /> (via [Capslock Mac v1](https://github.com/Vonng/Capslock/tree/master/mac_v1) | (via [Capslock Win](win/)) |
+The current Mac V3 documentation is verified against Karabiner-Elements 16.1.0. Its official support matrix covers macOS 13 Ventura through macOS 27 Golden Gate on Intel and Apple silicon. Older macOS releases require an archived Karabiner-Elements release and are not covered by the current V3 installation guide.
 
-macOS v3 is actively maintained, available on macOS 10.11 — 11.x. Yosemite (10.10) or lower are supported via [Capslock Mac v1](https://github.com/Vonng/Capslock/tree/master/mac_v1)
-
-Windows version is already archived. You can use [pre-compiled binary](https://github.com/Vonng/Capslock/tree/master/win) or install [**AutoHotKey**](https://www.autohotkey.com/) and load [capslock.ahk](https://github.com/Vonng/Capslock/blob/master/win/CapsLock.ahk) manually
+The Windows version is archived. Its [pre-compiled binary](https://github.com/Vonng/Capslock/tree/main/win) and [AutoHotkey source](https://github.com/Vonng/Capslock/blob/main/win/CapsLock.ahk) remain available for historical use, but are not actively tested or maintained.
 
 
 ## FAQ
@@ -364,16 +353,19 @@ Windows version is already archived. You can use [pre-compiled binary](https://g
 
 **Q: What's new in v3?**
 
-**A**: The original v2 only use 1 ~ 3 control planes. While v3 uses up to 9 control planes. A large number of functions have been added to make the additional modifier <kbd>⌘</kbd><kbd>⌥</kbd><kbd>⌃</kbd><kbd>⇧</kbd> functioning in a reasonable way.
+**A**: V2 used only a few control planes. V3 can combine Hyper with the four left modifiers to expose up to 16 planes and organize many more functions consistently.
 
-**Q: Is there any incompatible changes in V3 compared to V2 ?**
+V3.1 updates the application shortcuts for current macOS: <kbd>C</kbd> launches Codex, <kbd>⌘</kbd><kbd>C</kbd> launches Claude, number keys 6–0 provide five clipboards, Spotlight replaces Launchpad, and Alfred 5 replaces Alfred 4.
 
-**A**:  There are three minor **incompatible** changes:
+**Q: Which compatibility changes should I know about?**
 
-* F13/F4 from music prev/next to screenshot;
+**A**: The current V3.1 layout intentionally changes several shortcuts from older releases:
 
-* Number keys are used as clipboard instead of shifter
-* <kbd>⌘</kbd><kbd>D</kbd> now perform **define**(force touch) instead of opening dictionary app.
+* F13/F14 provide screenshot controls instead of previous/next track.
+* Number keys 6–0 provide five text clipboards; 1–5 are no longer clipboard slots.
+* <kbd>C</kbd> and <kbd>⌘</kbd><kbd>C</kbd> launch Codex and Claude.
+* Spotlight and Alfred 5 replace Launchpad and Alfred 4.
+* <kbd>⌘</kbd><kbd>D</kbd> performs **Define** instead of opening Dictionary.
 
 **Q: Why is there no Linux OS support?**
 
@@ -381,16 +373,15 @@ Windows version is already archived. You can use [pre-compiled binary](https://g
 
 **Q: Why is there an older version in macOS?**
 
-**A**: There was an older version of Karabiner that used XML config.  Apple modified its kernel architecture in macOS Sierra (10.12) and many programs had to be overhauled. So then there was a new version of Karabiner, the Karabiner-Elements, which is still in use today.
+**A**: Legacy Karabiner used XML configuration and was replaced by Karabiner-Elements for macOS Sierra and later. The repository retains those older configurations for historical systems.
 
 **Q: How can I customize it to my needs?**
 
-**A**: Just fork this repo and make modification to `mac_v3/capslock.json` according to [documentation](https://karabiner-elements.pqrs.org/docs/)
-You can edit the more human-readable format `mac_v3/capslock.yml` then compile it into `capslock.json` format with `make compile`.
+**A**: Fork this repository and edit the human-readable `mac_v3/capslock.yml` according to the [Karabiner-Elements documentation](https://karabiner-elements.pqrs.org/docs/), then regenerate `capslock.json` with `make -C mac_v3 compile` (requires [yq v4](https://github.com/mikefarah/yq)).
 
 **Q: Is this original?**
 
-**A**: I'm the first one to make a capslock overhaul schema as far as I know. The original win AHK version was written in 2013.  The first macOS version was written in 2015. It is the first capslock emulation schema in karabiner's [gallery](https://ke-complex-modifications.pqrs.org/#caps_lock_enhancement).
+**A**: This project started with an AutoHotkey version in 2013 and added its first Mac version in 2015. The current configuration is listed in the Karabiner-Elements [complex-modifications gallery](https://ke-complex-modifications.pqrs.org/#caps_lock_enhancement).
 
 
 ------------------------
@@ -406,6 +397,6 @@ You can edit the more human-readable format `mac_v3/capslock.yml` then compile i
 
 Author: [Vonng](https://vonng.com/en) ([rh@vonng.com](mailto:rh@vonng.com))
 
-License: [Apache 2.0 License](https://github.com/Vonng/Capslock/blob/master/LICENSE)
+License: [Apache 2.0 License](https://github.com/Vonng/Capslock/blob/main/LICENSE)
 
 ![featured.jpg](/img/featured.jpg)

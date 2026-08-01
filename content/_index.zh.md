@@ -12,16 +12,16 @@ breadcrumbs: false
 
 ### 下载安装
 
-下载并安装 [Karabiner-Elements](https://github.com/pqrs-org/Karabiner-Elements/releases/download/v15.5.0/Karabiner-Elements-15.5.0.dmg) (最新版本 15.5.0)
+从[官方网站](https://karabiner-elements.pqrs.org/)下载 Karabiner-Elements。本文档于 2026 年 8 月使用 16.1.0 验证；最新版及系统支持范围请以官网为准。
 
 ### 启用配置
 
-启用 CapsLock Enhancement 配置：[点我启用](karabiner://karabiner/assets/complex_modifications/import?url=https://ke-complex-modifications.pqrs.org/json/caps_lock_enhancement.json)
+导入当前 CapsLock Enhancement 配置：[点我启用](karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/main/mac_v3/capslock.json)
 
 {{% /steps %}}
 
 
-![0号控制平面键位功能图](/img//keyboard.jpg)
+![0号控制平面键位功能图](/img/keyboard.jpg)
 
 > 默认[控制平面](#控制平面)键位功能图（第0号，还有15个额外可用的控制平面）
 
@@ -33,7 +33,7 @@ breadcrumbs: false
 * **提速赋能**：根据**开发者**的典型操作习惯进行优化与与设计，高频操作手指无需离开键盘热区，提高操作效率！
 * **扩展定制**：✱ 可与⇧⌃⌥⌘组合使用，提供多达十六个额外的控制平面，自由定制所需功能！
 * **鼠标集成**：忘掉鼠标吧！用键盘来完成所有鼠标相关操作！
-* **轻量便携**：只是简单轻量的键盘定义，随带随走，随下随用，兼容MacOS与Windows。
+* **轻量便携**：当前维护的 V3 配置面向 macOS；历史 Windows 版本仍以归档形式保留。
 
 ## 功能
 
@@ -42,38 +42,34 @@ breadcrumbs: false
 - [删除功能](#删除功能)：快速执行字/词/句/行/页的删除操作，手无需离开核心区
 - [鼠标功能](#鼠标功能)：将小键盘映射为一个功能完整的鼠标。
 - [窗口管理](#窗口管理)：切换或关闭桌面/应用/窗口/选项卡，睡眠/锁屏/熄屏/登出。集成外部窗口管理应用。
-- [应用捷径](#应用捷径)：启动或切换至常用应用，预置MacOS高频应用与流行的开发者工具。
-- [终端控制](#终端控制)：发送常用终端控制信号，IDE运行命令，Vim/Tmux的元按键。
-- [文本剪贴](#文本剪贴)：将数字键用做10个额外的文本剪贴板：⌘n复制，n粘贴。
+- [应用捷径](#应用捷径)：启动或切换至常用应用，预置 macOS 高频应用与流行的开发者工具。
+- [终端控制](#终端控制)：发送终端与 IDE 命令、启动 Codex/Claude，并使用 Vim/Tmux 元按键。
+- [文本剪贴](#文本剪贴)：将数字键 6–0 用作 5 个额外文本剪贴板：⌘n 复制，n 粘贴。
 - [上档变换](#上档变换)：将一些键映射至常用高频字符。
-- [功能控制](#功能控制)：将F1-F2转义回原本的功能，截屏录屏，音量灯光的精密控制。
+- [功能控制](#功能控制)：使用 F1–F12 标准功能键，配合✱调用媒体与系统功能，并提供截屏录屏、音量和灯光控制。
 
 
 ## 安装
 
-以MacOS v3为例，在您的Mac上启用Capslock Enhancement只需要简单的两步：依次点击首页的两个大按钮即可。
+本文档于 2026 年 8 月使用 Karabiner-Elements 16.1.0 验证。当前版本支持 Intel 与 Apple 芯片上的 macOS 13–27。
 
 1. **下载软件**
 
-   在MacOS上，Capslock通过 [**Karabiner-Elements**](https://karabiner-elements.pqrs.org/) 提供服务。
+   从[官方网站](https://karabiner-elements.pqrs.org/)下载 Karabiner-Elements，打开 DMG 并运行 `Karabiner-Elements.pkg`。
 
-   下载Karabiner Elements，按安装向导提示完成安装，并赋予所需系统权限（设置-安全性与隐私-隐私）。
+   打开 Karabiner-Elements Settings，根据提示在系统设置中允许两项后台服务、辅助功能、输入监控与 Driver Extension。在 **Virtual Keyboard** 中选择与物理键盘一致的布局。详见[官方安装指南](https://karabiner-elements.pqrs.org/docs/getting-started/installation/)。
 
 2. **加载配置**
 
-   使用Safari打开下面的 [链接](karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json)，系统将自动启动Karabiner并加载Capslock配置文件。
+   在浏览器中打开下面的[链接](karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/main/mac_v3/capslock.json)，导入当前 V3 配置：
 
    ```bash
-   karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json
+   karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/main/mac_v3/capslock.json
    ```
 
-   > 如果您无法访问 Github，或 Karabiner官方陈列馆，可以考虑使用备用访问连接：
-   > * [Karabiner陈列馆](karabiner://karabiner/assets/complex_modifications/import?url=https://ke-complex-modifications.pqrs.org/json/caps_lock_enhancement.json)：https://ke-complex-modifications.pqrs.org/json/caps_lock_enhancement.json
-   > * [GitHub项目主干](karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json)： https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json
-   > * [Capslock官网](karabiner://karabiner/assets/complex_modifications/import?url=https://vonng.com/capslock.json)： https://vonng.com/capslock.json
-   > * 或，手工将 [**capslock.json**](https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json) 放置于` ~/.config/karabiner/assets/complex_modifications/`
+   在 Karabiner-Elements Settings 中依次选择 **Complex Modifications → Add predefined rule → Import more rules from the internet**，完成 **Import/Allow** 后按需启用规则，并使用 Karabiner-EventViewer 验证。详见[官方复杂规则导入说明](https://karabiner-elements.pqrs.org/docs/manual/configuration/configure-complex-modifications/)。
 
-   在Karabiner-Element弹出的对话窗口中针对`Capslock Enhancement`项目选择：`Enable All`，即可启用生效
+   手工安装时，将 [**capslock.json**](https://raw.githubusercontent.com/Vonng/Capslock/main/mac_v3/capslock.json) 放入 `~/.config/karabiner/assets/complex_modifications/`，然后选择 **Add predefined rule**。
 
    生效后，您可以打开任意编辑器或网页，按住Capslock，同时使用 `h,j,k,l` 移动光标，
    如果可以正常使用，说明Capslock改键已经正常生效。接下来您可以参考下面的说明，尝试更多的功能。
@@ -85,7 +81,7 @@ breadcrumbs: false
 
 Capslock以**ANSI**布局键盘为蓝本，对Capslock之外的 **所有按键** 进行了功能定制与修饰，主要分为10大类功能。
 
-![](/img//keyboard.jpg)
+![](/img/keyboard.jpg)
 
 > [**控制平面**](#控制平面) 由左侧修饰键的排列组合所定义：根据 ⌘⌥⌃⇧的状态，最多有16个额外的控制平面。上图为0号控制平面布局。
 
@@ -96,11 +92,11 @@ Capslock以**ANSI**布局键盘为蓝本，对Capslock之外的 **所有按键**
 | [删除功能](#删除功能) |  棕  | 快速执行字/词/句/行/页的删除操作，手无需离开核心区。                             |
 | [鼠标功能](#鼠标功能) | 小键盘 | 将小键盘映射为一个功能完整的鼠标。                                        |
 | [窗口管理](#窗口管理) | 淡蓝  | 切换或关闭桌面/应用/窗口/选项卡，睡眠/锁屏/熄屏/登出。集成外部窗口管理应用。                |
-| [应用捷径](#应用捷径) |  黄  | 启动或切换至常用应用，预置MacOS高频应用与流行的开发者工具。                         |
-| [终端控制](#终端控制) |  绿  | 发送常用终端控制信号，IDE运行命令，Vim/Tmux的元按键。                         |
-| [文本剪贴](#文本剪贴) |  紫  | 将数字键用做10个额外的文本剪贴板：⌘n复制，n粘贴。                              |
+| [应用捷径](#应用捷径) |  黄  | 启动或切换至常用应用，预置 macOS 高频应用与流行的开发者工具。                       |
+| [终端控制](#终端控制) |  绿  | 发送终端与 IDE 命令、启动 Codex/Claude，并使用 Vim/Tmux 元按键。                 |
+| [文本剪贴](#文本剪贴) |  紫  | 将数字键 6–0 用作 5 个额外文本剪贴板：⌘n 复制，n 粘贴。                           |
 | [上档变换](#上档变换) |  橙  | 将一些键映射至常用高频字符。                                           |
-| [功能控制](#功能控制) |  青  | 将F1-F2转义回原本的功能，截屏录屏，音量灯光的精密控制。                           |
+| [功能控制](#功能控制) |  青  | 将F1–F12用作标准功能键，配合✱调用媒体与系统功能，并提供截屏录屏、音量和灯光控制。 |
 
 
 ### 基础功能
@@ -136,7 +132,7 @@ Capslock以**ANSI**布局键盘为蓝本，对Capslock之外的 **所有按键**
 |   U    |  PgUp  |  选至上页  |   选至上页   |    缩小    |    全屏    | 🖱️L |   🖱️L   | ➡️  |  ➡️  |
 |   I    |  Home  |  选至行首  |   尾至行首   |   上个窗口   |   隐藏窗口   | 🖱️R |   🖱️R   | ⬆️  | ⬆️⏫  |
 |   O    |  End   |  选至行尾  |   首至行尾   |   切换窗口   |   隐藏所有   | 🖱️B |   🖱️B   | ⬇️  | ⬇️⏫  |
-|   P    |  PgDn  |  选至下页  |   选至下页   |    放大    |   启动菜单   | 🖱️F |   🖱️F   | ⬅️  | ⬅️⏫  |
+|   P    |  PgDn  |  选至下页  |   选至下页   |    放大    |   聚焦搜索   | 🖱️F |   🖱️F   | ⬅️  | ⬅️⏫  |
 
 **方向键导航**
 
@@ -179,14 +175,14 @@ Capslock以**ANSI**布局键盘为蓝本，对Capslock之外的 **所有按键**
 
 * `Tab`, `Q`, `W`, `A`, `s`用于窗口管理，关注应用/窗口/标签页/桌面的切换，关闭等功能。位于图中天蓝色区域。
 
-* 窗口管理功能（调整大小布局）是通过外部应用完成的，例如[Moom](https://manytricks.com/moom/)，[Magnet](https://apps.apple.com/us/app/magnet/id441258766)，[Slate](https://github.com/jigish/slate)等，您需要为其绑定⌃⌥⇧⌘A作为触发快捷键。
+* 窗口布局调整由外部应用完成，例如 [Moom](https://manytricks.com/moom/) 或 [Magnet](https://magnet.crowdcafe.com/)，需要为其绑定⌃⌥⇧⌘A作为触发快捷键。[Slate](https://github.com/jigish/slate)仅作为历史示例保留。
 
 |  键\修饰   |    ✱     |   ⌘   |    ⌥    |     ⌃     |   ⇧   |
 |:-------:|:--------:|:-----:|:-------:|:---------:|:-----:|
 | `⇥` Tab |   上个应用   | 下个应用  |  下个桌面   |           | 切换Tab |
 |   `Q`   |   关闭应用   | 关闭应用  |         |    锁屏     |  注销   |
 |   `W`   |   关闭窗口   | 关闭窗口  |         |    熄屏     |  睡眠   |
-|   `A`   | **窗口管理** | 暴露窗口  |  显示桌面   | LaunchPad |       |
+|   `A`   | **窗口管理** | 暴露窗口  |  显示桌面   | Spotlight |       |
 |   `S`   |  下个标签页   | 上个标签页 | 上个同应用窗口 |  下个同应用窗口  |       |
 
 ### 应用捷径
@@ -199,32 +195,32 @@ Capslock以**ANSI**布局键盘为蓝本，对Capslock之外的 **所有按键**
 |:----:|:-------------------:|:---------:|:-----------:|:--:|
 |  E   |       Safari        |  Finder   |    Mail     |    |
 |  R   |       iTerm2        |  Preview  |  Terminal   |    |
-|  T   | Visual Studio Code  |  Typora   |    Note     |    |
-|  Y   |        Siri         | Karabiner | Amphetamine |    |
-|  F   | Alfred (bind ⌃⌥⇧⌘F) |   Dash    | Dictionary  |    |
-|  G   |    Intellij IDEA    |  Chrome   |  Calender   |    |
+|  T   | Visual Studio Code  |  Typora   |    Notes    |    |
+|  Y   |        Siri         | Karabiner-Elements | Amphetamine |    |
+|  F   |      Alfred 5       |   Dash    | Dictionary  |    |
+|  G   |    IntelliJ IDEA    |  Chrome   |  Calendar   |    |
 
 ### 终端控制
 
-`D`, `Z`, `X`, `C`, `V`, `B` 用于终端控制，发送信号与IDE命令，位于图中绿色区域。
+`D`, `Z`, `X`, `C`, `V`, `B` 用于终端与 IDE 命令、启动 Codex/Claude，以及使用 Vim/Tmux 元按键，位于图中绿色区域。
 
 | 键\修饰 |                     ✱                      |         ⌘          |
 |:----:|:------------------------------------------:|:------------------:|
 |  D   |                 ⌃D  (EOF)                  |     定义 (压感点击)      |
 |  Z   |               ⌃Z   (SIGTSTP)               | F5 (VS Code Debug) |
 |  X   |               ⌃R  (IDE Run)                | ⌃F5 (VS Code Run)  |
-|  C   |                ⌃C (SIGINT)                 | ⇧F5（VS Code Stop）  |
+|  C   |                 启动 Codex                 |      启动 Claude     |
 |  V   |              ⌃V (Vim Prefix)               |                    |
-|  B   | ⌃B ([Tmux](http://tmux.github.io)  Prefix) |                    |
+|  B   | ⌃B ([Tmux](https://github.com/tmux/tmux/wiki) Prefix) |                    |
 
 ### 文本剪贴
 
-* 数字键 1, 2, …, 9, 0 用作剪贴板，按下 ⌘ Command +数字键**拷贝**，按下数字键粘贴。位于图中紫色区域。
+* 数字键 6, 7, 8, 9, 0 用作 5 个文本剪贴板，按下 ⌘ Command + 数字键**拷贝**，按下数字键粘贴。位于图中紫色区域。
 
 | 键\修饰 |    ✱    |    ⌘    |
 |:----:|:-------:|:-------:|
-|  1   | 从剪贴板1粘贴 | 拷贝至剪贴板1 |
-|  2   | 从剪贴板2粘贴 | 拷贝至剪贴板2 |
+|  6   | 从剪贴板6粘贴 | 拷贝至剪贴板6 |
+|  7   | 从剪贴板7粘贴 | 拷贝至剪贴板7 |
 |  ……  |   ……    |   ……    |
 |  0   | 从剪贴板0粘贴 | 拷贝至剪贴板0 |
 
@@ -248,15 +244,17 @@ Capslock以**ANSI**布局键盘为蓝本，对Capslock之外的 **所有按键**
 
 ### 功能控制
 
-- 将 F1,F2,..., F12等用作标准功能键，按下✱将其转义回原来的功能，位于图中青色区域。
+- 将 F1–F12 用作标准功能键，按下✱时发送对应的媒体或系统功能，位于图中青色区域。
 
 - ⌘Command + F1/F2/F3 为切换桌面快捷键，但您必须先在启用系统相关快捷键：
 
-  **系统设置** → **键盘** → **快捷键** → **调度中心** → 启用桌面切换快捷键。
+  **系统设置** → **键盘** → **键盘快捷键…** → **调度中心** → 启用桌面切换快捷键。
 
-- 如果您使用带TouchBar的Macbook键盘，可以将TouchBar修改回标准功能键组。
+- Karabiner-Elements 15.1 及以上版本使用 macOS 自己的功能键设置，请在下列位置启用：
 
-  **Karabiner-Elements** → **Function Keys** → **Use all F1, F2, etc. keys as standard function keys**
+  **系统设置** → **键盘** → **键盘快捷键…** → **功能键** → **将 F1、F2 等键用作标准功能键**
+
+  Touch Bar 说明只适用于旧款 Touch Bar Mac，参见[官方故障排除说明](https://karabiner-elements.pqrs.org/docs/help/troubleshooting/touch-bar-function-keys/)。
 
 |   键\修饰   |                  ✱                   |  ⌘  | 说明              |
 |:--------:|:------------------------------------:|:---:|-----------------|
@@ -264,7 +262,7 @@ Capslock以**ANSI**布局键盘为蓝本，对Capslock之外的 **所有按键**
 |    F1    | display_brightness_decrement  \|  ⌃1 | ⌃1  | 调低屏幕亮度/桌面1      |
 |    F2    |  display_brightness_increment \| ⌃2  | ⌃2  | 调高屏幕亮度/桌面2      |
 |    F3    |              ⌃↑  \|  ⌃3              | ⌃3  | 暴露窗口/桌面3        |
-|    F4    |              Launchpad               |     | 启动面板            |
+|    F4    |              Spotlight               |     | 聚焦搜索            |
 |    F5    |        illumination_decrement        |     | 调暗键盘灯           |
 |    F6    |        illumination_increment        |     | 调亮键盘灯           |
 |    F7    |                rewind                |     | 上一首音乐           |
@@ -274,7 +272,7 @@ Capslock以**ANSI**布局键盘为蓝本，对Capslock之外的 **所有按键**
 |   F11    |           volume_decrement           |     | 调低音量            |
 |   F12    |           volume_increment           |     | 调高音量            |
 |   F13    |                 ⌃⇧⌘3                 | ⇧⌘3 | 全屏截图｜（+⌘保存至桌面）  |
-|   F14    |                 ⇧⌘5                  | ⇧⌘6 | 截图菜单｜（+⌘触控栏截图）  |
+|   F14    |                 ⇧⌘5                  | ⇧⌘6 | 截图菜单｜（+⌘：旧款 Touch Bar 截图） |
 |   F15    |            play_or_pause             |     | 播放 / 暂停         |
 |  Insert  |   ⇧⌥ display_brightness_increment    |     | 平滑调高亮度          |
 | Delete ⌦ |   ⇧⌥ display_brightness_decrement    |     | 平滑调低亮度          |
@@ -323,28 +321,14 @@ Capslock以**ANSI**布局键盘为蓝本，对Capslock之外的 **所有按键**
 
 ## 版本历史
 
-* [**Capslock Mac V3**](https://github.com/Vonng/Capslock/tree/master/mac_v3/): 2021.03 至今 (最新版本)
-* [**Capslock Mac V2**](https://github.com/Vonng/Capslock/tree/master/mac_v2): 2017 - 2021
-* [**Capslock Mac V1**](https://github.com/Vonng/Capslock/tree/master/mac_v1): 2015 - 2017
-* [**Capslock Win**](https://github.com/Vonng/Capslock/tree/master/win): 2013 - 2015
+* [**Capslock Mac V3**](https://github.com/Vonng/Capslock/tree/main/mac_v3/): 2021.03 至今（活跃维护）
+* [**Capslock Mac V2**](https://github.com/Vonng/Capslock/tree/main/mac_v2): 2017 - 2021
+* [**Capslock Mac V1**](https://github.com/Vonng/Capslock/tree/main/mac_v1): 2015 - 2017
+* [**Capslock Win**](https://github.com/Vonng/Capslock/tree/main/win): 2013 - 2015（已归档）
 
-|                            支持的 Mac 操作系统                             |      支持的 Windows 操作系统      |
-|:-------------------------------------------------------------------:|:--------------------------:|
-|                         MacOS Big Sur (11)                          |         Windows 10         |
-|                       MacOS Catalina (10.15)                        |         Windows 8          |
-|                      MacOS High Sierra (10.13)                      |         Windows 7          |
-|                        MacOS Sierra (10.12)                         |       Windows Vista        |
-|                      MacOS EI Capitan (10.11)                       |         Windows XP         |
-| MacOS Yosemite (10.10) 或更低版本<br /> (via [Capslock Mac v1](mac_v1/)) | (via [Capslock Win](win/)) |
+当前 Mac V3 文档以 Karabiner-Elements 16.1.0 为验证基准。官方当前支持 Intel 与 Apple 芯片上的 macOS 13 Ventura 至 macOS 27 Golden Gate。更早的 macOS 需要使用历史 Karabiner-Elements 版本，不在当前 V3 安装指南的验证范围内。
 
-
-目前提供支持与更新的活跃版本为 Capslock Mac v3， Windows版本已经不再更新。
-
-Mac版本可以在MacOS 10.11+ 中使用，Windows版本可以在 Windows XP - Windows 10中使用。
-
-使用Mac版本时，请参考[安装](#安装)部分的说明。
-使用Win版本时，您可以直接下载预编译好的二进制程序 [CapsLock.exe](https://github.com/Vonng/Capslock/tree/master/win)。
-或下载安装 [**AutoHotKey**](https://www.autohotkey.com/)后手动加载配置文件 [`capslock.ahk`](https://github.com/Vonng/Capslock/blob/master/win/CapsLock.ahk)
+Windows 版本已经归档。[预编译程序](https://github.com/Vonng/Capslock/tree/main/win)与 [AutoHotkey 源码](https://github.com/Vonng/Capslock/blob/main/win/CapsLock.ahk)仍可用于历史环境，但不再进行主动测试与维护。
 
 
 
@@ -357,56 +341,51 @@ Mac版本可以在MacOS 10.11+ 中使用，Windows版本可以在 Windows XP - W
 
 **问：Capslock Mac v3有什么新花样？**
 
-答：原本的v2只定义了1到3个控制平面，v3最多使用了9个控制平面。添加了大量的功能，使得Capslock可有的修饰键⌘⌥⌃⇧产生化学反应。以一种符合逻辑的方式排列组合出更多的功能。
+答：V2 只使用了少量控制平面；V3 可以将 Hyper 与四个左侧修饰键组合，提供最多 16 个控制平面，并以一致的方式组织更多功能。
 
 
-**问：Capslock Mac v3相对于v2有什么不兼容之处？**
+**问：升级时需要注意哪些不兼容变化？**
 
-V3在整体上采用前向兼容策略，但确实有三个地方进行了不兼容的调整。
+当前 V3.1 相比旧版有以下有意调整：
 
-* 第二行的数字键1-0原本只是简单地上档转移为对应字符，现在变成了10个特殊的剪贴板。
-* F13 / F14 原本用做 前后切歌 ，现在修改为截图功能，更符合这两个键的原本语义。
-* ⌘D 原来是打开词典App，现在则变为 定义词语（⌘⌃D，或重按触控板的功能），词典App被新挂在了⌥F下。
+* 数字键 6–0 提供 5 个文本剪贴板，1–5 不再是剪贴板槽位。
+* C 与 ⌘C 分别启动 Codex 与 Claude。
+* Spotlight 与 Alfred 5 分别取代 Launchpad 与 Alfred 4。
+* F13/F14 提供截图功能，不再用于前后切歌。
+* ⌘D 用于“定义”，不再直接打开词典应用。
 
 
 **问：为什么没有Linux操作系统支持？**
 
-答：Linux的桌面环境较为复杂，碎片化，不好搞，而且我本人主要通过MacOS终端来使用Linux。Linux的原生支持理论上可以通过xmodmap来实现，欢迎贡献。
+答：Linux 的桌面环境较为复杂，而且我本人主要通过 macOS 终端使用 Linux。原生支持可以通过 xmodmap 等机制实现，欢迎贡献。
 
 
-**问：MacOS中为什么有一个旧版本？**
+**问：macOS 中为什么有一个旧版本？**
 
-答：曾经有一个旧版本的Karabiner，使用XML格式的配置文件。Apple在MacOS Sierra（10.12）中修改了内核架构，很多程序都要大改。所以后来就有了Karabiner的新版本，也就是现在还在使用的Karabiner-Elements了。
+答：旧版 Karabiner 使用 XML 配置。macOS Sierra（10.12）之后由 Karabiner-Elements 接替，因此仓库仍保留旧版配置供历史系统参考。
 
 
 **问：怎样按自己的需求定制？**
 
 您可以fork一份本项目，按照规则照葫芦画瓢即可。
-直接按需修改 `mac_v3/capslock.json` 文件，导入Karabiner启用即可。
-如果您觉得Json格式让人眼花，可以编辑可读性更好的`mac_v3/capslock.yml`文件，而后执行`make compile`将其转换为JSON。
-当您进行贡献时，也应当通过修改`YAML`，生成`JSON`的方式进行，保持两者间的同步。
+请编辑可读性更好的 `mac_v3/capslock.yml`，然后执行 `make -C mac_v3 compile` 生成 `capslock.json`，保持 YAML 与 JSON 同步；该命令需要 [yq v4](https://github.com/mikefarah/yq)。
 
 
 **问：这么好用的东西，是原创吗？**
 
-答：据我所知，本人应该是第一个弄这种 Capslock 改造的，因为当时没找到什么相关资料。
+本项目最早的 AutoHotkey 版本可以追溯到 2013 年，2015 年的文章介绍了背后的设计理念：[CapsLock魔改大法——变废为宝实现高效编辑](https://www.cnblogs.com/Vonng/p/4240219.html)。
 
-最早的AHK版本具体可以追溯到2013年，15年还有一篇文章介绍背后的设计理念：[CapsLock魔改大法——变废为宝实现高效编辑](https://www.cnblogs.com/Vonng/p/4240219.html)。
-
-大部分能搜索到的Capslock方案，特别是基于Karabiner与AutoHotKey的改造基本都能看到这里的影子。
-
-这个配置也是Karabiner官方[陈列馆](https://ke-complex-modifications.pqrs.org/#caps_lock_enhancement)收录的第一个Capslock全面改造方案，
+这个配置长期收录于 Karabiner-Elements 官方[复杂规则陈列馆](https://ke-complex-modifications.pqrs.org/#caps_lock_enhancement)。
 
 
 **问：后面还会有变动与修改吗？**
 
-答：习惯这种东西一旦养成是很难改，所以这种配置文件不适合频繁修改。实际上从13年第一次设计完后，基本除了一些边边角角的地方，没有特别大的变动。
-不过最近（2021）有一次非常大的升级（Capslock mac v3），会将原有的约3个控制平面扩充到16个，并填充大量累积改进。当然在功能上肯定是老版本的功能超集，不会影响现有用户的使用习惯。
+答：2021 年的 Mac V3 将原有的约 3 个控制平面扩充到 16 个。V3.1 又根据当前 macOS 环境更新了应用捷径：C 启动 Codex、⌘C 启动 Claude，剪贴板缩减为数字键 6–0，Spotlight 取代 Launchpad，Alfred 5 取代 Alfred 4。这些快捷键变化可能影响既有习惯，升级前应查看当前键位表。
 
 
-**问：为什么有时候会触发MacOS系统诊断？**
+**问：为什么有时候会触发 macOS 系统诊断？**
 
-[ISSUE #30](https://github.com/Vonng/Capslock/issues/30) 指出，在MacOS中同时按下`⌘⌥⌃⇧.`会触发系统自动诊断。
+[ISSUE #30](https://github.com/Vonng/Capslock/issues/30) 指出，在 macOS 中同时按下 `⌘⌥⌃⇧.` 会触发系统诊断。
 
 您可以参考[这篇文章](https://xam.io/2020/macos-diag-shortcuts/)，将这一快捷键二次映射为对应功能。
 
@@ -414,7 +393,7 @@ V3在整体上采用前向兼容策略，但确实有三个地方进行了不兼
 
 ## 用户之声
 
-![](/img//feedback_zh.jpg)
+![](/img/feedback_zh.jpg)
 
 
 
@@ -422,7 +401,7 @@ V3在整体上采用前向兼容策略，但确实有三个地方进行了不兼
 
 作者： [Vonng](https://vonng.com/) ([rh@vonng.com](mailto:rh@vonng.com))
 
-协议：[Apache 2.0 License](https://github.com/Vonng/Capslock/blob/master/LICENSE)
+协议：[Apache 2.0 License](https://github.com/Vonng/Capslock/blob/main/LICENSE)
 
 
 ![featured.jpg](/img/featured.jpg)

@@ -2,32 +2,23 @@
 
 
 
-### MacOS安装
+### macOS 安装
 
-在MacOS上，Capslock通过 [**Karabiner-Elements** 提供服务](https://karabiner-elements.pqrs.org/)
+本文档于 2026 年 8 月使用 Karabiner-Elements 16.1.0 验证。当前版本支持 Intel 与 Apple 芯片上的 macOS 13–27。
 
-1. 下载并安装 [**Karabiner Elements**](https://karabiner-elements.pqrs.org/)，按照安装向导提示完成安装并赋予所需权限。
+1. 从[官方网站](https://karabiner-elements.pqrs.org/)下载 Karabiner-Elements，打开 DMG 并运行 `Karabiner-Elements.pkg`。
 
+2. 打开 Karabiner-Elements Settings，根据提示在系统设置中允许两项后台服务、辅助功能、输入监控与 Driver Extension。在 **Virtual Keyboard** 中选择与物理键盘一致的布局。详见[官方安装指南](https://karabiner-elements.pqrs.org/docs/getting-started/installation/)。
 
-2. 将 [**capslock.json**](mac_v3/capslock.json) 下载至` ~/.config/karabiner/assets/complex_modifications/` 目录。
+3. 在浏览器中打开下面的链接，导入当前 V3 配置：
 
-   或使用Safari打开下面的链接，将自动启动Karabiner并加载Capslock配置文件。
-
-   ```yaml
-   # Capslock 官方网站 (v3)
-   karabiner://karabiner/assets/complex_modifications/import?url=https://vonng.com/capslock.json
-   
-   # Capslock Mac V3 (当前Repo)
-   karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json
-   
-   # Karabiner-Elements 官方陈列馆（Emulation Mode第一个）
-   karabiner://karabiner/assets/complex_modifications/import?url=https://pqrs.org/osx/karabiner/complex_modifications/json/caps_lock_enhancement.json
+   ```text
+   karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/main/mac_v3/capslock.json
    ```
 
+   在 Karabiner-Elements Settings 中依次选择 **Complex Modifications → Add predefined rule → Import more rules from the internet**，完成 **Import/Allow** 后按需启用规则，并使用 Karabiner-EventViewer 验证。详见[官方复杂规则导入说明](https://karabiner-elements.pqrs.org/docs/manual/configuration/configure-complex-modifications/)。
 
-3. 打开Karabiner-Elements，切至第三标签页`ComplexModification`，点击左下方按钮 `Add Rules`按需启用Capslock预置规则即可。
-
-   ![](images/config-karabiner.png)
+   手工安装时，将 [**capslock.json**](capslock.json) 放入 `~/.config/karabiner/assets/complex_modifications/`，然后选择 **Add predefined rule**。
 
 
 
@@ -37,7 +28,7 @@ Capslock以**ANSI**布局键盘为蓝本，对Capslock之外的 [**所有按键*
 
 ![](images/keyboard.png)
 
-> [**控制平面**](控制平面) 由左侧修饰键的排列组合所定义：根据 ⌘⌥⌃⇧的状态，最多有16个额外的控制平面。上图为0号控制平面布局。
+> [**控制平面**](#控制平面) 由左侧修饰键的排列组合所定义：根据 ⌘⌥⌃⇧的状态，最多有16个额外的控制平面。上图为0号控制平面布局。
 
 |         类目          |  颜色  | 说明                                                         |
 | :-------------------: | :----: | :----------------------------------------------------------- |
@@ -46,11 +37,11 @@ Capslock以**ANSI**布局键盘为蓝本，对Capslock之外的 [**所有按键*
 | [删除功能](#删除功能) |   棕   | 快速执行字/词/句/行/页的删除操作，手无需离开核心区。         |
 |   [鼠标键](#鼠标键)   | 小键盘 | 将小键盘映射为一个功能完整的鼠标。                           |
 | [窗口管理](#窗口管理) |  淡蓝  | 切换或关闭桌面/应用/窗口/选项卡，睡眠/锁屏/熄屏/登出。集成外部窗口管理应用。 |
-| [应用捷径](#应用捷径) |   黄   | 启动或切换至常用应用，预置MacOS高频应用与流行的开发者工具。  |
-| [终端控制](#终端控制) |   绿   | 发送常用终端控制信号，IDE运行命令，Vim/Tmux的元按键。        |
-| [文本剪贴](#文本剪贴) |   紫   | 将数字键用做10个额外的文本剪贴板：⌘n复制，n粘贴。            |
+| [应用捷径](#应用捷径) |   黄   | 启动或切换至常用应用，预置 macOS 高频应用与流行的开发者工具。 |
+| [终端控制](#终端控制) |   绿   | 发送常用终端控制信号、IDE命令，启动Codex/Claude，使用Vim/Tmux元按键。 |
+| [文本剪贴](#文本剪贴) |   紫   | 将数字键6–0用做5个额外的文本剪贴板：⌘n复制，n粘贴。          |
 | [上档变换](#上档变换) |   橙   | 将一些键映射至常用高频字符。                                 |
-| [功能控制](#功能控制) |   青   | 将F1-F2转义回原本的功能，截屏录屏，音量灯光的精密控制。      |
+| [功能控制](#功能控制) |   青   | 将F1–F12用作标准功能键，配合✱调用媒体与系统功能，并提供截屏录屏、音量和灯光控制。 |
 
 ### 基础功能
 
@@ -84,7 +75,7 @@ Capslock以**ANSI**布局键盘为蓝本，对Capslock之外的 [**所有按键*
 |    U     |   PgUp   | 选至上页 |   选至上页   |     缩小     |     全屏     |  🖱️L  |   🖱️L   |  ➡️   |  ➡️   |
 |    I     |   Home   | 选至行首 |   尾至行首   |   上个窗口   |   隐藏窗口   |  🖱️R  |   🖱️R   |  ⬆️   |  ⬆️⏫  |
 |    O     |   End    | 选至行尾 |   首至行尾   |   切换窗口   |   隐藏所有   |  🖱️B  |   🖱️B   |  ⬇️   |  ⬇️⏫  |
-|    P     |   PgDn   | 选至下页 |   选至下页   |     放大     |   启动菜单   |  🖱️F  |   🖱️F   |  ⬅️   |  ⬅️⏫  |
+|    P     |   PgDn   | 选至下页 |   选至下页   |     放大     |   聚焦搜索   |  🖱️F  |   🖱️F   |  ⬅️   |  ⬅️⏫  |
 
 #### 方向键导航
 
@@ -127,14 +118,14 @@ Capslock以**ANSI**布局键盘为蓝本，对Capslock之外的 [**所有按键*
 
 * `Tab`, `Q`, `W`, `A`, `s`用于窗口管理，关注应用/窗口/标签页/桌面的切换，关闭等功能。位于图中天蓝色区域。
 
-* 窗口管理功能（调整大小布局）是通过外部应用完成的，例如[Moom](https://manytricks.com/moom/)，[Magnet](https://apps.apple.com/us/app/magnet/id441258766)，[Slate](https://github.com/jigish/slate)等，您需要为其绑定⌃⌥⇧⌘A作为触发快捷键。
+* 窗口布局调整由外部应用完成，例如 [Moom](https://manytricks.com/moom/) 或 [Magnet](https://magnet.crowdcafe.com/)，需要为其绑定⌃⌥⇧⌘A作为触发快捷键。[Slate](https://github.com/jigish/slate)仅作为历史示例保留。
 
 | 键\修饰 |      ✱       |     ⌘      |       ⌥        |       ⌃        |    ⇧    |
 | :-----: | :----------: | :--------: | :------------: | :------------: | :-----: |
 | `⇥` Tab |   上个应用   |  下个应用  |    下个桌面    |                | 切换Tab |
 |   `Q`   |   关闭应用   |  关闭应用  |                |      锁屏      |  注销   |
 |   `W`   |   关闭窗口   |  关闭窗口  |                |      熄屏      |  睡眠   |
-|   `A`   | **窗口管理** |  暴露窗口  |    显示桌面    |   LaunchPad    |         |
+|   `A`   | **窗口管理** |  暴露窗口  |    显示桌面    |   Spotlight    |         |
 |   `S`   |  下个标签页  | 上个标签页 | 上个同应用窗口 | 下个同应用窗口 |         |
 
 ### 应用捷径
@@ -147,32 +138,32 @@ Capslock以**ANSI**布局键盘为蓝本，对Capslock之外的 [**所有按键*
 | :-----: | :-----------------: | :-------: | :---------: | :--: |
 |    E    |       Safari        |  Finder   |    Mail     |      |
 |    R    |       iTerm2        |  Preview  |  Terminal   |      |
-|    T    | Visual Studio Code  |  Typora   |    Note     |      |
-|    Y    |        Siri         | Karabiner | Amphetamine |      |
-|    F    | Alfred (bind ⌃⌥⇧⌘F) |   Dash    | Dictionary  |      |
-|    G    |    Intellij IDEA    |  Chrome   |  Calender   |      |
+|    T    | Visual Studio Code  |  Typora   |    Notes    |      |
+|    Y    |        Siri         | Karabiner-Elements | Amphetamine |      |
+|    F    |      Alfred 5       |   Dash    | Dictionary  |      |
+|    G    |    IntelliJ IDEA    |  Chrome   |  Calendar   |      |
 
 ### 终端控制
 
-`D`, `Z`, `X`, `C`, `V`, `B` 用于终端控制，发送信号与IDE命令，位于图中绿色区域。
+`D`, `Z`, `X`, `C`, `V`, `B` 用于终端控制、IDE命令，以及启动Codex或Claude，位于图中绿色区域。
 
 | 键\修饰 |                     ✱                      |          ⌘          |
 | :-----: | :----------------------------------------: | :-----------------: |
 |    D    |                 ⌃D  (EOF)                  |   定义 (压感点击)   |
 |    Z    |               ⌃Z   (SIGTSTP)               | F5 (VS Code Debug)  |
 |    X    |               ⌃R  (IDE Run)                |  ⌃F5 (VS Code Run)  |
-|    C    |                ⌃C (SIGINT)                 | ⇧F5（VS Code Stop） |
+|    C    |                 启动 Codex                 |     启动 Claude     |
 |    V    |              ⌃V (Vim Prefix)               |                     |
-|    B    | ⌃B ([Tmux](http://tmux.github.io)  Prefix) |                     |
+|    B    | ⌃B ([Tmux](https://github.com/tmux/tmux/wiki) Prefix) |                     |
 
 ### 文本剪贴
 
-* 数字键 1, 2, …, 9, 0 用作剪贴板，按下 ⌘ Command +数字键**拷贝**，按下数字键粘贴。位于图中紫色区域。
+* 数字键 6, 7, 8, 9, 0 用作剪贴板，按下 ⌘ Command +数字键**拷贝**，按下数字键粘贴。位于图中紫色区域。
 
 | 键\修饰 |       ✱       |       ⌘       |
 | :-----: | :-----------: | :-----------: |
-|    1    | 从剪贴板1粘贴 | 拷贝至剪贴板1 |
-|    2    | 从剪贴板2粘贴 | 拷贝至剪贴板2 |
+|    6    | 从剪贴板6粘贴 | 拷贝至剪贴板6 |
+|    7    | 从剪贴板7粘贴 | 拷贝至剪贴板7 |
 |   ……    |      ……       |      ……       |
 |    0    | 从剪贴板0粘贴 | 拷贝至剪贴板0 |
 
@@ -196,15 +187,17 @@ Capslock以**ANSI**布局键盘为蓝本，对Capslock之外的 [**所有按键*
 
 ### 功能控制
 
-- 将 F1,F2,..., F12等用作标准功能键，按下✱将其转义回原来的功能，位于图中青色区域。
+- 将 F1–F12 用作标准功能键，按下✱时发送对应的媒体或系统功能，位于图中青色区域。
 
 - ⌘Command + F1/F2/F3 为切换桌面快捷键，但您必须先在启用系统相关快捷键：
 
   **系统设置** → **键盘** → **快捷键** → **调度中心** → 启用桌面切换快捷键。
 
-- 如果您使用带TouchBar的Macbook键盘，可以将TouchBar修改回标准功能键组。
+- Karabiner-Elements 15.1 及以上版本使用 macOS 自己的功能键设置，请在下列位置启用：
 
-  **Karabiner-Elements** → **Function Keys** → **Use all F1, F2, etc. keys as standard function keys** 
+  **系统设置** → **键盘** → **键盘快捷键…** → **功能键** → **将 F1、F2 等键用作标准功能键**
+
+  Touch Bar 说明只适用于旧款 Touch Bar Mac，参见[官方故障排除说明](https://karabiner-elements.pqrs.org/docs/help/troubleshooting/touch-bar-function-keys/)。
 
 | 键\修饰  |                  ✱                   |  ⌘   | 说明                         |
 | :------: | :----------------------------------: | :--: | ---------------------------- |
@@ -212,7 +205,7 @@ Capslock以**ANSI**布局键盘为蓝本，对Capslock之外的 [**所有按键*
 |    F1    | display_brightness_decrement  \|  ⌃1 |  ⌃1  | 调低屏幕亮度/桌面1           |
 |    F2    |  display_brightness_increment \| ⌃2  |  ⌃2  | 调高屏幕亮度/桌面2           |
 |    F3    |              ⌃↑  \|  ⌃3              |  ⌃3  | 暴露窗口/桌面3               |
-|    F4    |              Launchpad               |      | 启动面板                     |
+|    F4    |              Spotlight               |      | 聚焦搜索                     |
 |    F5    |        illumination_decrement        |      | 调暗键盘灯                   |
 |    F6    |        illumination_increment        |      | 调亮键盘灯                   |
 |    F7    |                rewind                |      | 上一首音乐                   |
@@ -222,7 +215,7 @@ Capslock以**ANSI**布局键盘为蓝本，对Capslock之外的 [**所有按键*
 |   F11    |           volume_decrement           |      | 调低音量                     |
 |   F12    |           volume_increment           |      | 调高音量                     |
 |   F13    |                 ⌃⇧⌘3                 | ⇧⌘3  | 全屏截图｜（+⌘保存至桌面）   |
-|   F14    |                 ⇧⌘5                  | ⇧⌘6  | 截图菜单｜（+⌘触控栏截图）   |
+|   F14    |                 ⇧⌘5                  | ⇧⌘6  | 截图菜单｜（+⌘：旧款 Touch Bar 截图） |
 |   F15    |            play_or_pause             |      | 播放 / 暂停                  |
 |  Insert  |   ⇧⌥ display_brightness_increment    |      | 平滑调高亮度                 |
 | Delete ⌦ |   ⇧⌥ display_brightness_decrement    |      | 平滑调低亮度                 |
@@ -254,4 +247,3 @@ Capslock以**ANSI**布局键盘为蓝本，对Capslock之外的 [**所有按键*
 |                        🖱️L                        |   左键单击    |            🖱️B            |        鼠标后退        |
 |                        🖱️R                        |   右键单击    |            🖱️F            |        鼠标前进        |
 |                        🖱️M                        |   中键单击    |            🖲️             |        鼠标滚轮        |
-

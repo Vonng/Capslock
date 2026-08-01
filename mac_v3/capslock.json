@@ -1,15 +1,15 @@
 {
   "title": "Capslock Enhancement",
-  "url": "https://vonng.com/capslock.json",
-  "version": "3.0.3",
+  "url": "https://raw.githubusercontent.com/Vonng/Capslock/main/mac_v3/capslock.json",
+  "version": "3.1.0",
   "maintainers": [
     "Vonng"
   ],
   "author": "Vonng(rh@vonng.com)",
-  "website": "http://capslock.vonng.com",
-  "json_url": "https://vonng.com/capslock.json",
-  "import_url": "karabiner://karabiner/assets/complex_modifications/import?url=https://vonng.com/capslock.json",
-  "gallery_url": "https://ke-complex-modifications.pqrs.org/#emulation-modes",
+  "website": "https://capslock.vonng.com",
+  "json_url": "https://raw.githubusercontent.com/Vonng/Capslock/main/mac_v3/capslock.json",
+  "import_url": "karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/main/mac_v3/capslock.json",
+  "gallery_url": "https://ke-complex-modifications.pqrs.org/#caps_lock_enhancement",
   "repo": "https://github.com/Vonng/Capslock",
   "rules": [
     {
@@ -64,7 +64,11 @@
               "key_code": "caps_lock",
               "modifiers": [
                 "left_control"
-              ]
+              ],
+              "hold_down_milliseconds": 200
+            },
+            {
+              "key_code": "vk_none"
             }
           ]
         },
@@ -1711,7 +1715,7 @@
           ]
         },
         {
-          "description": "control + p = LaunchPad",
+          "description": "control + p = Spotlight",
           "type": "basic",
           "from": {
             "key_code": "p",
@@ -1727,7 +1731,10 @@
           },
           "to": [
             {
-              "shell_command": "open -a 'Launchpad'"
+              "key_code": "spacebar",
+              "modifiers": [
+                "left_command"
+              ]
             }
           ]
         },
@@ -4609,7 +4616,7 @@
           ]
         },
         {
-          "description": "control + a = launchpad",
+          "description": "control + a = Spotlight",
           "type": "basic",
           "from": {
             "key_code": "a",
@@ -4625,7 +4632,10 @@
           },
           "to": [
             {
-              "shell_command": "open -a 'Launchpad'"
+              "key_code": "spacebar",
+              "modifiers": [
+                "left_command"
+              ]
             }
           ]
         },
@@ -5067,7 +5077,7 @@
           ]
         },
         {
-          "description": "f = Alfred 4",
+          "description": "f = Alfred 5",
           "type": "basic",
           "from": {
             "key_code": "f",
@@ -5082,7 +5092,7 @@
           },
           "to": [
             {
-              "shell_command": "open -a 'Alfred 4'"
+              "shell_command": "open -a 'Alfred 5'"
             }
           ]
         },
@@ -5108,7 +5118,7 @@
           ]
         },
         {
-          "description": "option + g = Calender",
+          "description": "option + g = Calendar",
           "type": "basic",
           "from": {
             "key_code": "g",
@@ -5129,7 +5139,7 @@
           ]
         },
         {
-          "description": "g = Intellij IDEA",
+          "description": "g = IntelliJ IDEA",
           "type": "basic",
           "from": {
             "key_code": "g",
@@ -5218,7 +5228,10 @@
           },
           "to": [
             {
-              "key_code": "f5"
+              "key_code": "f5",
+              "modifiers": [
+                "fn"
+              ]
             }
           ]
         },
@@ -5264,6 +5277,7 @@
             {
               "key_code": "f5",
               "modifiers": [
+                "fn",
                 "left_control"
               ]
             }
@@ -5293,7 +5307,7 @@
           ]
         },
         {
-          "description": "command + c = shift + F5 (vscode stop)",
+          "description": "command + c = Claude",
           "type": "basic",
           "from": {
             "key_code": "c",
@@ -5309,15 +5323,12 @@
           },
           "to": [
             {
-              "key_code": "f5",
-              "modifiers": [
-                "left_shift"
-              ]
+              "shell_command": "open -a 'Claude'"
             }
           ]
         },
         {
-          "description": "c = ctrl-c",
+          "description": "c = Codex",
           "type": "basic",
           "from": {
             "key_code": "c",
@@ -5332,10 +5343,7 @@
           },
           "to": [
             {
-              "key_code": "c",
-              "modifiers": [
-                "left_control"
-              ]
+              "shell_command": "open -a 'Codex'"
             }
           ]
         },
@@ -5390,271 +5398,6 @@
     {
       "description": "Hyper Clipboard",
       "manipulators": [
-        {
-          "description": "command + 1 = copy to clip1",
-          "type": "basic",
-          "from": {
-            "key_code": "1",
-            "modifiers": {
-              "mandatory": [
-                "left_command",
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "c",
-              "modifiers": [
-                "left_command"
-              ]
-            },
-            {
-              "shell_command": "pbpaste > ~/.clip1"
-            }
-          ]
-        },
-        {
-          "description": "1 = paste from clip1",
-          "type": "basic",
-          "from": {
-            "key_code": "1",
-            "modifiers": {
-              "mandatory": [
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "shell_command": "cat ~/.clip1 | pbcopy "
-            },
-            {
-              "key_code": "v",
-              "modifiers": [
-                "left_command"
-              ]
-            }
-          ]
-        },
-        {
-          "description": "command + 2 = copy to clip2",
-          "type": "basic",
-          "from": {
-            "key_code": "2",
-            "modifiers": {
-              "mandatory": [
-                "left_command",
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "c",
-              "modifiers": [
-                "left_command"
-              ]
-            },
-            {
-              "shell_command": "pbpaste > ~/.clip2"
-            }
-          ]
-        },
-        {
-          "description": "2 = paste from clip2",
-          "type": "basic",
-          "from": {
-            "key_code": "2",
-            "modifiers": {
-              "mandatory": [
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "shell_command": "cat ~/.clip2 | pbcopy "
-            },
-            {
-              "key_code": "v",
-              "modifiers": [
-                "left_command"
-              ]
-            }
-          ]
-        },
-        {
-          "description": "command + 3 = copy to clip3",
-          "type": "basic",
-          "from": {
-            "key_code": "3",
-            "modifiers": {
-              "mandatory": [
-                "left_command",
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "c",
-              "modifiers": [
-                "left_command"
-              ]
-            },
-            {
-              "shell_command": "pbpaste > ~/.clip3"
-            }
-          ]
-        },
-        {
-          "description": "3 = paste from clip3",
-          "type": "basic",
-          "from": {
-            "key_code": "3",
-            "modifiers": {
-              "mandatory": [
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "shell_command": "cat ~/.clip3 | pbcopy "
-            },
-            {
-              "key_code": "v",
-              "modifiers": [
-                "left_command"
-              ]
-            }
-          ]
-        },
-        {
-          "description": "command + 4 = copy to clip4",
-          "type": "basic",
-          "from": {
-            "key_code": "4",
-            "modifiers": {
-              "mandatory": [
-                "left_command",
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "c",
-              "modifiers": [
-                "left_command"
-              ]
-            },
-            {
-              "shell_command": "pbpaste > ~/.clip4"
-            }
-          ]
-        },
-        {
-          "description": "4 = paste from clip4",
-          "type": "basic",
-          "from": {
-            "key_code": "4",
-            "modifiers": {
-              "mandatory": [
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "shell_command": "cat ~/.clip4 | pbcopy "
-            },
-            {
-              "key_code": "v",
-              "modifiers": [
-                "left_command"
-              ]
-            }
-          ]
-        },
-        {
-          "description": "command + 5 = copy to clip5",
-          "type": "basic",
-          "from": {
-            "key_code": "5",
-            "modifiers": {
-              "mandatory": [
-                "left_command",
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "c",
-              "modifiers": [
-                "left_command"
-              ]
-            },
-            {
-              "shell_command": "pbpaste > ~/.clip5"
-            }
-          ]
-        },
-        {
-          "description": "5 = paste from clip5",
-          "type": "basic",
-          "from": {
-            "key_code": "5",
-            "modifiers": {
-              "mandatory": [
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "shell_command": "cat ~/.clip5 | pbcopy "
-            },
-            {
-              "key_code": "v",
-              "modifiers": [
-                "left_command"
-              ]
-            }
-          ]
-        },
         {
           "description": "command + 6 = copy to clip6",
           "type": "basic",
@@ -6436,7 +6179,7 @@
           ]
         },
         {
-          "description": "F4 = LaunchPad",
+          "description": "F4 = Spotlight",
           "type": "basic",
           "from": {
             "key_code": "f4",
@@ -6451,7 +6194,10 @@
           },
           "to": [
             {
-              "shell_command": "open -a 'Launchpad'"
+              "key_code": "spacebar",
+              "modifiers": [
+                "left_command"
+              ]
             }
           ]
         },

@@ -2,11 +2,11 @@ default: dev
 
 d:dev
 dev:
-	hugo serve
+	hugo serve --panicOnWarning
 
 b:build
 build:
-	hugo build
+	hugo build --panicOnWarning
 
 .PHONY: default d dev b build
 

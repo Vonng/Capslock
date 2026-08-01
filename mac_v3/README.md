@@ -2,29 +2,23 @@
 
 
 
-### MacOS Installation
+### macOS Installation
 
+This guide was verified with Karabiner-Elements 16.1.0 in August 2026. The current release supports macOS 13–27 on Intel and Apple silicon.
 
-Capslock serves via  [**Karabiner-Elements**](https://karabiner-elements.pqrs.org/)  on MacOS
+1. Download [Karabiner-Elements](https://karabiner-elements.pqrs.org/), open the DMG, and run `Karabiner-Elements.pkg`.
 
-1. Download and install [**Karabiner Elements**](https://karabiner-elements.pqrs.org/), following the wizard and grant required permissions.
+2. Open Karabiner-Elements Settings and follow its System Settings prompts. Allow both background services, Accessibility, Input Monitoring, and the Driver Extension. In **Virtual Keyboard**, select the layout matching your physical keyboard. See the [official installation guide](https://karabiner-elements.pqrs.org/docs/getting-started/installation/).
 
-2. Download [**capslock.json**](mac_v3/capslock.json) to：` ~/.config/karabiner/assets/complex_modifications/` .  Or open this link with Safari to launch karabiner and load config from URL:
+3. Open this browser link to import the current V3 configuration:
 
-   ```yaml
-   # Capslock Mac V3 (this repo)
-   karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/master/mac_v3/capslock.json
-   
-   # Capslock Official Site (v3)
-   karabiner://karabiner/assets/complex_modifications/import?url=https://vonng.com/capslock.json
-   
-   # Karabiner-Elements Offical Script Gallery (v3)
-   karabiner://karabiner/assets/complex_modifications/import?url=https://pqrs.org/osx/karabiner/complex_modifications/json/caps_lock_enhancement.json
+   ```text
+   karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/main/mac_v3/capslock.json
    ```
 
-3. Launch Karabiner-Elements.  **Tab: ComplexModification** → **Button: Add Rules**, then enabled rulesets.
+   In Karabiner-Elements Settings, use **Complex Modifications → Add predefined rule → Import more rules from the internet**, complete **Import/Allow**, and enable the rules you need. Confirm the result with Karabiner-EventViewer. See the [official complex-modifications guide](https://karabiner-elements.pqrs.org/docs/manual/configuration/configure-complex-modifications/).
 
-   ![](/Volumes/Data/dev/env/Capslock/mac_v3/images/config-karabiner.png)
+   For manual installation, download [**capslock.json**](capslock.json) into `~/.config/karabiner/assets/complex_modifications/` and then choose **Add predefined rule**.
 
 
 
@@ -42,12 +36,12 @@ Capslock works on **ANSI** keyboards and similar layouts. It literally remaps ev
 |   [Navigation](#Navigation)   |  Pink  | Vim style navigation. Cursor move, text selection, switch desktop/window/tab, mouse move/wheel,etc... |
 |     [Deletion](#Deletion)     | Brown  | Maps `BNM,` to deletion operation to perform fast char/word/line deletion without hand move. |
 |     [MouseKey](#MouseKey)     | Keypad | Maps keypad to fully functional mouse                        |
-|   [Window](#window-control)   | Azure  | Close app/win/tab, Switch app/win/tab/desktop, intergration with win-manager app such as Moom,Slate,Magnet |
+|   [Window](#window-control)   | Azure  | Close or switch apps, windows, tabs, and desktops; integrate with an external window manager. |
 | [Application](#app-shortcuts) | Yellow | Shortcuts for launching or switching frequently used applications |
-| [Terminal](#terminal-control) | Green  | Sending high-freq signals (Ctrl-Z, Ctrl-D, Ctrl-C) and vim/tmux prefix meta key via  <kbd>✱</kbd> |
-|    [Clipboard](#Clipboard)    | Purple | Turn numkeys into 10 different text clipboard. <kbd>✱</kbd><kbd>⌘</kbd>n copy and <kbd>✱</kbd>n paste. |
+| [Terminal](#terminal-control) | Green  | Send high-frequency signals and IDE commands, launch Codex/Claude, and use Vim/Tmux prefix keys via <kbd>✱</kbd>. |
+|    [Clipboard](#Clipboard)    | Purple | Turn number keys 6–0 into five text clipboards. <kbd>✱</kbd><kbd>⌘</kbd>n copies and <kbd>✱</kbd>n pastes. |
 |      [Shifter](#Shifter)      | Orange | Turn some keys into common code symbols.                     |
-|   [Functional](#Functional)   |  Cyan  | Screenshtots. Fine-grained light/volume control. Take function keys' function back! |
+|   [Functional](#Functional)   |  Cyan  | Screenshots, standard function keys, and fine-grained light/volume control. |
 
 ### Basic
 
@@ -81,7 +75,7 @@ Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalities. We will assume a
 |    <kbd>U</kbd>    |   PgUp   | prev page  |  prev page  |   zoom-    | fullscreen  |  🖱️L  |   🖱️L   |  ➡️   |  ➡️⏫  |
 |    <kbd>I</kbd>    |   Home   | line head  |  end2head   |  prev win  |    hide     |  🖱️R  |   🖱️R   |  ⬆️   |  ⬆️⏫  |
 |    <kbd>O</kbd>    |   End    |  line end  |  head2end   |  next win  |  hide all   |  🖱️B  |   🖱️B   |  ⬇️   |  ⬇️⏫  |
-|    <kbd>P</kbd>    |   PgDn   | next page  |  next page  |   zoom+    |  Launchpad  |  🖱️F  |   🖱️F   |  ⬅️   |  ⬅️⏫  |
+|    <kbd>P</kbd>    |   PgDn   | next page  |  next page  |   zoom+    |  Spotlight  |  🖱️F  |   🖱️F   |  ⬅️   |  ⬅️⏫  |
 
 
 
@@ -134,8 +128,8 @@ Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalities. We will assume a
 
 
 
-* `Tab`, <kbd>Q</kbd>, <kbd>W</kbd>, <kbd>A</kbd>, <kbd>s</kbd> used as window control keys. Focuing on close/switch applications / windows / tabs / desktops. (azure area)
-* Windows management (resize, layout) leaves to external application such as [Moom](https://manytricks.com/moom/), [Magnet](https://apps.apple.com/us/app/magnet/id441258766), and [Slate](https://github.com/jigish/slate). Bind <kbd>⌃</kbd><kbd>⌥</kbd><kbd>⇧</kbd><kbd>⌘</kbd>A manually.
+* `Tab`, <kbd>Q</kbd>, <kbd>W</kbd>, <kbd>A</kbd>, <kbd>S</kbd> control closing and switching apps, windows, tabs, and desktops. (azure area)
+* Window layout is delegated to an external application such as [Moom](https://manytricks.com/moom/) or [Magnet](https://magnet.crowdcafe.com/). Bind <kbd>⌃</kbd><kbd>⌥</kbd><kbd>⇧</kbd><kbd>⌘</kbd>A manually. [Slate](https://github.com/jigish/slate) is retained only as a legacy example.
 
 
 | Key\Mod |      <kbd>✱</kbd>      |       <kbd>⌘</kbd>       |       <kbd>⌥</kbd>        |       <kbd>⌃</kbd>       |     <kbd>⇧</kbd>      |
@@ -143,7 +137,7 @@ Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalities. We will assume a
 |    <kbd>⇥</kbd>    |  next app   |   prev app    | switch desktop |               | switch tab |
 |    <kbd>Q</kbd>    |  close app  |   close app   |                |  Lock Screen  |   Logout   |
 |    <kbd>W</kbd>    |  close tab  | close all win |                | Display Sleep |   Sleep    |
-|    <kbd>A</kbd>    | **win app** |  expose all   |  show desktop  |   LaunchPad   |            |
+|    <kbd>A</kbd>    | **win app** |  expose all   |  show desktop  |   Spotlight   |            |
 |    <kbd>S</kbd>    |  next tab   |   prev tab    |    next win    |   prev win    |            |
 
 
@@ -159,10 +153,10 @@ Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalities. We will assume a
 | :-----: | :----------------: | :-------: | :---------: |
 |    <kbd>E</kbd>    |       Safari       |  Finder   |    Mail     |
 |    <kbd>R</kbd>    |       iTerm2       |  Preview  |  Terminal   |
-|    <kbd>T</kbd>    | Visual Studio Code |  Typora   |    Note     |
-|    <kbd>Y</kbd>    |        Siri        | Karabiner | Amphetamine |
-|    <kbd>F</kbd>    |      Alfred 4      |   Dash    | Dictionary  |
-|    <kbd>G</kbd>    |   Intellij IDEA    |  Chrome   |  Calender   |
+|    <kbd>T</kbd>    | Visual Studio Code |  Typora   |    Notes    |
+|    <kbd>Y</kbd>    |        Siri        | Karabiner-Elements | Amphetamine |
+|    <kbd>F</kbd>    |      Alfred 5      |   Dash    | Dictionary  |
+|    <kbd>G</kbd>    |   IntelliJ IDEA    |  Chrome   |  Calendar   |
 
 
 
@@ -170,16 +164,16 @@ Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalities. We will assume a
 
 
 
-<kbd>D</kbd>, <kbd>Z</kbd>, <kbd>X</kbd>, <kbd>C</kbd>, <kbd>V</kbd>, <kbd>B</kbd> are used as terminal control keys. Sending singals and IDE commands. (green area)
+<kbd>D</kbd>, <kbd>Z</kbd>, <kbd>X</kbd>, <kbd>C</kbd>, <kbd>V</kbd>, <kbd>B</kbd> are used for terminal control, IDE commands, and launching Codex or Claude. (green area)
 
 | Key\Mod |                         <kbd>✱</kbd>                          |          <kbd>⌘</kbd>           |
 | :-----: | :------------------------------------------------: | :------------------: |
 |    <kbd>D</kbd>    |               <kbd>⌃</kbd><kbd>D</kbd> Ctrl+D (Send EOF)               | Define (Force touch) |
 |    <kbd>Z</kbd>    |               <kbd>⌃</kbd><kbd>Z</kbd> Ctrl+Z  (SIGTSTP)               |  <kbd>F5</kbd> (VS Code Debug)  |
 |    <kbd>X</kbd>    |               <kbd>⌃</kbd><kbd>R</kbd> Ctrl+R (IDE Run)                |  <kbd>⌃</kbd><kbd>F5</kbd> (VS Code Run)   |
-|    <kbd>C</kbd>    |                <kbd>⌃</kbd><kbd>C</kbd>  Ctrl+C (SIGINT)                 | <kbd>⇧</kbd><kbd>>F5</kbd>（VS Code Stop） |
+|    <kbd>C</kbd>    |                         Open Codex                         | Open Claude          |
 |    <kbd>V</kbd>    |              <kbd>⌃</kbd><kbd>V</kbd>Ctrl+V (Vim Prefix)               |                      |
-|    <kbd>B</kbd>    | <kbd>⌃</kbd><kbd>B</kbd>Ctrl+B ([Tmux](http://tmux.github.io)  Prefix) |                      |
+|    <kbd>B</kbd>    | <kbd>⌃</kbd><kbd>B</kbd>Ctrl+B ([Tmux](https://github.com/tmux/tmux/wiki) Prefix) |                      |
 
 
 
@@ -187,14 +181,14 @@ Hold  **<kbd>✱</kbd> Hyper** to enable hyper functionalities. We will assume a
 
 
 
-Number keys <kbd>1</kbd>, <kbd>2</kbd>, …, <kbd>9</kbd>, <kbd>0</kbd> are used as **(text) clipboard**. Hold <kbd>⌘</kbd> to **copy**, and press to **paste**. (purple area)
+Number keys <kbd>6</kbd>, <kbd>7</kbd>, <kbd>8</kbd>, <kbd>9</kbd>, <kbd>0</kbd> are used as **text clipboards**. Hold <kbd>⌘</kbd> to **copy**, and press a number to **paste**. (purple area)
 
 | Key\Mod |         <kbd>✱</kbd>         |        <kbd>⌘</kbd>        |
 | :-----: | :---------------: | :-------------: |
-|    <kbd>1</kbd>    | Paste from clip 1 | Copy to clip 1  |
-|    <kbd>2</kbd>    | Paste from clip 2 | Copy to clip 2  |
+|    <kbd>6</kbd>    | Paste from clip 6 | Copy to clip 6  |
+|    <kbd>7</kbd>    | Paste from clip 7 | Copy to clip 7  |
 |   ……    |        ……         |       ……        |
-|    <kbd>0</kbd>    | Paste from clip 0 | Copy to clip 10 |
+|    <kbd>0</kbd>    | Paste from clip 0 | Copy to clip 0  |
 
 
 ### Shifter
@@ -222,13 +216,15 @@ Number keys <kbd>1</kbd>, <kbd>2</kbd>, …, <kbd>9</kbd>, <kbd>0</kbd> are used
 
 
 
-- Use F1,…F12 as standard functional keys, while hold **<kbd>✱</kbd> Hyper** to turn them back. (cyan area)
-- <kbd>⌘</kbd>Command  + F1 / F2 / F3 are used as desktop switcher. Enable shortcuts in system preference first:
+- Use F1,…F12 as standard function keys, while holding **<kbd>✱</kbd> Hyper** sends their media/system functions. (cyan area)
+- <kbd>⌘</kbd>Command + F1 / F2 / F3 switches desktops. Enable the shortcuts first:
 
-  **Preference** → **Keyboard** → **Shortcuts** → **MissionControl** → Switch to Desktop 1/2/3
-- If you are using RMBP with Bar, consider changing your bar back to function keys with:
+  **System Settings** → **Keyboard** → **Keyboard Shortcuts…** → **Mission Control** → Switch to Desktop 1/2/3
+- Karabiner-Elements 15.1 and later use the macOS function-key setting. Configure it in:
 
-  **Karabiner-Elements** → **Function Keys** → **Use all F1, F2, etc. keys as standard function keys** 
+  **System Settings** → **Keyboard** → **Keyboard Shortcuts…** → **Function Keys** → **Use F1, F2, etc. keys as standard function keys**
+
+  Touch Bar instructions apply only to legacy Touch Bar Macs; see the [official troubleshooting note](https://karabiner-elements.pqrs.org/docs/help/troubleshooting/touch-bar-function-keys/).
 
 | Key\Mod  |                  <kbd>✱</kbd>                   |  <kbd>⌘</kbd>   | Comment                              |
 | :------: | :----------------------------------: | :--: | ------------------------------------ |
@@ -236,7 +232,7 @@ Number keys <kbd>1</kbd>, <kbd>2</kbd>, …, <kbd>9</kbd>, <kbd>0</kbd> are used
 |    <kbd>F1</kbd>    | <kbd>display_brightness_decrement</kbd>  \|  <kbd>⌃</kbd><kbd>1</kbd> |  <kbd>⌃</kbd><kbd>1</kbd>  | Brightness Down / Desktop 1          |
 |    <kbd>F2</kbd>    |  <kbd>display_brightness_increment</kbd> \| <kbd>⌃</kbd><kbd>2</kbd>  |  <kbd>⌃</kbd><kbd>2</kbd>  | Brightness Up / Desktop 2            |
 |    <kbd>F3</kbd>    |              <kbd>⌃</kbd><kbd>↑</kbd>  \|  <kbd>⌃</kbd><kbd>3</kbd>              |  <kbd>⌃</kbd><kbd>3</kbd>  | Expose All / Desktop 3               |
-|    <kbd>F4</kbd>    |        <kbd>Launchpad</kbd>          |      | Launchpad                            |
+|    <kbd>F4</kbd>    |        <kbd>Spotlight</kbd>          |      | Spotlight                            |
 |    <kbd>F5</kbd>    |        <kbd>illumination_decrement</kbd>        |      | Keyboard Light Down                  |
 |    <kbd>F6</kbd>    |        <kbd>illumination_increment</kbd>        |      | Keyboard Light Up                    |
 |    <kbd>F7</kbd>    |                <kbd>rewind</kbd>                |      | Music Prev                           |
@@ -245,8 +241,8 @@ Number keys <kbd>1</kbd>, <kbd>2</kbd>, …, <kbd>9</kbd>, <kbd>0</kbd> are used
 |   <kbd>F10</kbd>   |                 <kbd>mute</kbd>                 |      | Mute                                 |
 |   <kbd>F11</kbd>   |           <kbd>volume_decrement</kbd>           |      | Volume Down                          |
 |   <kbd>F12</kbd>   |           <kbd>volume_increment</kbd>           |      | Volume Up                            |
-|   <kbd>F13</kbd>   |                 <kbd>⌃</kbd><kbd>⇧</kbd><kbd>⌘</kbd><kbd>3</kbd>                 | <kbd>⇧</kbd><kbd>⌘</kbd><kbd>3</kbd> | Full Screentshot (<kbd>⌘</kbd> to file)         |
-|   <kbd>F14</kbd>   |            <kbd>⇧</kbd><kbd>⌘</kbd><kbd>5</kbd>            | <kbd>⇧</kbd><kbd>⌘</kbd><kbd>6</kbd> | Screenshot menu (<kbd>⌘</kbd> touchbar snap)    |
+|   <kbd>F13</kbd>   |                 <kbd>⌃</kbd><kbd>⇧</kbd><kbd>⌘</kbd><kbd>3</kbd>                 | <kbd>⇧</kbd><kbd>⌘</kbd><kbd>3</kbd> | Full screenshot (<kbd>⌘</kbd> to file)          |
+|   <kbd>F14</kbd>   |            <kbd>⇧</kbd><kbd>⌘</kbd><kbd>5</kbd>            | <kbd>⇧</kbd><kbd>⌘</kbd><kbd>6</kbd> | Screenshot menu (<kbd>⌘</kbd>: legacy Touch Bar screenshot) |
 |   <kbd>F15</kbd>   |      <kbd>play_or_pause</kbd>        |      | Play / Pause                         |
 |  <kbd>Insert</kbd>  | <kbd>⇧</kbd><kbd>⌥</kbd> <kbd>display_brightness_increment</kbd> |      | Fine-Grained Brightness Up           |
 | Delete <kbd>⌦</kbd> | <kbd>⇧</kbd><kbd>⌥</kbd> <kbd>display_brightness_decrement</kbd> |      | Fine-Grained Brightness Down         |
@@ -278,4 +274,3 @@ Number keys <kbd>1</kbd>, <kbd>2</kbd>, …, <kbd>9</kbd>, <kbd>0</kbd> are used
 |  🖱️L   |  Mouse Left Click (Button1)  |  🖱️B   | Mouse Backward (Button4) |
 |  🖱️R   | Mouse Right Click (Button2)  |  🖱️F   | Mouse Forward (Button5)  |
 |  🖱️M   | Mouse Middle Click (Button3) |   🖲️   |       Mouse Wheel        |
-

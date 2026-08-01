@@ -1,13 +1,13 @@
 ---
 title: Capslock Enhancement
-url: https://vonng.com/capslock.json
-version: 3.0.3
+url: https://raw.githubusercontent.com/Vonng/Capslock/main/mac_v3/capslock.json
+version: 3.1.0
 maintainers: [ Vonng ]
 author: Vonng(rh@vonng.com)
-website: http://capslock.vonng.com
-json_url: https://vonng.com/capslock.json
-import_url: karabiner://karabiner/assets/complex_modifications/import?url=https://vonng.com/capslock.json
-gallery_url: https://ke-complex-modifications.pqrs.org/#emulation-modes
+website: https://capslock.vonng.com
+json_url: https://raw.githubusercontent.com/Vonng/Capslock/main/mac_v3/capslock.json
+import_url: karabiner://karabiner/assets/complex_modifications/import?url=https://raw.githubusercontent.com/Vonng/Capslock/main/mac_v3/capslock.json
+gallery_url: https://ke-complex-modifications.pqrs.org/#caps_lock_enhancement
 repo: https://github.com/Vonng/Capslock
 
 
@@ -28,7 +28,7 @@ rules:
       - description: 'escape = capslock switch'
         type: basic
         from: { key_code: escape, modifiers: { optional: [ caps_lock ], mandatory: [ right_command,right_control,right_shift,right_option ] } }
-        to: [ { key_code: caps_lock , modifiers: [ left_control ] } ]
+        to: [ { key_code: caps_lock, modifiers: [ left_control ], hold_down_milliseconds: 200 }, { key_code: vk_none } ]
 
       - description: 'spacebar = language switch'
         type: basic
@@ -477,10 +477,10 @@ rules:
         to: [ { key_code: equal_sign , modifiers: [ left_command,left_option ] } ]
 
       # control: desktop management
-      - description: 'control + p = LaunchPad'
+      - description: 'control + p = Spotlight'
         type: basic
         from: { key_code: p, modifiers: { mandatory: [ left_control ,right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a 'Launchpad' } ]
+        to: [ { key_code: spacebar, modifiers: [ left_command ] } ]
 
       # option: mouse forward
       - description: 'option + p = mouse forward'
@@ -1202,10 +1202,10 @@ rules:
       #==========================================================#
       # ( a ) --> window management                              #
       #==========================================================#
-      - description: 'control + a = launchpad'
+      - description: 'control + a = Spotlight'
         type: basic
         from: { key_code: a, modifiers: { mandatory: [ left_control,  right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a 'Launchpad' } ]
+        to: [ { key_code: spacebar, modifiers: [ left_command ] } ]
 
       - description: 'option + a = show desktop'
         type: basic
@@ -1327,7 +1327,7 @@ rules:
         to: [ { shell_command: open -a Siri } ]
 
       #==========================================================#
-      # ( f ) --> alfred 4 / Dash / Dictionary                   #
+      # ( f ) --> Alfred 5 / Dash / Dictionary                   #
       #==========================================================#
       - description: 'command + f = Dash'
         type: basic
@@ -1339,25 +1339,25 @@ rules:
         from: { key_code: f, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
         to: [ { shell_command: open -a Dictionary } ]
 
-      - description: 'f = Alfred 4'
+      - description: 'f = Alfred 5'
         type: basic
         from: { key_code: f, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a 'Alfred 4' } ]
+        to: [ { shell_command: open -a 'Alfred 5' } ]
 
       #==========================================================#
-      # ( g ) --> idea / chrome / calender                       #
+      # ( g ) --> IDEA / Chrome / Calendar                       #
       #==========================================================#
       - description: 'command + g = Chrome'
         type: basic
         from: { key_code: g, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
         to: [ { shell_command: open -a 'Google Chrome' } ]
 
-      - description: 'option + g = Calender'
+      - description: 'option + g = Calendar'
         type: basic
         from: { key_code: g, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
         to: [ { shell_command: open -a Calendar } ]
 
-      - description: 'g = Intellij IDEA'
+      - description: 'g = IntelliJ IDEA'
         type: basic
         from: { key_code: g, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
         to: [ { shell_command: open -a 'IntelliJ IDEA' } ]
@@ -1390,7 +1390,7 @@ rules:
       - description: 'command + z = F5 (vscode debug)'
         type: basic
         from: { key_code: z, modifiers: { mandatory: [ left_command,  right_command,right_control,right_shift,right_option ] } }
-        to: [ { key_code: f5 } ]
+        to: [ { key_code: f5, modifiers: [ fn ] } ]
 
       - description: 'z = ctrl-z'
         type: basic
@@ -1403,7 +1403,7 @@ rules:
       - description: 'command + x = ctrl + F5 (vscode run)'
         type: basic
         from: { key_code: x, modifiers: { mandatory: [ left_command,  right_command,right_control,right_shift,right_option ] } }
-        to: [ { key_code: f5 , modifiers: [ left_control ] } ]
+        to: [ { key_code: f5, modifiers: [ fn,left_control ] } ]
 
       - description: 'x = ctrl-r'
         type: basic
@@ -1411,17 +1411,17 @@ rules:
         to: [ { key_code: r , modifiers: [ left_control ] } ]
 
       #==========================================================#
-      # ( c ) -->  Ctrl-C (SIGINT)  |  Shift+F5 (VS Code Stop)   #
+      # ( c ) -->  Codex            |  Claude                    #
       #==========================================================#
-      - description: 'command + c = shift + F5 (vscode stop)'
+      - description: 'command + c = Claude'
         type: basic
         from: { key_code: c, modifiers: { mandatory: [ left_command,  right_command,right_control,right_shift,right_option ] } }
-        to: [ { key_code: f5 , modifiers: [ left_shift ] } ]
+        to: [ { shell_command: "open -a 'Claude'" } ]
 
-      - description: 'c = ctrl-c'
+      - description: 'c = Codex'
         type: basic
         from: { key_code: c, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
-        to: [ { key_code: c , modifiers: [ left_control ] } ]
+        to: [ { shell_command: "open -a 'Codex'" } ]
 
       #==========================================================#
       # ( v ) -->  Vim Prefix Meta Key                           #
@@ -1451,58 +1451,8 @@ rules:
     manipulators:
 
       #==========================================================#
-      # ( numbers ) -->  copy & paste TEXT via pbcopy|pbpaste    #
+      # ( numbers 6-0 ) --> copy & paste TEXT via pbcopy|pbpaste #
       #==========================================================#
-      - description: 'command + 1 = copy to clip1'
-        type: basic
-        from: { key_code: '1', modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
-        to: [ { key_code: c, modifiers: [ left_command ] } , { shell_command: 'pbpaste > ~/.clip1' } ]
-
-      - description: '1 = paste from clip1'
-        type: basic
-        from: { key_code: '1', modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: 'cat ~/.clip1 | pbcopy ' },{ key_code: v, modifiers: [ left_command ] } ]
-
-      - description: 'command + 2 = copy to clip2'
-        type: basic
-        from: { key_code: '2', modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
-        to: [ { key_code: c, modifiers: [ left_command ] } , { shell_command: 'pbpaste > ~/.clip2' } ]
-
-      - description: '2 = paste from clip2'
-        type: basic
-        from: { key_code: '2', modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: 'cat ~/.clip2 | pbcopy ' },{ key_code: v, modifiers: [ left_command ] } ]
-
-      - description: 'command + 3 = copy to clip3'
-        type: basic
-        from: { key_code: '3', modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
-        to: [ { key_code: c, modifiers: [ left_command ] } , { shell_command: 'pbpaste > ~/.clip3' } ]
-
-      - description: '3 = paste from clip3'
-        type: basic
-        from: { key_code: '3', modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: 'cat ~/.clip3 | pbcopy ' },{ key_code: v, modifiers: [ left_command ] } ]
-
-      - description: 'command + 4 = copy to clip4'
-        type: basic
-        from: { key_code: '4', modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
-        to: [ { key_code: c, modifiers: [ left_command ] } , { shell_command: 'pbpaste > ~/.clip4' } ]
-
-      - description: '4 = paste from clip4'
-        type: basic
-        from: { key_code: '4', modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: 'cat ~/.clip4 | pbcopy ' },{ key_code: v, modifiers: [ left_command ] } ]
-
-      - description: 'command + 5 = copy to clip5'
-        type: basic
-        from: { key_code: '5', modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
-        to: [ { key_code: c, modifiers: [ left_command ] } , { shell_command: 'pbpaste > ~/.clip5' } ]
-
-      - description: '5 = paste from clip5'
-        type: basic
-        from: { key_code: '5', modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: 'cat ~/.clip5 | pbcopy ' },{ key_code: v, modifiers: [ left_command ] } ]
-
       - description: 'command + 6 = copy to clip6'
         type: basic
         from: { key_code: '6', modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
@@ -1754,10 +1704,10 @@ rules:
         from: { key_code: f3, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
         to: [ { key_code: up_arrow , modifiers: [ left_control ] } ]
 
-      - description: 'F4 = LaunchPad'
+      - description: 'F4 = Spotlight'
         type: basic
         from: { key_code: f4, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a 'Launchpad' } ]
+        to: [ { key_code: spacebar, modifiers: [ left_command ] } ]
 
       - description: 'F5 = illumination_decrement'
         type: basic
